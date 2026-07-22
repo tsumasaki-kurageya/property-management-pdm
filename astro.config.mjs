@@ -14,6 +14,7 @@ export default defineConfig({
     starlight({
       title: 'ビルメンテナンス業務ガイド',
       description: 'ビルメンテナンス業務の全体像を初学者向けに整理したガイド',
+      customCss: ['./src/styles/diagrams.css'],
       locales: {
         root: {
           label: '日本語',
@@ -91,7 +92,10 @@ export default defineConfig({
         },
         {
           label: 'リファレンス',
-          items: [{ label: '入口', slug: 'reference' }],
+          items: [
+            { label: '入口', slug: 'reference' },
+            { label: '図解一覧', slug: 'diagrams' },
+          ],
         },
         {
           label: 'このサイトについて',
