@@ -162,7 +162,7 @@
 - [`PROC-EQP-002` 設備巡回点検](PROC-EQP-002_routine-inspection.md)
 - [`PROC-COM-002` 作業前安全確認・危険予知](../00_common/PROC-COM-002_pre-work-safety-check.md)
 - [ビルメンテナンス業務カタログ](../../building-maintenance-business-catalog.md)
-- 将来作成：`CHK-EQP-002` 警報・設備異常対応チェックリスト
+- [`CHK-EQP-002` 警報・設備異常対応チェックリスト](../../03_checklists/02_equipment/CHK-EQP-002_alarm-response.md)
 
 ## 15. 改訂履歴
 
