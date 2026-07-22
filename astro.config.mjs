@@ -78,7 +78,16 @@ export default defineConfig({
         },
         {
           label: '条件による違い',
-          items: [{ label: '準備中', slug: 'variations' }],
+          items: [
+            { label: '共通業務と条件差', slug: 'variations' },
+            { label: '建物用途による違い', slug: 'variations/building-use' },
+            { label: '常駐・巡回・遠隔監視', slug: 'variations/management-methods' },
+            { label: '元請け・再委託先・専門業者', slug: 'variations/contract-layers' },
+            { label: 'オーナー・PM・FM・BM', slug: 'variations/responsibility-boundaries' },
+            { label: '法令業務の考え方', slug: 'variations/statutory-duties' },
+            { label: '四つの責任主体', slug: 'variations/responsibility-types' },
+            { label: '複数条件の重ね合わせ', slug: 'variations/combining-conditions' },
+          ],
         },
         {
           label: 'リファレンス',
