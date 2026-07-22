@@ -67,7 +67,7 @@
 | 作業前 | [`PROC-COM-002` 作業前安全確認・危険予知](../00_common/PROC-COM-002_pre-work-safety-check.md) | 感電、回転体、高温・高圧、漏水、酸欠、高所、第三者影響 |
 | 区域設定 | [`PROC-COM-003` 作業区域設定・解除](../00_common/PROC-COM-003_work-area-control.md) | 機械室等の入室統制、施錠、表示、操作禁止、周知 |
 | 異常発生 | [`PROC-COM-004` 異常上申](../00_common/PROC-COM-004_abnormality-escalation.md) | 影響範囲、一次対応、停止判断、修繕化、緊急連絡 |
-| 完了 | [[`PROC-COM-005` 完了報告](../00_common/PROC-COM-005_completion-reporting.md)](../00_common/PROC-COM-005_completion-reporting.md) | 運転状態、設定、残留リスク、要観察、未復旧、引継ぎ |
+| 完了 | [`PROC-COM-005` 完了報告](../00_common/PROC-COM-005_completion-reporting.md) | 運転状態、設定、残留リスク、要観察、未復旧、引継ぎ |
 
 個別設備のメーカー手順、保安規程、系統図及び操作票がある場合は、それらを実行資料として参照し、一般手順で上書きしない。
 
