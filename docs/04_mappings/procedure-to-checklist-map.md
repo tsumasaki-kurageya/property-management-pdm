@@ -16,6 +16,7 @@
 | 清掃 | [`PROC-CLN-002` トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 0.1 | [`CHK-CLN-002` トイレ清掃](../03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-002` 設備巡回点検](../02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md) | 0.1 | [`CHK-EQP-001` 設備巡回点検](../03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-005` 警報・設備異常対応](../02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md) | 0.1 | [`CHK-EQP-002` 警報・設備異常対応](../03_checklists/02_equipment/CHK-EQP-002_alarm-response.md) | 0.1 | 草案あり |
+| 設備 | [`PROC-EQP-007` 試運転・復旧確認](../02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md) | 0.1 | [`CHK-EQP-003` 試運転・復旧確認](../03_checklists/02_equipment/CHK-EQP-003_restoration-verification.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-001` 警備勤務開始・交代](../02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md) | 0.2 | [`CHK-SEC-002` 警備勤務開始・交代](../03_checklists/03_security/CHK-SEC-002_duty-handover.md) | 0.2 | 草案あり |
 | 警備 | [`PROC-SEC-004` 巡回警備](../02_field-procedures/03_security/PROC-SEC-004_security-patrol.md) | 0.1 | [`CHK-SEC-001` 巡回警備](../03_checklists/03_security/CHK-SEC-001_security-patrol.md) | 0.1 | 草案あり |
 
@@ -46,10 +47,13 @@
 
 作業区域管理では、「作業完了」「技術的復旧」「区域解除」「施設利用再開」を別状態として記録する。区域を継続する場合も、次の責任者、巡視条件、期限及び解除条件が明確なら手順上の引継ぎを完了できる。
 
+試運転・復旧確認では、「施工者の自主検査」「技術的復旧」「区域解除」「施設利用再開」「契約上の検収」を別状態として記録する。技術的に復旧しても、運用権限者の判断前に利用再開済みとは扱わない。
+
 ## 5. 改訂履歴
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 0.6 | 2026-07-22 | PROC-EQP-007とCHK-EQP-003を追加し、復旧・再開・検収の状態分離を反映 |
 | 0.5 | 2026-07-22 | PROC-COM-003とCHK-COM-003を追加し、区域解除と利用再開の状態分離を反映 |
 | 0.4 | 2026-07-22 | PROC-COM-004とCHK-COM-002を追加し、異常上申の状態分離を反映 |
 | 0.3 | 2026-07-22 | PROC-COM-001と領域別チェックリストの実装関係を追加 |
