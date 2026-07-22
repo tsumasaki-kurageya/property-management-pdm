@@ -64,7 +64,17 @@ export default defineConfig({
         },
         {
           label: '異常と周辺業務',
-          items: [{ label: '準備中', slug: 'incidents-and-operations' }],
+          items: [
+            { label: 'この章の読み方', slug: 'incidents-and-operations' },
+            { label: '営業・現地調査・仕様・見積', slug: 'operations/pre-contract-and-specification' },
+            { label: '契約と責任分界', slug: 'operations/contracts-and-responsibilities' },
+            { label: '管理体制と業務立ち上げ', slug: 'operations/startup' },
+            { label: '計画・変更・未実施管理', slug: 'operations/planning-and-unperformed-work' },
+            { label: '記録・承認・月次報告', slug: 'operations/records-approval-and-reporting' },
+            { label: '追加作業・検収・請求・原価', slug: 'operations/additional-work-billing-and-costs' },
+            { label: '点検異常から修繕・引渡しまで', slug: 'incidents/abnormality-to-restoration' },
+            { label: '苦情・要望・事故・災害', slug: 'incidents/complaints-accidents-and-disasters' },
+          ],
         },
         {
           label: '条件による違い',
