@@ -42,7 +42,11 @@ export default defineConfig({
         },
         {
           label: '業務の全体像',
-          items: [{ label: '準備中', slug: 'overview' }],
+          items: [
+            { label: '18の業務領域', slug: 'overview' },
+            { label: '契約から改善まで', slug: 'overview/business-lifecycle' },
+            { label: '業務の時間軸と完了状態', slug: 'overview/completion-states' },
+          ],
         },
         {
           label: '現場の業務',
