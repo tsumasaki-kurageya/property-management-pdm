@@ -35,6 +35,9 @@ export default defineConfig({
           label: 'はじめに',
           items: [
             { label: 'ガイドの読み方', slug: 'introduction' },
+            { label: 'ビルメンテナンスとは', slug: 'introduction/what-is-building-maintenance' },
+            { label: '関係者と役割', slug: 'introduction/people-and-roles' },
+            { label: '初学者向け用語集', slug: 'introduction/glossary' },
           ],
         },
         {
