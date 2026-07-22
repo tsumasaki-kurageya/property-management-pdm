@@ -51,8 +51,8 @@
 | `PROC-CLN-002` | トイレ清掃 | BM-06-03 | BM-06-07、BM-13-01〜05、BM-15-02〜04、BM-17-01〜04、06 | 衛生区分、利用者動線、補充、異常発見を含む代表手順 |
 | [`PROC-CLN-003`](PROC-CLN-003_waste-collection-and-sorting.md) | 廃棄物回収・分別 | BM-06-06 | BM-13-01〜05、BM-17-05〜09 | 分別不良、危険物、搬出先への引渡しを扱う |
 | [`PROC-CLN-004`](PROC-CLN-004_consumables-check-and-replenishment.md) | 消耗品確認・補充 | BM-06-07 | BM-13-02、BM-15-02〜04 | 補充と在庫不足報告の境界を扱う |
-| `PROC-CLN-005` | 定期床面清掃 | BM-06-05 | BM-04-07、BM-12-08、BM-13-01〜06、BM-17-01〜06 | 区域規制、材質適合、乾燥・利用再開を扱う |
-| `PROC-CLN-006` | 清掃品質検査・再清掃 | BM-06-09 | BM-06-10〜11、BM-13-05〜06、BM-17-01〜04 | 合否判定、不適合、再実施、承認を扱う |
+| [`PROC-CLN-005`](PROC-CLN-005_periodic-floor-cleaning.md) | 定期床面清掃 | BM-06-05 | BM-04-07、BM-12-08、BM-13-01〜06、BM-17-01〜06 | 区域規制、材質適合、乾燥・利用再開を扱う |
+| [`PROC-CLN-006`](PROC-CLN-006_quality-inspection-and-recleaning.md) | 清掃品質検査・再清掃 | BM-06-09 | BM-06-10〜11、BM-13-05〜06、BM-17-01〜04 | 合否判定、不適合、再実施、承認を扱う |
 
 業務IDは[ビルメンテナンス業務カタログ](../../building-maintenance-business-catalog.md)を参照する。個別手順を作成する際に、関連業務IDの過不足を再確認する。
 
