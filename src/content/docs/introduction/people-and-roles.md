@@ -114,6 +114,7 @@ flowchart LR
 
 ## さらに詳しく
 
+- [契約役割・責任主体・法令の条件差プロファイル](../../reference/profiles/)
 - [ビルオーナー・PM・FM・BM責任分界プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/owner-pm-fm-bm-responsibility-profiles.md)
 - [ビルメンテナンス契約役割プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/contract-role-profiles.md)
 - [ビルメンテナンス法令義務プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/statutory-duty-profiles.md)

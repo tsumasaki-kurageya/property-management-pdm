@@ -171,6 +171,8 @@ flowchart TB
 
 ## さらに詳しく
 
+- [12横断プロセスを開始・判断・成果物から調べる](../../reference/processes/)
+- [178業務を領域・ID・名称から調べる](../../reference/business-catalog/)
 - [ビルメンテナンス業務プロセスマップ](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/04_mappings/business-process-map.md)
 - [ビルメンテナンス業務カタログ](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md)
 

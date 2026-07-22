@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "generate:reference": "node scripts/generate-reference.mjs",
+    "check:reference": "node scripts/generate-reference.mjs --check && node scripts/check-reference-links.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check"
