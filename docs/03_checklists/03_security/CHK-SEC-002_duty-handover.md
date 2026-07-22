@@ -9,7 +9,7 @@
 | 共通手順 | [`PROC-COM-001` 勤務・担当引継ぎ](../../02_field-procedures/00_common/PROC-COM-001_shift-handover.md) |
 | 対応手順版 | 0.2 |
 | 版 | 0.2 |
-| 状態 | 初版草案 |
+| 状態 | 改訂草案 |
 
 ## 1. 勤務・引継ぎ情報
 
