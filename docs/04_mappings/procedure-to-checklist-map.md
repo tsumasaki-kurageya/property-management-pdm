@@ -9,7 +9,7 @@
 | 領域 | 手順 | 手順版 | チェックリスト | 帳票版 | 状態 |
 |---|---|---:|---|---:|---|
 | 共通 | [`PROC-COM-001` 勤務・担当引継ぎ](../02_field-procedures/00_common/PROC-COM-001_shift-handover.md) | 0.1 | 領域別チェックリストへ組込み（代表：`CHK-SEC-002`） | — | 領域別実装 |
-| 共通 | [`PROC-COM-002` 作業前安全確認・危険予知](../02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md) | 0.1 | `CHK-COM-001` 作業前確認 | 未作成 | 予定 |
+| 共通 | [`PROC-COM-002` 作業前安全確認・危険予知](../02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md) | 0.2 | [`CHK-COM-001` 作業前安全確認](../03_checklists/00_common/CHK-COM-001_pre-work-safety-check.md) | 0.1 | 草案あり |
 | 共通 | [`PROC-COM-003` 作業区域設定・解除](../02_field-procedures/00_common/PROC-COM-003_work-area-control.md) | 0.1 | [`CHK-COM-003` 作業区域設定・解除](../03_checklists/00_common/CHK-COM-003_work-area-control.md) | 0.1 | 草案あり |
 | 共通 | [`PROC-COM-004` 異常上申](../02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md) | 0.1 | [`CHK-COM-002` 異常上申](../03_checklists/00_common/CHK-COM-002_abnormality-escalation.md) | 0.1 | 草案あり |
 | 共通 | [`PROC-COM-005` 完了報告](../02_field-procedures/00_common/PROC-COM-005_completion-reporting.md) | 0.1 | [`CHK-COM-004` 完了報告](../03_checklists/00_common/CHK-COM-004_completion-reporting.md) | 0.1 | 草案あり |
@@ -52,10 +52,13 @@
 
 完了報告では、「現場作業の終了」「作業者確認」「管理者受領・結果確認」「是正完了」「検収」「顧客提出」を別状態として記録する。領域別帳票に共通必須項目と受領欄を組み込める場合は `CHK-COM-004` を重複作成せず、代替帳票IDと版を追跡する。
 
+作業前安全確認では、「開始可」「条件付き開始」「開始保留」「開始不可」を記録し、条件付き開始の責任者・監視・中止条件と、開始しない場合の安全状態・再確認条件を保持する。
+
 ## 5. 改訂履歴
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 0.8 | 2026-07-22 | CHK-COM-001を追加し、共通手順5件のチェックリスト対応を具体化 |
 | 0.7 | 2026-07-22 | PROC-COM-005とCHK-COM-004を追加し、作業終了・受領・確認・検収・提出の状態分離を反映 |
 | 0.6 | 2026-07-22 | PROC-EQP-007とCHK-EQP-003を追加し、復旧・再開・検収の状態分離を反映 |
 | 0.5 | 2026-07-22 | PROC-COM-003とCHK-COM-003を追加し、区域解除と利用再開の状態分離を反映 |
