@@ -135,7 +135,7 @@
 ## 14. 関連文書
 
 - [警備現場作業手順](README.md)
-- [`PROC-SEC-003` 鍵・入館証管理](README.md)
+- `PROC-SEC-003` 鍵・入館証管理（作成予定）
 - [`PROC-COM-004` 異常上申](../00_common/PROC-COM-004_abnormality-escalation.md)
 - [`PROC-COM-005` 完了報告](../00_common/PROC-COM-005_completion-reporting.md)
 - [`CHK-SEC-004` 入退館受付・確認](../../03_checklists/03_security/CHK-SEC-004_access-reception-and-verification.md)
