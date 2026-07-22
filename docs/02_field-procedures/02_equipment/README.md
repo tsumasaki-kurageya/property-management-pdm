@@ -55,7 +55,7 @@
 | [`PROC-EQP-005`](PROC-EQP-005_alarm-response.md) | 警報・設備異常対応 | BM-08-07 | BM-10-01〜05、BM-12-03〜07、BM-13-01〜05 | 警報確認、現場確認、一次対応、修繕化を扱う |
 | [`PROC-EQP-006`](PROC-EQP-006_emergency-shutdown-and-isolation.md) | 緊急停止・隔離 | BM-10-03 | BM-08-02、07、BM-10-02、BM-12-08、BM-17-05〜07 | 人命・被害拡大防止と停止後の統制を扱う |
 | [`PROC-EQP-007`](PROC-EQP-007_restoration-verification.md) | 試運転・復旧確認 | BM-10-10 | BM-10-09、11、BM-13-02〜06、BM-14-08 | 復旧作業と利用再開判断を分離する |
-| `PROC-EQP-008` | 設備日常保守 | BM-09-08 | BM-09-07、BM-13-01〜05、BM-14-07、BM-15-03 | 清掃、給油、調整、消耗品交換と作業限界を扱う |
+| [`PROC-EQP-008`](PROC-EQP-008_routine-maintenance.md) | 設備日常保守 | BM-09-08 | BM-09-07、BM-13-01〜05、BM-14-07、BM-15-03 | 清掃、給油、調整、消耗品交換と作業限界を扱う |
 
 業務IDは[ビルメンテナンス業務カタログ](../../building-maintenance-business-catalog.md)を参照する。個別手順を作成する際に、対象設備と業務カタログの定義を照合し、関連業務IDを確定する。
 
