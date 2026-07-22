@@ -165,7 +165,7 @@
 - [警備現場作業手順](README.md)
 - [`PROC-SEC-004` 巡回警備](PROC-SEC-004_security-patrol.md)
 - [ビルメンテナンス業務カタログ](../../building-maintenance-business-catalog.md)
-- 将来作成：`CHK-SEC-002` 警備勤務開始・交代チェックリスト
+- [`CHK-SEC-002` 警備勤務開始・交代チェックリスト](../../03_checklists/03_security/CHK-SEC-002_duty-handover.md)
 
 ## 15. 改訂履歴
 
