@@ -10,6 +10,7 @@
 |---|---|---:|---|---:|---|
 | 共通 | [`PROC-COM-001` 勤務・担当引継ぎ](../02_field-procedures/00_common/PROC-COM-001_shift-handover.md) | 0.1 | 領域別チェックリストへ組込み（代表：`CHK-SEC-002`） | — | 領域別実装 |
 | 共通 | [`PROC-COM-002` 作業前安全確認・危険予知](../02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md) | 0.1 | `CHK-COM-001` 作業前確認 | 未作成 | 予定 |
+| 共通 | [`PROC-COM-004` 異常上申](../02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md) | 0.1 | [`CHK-COM-002` 異常上申](../03_checklists/00_common/CHK-COM-002_abnormality-escalation.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-001` 共用部日常清掃](../02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md) | 0.1 | [`CHK-CLN-001` 共用部日常清掃](../03_checklists/01_cleaning/CHK-CLN-001_common-area-cleaning.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-002` トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 0.1 | [`CHK-CLN-002` トイレ清掃](../03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-002` 設備巡回点検](../02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md) | 0.1 | [`CHK-EQP-001` 設備巡回点検](../03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md) | 0.1 | 草案あり |
@@ -40,10 +41,13 @@
 
 追加3件では、警報対応の「一次対応完了」と「異常案件完了」、警備交代の「引継ぎ説明」と「受領完了」を別状態として記録する必要性を確認した。チェックリストは、後続案件ID、担当・期限、双方確認及び条件付き開始の承認を保持する。
 
+横断的な異常上申では、「初報発信」「受領確認」「対応責任の引渡し」「異常案件の解決」を別状態として記録する。領域別帳票に共通必須項目を組み込める場合は `CHK-COM-002` を重複作成せず、代替した帳票IDを追跡する。
+
 ## 5. 改訂履歴
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 0.4 | 2026-07-22 | PROC-COM-004とCHK-COM-002を追加し、異常上申の状態分離を反映 |
 | 0.3 | 2026-07-22 | PROC-COM-001と領域別チェックリストの実装関係を追加 |
 | 0.2 | 2026-07-22 | 代表手順・チェックリストを各領域2件へ拡張し、粒度検証結果を更新 |
 | 0.1 | 2026-07-22 | 代表手順3件と代表チェックリスト3件の初期対応を整理 |
