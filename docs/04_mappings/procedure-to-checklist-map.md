@@ -12,6 +12,7 @@
 | 共通 | [`PROC-COM-002` 作業前安全確認・危険予知](../02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md) | 0.1 | `CHK-COM-001` 作業前確認 | 未作成 | 予定 |
 | 共通 | [`PROC-COM-003` 作業区域設定・解除](../02_field-procedures/00_common/PROC-COM-003_work-area-control.md) | 0.1 | [`CHK-COM-003` 作業区域設定・解除](../03_checklists/00_common/CHK-COM-003_work-area-control.md) | 0.1 | 草案あり |
 | 共通 | [`PROC-COM-004` 異常上申](../02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md) | 0.1 | [`CHK-COM-002` 異常上申](../03_checklists/00_common/CHK-COM-002_abnormality-escalation.md) | 0.1 | 草案あり |
+| 共通 | [`PROC-COM-005` 完了報告](../02_field-procedures/00_common/PROC-COM-005_completion-reporting.md) | 0.1 | [`CHK-COM-004` 完了報告](../03_checklists/00_common/CHK-COM-004_completion-reporting.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-001` 共用部日常清掃](../02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md) | 0.1 | [`CHK-CLN-001` 共用部日常清掃](../03_checklists/01_cleaning/CHK-CLN-001_common-area-cleaning.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-002` トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 0.1 | [`CHK-CLN-002` トイレ清掃](../03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-002` 設備巡回点検](../02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md) | 0.1 | [`CHK-EQP-001` 設備巡回点検](../03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md) | 0.1 | 草案あり |
@@ -49,10 +50,13 @@
 
 試運転・復旧確認では、「施工者の自主検査」「技術的復旧」「区域解除」「施設利用再開」「契約上の検収」を別状態として記録する。技術的に復旧しても、運用権限者の判断前に利用再開済みとは扱わない。
 
+完了報告では、「現場作業の終了」「作業者確認」「管理者受領・結果確認」「是正完了」「検収」「顧客提出」を別状態として記録する。領域別帳票に共通必須項目と受領欄を組み込める場合は `CHK-COM-004` を重複作成せず、代替帳票IDと版を追跡する。
+
 ## 5. 改訂履歴
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 0.7 | 2026-07-22 | PROC-COM-005とCHK-COM-004を追加し、作業終了・受領・確認・検収・提出の状態分離を反映 |
 | 0.6 | 2026-07-22 | PROC-EQP-007とCHK-EQP-003を追加し、復旧・再開・検収の状態分離を反映 |
 | 0.5 | 2026-07-22 | PROC-COM-003とCHK-COM-003を追加し、区域解除と利用再開の状態分離を反映 |
 | 0.4 | 2026-07-22 | PROC-COM-004とCHK-COM-002を追加し、異常上申の状態分離を反映 |
