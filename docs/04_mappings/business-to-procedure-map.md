@@ -31,8 +31,8 @@
 | `BM-06-03` | 日常清掃を実施する | `PROC-CLN-001` | [共用部日常清掃](../02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md) | 草案あり | BM-13、BM-17 |
 | `BM-06-03` | 日常清掃を実施する | `PROC-CLN-002` | [トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 草案あり | BM-06-07〜08、BM-13、BM-15、BM-17 |
 | `BM-06-06` | 廃棄物を回収・分別する | `PROC-CLN-003` | [廃棄物回収・分別](../02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md) | 草案あり | BM-13、BM-17 |
-| `BM-06-07` | 消耗品を補充する | `PROC-CLN-004` | 消耗品確認・補充 | 予定 | BM-13-02、BM-15-02〜04 |
-| `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-005` | 定期床面清掃 | 予定 | BM-04、BM-12、BM-13、BM-17 |
+| `BM-06-07` | 消耗品を補充する | `PROC-CLN-004` | [消耗品確認・補充](../02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md) | 草案あり | BM-13-02、BM-15-02〜04 |
+| `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-005` | [定期床面清掃](../02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md) | 草案あり | BM-04、BM-12、BM-13、BM-17 |
 | `BM-06-09` | 清掃品質を検査する | `PROC-CLN-006` | [清掃品質検査・再清掃](../02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md) | 草案あり | BM-06-10〜11、BM-13、BM-17 |
 
 ### 4.1 清掃業務から見た対応
@@ -43,7 +43,7 @@
 | `BM-06-02` 日常清掃を計画する | 現場手順の前工程 | 作業指示・日次計画として開始条件へ接続する |
 | `BM-06-03` 日常清掃を実施する | 対応あり | `PROC-CLN-001`、`PROC-CLN-002` |
 | `BM-06-04` 定期清掃を計画する | 現場手順の前工程 | `PROC-CLN-005`の作業計画へ接続する |
-| `BM-06-05` 定期・特別清掃を実施する | 対応予定 | `PROC-CLN-005` |
+| `BM-06-05` 定期・特別清掃を実施する | 対応あり | [`PROC-CLN-005`](../02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md) |
 | `BM-06-06` 廃棄物を回収・分別する | 対応あり | `PROC-CLN-003` |
 | `BM-06-07` 消耗品を補充する | 対応あり | [`PROC-CLN-004`](../02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md)、`PROC-CLN-002` |
 | `BM-06-08` 清掃結果を記録する | 各清掃手順の共通関連業務 | 独立手順ではなく記録工程として組み込む |
@@ -60,7 +60,7 @@
 | `BM-08-05` | メーターを検針する | `PROC-EQP-003` | [検針・測定値記録](../02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md) | 草案あり | BM-08-06、BM-09-05〜06、BM-15-08 |
 | `BM-08-02` | 設備を起動・停止する | `PROC-EQP-004` | [設備運転操作・切替え](../02_field-procedures/02_equipment/PROC-EQP-004_equipment-operation-and-switching.md) | 草案あり | BM-08-01、08、BM-12、BM-13、BM-17 |
 | `BM-08-07` | 警報に対応する | `PROC-EQP-005` | [警報・設備異常対応](../02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md) | 草案あり | BM-10-01〜05、BM-12、BM-13 |
-| `BM-10-03` | 一次対応を行う | `PROC-EQP-006` | 緊急停止・隔離 | 予定 | BM-08、BM-10、BM-12、BM-17 |
+| `BM-10-03` | 一次対応を行う | `PROC-EQP-006` | [緊急停止・隔離](../02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md) | 草案あり | BM-08、BM-10、BM-12、BM-17 |
 | `BM-10-10` | 完了検査・引渡しを行う | `PROC-EQP-007` | [試運転・復旧確認](../02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md) | 草案あり | BM-08-02・06、BM-10-09・11、BM-13、BM-14 |
 | `BM-09-08` | 清掃・給油・調整を行う | `PROC-EQP-008` | 設備日常保守 | 予定 | BM-09-07、BM-13、BM-14、BM-15 |
 
@@ -74,7 +74,7 @@
 | `BM-11-02` | 入退館を管理する | `PROC-SEC-002` | [入退館受付・確認](../02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md) | 草案あり | BM-12、BM-13 |
 | `BM-11-03` | 鍵を管理する | `PROC-SEC-003` | [鍵・入館証管理](../02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md) | 草案あり | BM-11-02、BM-13、BM-14、BM-17 |
 | `BM-11-04` | 巡回警備を行う | `PROC-SEC-004` | [巡回警備](../02_field-procedures/03_security/PROC-SEC-004_security-patrol.md) | 草案あり | BM-11-07・10、BM-13、BM-17 |
-| `BM-11-05` | 監視設備を確認する | `PROC-SEC-005` | 警報・防犯監視 | 予定 | BM-11-06・09〜10、BM-13 |
+| `BM-11-05` | 監視設備を確認する | `PROC-SEC-005` | [警報・防犯監視](../02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md) | 草案あり | BM-11-06・09〜10、BM-13 |
 | `BM-11-06` | 事故・事件へ対応する | `PROC-SEC-006` | 不審者・不審物対応 | 予定 | BM-12、BM-13、BM-17 |
 | `BM-11-06` | 事故・事件へ対応する | `PROC-SEC-007` | [事故・急病・現場保全](../02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md) | 草案あり | BM-11-10、BM-12、BM-13、BM-17 |
 | `BM-11-09` | 災害時対応を行う | `PROC-SEC-008` | 火災・地震等の災害初動 | 予定 | BM-11-07〜08・10、BM-12、BM-13、BM-17 |
@@ -102,6 +102,7 @@
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 1.0 | 2026-07-22 | PROC-CLN-005、PROC-EQP-006、PROC-SEC-005を追加し、清掃完了・安全隔離・警報対応の責任境界を具体化 |
 | 0.9 | 2026-07-22 | PROC-CLN-004、PROC-EQP-004、PROC-SEC-003を追加し、補充・操作・媒体管理の責任境界を具体化 |
 | 0.8 | 2026-07-22 | PROC-CLN-003、PROC-EQP-003、PROC-SEC-002を追加し、各領域の次順位手順を具体化 |
 | 0.7 | 2026-07-22 | PROC-CLN-006、PROC-EQP-001、PROC-SEC-007を追加し、各領域の次順位手順を具体化 |
