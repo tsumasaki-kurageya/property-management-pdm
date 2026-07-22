@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # P04 定常業務の実施
 
-### 8.1 共通入口・出口
+## 8.1 共通入口・出口
 
 ```mermaid
 flowchart TD
@@ -26,7 +26,7 @@ flowchart TD
     F --> H["P06 異常・修繕・復旧"]
 ```
 
-### 8.2 領域別の主な流れ
+## 8.2 領域別の主な流れ
 
 | 領域 | 計画・条件 | 実施 | 記録・判定 | 主な分岐 |
 |---|---|---|---|---|
@@ -38,4 +38,4 @@ flowchart TD
 
 勤務交代時はBM-05-10で未完了事項、異常、物品及び対応責任を引き継ぐ。作業終了だけではP05の結果確認、P09の是正又は施設利用再開まで完了したことにならない。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

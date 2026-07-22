@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-01 営業・提案
 
-[本文でこの領域を学ぶ](/operations/pre-contract-and-specification/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../operations/pre-contract-and-specification/) · [18領域へ戻る](../)
 
 ## 業務一覧
 

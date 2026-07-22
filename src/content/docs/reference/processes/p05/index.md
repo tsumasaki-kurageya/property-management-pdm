@@ -24,4 +24,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 異常を認知した場合は、定期報告を待たずBM-13-11で速報・上申しP06へ接続する。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

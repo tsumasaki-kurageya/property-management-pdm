@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-16 売上・請求・原価管理
 
-[本文でこの領域を学ぶ](/operations/additional-work-billing-and-costs/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../operations/additional-work-billing-and-costs/) · [18領域へ戻る](../)
 
 ## 業務一覧
 

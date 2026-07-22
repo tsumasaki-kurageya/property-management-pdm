@@ -105,8 +105,8 @@ flowchart TB
 
 ## さらに詳しく
 
-- [18領域・178業務をIDや名称から調べる](./reference/business-catalog/)
-- [12横断プロセスで業務の接続を調べる](./reference/processes/)
+- [18領域・178業務をIDや名称から調べる](../reference/business-catalog/)
+- [12横断プロセスで業務の接続を調べる](../reference/processes/)
 - [ビルメンテナンス業務カタログ](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md)
 - [ビルメンテナンス業務プロセスマップ](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/04_mappings/business-process-map.md)
 

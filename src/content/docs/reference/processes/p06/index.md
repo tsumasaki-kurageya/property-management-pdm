@@ -28,4 +28,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 緊急初動、技術的復旧、区域解除、施設利用再開、契約検収及び異常案件完了は別の判断である。延期・見送り時は、決定者、残存リスク、暫定対策、監視条件及び再判定期限を残す。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

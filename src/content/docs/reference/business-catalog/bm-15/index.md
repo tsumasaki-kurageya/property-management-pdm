@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-15 資材・在庫・購買管理
 
-[本文でこの領域を学ぶ](/field-work/materials-and-inventory/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../field-work/materials-and-inventory/) · [18領域へ戻る](../)
 
 ## 業務一覧
 

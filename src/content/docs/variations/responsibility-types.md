@@ -41,12 +41,12 @@ flowchart TB
 
 業務ID・案件、四主体、承認上限、不在時代行、期限、連絡先、必要証跡を一行で追えるようにします。平常時だけでなく、異常、未実施、期限超過、契約外作業についても決めます。
 
-次は[複数条件の重ね合わせ](./combining-conditions/)で、ここまでの条件を一つの物件へ統合します。
+次は[複数条件の重ね合わせ](../combining-conditions/)で、ここまでの条件を一つの物件へ統合します。
 
 ## さらに詳しく
 
 - [オーナー・PM・FM・BM責任分界プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/owner-pm-fm-bm-responsibility-profiles.md)
 - [契約役割プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/contract-role-profiles.md)
-- [業務の時間軸と完了状態](../overview/completion-states/)
+- [業務の時間軸と完了状態](../../overview/completion-states/)
 
 最終確認日：2026年7月23日。記載状態：標準モデル。

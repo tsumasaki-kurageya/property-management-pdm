@@ -24,4 +24,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 情報不足、体制未確定又は法令上必要な資格者不在の場合は、運用開始可能とは判定せず、不足事項を担当・期限付きで管理する。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

@@ -100,22 +100,22 @@ async function parseDocumentDirectory(directory) {
 }
 
 const narrativeByArea = {
-  'BM-01': '/operations/pre-contract-and-specification/', 'BM-02': '/operations/contracts-and-responsibilities/',
-  'BM-03': '/operations/startup/', 'BM-04': '/operations/planning-and-unperformed-work/',
-  'BM-05': '/field-work/staffing-and-contractors/', 'BM-06': '/field-work/cleaning/',
-  'BM-07': '/field-work/hygiene/', 'BM-08': '/field-work/equipment-operation/',
-  'BM-09': '/field-work/inspection-and-maintenance/', 'BM-10': '/incidents/abnormality-to-restoration/',
-  'BM-11': '/field-work/security-and-disaster-prevention/', 'BM-12': '/incidents/complaints-accidents-and-disasters/',
-  'BM-13': '/field-work/records-and-reports/', 'BM-14': '/operations/startup/',
-  'BM-15': '/field-work/materials-and-inventory/', 'BM-16': '/operations/additional-work-billing-and-costs/',
-  'BM-17': '/variations/statutory-duties/', 'BM-18': '/overview/business-lifecycle/',
+  'BM-01': 'operations/pre-contract-and-specification/', 'BM-02': 'operations/contracts-and-responsibilities/',
+  'BM-03': 'operations/startup/', 'BM-04': 'operations/planning-and-unperformed-work/',
+  'BM-05': 'field-work/staffing-and-contractors/', 'BM-06': 'field-work/cleaning/',
+  'BM-07': 'field-work/hygiene/', 'BM-08': 'field-work/equipment-operation/',
+  'BM-09': 'field-work/inspection-and-maintenance/', 'BM-10': 'incidents/abnormality-to-restoration/',
+  'BM-11': 'field-work/security-and-disaster-prevention/', 'BM-12': 'incidents/complaints-accidents-and-disasters/',
+  'BM-13': 'field-work/records-and-reports/', 'BM-14': 'operations/startup/',
+  'BM-15': 'field-work/materials-and-inventory/', 'BM-16': 'operations/additional-work-billing-and-costs/',
+  'BM-17': 'variations/statutory-duties/', 'BM-18': 'overview/business-lifecycle/',
 };
 const profileSources = [
-  ['建物用途', 'docs/building-use-profiles.md', '/variations/building-use/'],
-  ['管理方式', 'docs/management-operation-profiles.md', '/variations/management-methods/'],
-  ['契約役割', 'docs/contract-role-profiles.md', '/variations/contract-layers/'],
-  ['オーナー・PM・FM・BM責任分界', 'docs/owner-pm-fm-bm-responsibility-profiles.md', '/variations/responsibility-boundaries/'],
-  ['法令義務', 'docs/statutory-duty-profiles.md', '/variations/statutory-duties/'],
+  ['建物用途', 'docs/building-use-profiles.md', '../../variations/building-use/'],
+  ['管理方式', 'docs/management-operation-profiles.md', '../../variations/management-methods/'],
+  ['契約役割', 'docs/contract-role-profiles.md', '../../variations/contract-layers/'],
+  ['オーナー・PM・FM・BM責任分界', 'docs/owner-pm-fm-bm-responsibility-profiles.md', '../../variations/responsibility-boundaries/'],
+  ['法令義務', 'docs/statutory-duty-profiles.md', '../../variations/statutory-duties/'],
 ];
 const outputs = new Map();
 const add = (path, content) => outputs.set(join(outputRoot, path), `${content.trim()}\n`);
@@ -139,13 +139,13 @@ for (const task of catalog.tasks) if (!processMappings.has(task.id)) throw new E
 
 let catalogIndex = frontmatter({ title: '業務カタログ', description: '18領域・178業務を業務IDと名称から調べる索引です。', sourceFile: 'docs/building-maintenance-business-catalog.md', sourceVersion: catalog.version });
 catalogIndex += '# 18領域・178業務\n\n業務IDまたは日本語の業務名をサイト内検索へ入力するか、次の領域から辿ってください。業務の順序は[12横断プロセス](../processes/)で確認できます。\n\n| 領域 | 業務数 | 本文で学ぶ |\n|---|---:|---|\n';
-for (const area of catalog.areas) catalogIndex += `| [${area.id} ${area.name}](./${slug(area.id)}/) | ${area.tasks.length} | [解説](${narrativeByArea[area.id]}) |\n`;
+for (const area of catalog.areas) catalogIndex += `| [${area.id} ${area.name}](./${slug(area.id)}/) | ${area.tasks.length} | [解説](../../${narrativeByArea[area.id]}) |\n`;
 catalogIndex += '\n## 検索の例\n\n- 業務ID：`BM-10-02`\n- 業務名：`緊急度を判断する`\n- 領域名：`不具合・修繕管理`\n';
 add('business-catalog/index.md', catalogIndex);
 
 for (const area of catalog.areas) {
   let page = frontmatter({ title: `${area.id} ${area.name}`, description: `${area.name}に含まれる${area.tasks.length}業務のリファレンスです。`, sourceFile: 'docs/building-maintenance-business-catalog.md', sourceVersion: catalog.version });
-  page += `# ${area.id} ${area.name}\n\n[本文でこの領域を学ぶ](${narrativeByArea[area.id]}) · [18領域へ戻る](../)\n\n## 業務一覧\n\n`;
+  page += `# ${area.id} ${area.name}\n\n[本文でこの領域を学ぶ](../../../${narrativeByArea[area.id]}) · [18領域へ戻る](../)\n\n## 業務一覧\n\n`;
   page += area.tasks.map((task) => `- [${task.id} ${task.name}](#${anchor(task)})`).join('\n');
   page += '\n\n';
   for (const task of area.tasks) {
@@ -169,7 +169,8 @@ for (const process of processes) processIndex += `| [${process.id}](./${process.
 add('processes/index.md', processIndex);
 for (const process of processes) {
   let page = frontmatter({ title: `${process.id} ${process.name}`, description: `${process.name}の開始、判断、成果物、接続を確認します。`, sourceFile: 'docs/04_mappings/business-process-map.md', sourceVersion: 'v0.1' });
-  page += `# ${process.id} ${process.name}\n\n${process.body}\n\n[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)\n`;
+  const body = process.body.replace(/^(#{3,6}) /gm, (_, marks) => `${marks.slice(1)} `);
+  page += `# ${process.id} ${process.name}\n\n${body}\n\n[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)\n`;
   add(`processes/${process.id.toLowerCase()}/index.md`, page);
 }
 

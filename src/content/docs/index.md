@@ -28,4 +28,4 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
   </Card>
 </CardGrid>
 
-このサイトは構築中です。現在はサイト基盤と学習順序のみを確認でき、各分野の本文と詳細リファレンスは後続タスクで追加します。
+本文、図解、業務カタログのリファレンスを含む初版です。収録範囲と確認済みの品質項目は[初版の範囲と品質](./about/initial-release/)で確認できます。

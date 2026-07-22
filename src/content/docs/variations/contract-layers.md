@@ -39,11 +39,11 @@ flowchart TB
 
 主な関連業務：BM-02-04、BM-03-04〜05、BM-05-07〜10、BM-13、BM-17-10。
 
-次は[オーナー・PM・FM・BM](./responsibility-boundaries/)で、契約会社ではなく機能・責任の分け方を見ます。
+次は[オーナー・PM・FM・BM](../responsibility-boundaries/)で、契約会社ではなく機能・責任の分け方を見ます。
 
 ## さらに詳しく
 
 - [契約役割プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/contract-role-profiles.md)
-- [契約と責任分界](../operations/contracts-and-responsibilities/)
+- [契約と責任分界](../../operations/contracts-and-responsibilities/)
 
 最終確認日：2026年7月23日。記載状態：標準モデル。実際の階層・権限は個別契約で確認します。

@@ -25,4 +25,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 法的義務主体、実施統括者、資格を持つ実施者、結果確認者及び行政報告者を分ける。契約上の委託によって法的義務が当然に移転したものとは扱わない。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

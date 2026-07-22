@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-10 不具合・修繕管理
 
-[本文でこの領域を学ぶ](/incidents/abnormality-to-restoration/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../incidents/abnormality-to-restoration/) · [18領域へ戻る](../)
 
 ## 業務一覧
 

@@ -31,11 +31,11 @@ flowchart TB
 
 | 条件軸 | 主な問い | 次のページ |
 |---|---|---|
-| 建物用途 | 誰が、いつ、どのように建物を使うか | [建物用途による違い](./variations/building-use/) |
-| 管理方式 | 現場にいつ人がいて、異常をどう検知するか | [常駐・巡回・遠隔監視](./variations/management-methods/) |
-| 契約階層 | 誰が顧客と契約し、誰へ仕事を委ねるか | [元請け・再委託先・専門業者](./variations/contract-layers/) |
-| 責任・機能 | 誰が所有、経営、利用、現場管理を担うか | [オーナー・PM・FM・BM](./variations/responsibility-boundaries/) |
-| 法令 | 何が適用され、誰が義務を負うか | [法令業務の考え方](./variations/statutory-duties/) |
+| 建物用途 | 誰が、いつ、どのように建物を使うか | [建物用途による違い](./building-use/) |
+| 管理方式 | 現場にいつ人がいて、異常をどう検知するか | [常駐・巡回・遠隔監視](./management-methods/) |
+| 契約階層 | 誰が顧客と契約し、誰へ仕事を委ねるか | [元請け・再委託先・専門業者](./contract-layers/) |
+| 責任・機能 | 誰が所有、経営、利用、現場管理を担うか | [オーナー・PM・FM・BM](./responsibility-boundaries/) |
+| 法令 | 何が適用され、誰が義務を負うか | [法令業務の考え方](./statutory-duties/) |
 
 これらは代替関係ではありません。一つの物件にすべての軸が同時に存在します。例えば「病院だから常駐」「BMだから法的義務を負う」と肩書だけで決めず、各軸を個別に確認します。
 
@@ -43,12 +43,12 @@ flowchart TB
 
 この章の比較は、業務分析用の標準モデルです。実際の役割、周期、資格、報告先、権限は、個別契約、設備、物件体制、最新の法令・条例、所管行政庁の判断で確認します。
 
-次は[建物用途による違い](./variations/building-use/)で、建物の使われ方が現場業務へ与える影響を見ます。
+次は[建物用途による違い](./building-use/)で、建物の使われ方が現場業務へ与える影響を見ます。
 
 ## さらに詳しく
 
-- [五つの条件差プロファイルから調べる](./reference/profiles/)
-- [条件が重なる前の共通業務を調べる](./reference/business-catalog/)
+- [五つの条件差プロファイルから調べる](../reference/profiles/)
+- [条件が重なる前の共通業務を調べる](../reference/business-catalog/)
 - [ビルメンテナンス業務カタログ](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md)
 - [建物用途別プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-use-profiles.md)
 - [管理方式プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/management-operation-profiles.md)

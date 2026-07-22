@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-07 衛生管理
 
-[本文でこの領域を学ぶ](/field-work/hygiene/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../field-work/hygiene/) · [18領域へ戻る](../)
 
 ## 業務一覧
 
