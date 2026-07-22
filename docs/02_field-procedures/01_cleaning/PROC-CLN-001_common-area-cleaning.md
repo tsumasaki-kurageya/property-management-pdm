@@ -154,7 +154,7 @@
 - [清掃現場作業手順](README.md)
 - [`PROC-COM-002` 作業前安全確認・危険予知](../00_common/PROC-COM-002_pre-work-safety-check.md)
 - [ビルメンテナンス業務カタログ](../../building-maintenance-business-catalog.md)
-- 将来作成：`CHK-CLN-001` 共用部日常清掃チェックリスト
+- [`CHK-CLN-001` 共用部日常清掃チェックリスト](../../03_checklists/01_cleaning/CHK-CLN-001_common-area-cleaning.md)
 
 ## 15. 改訂履歴
 
