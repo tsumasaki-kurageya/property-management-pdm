@@ -26,12 +26,15 @@
 | 設備 | [`PROC-EQP-005` 警報・設備異常対応](../02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md) | 0.1 | [`CHK-EQP-002` 警報・設備異常対応](../03_checklists/02_equipment/CHK-EQP-002_alarm-response.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-006` 緊急停止・隔離](../02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md) | 0.1 | [`CHK-EQP-007` 緊急停止・隔離](../03_checklists/02_equipment/CHK-EQP-007_emergency-shutdown-and-isolation.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-007` 試運転・復旧確認](../02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md) | 0.1 | [`CHK-EQP-003` 試運転・復旧確認](../03_checklists/02_equipment/CHK-EQP-003_restoration-verification.md) | 0.1 | 草案あり |
+| 設備 | [`PROC-EQP-008` 設備日常保守](../02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md) | 0.1 | [`CHK-EQP-008` 設備日常保守](../03_checklists/02_equipment/CHK-EQP-008_routine-maintenance.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-001` 警備勤務開始・交代](../02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md) | 0.2 | [`CHK-SEC-002` 警備勤務開始・交代](../03_checklists/03_security/CHK-SEC-002_duty-handover.md) | 0.2 | 草案あり |
 | 警備 | [`PROC-SEC-002` 入退館受付・確認](../02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md) | 0.2 | [`CHK-SEC-004` 入退館受付・確認](../03_checklists/03_security/CHK-SEC-004_access-reception-and-verification.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-003` 鍵・入館証管理](../02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md) | 0.1 | [`CHK-SEC-005` 鍵・入館証管理](../03_checklists/03_security/CHK-SEC-005_key-and-access-card-management.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-004` 巡回警備](../02_field-procedures/03_security/PROC-SEC-004_security-patrol.md) | 0.1 | [`CHK-SEC-001` 巡回警備](../03_checklists/03_security/CHK-SEC-001_security-patrol.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-005` 警報・防犯監視](../02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md) | 0.1 | [`CHK-SEC-006` 警報・防犯監視](../03_checklists/03_security/CHK-SEC-006_alarm-and-security-monitoring.md) | 0.1 | 草案あり |
+| 警備 | [`PROC-SEC-006` 不審者・不審物対応](../02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md) | 0.1 | [`CHK-SEC-007` 不審者・不審物対応](../03_checklists/03_security/CHK-SEC-007_suspicious-person-and-object-response.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-007` 事故・急病・現場保全](../02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md) | 0.1 | [`CHK-SEC-003` 事故・急病・現場保全](../03_checklists/03_security/CHK-SEC-003_incident-illness-scene-preservation.md) | 0.1 | 草案あり |
+| 警備 | [`PROC-SEC-008` 火災・地震等の災害初動](../02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md) | 0.1 | [`CHK-SEC-008` 火災・地震等の災害初動](../03_checklists/03_security/CHK-SEC-008_disaster-initial-response.md) | 0.1 | 草案あり |
 
 ## 3. 版・変更管理
 
@@ -78,6 +81,7 @@
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 1.3 | 2026-07-22 | PROC-EQP-008、PROC-SEC-006、PROC-SEC-008と対応チェックリストを追加し、保守復帰・不審事象・災害初動の状態分離を反映 |
 | 1.2 | 2026-07-22 | PROC-CLN-005、PROC-EQP-006、PROC-SEC-005と対応チェックリストを追加し、清掃・隔離・監視の状態分離を反映 |
 | 1.1 | 2026-07-22 | PROC-CLN-004、PROC-EQP-004、PROC-SEC-003と対応チェックリストを追加し、補充・操作・媒体管理の状態分離を反映 |
 | 1.0 | 2026-07-22 | PROC-CLN-003、PROC-EQP-003、PROC-SEC-002と対応チェックリストを追加し、状態分離を反映 |
