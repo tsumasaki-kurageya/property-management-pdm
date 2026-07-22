@@ -15,11 +15,14 @@
 | 共通 | [`PROC-COM-005` 完了報告](../02_field-procedures/00_common/PROC-COM-005_completion-reporting.md) | 0.1 | [`CHK-COM-004` 完了報告](../03_checklists/00_common/CHK-COM-004_completion-reporting.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-001` 共用部日常清掃](../02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md) | 0.1 | [`CHK-CLN-001` 共用部日常清掃](../03_checklists/01_cleaning/CHK-CLN-001_common-area-cleaning.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-002` トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 0.1 | [`CHK-CLN-002` トイレ清掃](../03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md) | 0.1 | 草案あり |
+| 清掃 | [`PROC-CLN-006` 清掃品質検査・再清掃](../02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md) | 0.1 | [`CHK-CLN-003` 清掃品質検査・再清掃](../03_checklists/01_cleaning/CHK-CLN-003_quality-inspection-and-recleaning.md) | 0.1 | 草案あり |
+| 設備 | [`PROC-EQP-001` 中央監視・運転状態確認](../02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md) | 0.1 | [`CHK-EQP-004` 中央監視・運転状態確認](../03_checklists/02_equipment/CHK-EQP-004_central-monitoring.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-002` 設備巡回点検](../02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md) | 0.1 | [`CHK-EQP-001` 設備巡回点検](../03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-005` 警報・設備異常対応](../02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md) | 0.1 | [`CHK-EQP-002` 警報・設備異常対応](../03_checklists/02_equipment/CHK-EQP-002_alarm-response.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-007` 試運転・復旧確認](../02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md) | 0.1 | [`CHK-EQP-003` 試運転・復旧確認](../03_checklists/02_equipment/CHK-EQP-003_restoration-verification.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-001` 警備勤務開始・交代](../02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md) | 0.2 | [`CHK-SEC-002` 警備勤務開始・交代](../03_checklists/03_security/CHK-SEC-002_duty-handover.md) | 0.2 | 草案あり |
 | 警備 | [`PROC-SEC-004` 巡回警備](../02_field-procedures/03_security/PROC-SEC-004_security-patrol.md) | 0.1 | [`CHK-SEC-001` 巡回警備](../03_checklists/03_security/CHK-SEC-001_security-patrol.md) | 0.1 | 草案あり |
+| 警備 | [`PROC-SEC-007` 事故・急病・現場保全](../02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md) | 0.1 | [`CHK-SEC-003` 事故・急病・現場保全](../03_checklists/03_security/CHK-SEC-003_incident-illness-scene-preservation.md) | 0.1 | 草案あり |
 
 ## 3. 版・変更管理
 
@@ -54,10 +57,13 @@
 
 作業前安全確認では、「開始可」「条件付き開始」「開始保留」「開始不可」を記録し、条件付き開始の責任者・監視・中止条件と、開始しない場合の安全状態・再確認条件を保持する。
 
+清掃品質検査では「自己確認」「独立検査」「再清掃」「再検査」を、中央監視では「表示復帰」「現場正常」「監視不能」を、事故・急病対応では「救護終了」「指揮移管」「現場保全」「事故案件完了」を別状態として記録する。
+
 ## 5. 改訂履歴
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 0.9 | 2026-07-22 | 各領域の次順位3手順・チェックリストを追加し、状態分離の検証結果を反映 |
 | 0.8 | 2026-07-22 | CHK-COM-001を追加し、共通手順5件のチェックリスト対応を具体化 |
 | 0.7 | 2026-07-22 | PROC-COM-005とCHK-COM-004を追加し、作業終了・受領・確認・検収・提出の状態分離を反映 |
 | 0.6 | 2026-07-22 | PROC-EQP-007とCHK-EQP-003を追加し、復旧・再開・検収の状態分離を反映 |
