@@ -137,6 +137,8 @@ flowchart TB
 
 ## さらに詳しく
 
+- [判断・例外・完了条件を重要業務14件から調べる](../../reference/critical-businesses/)
+- [関連する横断プロセスを調べる](../../reference/processes/)
 - [ビルメンテナンス業務プロセスマップ](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/04_mappings/business-process-map.md)
 - [重要業務分析](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/04_mappings/critical-business-analysis.md)
 - [管理方式プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/management-operation-profiles.md)

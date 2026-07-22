@@ -95,6 +95,13 @@ export default defineConfig({
           items: [
             { label: '入口', slug: 'reference' },
             { label: '図解一覧', slug: 'diagrams' },
+            { label: '業務カタログ', slug: 'reference/business-catalog' },
+            { label: '12横断プロセス', slug: 'reference/processes' },
+            { label: '重要業務14件', slug: 'reference/critical-businesses' },
+            { label: '条件差プロファイル', slug: 'reference/profiles' },
+            { label: '現場作業手順', slug: 'reference/field-procedures' },
+            { label: 'チェックリスト', slug: 'reference/checklists' },
+            { label: '分析用原本一覧', slug: 'reference/sources' },
           ],
         },
         {

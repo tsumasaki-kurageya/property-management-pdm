@@ -47,6 +47,8 @@ flowchart TB
 
 ## さらに詳しく
 
+- [五つの条件差プロファイルから調べる](./reference/profiles/)
+- [条件が重なる前の共通業務を調べる](./reference/business-catalog/)
 - [ビルメンテナンス業務カタログ](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md)
 - [建物用途別プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-use-profiles.md)
 - [管理方式プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/management-operation-profiles.md)
