@@ -162,7 +162,7 @@
 - [警備現場作業手順](README.md)
 - [`PROC-COM-002` 作業前安全確認・危険予知](../00_common/PROC-COM-002_pre-work-safety-check.md)
 - [ビルメンテナンス業務カタログ](../../building-maintenance-business-catalog.md)
-- 将来作成：`CHK-SEC-001` 巡回警備チェックリスト
+- [`CHK-SEC-001` 巡回警備チェックリスト](../../03_checklists/03_security/CHK-SEC-001_security-patrol.md)
 - 物件別：警備計画、巡回経路、巡回点、残留者・工事情報、鍵・装備台帳、緊急連絡網
 
 ## 15. 改訂履歴
