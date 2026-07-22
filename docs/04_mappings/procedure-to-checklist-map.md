@@ -17,13 +17,16 @@
 | 清掃 | [`PROC-CLN-002` トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 0.1 | [`CHK-CLN-002` トイレ清掃](../03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-006` 清掃品質検査・再清掃](../02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md) | 0.1 | [`CHK-CLN-003` 清掃品質検査・再清掃](../03_checklists/01_cleaning/CHK-CLN-003_quality-inspection-and-recleaning.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-003` 廃棄物回収・分別](../02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md) | 0.1 | [`CHK-CLN-004` 廃棄物回収・分別](../03_checklists/01_cleaning/CHK-CLN-004_waste-collection-and-sorting.md) | 0.1 | 草案あり |
+| 清掃 | [`PROC-CLN-004` 消耗品確認・補充](../02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md) | 0.1 | [`CHK-CLN-005` 消耗品確認・補充](../03_checklists/01_cleaning/CHK-CLN-005_consumables-check-and-replenishment.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-001` 中央監視・運転状態確認](../02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md) | 0.1 | [`CHK-EQP-004` 中央監視・運転状態確認](../03_checklists/02_equipment/CHK-EQP-004_central-monitoring.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-002` 設備巡回点検](../02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md) | 0.1 | [`CHK-EQP-001` 設備巡回点検](../03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-003` 検針・測定値記録](../02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md) | 0.1 | [`CHK-EQP-005` 検針・測定値記録](../03_checklists/02_equipment/CHK-EQP-005_meter-reading-and-measurement.md) | 0.1 | 草案あり |
+| 設備 | [`PROC-EQP-004` 設備運転操作・切替え](../02_field-procedures/02_equipment/PROC-EQP-004_equipment-operation-and-switching.md) | 0.1 | [`CHK-EQP-006` 設備運転操作・切替え](../03_checklists/02_equipment/CHK-EQP-006_equipment-operation-and-switching.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-005` 警報・設備異常対応](../02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md) | 0.1 | [`CHK-EQP-002` 警報・設備異常対応](../03_checklists/02_equipment/CHK-EQP-002_alarm-response.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-007` 試運転・復旧確認](../02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md) | 0.1 | [`CHK-EQP-003` 試運転・復旧確認](../03_checklists/02_equipment/CHK-EQP-003_restoration-verification.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-001` 警備勤務開始・交代](../02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md) | 0.2 | [`CHK-SEC-002` 警備勤務開始・交代](../03_checklists/03_security/CHK-SEC-002_duty-handover.md) | 0.2 | 草案あり |
-| 警備 | [`PROC-SEC-002` 入退館受付・確認](../02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md) | 0.1 | [`CHK-SEC-004` 入退館受付・確認](../03_checklists/03_security/CHK-SEC-004_access-reception-and-verification.md) | 0.1 | 草案あり |
+| 警備 | [`PROC-SEC-002` 入退館受付・確認](../02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md) | 0.2 | [`CHK-SEC-004` 入退館受付・確認](../03_checklists/03_security/CHK-SEC-004_access-reception-and-verification.md) | 0.1 | 草案あり |
+| 警備 | [`PROC-SEC-003` 鍵・入館証管理](../02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md) | 0.1 | [`CHK-SEC-005` 鍵・入館証管理](../03_checklists/03_security/CHK-SEC-005_key-and-access-card-management.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-004` 巡回警備](../02_field-procedures/03_security/PROC-SEC-004_security-patrol.md) | 0.1 | [`CHK-SEC-001` 巡回警備](../03_checklists/03_security/CHK-SEC-001_security-patrol.md) | 0.1 | 草案あり |
 | 警備 | [`PROC-SEC-007` 事故・急病・現場保全](../02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md) | 0.1 | [`CHK-SEC-003` 事故・急病・現場保全](../03_checklists/03_security/CHK-SEC-003_incident-illness-scene-preservation.md) | 0.1 | 草案あり |
 
@@ -64,10 +67,13 @@
 
 廃棄物回収では「回収」「適正分別・安全集積」「後続処理への引渡し」を、検針では「読取り」「原記録照合」「異常・欠測の引渡し」を、入退館受付では「本人確認」「入館許可」「受入先への引渡し」「退館確認」を別状態として記録する。
 
+消耗品補充では「残量確認」「補充」「在庫記録反映」「不足引渡し」を、設備操作では「操作実行」「設備応答」「正常運転」「施設利用再開」を、鍵・入館証管理では「交付・回収」「台帳照合」「保管責任の復帰」「紛失案件完了」を別状態として記録する。
+
 ## 5. 改訂履歴
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 1.1 | 2026-07-22 | PROC-CLN-004、PROC-EQP-004、PROC-SEC-003と対応チェックリストを追加し、補充・操作・媒体管理の状態分離を反映 |
 | 1.0 | 2026-07-22 | PROC-CLN-003、PROC-EQP-003、PROC-SEC-002と対応チェックリストを追加し、状態分離を反映 |
 | 0.9 | 2026-07-22 | 各領域の次順位3手順・チェックリストを追加し、状態分離の検証結果を反映 |
 | 0.8 | 2026-07-22 | CHK-COM-001を追加し、共通手順5件のチェックリスト対応を具体化 |
