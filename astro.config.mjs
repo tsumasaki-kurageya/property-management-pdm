@@ -50,7 +50,17 @@ export default defineConfig({
         },
         {
           label: '現場の業務',
-          items: [{ label: '準備中', slug: 'field-work' }],
+          items: [
+            { label: '現場業務の共通した進み方', slug: 'field-work' },
+            { label: '清掃管理', slug: 'field-work/cleaning' },
+            { label: '衛生管理', slug: 'field-work/hygiene' },
+            { label: '設備運転管理', slug: 'field-work/equipment-operation' },
+            { label: '点検・保守管理', slug: 'field-work/inspection-and-maintenance' },
+            { label: '警備・防災管理', slug: 'field-work/security-and-disaster-prevention' },
+            { label: '人員・協力会社管理', slug: 'field-work/staffing-and-contractors' },
+            { label: '資材・在庫管理', slug: 'field-work/materials-and-inventory' },
+            { label: '作業結果・報告管理', slug: 'field-work/records-and-reports' },
+          ],
         },
         {
           label: '異常と周辺業務',
