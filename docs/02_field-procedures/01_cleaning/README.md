@@ -63,9 +63,9 @@
 | 工程 | 共通手順 | 清掃領域での主な確認 |
 |---|---|---|
 | 作業前 | [`PROC-COM-002` 作業前安全確認・危険予知](../00_common/PROC-COM-002_pre-work-safety-check.md) | 薬剤、濡れ床、電源、第三者動線、汚染、重量物 |
-| 区域設定 | [[`PROC-COM-003` 作業区域設定・解除](../00_common/PROC-COM-003_work-area-control.md)](../00_common/PROC-COM-003_work-area-control.md) | 表示、通行規制、代替動線、利用者への配慮 |
-| 異常発見 | [[`PROC-COM-004` 異常上申](../00_common/PROC-COM-004_abnormality-escalation.md)](../00_common/PROC-COM-004_abnormality-escalation.md) | 破損、漏水、害虫、忘れ物、危険物、感染リスク |
-| 完了 | [[`PROC-COM-005` 完了報告](../00_common/PROC-COM-005_completion-reporting.md)](../00_common/PROC-COM-005_completion-reporting.md) | 仕上がり、原状回復、未実施、再清掃、写真 |
+| 区域設定 | [`PROC-COM-003` 作業区域設定・解除](../00_common/PROC-COM-003_work-area-control.md) | 表示、通行規制、代替動線、利用者への配慮 |
+| 異常発見 | [`PROC-COM-004` 異常上申](../00_common/PROC-COM-004_abnormality-escalation.md) | 破損、漏水、害虫、忘れ物、危険物、感染リスク |
+| 完了 | [`PROC-COM-005` 完了報告](../00_common/PROC-COM-005_completion-reporting.md) | 仕上がり、原状回復、未実施、再清掃、写真 |
 
 共通手順を参照しても、個別手順側には当該作業に固有の開始条件、中止条件、品質基準及び完了条件を記載する。
 
