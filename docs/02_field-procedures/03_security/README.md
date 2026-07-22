@@ -54,9 +54,9 @@
 | [`PROC-SEC-003`](PROC-SEC-003_key-and-access-card-management.md) | 鍵・入館証管理 | BM-11-03 | BM-13-02、BM-14-10、BM-17-07 | 貸出・返却・照合・紛失初動を扱う |
 | [`PROC-SEC-004`](PROC-SEC-004_security-patrol.md) | 巡回警備 | BM-11-04 | BM-11-07、10、BM-13-01〜05、BM-17-06〜07 | 複数巡回点の確認と異常分岐を含む代表手順 |
 | [`PROC-SEC-005`](PROC-SEC-005_alarm-and-security-monitoring.md) | 警報・防犯監視 | BM-11-05 | BM-11-06、09〜10、BM-13-01〜05 | 監視情報から現場確認・応援要請への分岐を扱う |
-| `PROC-SEC-006` | 不審者・不審物対応 | BM-11-06 | BM-12-03〜07、BM-13-02〜05、BM-17-07 | 身体安全、応援要請、警察連絡、現場保全を扱う |
+| [`PROC-SEC-006`](PROC-SEC-006_suspicious-person-and-object-response.md) | 不審者・不審物対応 | BM-11-06 | BM-12-03〜07、BM-13-02〜05、BM-17-07 | 身体安全、応援要請、警察連絡、現場保全を扱う |
 | [`PROC-SEC-007`](PROC-SEC-007_incident-illness-scene-preservation.md) | 事故・急病・現場保全 | BM-11-06 | BM-11-10、BM-12-03〜08、BM-13-02〜05、BM-17-07 | 人命優先の初動と証跡・引渡しを扱う |
-| `PROC-SEC-008` | 火災・地震等の災害初動 | BM-11-09 | BM-11-07〜08、10、BM-12-08、BM-13-02〜05、BM-17-07〜09 | 消防計画等への接続と初動範囲を扱う |
+| [`PROC-SEC-008`](PROC-SEC-008_disaster-initial-response.md) | 火災・地震等の災害初動 | BM-11-09 | BM-11-07〜08、10、BM-12-08、BM-13-02〜05、BM-17-07〜09 | 消防計画等への接続と初動範囲を扱う |
 
 業務IDは[ビルメンテナンス業務カタログ](../../building-maintenance-business-catalog.md)を参照する。個別手順では、警備計画・消防計画・契約上の担当範囲と照合して関連業務IDを確定する。`BM-05-10`は領域横断の勤務・担当引継ぎを表し、`PROC-SEC-001`は共通手順の受領判定・責任移管条件を維持したまま、警備固有の確認を追加する。
 
