@@ -4,6 +4,8 @@
 
 本書は、現場作業手順と実行用チェックリストの対応、版及び作成状況を管理する。判断基準、異常分岐及び権限は手順書を正とし、チェックリストは一回の実施事実と証跡を記録する。
 
+全手順・帳票の責任分界、状態遷移及び追跡性の確認結果は、[現場作業手順・チェックリスト横断レビュー](procedure-cross-review.md)を参照する。
+
 ## 2. 対応表
 
 | 領域 | 手順 | 手順版 | チェックリスト | 帳票版 | 状態 |
@@ -13,14 +15,14 @@
 | 共通 | [`PROC-COM-003` 作業区域設定・解除](../02_field-procedures/00_common/PROC-COM-003_work-area-control.md) | 0.1 | [`CHK-COM-003` 作業区域設定・解除](../03_checklists/00_common/CHK-COM-003_work-area-control.md) | 0.1 | 草案あり |
 | 共通 | [`PROC-COM-004` 異常上申](../02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md) | 0.1 | [`CHK-COM-002` 異常上申](../03_checklists/00_common/CHK-COM-002_abnormality-escalation.md) | 0.1 | 草案あり |
 | 共通 | [`PROC-COM-005` 完了報告](../02_field-procedures/00_common/PROC-COM-005_completion-reporting.md) | 0.1 | [`CHK-COM-004` 完了報告](../03_checklists/00_common/CHK-COM-004_completion-reporting.md) | 0.1 | 草案あり |
-| 清掃 | [`PROC-CLN-001` 共用部日常清掃](../02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md) | 0.1 | [`CHK-CLN-001` 共用部日常清掃](../03_checklists/01_cleaning/CHK-CLN-001_common-area-cleaning.md) | 0.1 | 草案あり |
-| 清掃 | [`PROC-CLN-002` トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 0.1 | [`CHK-CLN-002` トイレ清掃](../03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md) | 0.1 | 草案あり |
+| 清掃 | [`PROC-CLN-001` 共用部日常清掃](../02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md) | 0.1 | [`CHK-CLN-001` 共用部日常清掃](../03_checklists/01_cleaning/CHK-CLN-001_common-area-cleaning.md) | 0.2 | 草案あり |
+| 清掃 | [`PROC-CLN-002` トイレ清掃](../02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md) | 0.2 | [`CHK-CLN-002` トイレ清掃](../03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md) | 0.2 | 草案あり |
 | 清掃 | [`PROC-CLN-006` 清掃品質検査・再清掃](../02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md) | 0.1 | [`CHK-CLN-003` 清掃品質検査・再清掃](../03_checklists/01_cleaning/CHK-CLN-003_quality-inspection-and-recleaning.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-003` 廃棄物回収・分別](../02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md) | 0.1 | [`CHK-CLN-004` 廃棄物回収・分別](../03_checklists/01_cleaning/CHK-CLN-004_waste-collection-and-sorting.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-004` 消耗品確認・補充](../02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md) | 0.1 | [`CHK-CLN-005` 消耗品確認・補充](../03_checklists/01_cleaning/CHK-CLN-005_consumables-check-and-replenishment.md) | 0.1 | 草案あり |
 | 清掃 | [`PROC-CLN-005` 定期床面清掃](../02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md) | 0.1 | [`CHK-CLN-006` 定期床面清掃](../03_checklists/01_cleaning/CHK-CLN-006_periodic-floor-cleaning.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-001` 中央監視・運転状態確認](../02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md) | 0.1 | [`CHK-EQP-004` 中央監視・運転状態確認](../03_checklists/02_equipment/CHK-EQP-004_central-monitoring.md) | 0.1 | 草案あり |
-| 設備 | [`PROC-EQP-002` 設備巡回点検](../02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md) | 0.1 | [`CHK-EQP-001` 設備巡回点検](../03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md) | 0.1 | 草案あり |
+| 設備 | [`PROC-EQP-002` 設備巡回点検](../02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md) | 0.2 | [`CHK-EQP-001` 設備巡回点検](../03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md) | 0.2 | 草案あり |
 | 設備 | [`PROC-EQP-003` 検針・測定値記録](../02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md) | 0.1 | [`CHK-EQP-005` 検針・測定値記録](../03_checklists/02_equipment/CHK-EQP-005_meter-reading-and-measurement.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-004` 設備運転操作・切替え](../02_field-procedures/02_equipment/PROC-EQP-004_equipment-operation-and-switching.md) | 0.1 | [`CHK-EQP-006` 設備運転操作・切替え](../03_checklists/02_equipment/CHK-EQP-006_equipment-operation-and-switching.md) | 0.1 | 草案あり |
 | 設備 | [`PROC-EQP-005` 警報・設備異常対応](../02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md) | 0.1 | [`CHK-EQP-002` 警報・設備異常対応](../03_checklists/02_equipment/CHK-EQP-002_alarm-response.md) | 0.1 | 草案あり |
@@ -81,6 +83,7 @@
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 1.4 | 2026-07-22 | 全27手順・26帳票の横断レビューを実施し、帳票追跡性、後続責任欄及び版整合を是正 |
 | 1.3 | 2026-07-22 | PROC-EQP-008、PROC-SEC-006、PROC-SEC-008と対応チェックリストを追加し、保守復帰・不審事象・災害初動の状態分離を反映 |
 | 1.2 | 2026-07-22 | PROC-CLN-005、PROC-EQP-006、PROC-SEC-005と対応チェックリストを追加し、清掃・隔離・監視の状態分離を反映 |
 | 1.1 | 2026-07-22 | PROC-CLN-004、PROC-EQP-004、PROC-SEC-003と対応チェックリストを追加し、補充・操作・媒体管理の状態分離を反映 |
