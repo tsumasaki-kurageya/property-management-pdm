@@ -64,11 +64,11 @@
 
 | 工程 | 共通手順 | 警備領域での主な確認 |
 |---|---|---|
-| 勤務開始・交代 | [`PROC-COM-001` 勤務・担当引継ぎ](../00_common/PROC-COM-001_shift-handover.md) | 共通の受領判定・責任移管に、継続案件、鍵・装備、警報、工事、要注意者、臨時指示を追加 |
-| 作業前 | `PROC-COM-002` 作業前安全確認・危険予知 | 単独勤務、夜間、危険区域、通信手段、応援到着、避難経路 |
-| 区域設定 | `PROC-COM-003` 作業区域設定・解除（予定） | 立入規制、現場保全、代替動線、関係者以外の排除 |
-| 異常発生 | `PROC-COM-004` 異常上申（予定） | 人命危険、応援要請、施設責任者、警察・消防・救急への連絡 |
-| 完了・交代 | `PROC-COM-005` 完了報告（予定） | 事象経過、引渡し、証跡、未解決事項、次勤務者への引継ぎ |
+| 勤務開始・交代 | [[`PROC-COM-001` 勤務・担当引継ぎ](../00_common/PROC-COM-001_shift-handover.md)](../00_common/PROC-COM-001_shift-handover.md) | 共通の受領判定・責任移管に、継続案件、鍵・装備、警報、工事、要注意者、臨時指示を追加 |
+| 作業前 | [`PROC-COM-002` 作業前安全確認・危険予知](../00_common/PROC-COM-002_pre-work-safety-check.md) | 単独勤務、夜間、危険区域、通信手段、応援到着、避難経路 |
+| 区域設定 | [[`PROC-COM-003` 作業区域設定・解除](../00_common/PROC-COM-003_work-area-control.md)](../00_common/PROC-COM-003_work-area-control.md) | 立入規制、現場保全、代替動線、関係者以外の排除 |
+| 異常発生 | [[`PROC-COM-004` 異常上申](../00_common/PROC-COM-004_abnormality-escalation.md)](../00_common/PROC-COM-004_abnormality-escalation.md) | 人命危険、応援要請、施設責任者、警察・消防・救急への連絡 |
+| 完了・交代 | [[`PROC-COM-005` 完了報告](../00_common/PROC-COM-005_completion-reporting.md)](../00_common/PROC-COM-005_completion-reporting.md) | 事象経過、引渡し、証跡、未解決事項、次勤務者への引継ぎ |
 
 緊急時は共通手順の順番を機械的に守るのではなく、人命保護、退避、緊急通報等を優先し、その後に記録・報告を補完する。
 
