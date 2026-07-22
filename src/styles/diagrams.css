@@ -1,0 +1,39 @@
+.mermaid {
+  max-width: 100%;
+  overflow-x: auto;
+  padding-block: 0.5rem;
+}
+
+.mermaid svg {
+  display: block;
+  height: auto;
+  margin-inline: auto;
+  max-width: 100%;
+}
+
+@media (max-width: 50rem) {
+  .mermaid svg {
+    min-width: 38rem;
+  }
+}
+
+@media print {
+  .mermaid {
+    break-inside: avoid;
+    overflow: visible;
+  }
+
+  .mermaid svg {
+    max-height: 22cm;
+    min-width: 0;
+  }
+
+  table {
+    break-inside: auto;
+    font-size: 9pt;
+  }
+
+  tr {
+    break-inside: avoid;
+  }
+}
