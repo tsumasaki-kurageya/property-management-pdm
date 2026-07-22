@@ -62,7 +62,7 @@
 | `BM-08-07` | 警報に対応する | `PROC-EQP-005` | [警報・設備異常対応](../02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md) | 草案あり | BM-10-01〜05、BM-12、BM-13 |
 | `BM-10-03` | 一次対応を行う | `PROC-EQP-006` | [緊急停止・隔離](../02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md) | 草案あり | BM-08、BM-10、BM-12、BM-17 |
 | `BM-10-10` | 完了検査・引渡しを行う | `PROC-EQP-007` | [試運転・復旧確認](../02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md) | 草案あり | BM-08-02・06、BM-10-09・11、BM-13、BM-14 |
-| `BM-09-08` | 清掃・給油・調整を行う | `PROC-EQP-008` | 設備日常保守 | 予定 | BM-09-07、BM-13、BM-14、BM-15 |
+| `BM-09-08` | 清掃・給油・調整を行う | `PROC-EQP-008` | [設備日常保守](../02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md) | 草案あり | BM-09-07、BM-13、BM-14、BM-15 |
 
 設備の業務カタログには、計画・台帳・法定点検・修繕発注等も含まれる。本表の初期範囲は、運転監視、日常点検、操作、異常対応及び復旧確認の現場実行手順であり、設備別の法定点検手順は後続拡張とする。
 
@@ -75,9 +75,9 @@
 | `BM-11-03` | 鍵を管理する | `PROC-SEC-003` | [鍵・入館証管理](../02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md) | 草案あり | BM-11-02、BM-13、BM-14、BM-17 |
 | `BM-11-04` | 巡回警備を行う | `PROC-SEC-004` | [巡回警備](../02_field-procedures/03_security/PROC-SEC-004_security-patrol.md) | 草案あり | BM-11-07・10、BM-13、BM-17 |
 | `BM-11-05` | 監視設備を確認する | `PROC-SEC-005` | [警報・防犯監視](../02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md) | 草案あり | BM-11-06・09〜10、BM-13 |
-| `BM-11-06` | 事故・事件へ対応する | `PROC-SEC-006` | 不審者・不審物対応 | 予定 | BM-12、BM-13、BM-17 |
+| `BM-11-06` | 事故・事件へ対応する | `PROC-SEC-006` | [不審者・不審物対応](../02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md) | 草案あり | BM-12、BM-13、BM-17 |
 | `BM-11-06` | 事故・事件へ対応する | `PROC-SEC-007` | [事故・急病・現場保全](../02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md) | 草案あり | BM-11-10、BM-12、BM-13、BM-17 |
-| `BM-11-09` | 災害時対応を行う | `PROC-SEC-008` | 火災・地震等の災害初動 | 予定 | BM-11-07〜08・10、BM-12、BM-13、BM-17 |
+| `BM-11-09` | 災害時対応を行う | `PROC-SEC-008` | [火災・地震等の災害初動](../02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md) | 草案あり | BM-11-07〜08・10、BM-12、BM-13、BM-17 |
 
 ## 7. 業務カタログの不足・粒度確認候補
 
@@ -102,6 +102,7 @@
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 1.1 | 2026-07-22 | PROC-EQP-008、PROC-SEC-006、PROC-SEC-008を追加し、保守復帰・不審事象・災害初動の責任境界を具体化 |
 | 1.0 | 2026-07-22 | PROC-CLN-005、PROC-EQP-006、PROC-SEC-005を追加し、清掃完了・安全隔離・警報対応の責任境界を具体化 |
 | 0.9 | 2026-07-22 | PROC-CLN-004、PROC-EQP-004、PROC-SEC-003を追加し、補充・操作・媒体管理の責任境界を具体化 |
 | 0.8 | 2026-07-22 | PROC-CLN-003、PROC-EQP-003、PROC-SEC-002を追加し、各領域の次順位手順を具体化 |
