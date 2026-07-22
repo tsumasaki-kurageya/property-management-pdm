@@ -7,7 +7,7 @@
 | 手順ID | `PROC-SEC-002` |
 | 手順名 | 入退館受付・確認 |
 | 領域 | 警備 |
-| 版 | 0.1 |
+| 版 | 0.2 |
 | 状態 | 初版草案 |
 | 作成日 | 2026-07-22 |
 
@@ -135,7 +135,7 @@
 ## 14. 関連文書
 
 - [警備現場作業手順](README.md)
-- `PROC-SEC-003` 鍵・入館証管理（作成予定）
+- [`PROC-SEC-003` 鍵・入館証管理](PROC-SEC-003_key-and-access-card-management.md)
 - [`PROC-COM-004` 異常上申](../00_common/PROC-COM-004_abnormality-escalation.md)
 - [`PROC-COM-005` 完了報告](../00_common/PROC-COM-005_completion-reporting.md)
 - [`CHK-SEC-004` 入退館受付・確認](../../03_checklists/03_security/CHK-SEC-004_access-reception-and-verification.md)
@@ -144,4 +144,5 @@
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 0.2 | 2026-07-22 | PROC-SEC-003への接続を作成済み手順へ更新 |
 | 0.1 | 2026-07-22 | 初版草案 |
