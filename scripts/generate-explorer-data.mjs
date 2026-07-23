@@ -6,7 +6,7 @@ import { expandBusinessReferences } from './explorer-business-references.mjs';
 const root = process.cwd();
 const outputRoot = join(root, 'src/data/explorer/generated');
 const checkOnly = process.argv.includes('--check');
-const schemaVersion = '1.0.0';
+const schemaVersion = '2.0.0';
 const allowedNodeTypes = new Set([
   'area',
   'business',
@@ -66,7 +66,10 @@ function parseCatalog(markdown) {
     }));
     return { id: match[1], name: match[2].trim(), tasks };
   });
-  return { version, areas, tasks: areas.flatMap((area) => area.tasks) };
+  const tasks = areas.flatMap((area) => area.tasks);
+  assertUniqueIds(areas, '業務領域');
+  assertUniqueIds(tasks, '業務');
+  return { version, areas, tasks };
 }
 
 function parseProcessMappings(markdown, catalog) {
@@ -74,40 +77,182 @@ function parseProcessMappings(markdown, catalog) {
   const mappings = new Map();
   for (const line of section.split('\n').filter((value) => value.startsWith('|'))) {
     const cells = line.split('|').slice(1, -1).map((value) => value.trim());
-    const ids = expandBusinessReferences(cells[1] ?? '', catalog);
+    const ids = expandBusinessReferences(cells[1] ?? '', catalog, { strict: true });
     const processes = unique((cells[2] ?? '').match(/P\d{2}/g) ?? []);
     for (const id of ids) mappings.set(id, unique([...(mappings.get(id) ?? []), ...processes]));
   }
   return mappings;
 }
 
-function parseProcesses(markdown) {
+function assertUniqueIds(items, label) {
+  const seen = new Set();
+  const duplicates = new Set();
+  for (const item of items) {
+    if (seen.has(item.id)) duplicates.add(item.id);
+    seen.add(item.id);
+  }
+  if (duplicates.size > 0) throw new Error(`${label}IDが重複しています: ${[...duplicates].join('、')}`);
+}
+
+function parseProcessMetadata(markdown) {
+  const section = markdown.match(/## 4\. 横断プロセス一覧\n([\s\S]*?)(?=\n## 5\.)/)?.[1] ?? '';
+  const metadata = new Map();
+  let order = 0;
+  for (const line of section.split('\n').filter((value) => /^\| P\d{2} \|/.test(value))) {
+    const cells = line.split('|').slice(1, -1).map((value) => normalizeText(value));
+    order += 1;
+    metadata.set(cells[0], {
+      order,
+      startTrigger: cells[2] ?? '',
+      endState: cells[3] ?? '',
+    });
+  }
+  return metadata;
+}
+
+function parseProcesses(markdown, catalog) {
   const matches = [...markdown.matchAll(/^## \d+\. (P\d{2}) (.+)$/gm)];
-  return matches
+  const metadata = parseProcessMetadata(markdown);
+  const processes = matches
     .map((match, index) => ({
       id: match[1],
       name: match[2].trim(),
       body: markdown
-        .slice(match.index + match[0].length, matches[index + 1]?.index ?? markdown.indexOf('\n## 17.', match.index))
+        .slice(
+          match.index + match[0].length,
+          matches[index + 1]?.index ?? markdown.indexOf('\n## 17.', match.index),
+        )
         .trim(),
+      ...(metadata.get(match[1]) ?? {}),
     }))
     .filter((process) => Number(process.id.slice(1)) <= 12);
+  assertUniqueIds(processes, '横断プロセス');
+  const orders = processes.map((process) => process.order);
+  if (new Set(orders).size !== orders.length) {
+    throw new Error(`横断プロセスの表示順が重複しています: ${orders.join('、')}`);
+  }
+  const expectedOrders = Array.from({ length: processes.length }, (_value, index) => index + 1);
+  if (orders.some((order, index) => order !== expectedOrders[index])) {
+    throw new Error(`横断プロセスの表示順が連続していません: ${orders.join('、')}`);
+  }
+  for (const process of processes) {
+    if (!process.order) throw new Error(`横断プロセスの表示順がありません: ${process.id}`);
+    process.description = `${process.startTrigger}を契機に開始し、${process.endState}までを扱う。`;
+    process.steps = process.id === 'P04'
+      ? parseP04ProcessRows(process, catalog)
+      : parseOrderedProcessRows(process, catalog);
+    if (process.steps.length === 0) throw new Error(`横断プロセスに業務ステップがありません: ${process.id}`);
+  }
+  return processes.sort((left, right) => left.order - right.order);
 }
 
-function parseProcessRows(process, catalog) {
+function parseOrderedProcessRows(process, catalog) {
   const rows = [];
   for (const line of process.body.split('\n').filter((value) => value.startsWith('|'))) {
     const cells = line.split('|').slice(1, -1).map((value) => value.trim());
-    if (!/^\d+[A-Z]?$/.test(cells[0] ?? '') || !(cells[1] ?? '').includes('BM-')) continue;
+    if (!/^\d+[A-Z]?$/.test(cells[0] ?? '')) continue;
     rows.push({
       order: cells[0],
-      businessIds: expandBusinessReferences(cells[1], catalog),
+      id: `${process.id}-${cells[0]}`,
+      businessIds: expandBusinessReferences(cells[1] ?? '', catalog, { strict: true }),
       activity: normalizeText(cells[2] ?? ''),
       outputs: normalizeText(cells[3] ?? ''),
       connection: normalizeText(cells[4] ?? ''),
     });
   }
+  assertUniqueIds(rows, `${process.id}のステップ`);
+  return connectProcessRows(rows);
+}
+
+function parseP04ProcessRows(process, catalog) {
+  const section = process.body.match(/### 8\.2 領域別の主な流れ\n([\s\S]*?)$/)?.[1] ?? '';
+  const rows = [];
+  let areaOrder = 0;
+  for (const line of section.split('\n').filter((value) => value.startsWith('|'))) {
+    const cells = line.split('|').slice(1, -1).map((value) => value.trim());
+    if (!cells[0] || cells[0] === '領域' || /^-+$/.test(cells[0])) continue;
+    areaOrder += 1;
+    const areaKey = String(areaOrder).padStart(2, '0');
+    const groups = [
+      ['PLAN', '計画・条件', cells[1]],
+      ['EXECUTE', '実施', cells[2]],
+      ['RECORD', '記録・判定', cells[3]],
+    ];
+    for (let index = 0; index < groups.length; index += 1) {
+      const [suffix, phase, expression] = groups[index];
+      const id = `${process.id}-${areaKey}-${suffix}`;
+      rows.push({
+        id,
+        order: `${areaOrder}${String.fromCharCode(65 + index)}`,
+        businessIds: expandBusinessReferences(expression ?? '', catalog, { strict: true }),
+        activity: `${normalizeText(cells[0])}：${phase}`,
+        outputs: '',
+        connection: index === groups.length - 1 ? normalizeText(cells[4] ?? '') : '',
+        nextStepIds: index < groups.length - 1 ? [`${process.id}-${areaKey}-${groups[index + 1][0]}`] : [],
+        branches: [],
+      });
+    }
+  }
+  assertUniqueIds(rows, `${process.id}のステップ`);
+  for (const row of rows) {
+    if (row.connection) row.branches = parseConnectionBranches(row.connection, undefined, new Map());
+  }
   return rows;
+}
+
+function connectProcessRows(rows) {
+  const stepIdByOrder = new Map(rows.map((row) => [row.order, row.id]));
+  return rows.map((row, index) => {
+    const nextRow = rows[index + 1];
+    const explicitNextStepIds = unique(
+      [...row.connection.matchAll(/(?<!P)(?<!\d)(\d+[A-Z]?)(?!\d)/g)]
+        .map((match) => stepIdByOrder.get(match[1]))
+        .filter(Boolean),
+    );
+    const nextStepIds = unique([
+      ...(nextRow ? [nextRow.id] : []),
+      ...explicitNextStepIds,
+    ]);
+    return {
+      ...row,
+      nextStepIds,
+      branches: parseConnectionBranches(row.connection, nextRow?.id, stepIdByOrder),
+    };
+  });
+}
+
+function parseConnectionBranches(connection, fallbackStepId, stepIdByOrder) {
+  if (!connection || /^\d+[A-Z]?$/.test(connection)) return [];
+  const branches = [];
+  const withoutBusinessReferences = connection.replace(
+    /BM-\d{2}-\d{2}(?:\s*[〜～・、]\s*(?:BM-\d{2}-)?\d{2})*/g,
+    '',
+  );
+  const segments = withoutBusinessReferences
+    .split(/[、，,]/)
+    .map((value) => normalizeText(value))
+    .filter(Boolean);
+  for (const segment of segments) {
+    const processIds = unique(segment.match(/P\d{2}/g) ?? []);
+    const stepOrders = unique(
+      [...segment.matchAll(/(?<!P)(?<!\d)(\d+[A-Z]?)(?!\d)/g)].map((match) => match[1]),
+    );
+    const targetStepIds = stepOrders.map((order) => stepIdByOrder.get(order)).filter(Boolean);
+    const label = normalizeText(
+      segment
+        .replace(/P\d{2}/g, '')
+        .replace(/(?<!P)(?<!\d)\d+[A-Z]?(?!\d)/g, '')
+        .replace(/(?:又は|または|又|は|から)+/g, '')
+        .replace(/^・+|・+$/g, ''),
+    ) || segment;
+    for (const targetStepId of targetStepIds) branches.push({ label, targetStepId });
+    for (const targetProcessId of processIds) branches.push({ label, targetProcessId });
+    if (targetStepIds.length === 0 && processIds.length === 0) {
+      if (fallbackStepId) branches.push({ label, targetStepId: fallbackStepId });
+      else branches.push({ label, terminal: true });
+    }
+  }
+  return branches;
 }
 
 function parseCriticalBusinesses(markdown) {
@@ -263,8 +408,19 @@ const criticalMarkdown = await read('docs/04_mappings/critical-business-analysis
 const statutoryMarkdown = await read('docs/statutory-duty-profiles.md');
 const checklistMappingMarkdown = await read('docs/04_mappings/procedure-to-checklist-map.md');
 const catalog = parseCatalog(catalogMarkdown);
-const processes = parseProcesses(processMarkdown);
+const processes = parseProcesses(processMarkdown, catalog);
 const processMappings = parseProcessMappings(processMarkdown, catalog);
+const processMemberships = new Map(
+  [...processMappings].map(([businessId, processIds]) => [businessId, [...processIds]]),
+);
+for (const process of processes) {
+  for (const businessId of unique(process.steps.flatMap((step) => step.businessIds))) {
+    processMemberships.set(
+      businessId,
+      unique([...(processMemberships.get(businessId) ?? []), process.id]),
+    );
+  }
+}
 const criticalBusinesses = parseCriticalBusinesses(criticalMarkdown);
 const procedures = await readMarkdownDirectory('docs/02_field-procedures');
 const checklists = await readMarkdownDirectory('docs/03_checklists');
@@ -344,7 +500,11 @@ for (const process of processes) {
     href: `/reference/processes/${slug(process.id)}/`,
     source: { path: 'docs/04_mappings/business-process-map.md', anchor: slug(process.id) },
   });
-  const rows = parseProcessRows(process, catalog);
+  // 既存UI向けグラフは従来の順序表だけから生成する。
+  // 新エクスプローラーは下段で生成する型付き processes.json を利用する。
+  const rows = process.id === 'P04'
+    ? []
+    : process.steps.filter((step) => step.businessIds.length > 0);
   for (let rowIndex = 0; rowIndex < rows.length; rowIndex += 1) {
     const row = rows[rowIndex];
     const nextRow = rows[rowIndex + 1];
@@ -366,7 +526,6 @@ for (const process of processes) {
 
 for (const task of catalog.tasks) {
   const processIds = processMappings.get(task.id) ?? [];
-  if (processIds.length === 0) throw new Error(`横断プロセスへの所属がありません: ${task.id}`);
   for (const processId of processIds) addEdge({ type: 'participates_in', from: task.id, to: processId, source: { path: 'docs/04_mappings/business-process-map.md' } });
 }
 
@@ -462,13 +621,34 @@ if (isolated.length > 0) throw new Error(`孤立ノードがあります: ${isol
 for (const task of catalog.tasks) {
   const taskEdges = edgeList.filter((edge) => edge.from === task.id || edge.to === task.id);
   if (!taskEdges.some((edge) => edge.type === 'contains' && edge.to === task.id)) throw new Error(`上位領域がありません: ${task.id}`);
-  if (!taskEdges.some((edge) => edge.type === 'participates_in' && /^P\d{2}$/.test(edge.to))) throw new Error(`横断プロセス位置がありません: ${task.id}`);
-  if (!taskEdges.some((edge) => edge.type === 'participates_in' && /^LC-\d{2}$/.test(edge.to))) throw new Error(`ライフサイクル位置がありません: ${task.id}`);
 }
-const representativeId = 'BM-09-06';
-const representativeEdges = edgeList.filter((edge) => edge.from === representativeId || edge.to === representativeId);
-for (const required of ['contains', 'precedes', 'uses', 'produces', 'approved_by', 'governed_by', 'participates_in', 'related_to']) {
-  if (!representativeEdges.some((edge) => edge.type === required)) throw new Error(`${representativeId} に代表関係 ${required} がありません`);
+
+const processIds = new Set(processes.map((process) => process.id));
+for (const [businessId, mappedProcessIds] of processMemberships) {
+  if (!nodeIds.has(businessId)) throw new Error(`プロセス索引が未定義の業務を参照しています: ${businessId}`);
+  for (const processId of mappedProcessIds) {
+    if (!processIds.has(processId)) throw new Error(`プロセス索引が未定義のプロセスを参照しています: ${businessId} -> ${processId}`);
+  }
+}
+for (const process of processes) {
+  for (const step of process.steps) {
+    for (const businessId of step.businessIds) {
+      if (!nodeIds.has(businessId)) throw new Error(`${process.id}が未定義の業務を参照しています: ${step.id} -> ${businessId}`);
+    }
+    for (const nextStepId of step.nextStepIds) {
+      if (!process.steps.some((candidate) => candidate.id === nextStepId)) {
+        throw new Error(`${process.id}が未定義の次工程を参照しています: ${step.id} -> ${nextStepId}`);
+      }
+    }
+    for (const branch of step.branches) {
+      if (branch.targetStepId && !process.steps.some((candidate) => candidate.id === branch.targetStepId)) {
+        throw new Error(`${process.id}が未定義の分岐先工程を参照しています: ${step.id} -> ${branch.targetStepId}`);
+      }
+      if (branch.targetProcessId && !processIds.has(branch.targetProcessId)) {
+        throw new Error(`${process.id}が未定義の分岐先プロセスを参照しています: ${step.id} -> ${branch.targetProcessId}`);
+      }
+    }
+  }
 }
 
 const counts = Object.fromEntries([...allowedNodeTypes].map((type) => [type, nodeList.filter((node) => node.type === type).length]));
@@ -479,15 +659,61 @@ const manifest = {
   counts: { ...counts, edges: edgeList.length },
   sourceHashes,
 };
-const processIndex = processes.map((process) => ({
+const businessAreas = catalog.areas.map((area, index) => ({
+  id: area.id,
+  label: area.name,
+  order: index + 1,
+  businessIds: area.tasks.map((task) => task.id),
+}));
+  const processIndex = processes.map((process) => {
+  const businessIds = catalog.tasks
+    .filter((task) => (processMemberships.get(task.id) ?? []).includes(process.id))
+    .map((task) => task.id);
+  const entrySteps = process.id === 'P04'
+    ? process.steps.filter((step) => step.id.endsWith('-PLAN'))
+    : [process.steps.find((step) => step.businessIds.length > 0)].filter(Boolean);
+  const exitSteps = process.id === 'P04'
+    ? process.steps.filter((step) => step.id.endsWith('-RECORD'))
+    : [process.steps.findLast((step) => step.businessIds.length > 0)].filter(Boolean);
+  const entryBusinessIds = unique(entrySteps.flatMap((step) => step.businessIds));
+  const exitBusinessIds = unique(exitSteps.flatMap((step) => step.businessIds));
+  return {
   id: process.id,
   label: process.name,
+  order: process.order,
+  description: process.description,
+  startTrigger: process.startTrigger,
+  endState: process.endState,
   lifecycleId: lifecycleByProcess.get(process.id),
-  businessIds: catalog.tasks.filter((task) => (processMappings.get(task.id) ?? []).includes(process.id)).map((task) => task.id),
+  entryBusinessIds,
+  exitBusinessIds,
+  businessIds,
+  steps: process.steps.map((step) => ({
+    id: step.id,
+    order: step.order,
+    businessIds: step.businessIds,
+    activity: step.activity,
+    outputs: step.outputs,
+    connection: step.connection,
+    nextStepIds: step.nextStepIds,
+    branches: step.branches,
+    source: { path: 'docs/04_mappings/business-process-map.md', anchor: slug(process.id) },
+  })),
+  source: { path: 'docs/04_mappings/business-process-map.md', anchor: slug(process.id) },
+  };
+});
+const processOrder = new Map(processIndex.map((process) => [process.id, process.order]));
+const businessIndex = catalog.tasks.map((task) => ({
+  businessId: task.id,
+  areaId: task.id.slice(0, 5),
+  processIds: [...(processMemberships.get(task.id) ?? [])]
+    .sort((left, right) => processOrder.get(left) - processOrder.get(right)),
 }));
 const outputs = new Map([
   ['business-nodes.json', `${JSON.stringify(nodeList, null, 2)}\n`],
   ['business-edges.json', `${JSON.stringify(edgeList, null, 2)}\n`],
+  ['business-areas.json', `${JSON.stringify(businessAreas, null, 2)}\n`],
+  ['business-index.json', `${JSON.stringify(businessIndex, null, 2)}\n`],
   ['lifecycle-stages.json', `${JSON.stringify(lifecycleDefinitions, null, 2)}\n`],
   ['processes.json', `${JSON.stringify(processIndex, null, 2)}\n`],
   ['manifest.json', `${JSON.stringify(manifest, null, 2)}\n`],

@@ -1,0 +1,1552 @@
+[
+  {
+    "businessId": "BM-01-01",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-01-02",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-01-03",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-01-04",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-01-05",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-01-06",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-01-07",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-01-08",
+    "areaId": "BM-01",
+    "processIds": [
+      "P01",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-02-01",
+    "areaId": "BM-02",
+    "processIds": [
+      "P01"
+    ]
+  },
+  {
+    "businessId": "BM-02-02",
+    "areaId": "BM-02",
+    "processIds": [
+      "P01"
+    ]
+  },
+  {
+    "businessId": "BM-02-03",
+    "areaId": "BM-02",
+    "processIds": [
+      "P01"
+    ]
+  },
+  {
+    "businessId": "BM-02-04",
+    "areaId": "BM-02",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-02-05",
+    "areaId": "BM-02",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-02-06",
+    "areaId": "BM-02",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-02-07",
+    "areaId": "BM-02",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-03-01",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-03-02",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-03-03",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-03-04",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-03-05",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-03-06",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-03-07",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-03-08",
+    "areaId": "BM-03",
+    "processIds": [
+      "P02"
+    ]
+  },
+  {
+    "businessId": "BM-04-01",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-02",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-03",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-04",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-05",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-06",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-07",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-08",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-04-09",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-04-10",
+    "areaId": "BM-04",
+    "processIds": [
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-01",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-02",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-03",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-04",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-05",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-05-06",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-07",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-08",
+    "areaId": "BM-05",
+    "processIds": [
+      "P02",
+      "P03",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-05-09",
+    "areaId": "BM-05",
+    "processIds": [
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-05-10",
+    "areaId": "BM-05",
+    "processIds": [
+      "P04",
+      "P05",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-06-01",
+    "areaId": "BM-06",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-06-02",
+    "areaId": "BM-06",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-06-03",
+    "areaId": "BM-06",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-06-04",
+    "areaId": "BM-06",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-06-05",
+    "areaId": "BM-06",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-06-06",
+    "areaId": "BM-06",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-06-07",
+    "areaId": "BM-06",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-06-08",
+    "areaId": "BM-06",
+    "processIds": [
+      "P04",
+      "P05"
+    ]
+  },
+  {
+    "businessId": "BM-06-09",
+    "areaId": "BM-06",
+    "processIds": [
+      "P04",
+      "P05",
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-06-10",
+    "areaId": "BM-06",
+    "processIds": [
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-06-11",
+    "areaId": "BM-06",
+    "processIds": [
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-07-01",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-02",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-03",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-04",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-05",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-06",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-07",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-08",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-09",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-10",
+    "areaId": "BM-07",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-07-11",
+    "areaId": "BM-07",
+    "processIds": [
+      "P04",
+      "P05",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-08-01",
+    "areaId": "BM-08",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-08-02",
+    "areaId": "BM-08",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-08-03",
+    "areaId": "BM-08",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-08-04",
+    "areaId": "BM-08",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-08-05",
+    "areaId": "BM-08",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-08-06",
+    "areaId": "BM-08",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-08-07",
+    "areaId": "BM-08",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-08-08",
+    "areaId": "BM-08",
+    "processIds": [
+      "P03",
+      "P04"
+    ]
+  },
+  {
+    "businessId": "BM-08-09",
+    "areaId": "BM-08",
+    "processIds": [
+      "P04",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-09-01",
+    "areaId": "BM-09",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-02",
+    "areaId": "BM-09",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-03",
+    "areaId": "BM-09",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-04",
+    "areaId": "BM-09",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-05",
+    "areaId": "BM-09",
+    "processIds": [
+      "P04",
+      "P05",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-06",
+    "areaId": "BM-09",
+    "processIds": [
+      "P04",
+      "P06",
+      "P08",
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-09-07",
+    "areaId": "BM-09",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-08",
+    "areaId": "BM-09",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-09",
+    "areaId": "BM-09",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-09-10",
+    "areaId": "BM-09",
+    "processIds": [
+      "P04",
+      "P05",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-10-01",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-02",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-03",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-04",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-05",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-06",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-07",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-08",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-09",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-10",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-11",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-10-12",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-10-13",
+    "areaId": "BM-10",
+    "processIds": [
+      "P06",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-11-01",
+    "areaId": "BM-11",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-11-02",
+    "areaId": "BM-11",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-11-03",
+    "areaId": "BM-11",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-11-04",
+    "areaId": "BM-11",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-11-05",
+    "areaId": "BM-11",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-11-06",
+    "areaId": "BM-11",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-11-07",
+    "areaId": "BM-11",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-11-08",
+    "areaId": "BM-11",
+    "processIds": [
+      "P03",
+      "P04",
+      "P08"
+    ]
+  },
+  {
+    "businessId": "BM-11-09",
+    "areaId": "BM-11",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-11-10",
+    "areaId": "BM-11",
+    "processIds": [
+      "P04",
+      "P05"
+    ]
+  },
+  {
+    "businessId": "BM-12-01",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-02",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-03",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-04",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-05",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-06",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-07",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-08",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-09",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-12-10",
+    "areaId": "BM-12",
+    "processIds": [
+      "P03",
+      "P06",
+      "P07",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-13-01",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-02",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-03",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-04",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-05",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P09",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-06",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P09",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-07",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-08",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-09",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-10",
+    "areaId": "BM-13",
+    "processIds": [
+      "P05",
+      "P08",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-13-11",
+    "areaId": "BM-13",
+    "processIds": [
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-14-01",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-02",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-03",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-04",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-05",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-06",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-07",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P05",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-08",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P05",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-09",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-14-10",
+    "areaId": "BM-14",
+    "processIds": [
+      "P02",
+      "P04",
+      "P06",
+      "P08",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-15-01",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-02",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-03",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-04",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-05",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-06",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-07",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-08",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-15-09",
+    "areaId": "BM-15",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06",
+      "P10"
+    ]
+  },
+  {
+    "businessId": "BM-16-01",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-02",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-03",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-04",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-05",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-06",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-07",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-08",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-09",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-16-10",
+    "areaId": "BM-16",
+    "processIds": [
+      "P10",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-17-01",
+    "areaId": "BM-17",
+    "processIds": [
+      "P01",
+      "P09",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-17-02",
+    "areaId": "BM-17",
+    "processIds": [
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-17-03",
+    "areaId": "BM-17",
+    "processIds": [
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-17-04",
+    "areaId": "BM-17",
+    "processIds": [
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-17-05",
+    "areaId": "BM-17",
+    "processIds": [
+      "P02",
+      "P03",
+      "P04",
+      "P06",
+      "P11"
+    ]
+  },
+  {
+    "businessId": "BM-17-06",
+    "areaId": "BM-17",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-17-07",
+    "areaId": "BM-17",
+    "processIds": [
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-17-08",
+    "areaId": "BM-17",
+    "processIds": [
+      "P02",
+      "P05",
+      "P08",
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-17-09",
+    "areaId": "BM-17",
+    "processIds": [
+      "P05",
+      "P08",
+      "P09",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-17-10",
+    "areaId": "BM-17",
+    "processIds": [
+      "P05",
+      "P08",
+      "P09"
+    ]
+  },
+  {
+    "businessId": "BM-17-11",
+    "areaId": "BM-17",
+    "processIds": [
+      "P03",
+      "P04",
+      "P06"
+    ]
+  },
+  {
+    "businessId": "BM-18-01",
+    "areaId": "BM-18",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-02",
+    "areaId": "BM-18",
+    "processIds": [
+      "P09",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-03",
+    "areaId": "BM-18",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-04",
+    "areaId": "BM-18",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-05",
+    "areaId": "BM-18",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-06",
+    "areaId": "BM-18",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-07",
+    "areaId": "BM-18",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-08",
+    "areaId": "BM-18",
+    "processIds": [
+      "P09",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-09",
+    "areaId": "BM-18",
+    "processIds": [
+      "P09",
+      "P11",
+      "P12"
+    ]
+  },
+  {
+    "businessId": "BM-18-10",
+    "areaId": "BM-18",
+    "processIds": [
+      "P11",
+      "P12"
+    ]
+  }
+]

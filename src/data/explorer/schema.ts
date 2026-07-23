@@ -57,11 +57,51 @@ export interface ExplorerLifecycleStage {
   processIds: string[];
 }
 
+export interface ExplorerBusinessArea {
+  id: string;
+  label: string;
+  order: number;
+  businessIds: string[];
+}
+
+export interface ExplorerProcessBranch {
+  label: string;
+  targetStepId?: string;
+  targetProcessId?: string;
+  terminal?: boolean;
+}
+
+export interface ExplorerProcessStep {
+  id: string;
+  order: string;
+  businessIds: string[];
+  activity: string;
+  outputs: string;
+  connection: string;
+  nextStepIds: string[];
+  branches: ExplorerProcessBranch[];
+  source: ExplorerSourceReference;
+}
+
 export interface ExplorerProcessIndex {
   id: string;
   label: string;
+  order: number;
+  description: string;
+  startTrigger: string;
+  endState: string;
   lifecycleId: string;
+  entryBusinessIds: string[];
+  exitBusinessIds: string[];
   businessIds: string[];
+  steps: ExplorerProcessStep[];
+  source: ExplorerSourceReference;
+}
+
+export interface ExplorerBusinessIndexEntry {
+  businessId: string;
+  areaId: string;
+  processIds: string[];
 }
 
 export interface ExplorerManifest {
@@ -74,6 +114,8 @@ export interface ExplorerManifest {
 export interface ExplorerGraph {
   nodes: ExplorerNode[];
   edges: ExplorerEdge[];
+  businessAreas: ExplorerBusinessArea[];
+  businessIndex: ExplorerBusinessIndexEntry[];
   lifecycleStages: ExplorerLifecycleStage[];
   processes: ExplorerProcessIndex[];
   manifest: ExplorerManifest;

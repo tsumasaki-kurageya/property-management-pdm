@@ -1,4 +1,6 @@
 import businessEdges from './generated/business-edges.json';
+import businessAreas from './generated/business-areas.json';
+import businessIndex from './generated/business-index.json';
 import businessNodes from './generated/business-nodes.json';
 import flowScenarios from './generated/flow-scenarios.json';
 import lifecycleStages from './generated/lifecycle-stages.json';
@@ -7,6 +9,8 @@ import processes from './generated/processes.json';
 import type {
   ExplorerEdge,
   ExplorerGraph,
+  ExplorerBusinessArea,
+  ExplorerBusinessIndexEntry,
   ExplorerLifecycleStage,
   ExplorerManifest,
   ExplorerNode,
@@ -25,12 +29,27 @@ interface ExplorerFlowScenario {
 export const explorerGraph: ExplorerGraph = {
   nodes: businessNodes as ExplorerNode[],
   edges: businessEdges as ExplorerEdge[],
+  businessAreas: businessAreas as ExplorerBusinessArea[],
+  businessIndex: businessIndex as ExplorerBusinessIndexEntry[],
   lifecycleStages: lifecycleStages as ExplorerLifecycleStage[],
   processes: processes as ExplorerProcessIndex[],
   manifest: manifest as ExplorerManifest,
 };
 
 export const explorerNodesById = new Map(explorerGraph.nodes.map((node) => [node.id, node]));
+export const explorerAreasById = new Map(explorerGraph.businessAreas.map((area) => [area.id, area]));
+export const explorerBusinessIndexById = new Map(
+  explorerGraph.businessIndex.map((entry) => [entry.businessId, entry]),
+);
+export const explorerAreaIdByBusinessId = new Map(
+  explorerGraph.businessIndex.map((entry) => [entry.businessId, entry.areaId]),
+);
+export const explorerProcessesById = new Map(
+  explorerGraph.processes.map((process) => [process.id, process]),
+);
+export const explorerProcessIdsByBusinessId = new Map(
+  explorerGraph.businessIndex.map((entry) => [entry.businessId, entry.processIds]),
+);
 
 const flowScenarioEdges = new Map<string, ExplorerEdge[]>();
 for (const scenario of flowScenarios as ExplorerFlowScenario[]) {
