@@ -16,7 +16,9 @@
     "build": "astro build",
     "postbuild": "npm run check:release",
     "preview": "astro preview",
-    "check": "astro check"
+    "check": "astro check",
+    "test:e2e": "playwright test",
+    "test:e2e:report": "playwright show-report"
   },
   "engines": {
     "node": ">=22.12.0 <23"
@@ -34,6 +36,8 @@
   },
   "devDependencies": {
     "@astrojs/check": "0.9.6",
+    "@axe-core/playwright": "4.12.1",
+    "@playwright/test": "1.61.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
     "typescript": "5.9.3"
