@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
+import { expandBusinessReferences } from './explorer-business-references.mjs';
 
 const root = process.cwd();
 const outputRoot = join(root, 'src/data/explorer/generated');
@@ -66,41 +67,6 @@ function parseCatalog(markdown) {
     return { id: match[1], name: match[2].trim(), tasks };
   });
   return { version, areas, tasks: areas.flatMap((area) => area.tasks) };
-}
-
-function expandNumberExpression(area, expression) {
-  const ids = [];
-  for (const token of expression.split(/[、・]/).map((value) => value.trim()).filter(Boolean)) {
-    const normalized = token.replace(new RegExp(`^BM-${area}-`), '');
-    const range = normalized.match(/^(\d{2})\s*[〜～]\s*(?:BM-\d{2}-)?(\d{2})$/);
-    if (range) {
-      for (let number = Number(range[1]); number <= Number(range[2]); number += 1) {
-        ids.push(`BM-${area}-${String(number).padStart(2, '0')}`);
-      }
-    } else if (/^\d{2}$/.test(normalized)) {
-      ids.push(`BM-${area}-${normalized}`);
-    }
-  }
-  return ids;
-}
-
-function expandBusinessReferences(expression, catalog) {
-  const ids = new Set();
-  const claimedRanges = [];
-  const groupPattern = /BM-(\d{2})-(\d{2})(?:(?:[〜～・、])(?:BM-\d{2}-)?\d{2})*/g;
-  for (const match of expression.replace(/`/g, '').matchAll(groupPattern)) {
-    const area = match[1];
-    const tail = match[0].replace(`BM-${area}-`, '');
-    for (const id of expandNumberExpression(area, tail)) ids.add(id);
-    claimedRanges.push([match.index, match.index + match[0].length]);
-  }
-  for (const match of expression.matchAll(/BM-(\d{2})(?!-\d{2})/g)) {
-    const insideClaimedRange = claimedRanges.some(([start, end]) => match.index >= start && match.index < end);
-    if (insideClaimedRange) continue;
-    const areaId = `BM-${match[1]}`;
-    for (const task of catalog.areas.find((area) => area.id === areaId)?.tasks ?? []) ids.add(task.id);
-  }
-  return [...ids];
 }
 
 function parseProcessMappings(markdown, catalog) {
