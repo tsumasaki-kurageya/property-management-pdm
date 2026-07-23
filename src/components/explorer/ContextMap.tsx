@@ -358,6 +358,7 @@ export default function ContextMap({
   const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
   const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
   const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
+  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
   const selectedNode = explorerNodesById.get(selectedId);
   const filter = relationFilter ?? localFilter;
   const allRelationEdges = useMemo(
@@ -469,6 +470,8 @@ export default function ContextMap({
             minZoom={0.38}
             maxZoom={1.65}
             nodesDraggable={false}
+            panOnDrag={!coarsePointer}
+            zoomOnScroll={!coarsePointer}
             panOnDrag={!coarsePointer}
             zoomOnScroll={!coarsePointer}
             panOnDrag={!coarsePointer}
