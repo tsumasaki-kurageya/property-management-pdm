@@ -81,7 +81,7 @@ export default function DetailPanel({ selectedId, onSelect }: DetailPanelProps) 
         && ['contains', 'precedes', 'branches_to', 'related_to'].includes(edge.type));
     });
 
-    return [
+    const definitions: DetailSection[] = [
       {
         id: 'needs',
         title: 'この仕事に必要なもの',
@@ -119,7 +119,9 @@ export default function DetailPanel({ selectedId, onSelect }: DetailPanelProps) 
         edges: relatedWork,
         open: true,
       },
-    ].map((section) => ({ ...section, edges: uniqueEdges(section.edges) }));
+    ];
+
+    return definitions.map((section) => ({ ...section, edges: uniqueEdges(section.edges) }));
   }, [edges, node, selectedId]);
 
   if (!node) {
