@@ -23,7 +23,7 @@ jobs:
       - name: Generate and commit explorer data
         run: |
           npm run generate:explorer
-          if git diff --quiet -- src/data/explorer/generated; then
+          if [ -z "$(git status --porcelain -- src/data/explorer/generated)" ]; then
             exit 0
           fi
           git config user.name github-actions[bot]
