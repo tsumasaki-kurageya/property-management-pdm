@@ -29,11 +29,14 @@ import type {
   ExplorerProcessStep,
 } from '../../data/explorer/schema';
 import { useExplorerMediaPreferences } from './explorerMedia';
+import ProcessNavigator from './ProcessNavigator';
 import './FlowMap.css';
 
 interface FlowMapProps {
   selectedId: string;
+  selectedProcessId?: string;
   onSelect: (nodeId: string) => void;
+  onProcessSelect: (processId: string) => void;
 }
 
 type FlowMapState = 'loading' | 'ready' | 'error';
@@ -457,9 +460,13 @@ function ProcessTextAlternative({
   );
 }
 
-export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
+export default function FlowMap({
+  selectedId,
+  selectedProcessId,
+  onSelect,
+  onProcessSelect,
+}: FlowMapProps) {
   const candidates = useMemo(() => processCandidates(selectedId), [selectedId]);
-  const [activeProcessId, setActiveProcessId] = useState<string>();
   const [expandedStepIds, setExpandedStepIds] = useState<Set<string>>(() => new Set());
   const [nodes, setNodes] = useState<ReactFlowNode[]>([]);
   const [edges, setEdges] = useState<ReactFlowEdge[]>([]);
@@ -468,14 +475,10 @@ export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
   const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
 
   const process = useMemo(() => {
-    const maintained = candidates.find((candidate) => candidate.id === activeProcessId);
-    return maintained ?? candidates[0];
-  }, [activeProcessId, candidates]);
+    const selected = candidates.find((candidate) => candidate.id === selectedProcessId);
+    return selected ?? candidates[0];
+  }, [candidates, selectedProcessId]);
   const selectedStep = selectedStepFor(process, selectedId);
-
-  useEffect(() => {
-    if (process?.id !== activeProcessId) setActiveProcessId(process?.id);
-  }, [activeProcessId, process?.id]);
 
   const toggleStep = useCallback((stepId: string) => {
     setExpandedStepIds((current) => {
@@ -549,6 +552,12 @@ export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
 
   return (
     <div className="flow-map-view">
+      <ProcessNavigator
+        selectedBusinessId={selectedId}
+        selectedProcessId={selectedProcessId}
+        onSelect={onProcessSelect}
+      />
+
       <div className="flow-map-context">
         <div>
           <span>表示中の横断プロセス</span>

@@ -1,4 +1,9 @@
-import { explorerGraph, explorerNodesById } from '../../data/explorer';
+import {
+  explorerGraph,
+  explorerNodesById,
+  explorerProcessIdsByBusinessId,
+  explorerProcessesById,
+} from '../../data/explorer';
 
 export const explorerViewModes = ['flow', 'hierarchy', 'relations'] as const;
 export const explorerRelationFilters = ['all', 'related_to', 'uses', 'produces', 'people', 'governed_by'] as const;
@@ -8,6 +13,7 @@ export type ExplorerRelationFilter = (typeof explorerRelationFilters)[number];
 
 export interface ExplorerUiState {
   selectedId: string;
+  selectedProcessId?: string;
   viewMode: ExplorerViewMode;
   relationFilter: ExplorerRelationFilter;
 }
@@ -18,6 +24,19 @@ export interface ParsedExplorerState {
 }
 
 const DEFAULT_NODE_ID = 'BM-09-06';
+
+export function resolveExplorerProcessId(
+  selectedId: string,
+  currentProcessId?: string,
+): string | undefined {
+  const processIds = explorerProcessIdsByBusinessId.get(selectedId) ?? [];
+  if (currentProcessId && processIds.includes(currentProcessId)) return currentProcessId;
+
+  return processIds
+    .map((processId) => explorerProcessesById.get(processId))
+    .filter((process) => process !== undefined)
+    .sort((left, right) => left.order - right.order)[0]?.id;
+}
 
 function isOneOf<T extends readonly string[]>(value: string | null, candidates: T): value is T[number] {
   return Boolean(value && candidates.includes(value as T[number]));
@@ -30,6 +49,7 @@ export function getDefaultExplorerState(): ExplorerUiState {
 
   return {
     selectedId,
+    selectedProcessId: resolveExplorerProcessId(selectedId),
     viewMode: 'flow',
     relationFilter: 'all',
   };
@@ -42,6 +62,7 @@ export function parseExplorerUrl(url: URL): ParsedExplorerState {
     ?? url.searchParams.get('node');
   const requestedView = url.searchParams.get('view');
   const requestedFilter = url.searchParams.get('type');
+  const requestedProcessId = url.searchParams.get('process');
   const notices: string[] = [];
 
   const selectedId = requestedId && explorerNodesById.has(requestedId)
@@ -49,6 +70,13 @@ export function parseExplorerUrl(url: URL): ParsedExplorerState {
     : fallback.selectedId;
   if (requestedId && selectedId !== requestedId) {
     notices.push(`指定された項目「${requestedId}」は見つからないため、既定の業務を表示しました。`);
+  }
+
+  const selectedProcessId = resolveExplorerProcessId(selectedId, requestedProcessId ?? undefined);
+  if (requestedProcessId && selectedProcessId !== requestedProcessId) {
+    notices.push(
+      `指定されたプロセス「${requestedProcessId}」には選択業務が含まれないため、先頭のプロセスを表示しました。`,
+    );
   }
 
   const viewMode = isOneOf(requestedView, explorerViewModes) ? requestedView : fallback.viewMode;
@@ -68,7 +96,7 @@ export function parseExplorerUrl(url: URL): ParsedExplorerState {
   }
 
   return {
-    state: { selectedId, viewMode, relationFilter },
+    state: { selectedId, selectedProcessId, viewMode, relationFilter },
     notice: notices.length > 0 ? notices.join(' ') : undefined,
   };
 }
@@ -77,7 +105,7 @@ export function buildExplorerUrl(currentUrl: URL, state: ExplorerUiState): URL {
   const url = new URL(currentUrl);
   const selectedNode = explorerNodesById.get(state.selectedId);
 
-  for (const key of ['business', 'item', 'node', 'view', 'type']) {
+  for (const key of ['business', 'item', 'node', 'process', 'view', 'type']) {
     url.searchParams.delete(key);
   }
 
@@ -85,6 +113,9 @@ export function buildExplorerUrl(currentUrl: URL, state: ExplorerUiState): URL {
     url.searchParams.set('business', state.selectedId);
   } else {
     url.searchParams.set('item', state.selectedId);
+  }
+  if (selectedNode?.type === 'business' && state.selectedProcessId) {
+    url.searchParams.set('process', state.selectedProcessId);
   }
   url.searchParams.set('view', state.viewMode);
 

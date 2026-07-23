@@ -11,6 +11,7 @@ import {
   buildExplorerUrl,
   getDefaultExplorerState,
   parseExplorerUrl,
+  resolveExplorerProcessId,
   type ExplorerRelationFilter,
   type ExplorerUiState,
   type ExplorerViewMode,
@@ -80,6 +81,7 @@ async function copyText(value: string): Promise<void> {
 function ExplorerAppContent() {
   const initialState = getDefaultExplorerState();
   const [selectedId, setSelectedId] = useState(initialState.selectedId);
+  const [selectedProcessId, setSelectedProcessId] = useState(initialState.selectedProcessId);
   const [viewMode, setViewMode] = useState<ExplorerViewMode>(initialState.viewMode);
   const [relationFilter, setRelationFilter] = useState<ExplorerRelationFilter>(initialState.relationFilter);
   const [mobilePanel, setMobilePanel] = useState<MobilePanel>('map');
@@ -90,6 +92,7 @@ function ExplorerAppContent() {
 
   const applyState = (state: ExplorerUiState) => {
     setSelectedId(state.selectedId);
+    setSelectedProcessId(state.selectedProcessId);
     setViewMode(state.viewMode);
     setRelationFilter(state.relationFilter);
   };
@@ -129,17 +132,33 @@ function ExplorerAppContent() {
 
   const selectNode = (nodeId: string) => {
     if (!explorerNodesById.has(nodeId)) return;
-    navigate({ selectedId: nodeId, viewMode, relationFilter });
+    navigate({
+      selectedId: nodeId,
+      selectedProcessId: resolveExplorerProcessId(nodeId, selectedProcessId),
+      viewMode,
+      relationFilter,
+    });
   };
 
   const selectView = (nextView: ExplorerViewMode) => {
     setMobilePanel('map');
-    navigate({ selectedId, viewMode: nextView, relationFilter });
+    navigate({ selectedId, selectedProcessId, viewMode: nextView, relationFilter });
   };
 
   const selectRelationFilter = (nextFilter: ExplorerRelationFilter) => {
     setMobilePanel('map');
-    navigate({ selectedId, viewMode: 'relations', relationFilter: nextFilter });
+    navigate({
+      selectedId,
+      selectedProcessId,
+      viewMode: 'relations',
+      relationFilter: nextFilter,
+    });
+  };
+
+  const selectProcess = (nextProcessId: string) => {
+    const resolvedProcessId = resolveExplorerProcessId(selectedId, nextProcessId);
+    if (resolvedProcessId !== nextProcessId) return;
+    navigate({ selectedId, selectedProcessId: nextProcessId, viewMode, relationFilter });
   };
 
   const handleViewTabKeyDown = (
@@ -169,7 +188,7 @@ function ExplorerAppContent() {
   const copyCurrentUrl = async () => {
     const url = buildExplorerUrl(
       new URL(window.location.href),
-      { selectedId, viewMode, relationFilter },
+      { selectedId, selectedProcessId, viewMode, relationFilter },
     );
 
     try {
@@ -258,7 +277,14 @@ function ExplorerAppContent() {
           aria-labelledby={`explorer-view-tab-${viewMode}`}
           aria-live="polite"
         >
-          {viewMode === 'flow' && <FlowMap selectedId={selectedId} onSelect={selectNode} />}
+          {viewMode === 'flow' && (
+            <FlowMap
+              selectedId={selectedId}
+              selectedProcessId={selectedProcessId}
+              onSelect={selectNode}
+              onProcessSelect={selectProcess}
+            />
+          )}
           {viewMode === 'hierarchy' && (
             <ContextMap mode="hierarchy" selectedId={selectedId} onSelect={selectNode} />
           )}

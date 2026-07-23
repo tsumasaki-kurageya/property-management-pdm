@@ -2,7 +2,7 @@
   display: grid;
   min-height: 0;
   height: 100%;
-  grid-template-rows: auto minmax(28rem, 1fr) auto minmax(8rem, auto);
+  grid-template-rows: auto auto minmax(28rem, 1fr) auto minmax(8rem, auto);
   background: var(--sl-color-bg);
 }
 
@@ -481,7 +481,7 @@
 
 @media (max-width: 64rem) {
   .flow-map-view {
-    grid-template-rows: auto minmax(31rem, 1fr) auto minmax(10rem, auto);
+    grid-template-rows: auto auto minmax(31rem, 1fr) auto minmax(10rem, auto);
   }
 
   .flow-map-text-alternative {
