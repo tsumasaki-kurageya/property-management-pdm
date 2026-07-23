@@ -1,0 +1,42 @@
+name: Explorer shell diagnostics
+
+on:
+  push:
+    branches:
+      - agent/explorer-shell
+
+permissions:
+  contents: read
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/explorer-shell
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Run verification
+        id: verify
+        shell: bash
+        run: |
+          set +e
+          npm run verify > explorer-shell-verify.log 2>&1
+          status=$?
+          cat explorer-shell-verify.log
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Upload diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: explorer-shell-diagnostics
+          path: explorer-shell-verify.log
+          if-no-files-found: error
+      - name: Fail when verification failed
+        if: steps.verify.outputs.status != '0'
+        run: exit 1
