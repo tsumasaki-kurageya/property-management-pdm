@@ -1,0 +1,87 @@
+.explorer-mobile-panel-tabs {
+  display: none;
+}
+
+.explorer-mobile-detail-slot,
+.explorer-mobile-lifecycle-slot {
+  display: contents;
+}
+
+.explorer-keyboard-help {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.explorer-view-tabs button:focus-visible,
+.explorer-mobile-panel-tabs button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--sl-color-accent) 48%, transparent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 56rem) {
+  .explorer-mobile-panel-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.3rem;
+    order: 2;
+    border: 1px solid var(--explorer-border);
+    border-radius: 0.72rem;
+    padding: 0.3rem;
+    background: var(--sl-color-bg-nav);
+  }
+
+  .explorer-mobile-panel-tabs button {
+    min-height: 2.75rem;
+    border: 0;
+    border-radius: 0.5rem;
+    padding: 0.48rem 0.4rem;
+    color: var(--sl-color-gray-2);
+    background: transparent;
+    font: inherit;
+    font-size: 0.73rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .explorer-mobile-panel-tabs button[aria-selected='true'] {
+    color: var(--sl-color-white);
+    background: var(--sl-color-accent);
+  }
+
+  .explorer-shell.mobile-panel-map .explorer-mobile-detail-slot,
+  .explorer-shell.mobile-panel-map .explorer-mobile-lifecycle-slot,
+  .explorer-shell.mobile-panel-detail .explorer-map-pane,
+  .explorer-shell.mobile-panel-detail .explorer-mobile-lifecycle-slot,
+  .explorer-shell.mobile-panel-lifecycle .explorer-map-pane,
+  .explorer-shell.mobile-panel-lifecycle .explorer-mobile-detail-slot {
+    display: none;
+  }
+
+  .explorer-shell.mobile-panel-map .explorer-map-pane,
+  .explorer-shell.mobile-panel-detail .explorer-detail-pane,
+  .explorer-shell.mobile-panel-lifecycle .explorer-lifecycle {
+    min-height: min(38rem, calc(100dvh - 12rem));
+  }
+
+  .explorer-map .react-flow__pane {
+    touch-action: pan-y pinch-zoom;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explorer-shell *,
+  .explorer-shell *::before,
+  .explorer-shell *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
