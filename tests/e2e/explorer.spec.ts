@@ -18,17 +18,34 @@ async function openRepresentative(page: Page) {
   await expect(shell.locator('.detail-panel-id')).toHaveText('BM-09-06');
 }
 
-test('BM-09-06の前後と条件分岐をテキストでも確認できる', async ({ page }) => {
+test('BM-09-06を含む横断プロセスを開始から完了まで確認できる', async ({ page }) => {
   await openRepresentative(page);
 
-  const textAlternative = explorerShell(page).getByLabel('仕事の流れをテキストで確認');
+  const shell = explorerShell(page);
+  await expect(shell.getByText('P04 定常業務の実施', { exact: true })).toBeVisible();
+  await expect(shell.getByText('開始', { exact: true }).first()).toBeAttached();
+  await expect(shell.getByText('完了', { exact: true }).first()).toBeAttached();
+
+  const textAlternative = shell.getByRole('region', { name: 'プロセス内容をテキストで確認' });
   await expect(textAlternative).toBeVisible();
   await expect(textAlternative.getByRole('button', { name: /点検値を記録する/ })).toBeVisible();
-  await expect(textAlternative.getByRole('button', { name: /点検結果を承認する/ })).toBeVisible();
-  await expect(textAlternative.getByRole('button', { name: /不具合を受け付ける/ })).toBeVisible();
+  await expect(textAlternative.locator('> ol > li')).toHaveCount(15);
+  await expect(textAlternative.getByText(/異常の場合/).first()).toBeVisible();
 
-  const renderedNodes = await explorerShell(page).locator('.flow-map-canvas .react-flow__node').count();
-  expect(renderedNodes).toBeLessThanOrEqual(8);
+  const renderedSteps = await shell.locator('.flow-map-canvas .flow-map-process-step').count();
+  expect(renderedSteps).toBe(15);
+});
+
+test('プロセス内の別業務を選択しても同じプロセスを維持する', async ({ page }) => {
+  await openRepresentative(page);
+
+  const shell = explorerShell(page);
+  const textAlternative = shell.getByRole('region', { name: 'プロセス内容をテキストで確認' });
+  await textAlternative.getByRole('button', { name: /BM-09-05/ }).click();
+
+  await expect(shell.locator('.detail-panel-id')).toHaveText('BM-09-05');
+  await expect(shell.locator('.flow-map-canvas')).toHaveAttribute('data-process-id', 'P04');
+  await expect(textAlternative.getByRole('button', { name: /BM-09-05/ })).toHaveAttribute('aria-current', 'true');
 });
 
 test('各画面幅で主要表示へ到達でき、ページ全体が横にはみ出さない', async ({ page }, testInfo) => {
