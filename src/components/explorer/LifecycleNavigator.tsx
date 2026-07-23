@@ -7,12 +7,12 @@ interface LifecycleNavigatorProps {
   onSelect: (nodeId: string) => void;
 }
 
-function representativeBusiness(stageId: string): string | undefined {
+function firstBusinessInStage(stageId: string): string | undefined {
   const stage = explorerGraph.lifecycleStages.find((item) => item.id === stageId);
   if (!stage) return undefined;
   for (const processId of stage.processIds) {
     const process = explorerGraph.processes.find((item) => item.id === processId);
-    const businessId = process?.businessIds.find((id) => explorerNodesById.has(id));
+    const businessId = process?.entryBusinessIds.find((id) => explorerNodesById.has(id));
     if (businessId) return businessId;
   }
   return undefined;
@@ -37,8 +37,8 @@ export default function LifecycleNavigator({ selectedId, onSelect }: LifecycleNa
   const currentProcesses = explorerGraph.processes.filter((process) => processIds.has(process.id));
 
   const selectStage = (stageId: string) => {
-    const representative = representativeBusiness(stageId);
-    if (representative) onSelect(representative);
+    const firstBusiness = firstBusinessInStage(stageId);
+    if (firstBusiness) onSelect(firstBusiness);
   };
 
   return (
@@ -57,15 +57,15 @@ export default function LifecycleNavigator({ selectedId, onSelect }: LifecycleNa
         <ol aria-label="業務ライフサイクル">
           {explorerGraph.lifecycleStages.map((stage, index) => {
             const isCurrent = lifecycleIds.has(stage.id);
-            const representative = representativeBusiness(stage.id);
+            const firstBusiness = firstBusinessInStage(stage.id);
             return (
               <li key={stage.id} className={isCurrent ? 'is-current' : ''}>
                 <button
                   type="button"
                   aria-current={isCurrent ? 'step' : undefined}
-                  disabled={!representative}
+                  disabled={!firstBusiness}
                   onClick={() => selectStage(stage.id)}
-                  title={representative ? `${stage.label}の代表業務へ移動` : '代表業務は未登録です'}
+                  title={firstBusiness ? `${stage.label}の先頭業務へ移動` : '先頭業務は未登録です'}
                 >
                   <span>{String(index + 1).padStart(2, '0')}</span>
                   <strong>{stage.label}</strong>
@@ -95,7 +95,7 @@ export default function LifecycleNavigator({ selectedId, onSelect }: LifecycleNa
                     <li className="is-unregistered">プロセス情報未登録</li>
                   ) : currentProcesses.map((process) => {
                     const processNode = explorerNodesById.get(process.id);
-                    const target = process.businessIds.find((id) => explorerNodesById.has(id));
+                    const target = process.entryBusinessIds.find((id) => explorerNodesById.has(id));
                     return (
                       <li key={process.id}>
                         <button type="button" disabled={!target} onClick={() => target && onSelect(target)}>

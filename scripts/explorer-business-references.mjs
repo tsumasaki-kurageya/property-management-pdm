@@ -1,8 +1,10 @@
-export function expandBusinessReferences(expression, catalog) {
+export function expandBusinessReferences(expression, catalog, { strict = false } = {}) {
   const text = expression.replace(/`/g, '');
   const catalogIds = new Set(catalog.tasks.map((task) => task.id));
   const areaTasks = new Map(catalog.areas.map((area) => [area.id, area.tasks.map((task) => task.id)]));
   const ids = new Set();
+  const referencedIds = new Set();
+  const referencedAreaIds = new Set();
 
   const normalized = text.replace(
     /BM-(\d{2})-(\d{2})\s*([〜～])\s*BM-\1-(\d{2})/g,
@@ -27,12 +29,14 @@ export function expandBusinessReferences(expression, catalog) {
         if (range) {
           for (let number = Number(range[1]); number <= Number(range[2]); number += 1) {
             const id = `BM-${area}-${String(number).padStart(2, '0')}`;
+            referencedIds.add(id);
             if (catalogIds.has(id)) ids.add(id);
           }
         } else {
           const number = token.match(/^(\d{2})(?!\d)/)?.[1];
           if (number) {
             const id = `BM-${area}-${number}`;
+            referencedIds.add(id);
             if (catalogIds.has(id)) ids.add(id);
           }
         }
@@ -41,7 +45,18 @@ export function expandBusinessReferences(expression, catalog) {
   }
 
   for (const match of normalized.matchAll(/BM-(\d{2})(?!-\d{2})/g)) {
-    for (const id of areaTasks.get(`BM-${match[1]}`) ?? []) ids.add(id);
+    const areaId = `BM-${match[1]}`;
+    referencedAreaIds.add(areaId);
+    for (const id of areaTasks.get(areaId) ?? []) ids.add(id);
+  }
+
+  if (strict) {
+    const unknownIds = [...referencedIds].filter((id) => !catalogIds.has(id));
+    const unknownAreaIds = [...referencedAreaIds].filter((id) => !areaTasks.has(id));
+    const unknown = [...unknownIds, ...unknownAreaIds];
+    if (unknown.length > 0) {
+      throw new Error(`未定義の業務参照です: ${unknown.join('、')}（${expression}）`);
+    }
   }
 
   return [...ids];
