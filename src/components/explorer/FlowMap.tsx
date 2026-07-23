@@ -287,9 +287,6 @@ export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
   const [state, setState] = useState<FlowMapState>('loading');
   const { fitView } = useReactFlow();
   const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
-  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
-  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
-  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
 
   const centerMap = useCallback(() => {
     void fitView({ padding: 0.24, duration: reducedMotion ? 0 : 240, maxZoom: 1.1 });
