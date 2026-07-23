@@ -23,6 +23,7 @@
     box-sizing: border-box;
     width: 100vw;
     max-width: none;
+    height: calc(100dvh - var(--sl-nav-height) - 0.5rem);
     margin-left: calc(50% - 50vw);
   }
 }
