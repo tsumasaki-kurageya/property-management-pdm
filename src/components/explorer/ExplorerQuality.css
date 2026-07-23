@@ -25,6 +25,16 @@
   outline-offset: 2px;
 }
 
+.explorer-view-tabs button.is-active,
+.explorer-reference-link,
+.explorer-reference-link:hover {
+  color: #fff !important;
+}
+
+.explorer-node-type {
+  color: var(--sl-color-text) !important;
+}
+
 @media (max-width: 56rem) {
   .explorer-mobile-panel-tabs {
     display: grid;
@@ -51,7 +61,7 @@
   }
 
   .explorer-mobile-panel-tabs button[aria-selected='true'] {
-    color: var(--sl-color-white);
+    color: #fff;
     background: var(--sl-color-accent);
   }
 
