@@ -15,6 +15,7 @@ function containsNextFocus(event: FocusEvent<HTMLElement>): boolean {
 export default function BusinessAreaMap({ onSelectBusiness }: BusinessAreaMapProps) {
   const [expandedAreaId, setExpandedAreaId] = useState<string>();
   const mapRef = useRef<HTMLElement>(null);
+  const pointerInteractionRef = useRef(false);
   const expandedArea = expandedAreaId ? explorerAreasById.get(expandedAreaId) : undefined;
 
   const closeExpandedArea = () => setExpandedAreaId(undefined);
@@ -78,9 +79,25 @@ export default function BusinessAreaMap({ onSelectBusiness }: BusinessAreaMapPro
                 aria-expanded={isExpanded}
                 aria-controls="business-area-expansion"
                 aria-label={`${area.id} 業務領域「${area.label}」、所属業務${area.businessIds.length}件。所属業務を${isExpanded ? '閉じる' : '開く'}`}
-                onMouseEnter={() => setExpandedAreaId(area.id)}
-                onFocus={() => setExpandedAreaId(area.id)}
-                onClick={() => setExpandedAreaId(isExpanded ? undefined : area.id)}
+                onMouseEnter={() => {
+                  if (window.matchMedia('(hover: hover)').matches) setExpandedAreaId(area.id);
+                }}
+                onPointerDown={() => {
+                  pointerInteractionRef.current = true;
+                }}
+                onPointerUp={() => {
+                  pointerInteractionRef.current = false;
+                }}
+                onPointerCancel={() => {
+                  pointerInteractionRef.current = false;
+                }}
+                onFocus={() => {
+                  if (!pointerInteractionRef.current) setExpandedAreaId(area.id);
+                }}
+                onClick={() => {
+                  setExpandedAreaId((currentAreaId) => currentAreaId === area.id ? undefined : area.id);
+                  pointerInteractionRef.current = false;
+                }}
                 onKeyDown={(event) => {
                   if (event.key !== 'ArrowDown') return;
                   event.preventDefault();
