@@ -22,3 +22,9 @@ jobs:
         run: npm ci
       - name: Verify release candidate
         run: npm run verify
+      - name: Upload explorer data
+        uses: actions/upload-artifact@v4
+        with:
+          name: explorer-data
+          path: src/data/explorer/generated
+          if-no-files-found: error
