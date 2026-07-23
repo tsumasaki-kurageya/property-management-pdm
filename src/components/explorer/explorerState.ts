@@ -56,9 +56,15 @@ export function parseExplorerUrl(url: URL): ParsedExplorerState {
     notices.push(`指定された表示方法「${requestedView}」は利用できないため、「仕事の流れ」を表示しました。`);
   }
 
-  const relationFilter = isOneOf(requestedFilter, explorerRelationFilters) ? requestedFilter : 'all';
-  if (requestedFilter && relationFilter !== requestedFilter) {
-    notices.push(`指定された関係分類「${requestedFilter}」は利用できないため、すべての関係を表示します。`);
+  let relationFilter: ExplorerRelationFilter = 'all';
+  if (viewMode === 'relations' && requestedFilter) {
+    if (isOneOf(requestedFilter, explorerRelationFilters)) {
+      relationFilter = requestedFilter;
+    } else {
+      notices.push(`指定された関係分類「${requestedFilter}」は利用できないため、すべての関係を表示します。`);
+    }
+  } else if (requestedFilter) {
+    notices.push('関係分類は「関係から探す」表示でのみ使用するため、指定を解除しました。');
   }
 
   return {
