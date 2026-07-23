@@ -1,0 +1,353 @@
+.flow-map-view {
+  display: grid;
+  min-height: 0;
+  height: 100%;
+  grid-template-rows: auto minmax(24rem, 1fr) auto auto;
+  background: var(--sl-color-bg);
+}
+
+.flow-map-context {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--explorer-border);
+  padding: 0.65rem 0.8rem;
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 80%, transparent);
+}
+
+.flow-map-context > div:first-child {
+  display: grid;
+  gap: 0.08rem;
+}
+
+.flow-map-context span,
+.flow-map-context small {
+  color: var(--sl-color-gray-3);
+  font-size: 0.66rem;
+}
+
+.flow-map-context > div:first-child > span {
+  color: var(--sl-color-text-accent);
+  font-weight: 750;
+}
+
+.flow-map-context strong {
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+.flow-map-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.flow-map-actions button {
+  border: 1px solid var(--explorer-border);
+  border-radius: 0.48rem;
+  padding: 0.42rem 0.62rem;
+  color: var(--sl-color-text);
+  background: var(--sl-color-bg);
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.flow-map-actions button:hover,
+.flow-map-actions button:focus-visible {
+  border-color: var(--sl-color-accent);
+  outline: none;
+  color: var(--sl-color-text-accent);
+}
+
+.flow-map-canvas {
+  position: relative;
+  min-height: 24rem;
+}
+
+.flow-map-canvas .react-flow {
+  background:
+    radial-gradient(circle at 50% 35%, color-mix(in srgb, var(--sl-color-accent-low) 30%, transparent), transparent 42%),
+    var(--sl-color-bg);
+}
+
+.flow-map-node {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--explorer-border) !important;
+  border-radius: 0.78rem !important;
+  padding: 0 !important;
+  color: var(--sl-color-text) !important;
+  background: var(--sl-color-bg) !important;
+  box-shadow: 0 0.45rem 1.2rem rgb(0 0 0 / 9%) !important;
+  text-align: left !important;
+  overflow: hidden;
+}
+
+.flow-map-node:hover,
+.flow-map-node:focus-visible,
+.flow-map-node.selected {
+  border-color: color-mix(in srgb, var(--sl-color-accent) 70%, var(--explorer-border)) !important;
+}
+
+.flow-map-node.is-selected {
+  border-color: var(--sl-color-accent) !important;
+  background: color-mix(in srgb, var(--sl-color-accent-low) 52%, var(--sl-color-bg)) !important;
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--sl-color-accent) 24%, transparent),
+    0 0.55rem 1.4rem rgb(0 0 0 / 12%) !important;
+}
+
+.flow-map-node.is-branch {
+  border-color: color-mix(in srgb, var(--sl-color-orange) 60%, var(--explorer-border)) !important;
+}
+
+.flow-map-node.is-missing {
+  border-style: dashed !important;
+  color: var(--sl-color-gray-3) !important;
+  background: color-mix(in srgb, var(--sl-color-gray-6) 68%, var(--sl-color-bg)) !important;
+  box-shadow: none !important;
+}
+
+.flow-map-node-copy {
+  display: grid;
+  width: 100%;
+  min-height: 92px;
+  align-content: center;
+  gap: 0.18rem;
+  padding: 0.7rem 0.78rem;
+}
+
+.flow-map-node-copy strong {
+  font-size: 0.82rem;
+  line-height: 1.35;
+}
+
+.flow-map-node-copy small {
+  color: var(--sl-color-gray-3);
+  font-size: 0.65rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.flow-map-node-eyebrow,
+.flow-map-node-relation {
+  font-size: 0.62rem;
+  font-weight: 750;
+}
+
+.flow-map-node-eyebrow {
+  color: var(--sl-color-text-accent);
+  letter-spacing: 0.04em;
+}
+
+.flow-map-node-relation {
+  margin-top: 0.08rem;
+  color: var(--sl-color-gray-3);
+}
+
+.flow-map-node.is-selected .flow-map-node-eyebrow,
+.flow-map-node.is-selected .flow-map-node-relation {
+  color: var(--sl-color-accent-high);
+}
+
+.flow-map-node.is-branch .flow-map-node-eyebrow {
+  color: var(--sl-color-orange-high);
+}
+
+.flow-map-canvas .react-flow__edge-path {
+  stroke: var(--sl-color-gray-3);
+  stroke-width: 1.8;
+}
+
+.flow-map-canvas .flow-map-edge.is-branch .react-flow__edge-path {
+  stroke: var(--sl-color-orange);
+  stroke-width: 2;
+}
+
+.flow-map-canvas .flow-map-edge.is-missing .react-flow__edge-path {
+  stroke: var(--sl-color-gray-4);
+  stroke-dasharray: 4 5;
+}
+
+.flow-map-canvas .react-flow__edge-text {
+  fill: var(--sl-color-gray-2);
+  font-size: 0.64rem;
+  font-weight: 700;
+}
+
+.flow-map-canvas .flow-map-edge.is-branch .react-flow__edge-text {
+  fill: var(--sl-color-orange-high);
+}
+
+.flow-map-canvas .react-flow__edge-textbg {
+  fill: var(--sl-color-bg);
+  fill-opacity: 0.92;
+}
+
+.flow-map-canvas .react-flow__controls {
+  border: 1px solid var(--explorer-border);
+  box-shadow: none;
+}
+
+.flow-map-canvas .react-flow__controls-button {
+  border-bottom-color: var(--explorer-border);
+  color: var(--sl-color-text);
+  background: var(--sl-color-bg);
+}
+
+.flow-map-canvas .react-flow__controls-button svg {
+  fill: currentColor;
+}
+
+.flow-map-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem 1rem;
+  border-top: 1px solid var(--explorer-border);
+  border-bottom: 1px solid var(--explorer-border);
+  padding: 0.55rem 0.8rem;
+  background: var(--sl-color-bg-nav);
+}
+
+.flow-map-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.38rem;
+  color: var(--sl-color-gray-2);
+  font-size: 0.67rem;
+  font-weight: 650;
+}
+
+.flow-map-legend i {
+  display: inline-block;
+  width: 1.5rem;
+  height: 0;
+  border-top: 2px solid var(--sl-color-gray-3);
+}
+
+.flow-map-legend i.is-branch {
+  border-top-color: var(--sl-color-orange);
+  border-top-style: dashed;
+}
+
+.flow-map-legend i.is-missing {
+  border-top-color: var(--sl-color-gray-4);
+  border-top-style: dotted;
+}
+
+.flow-map-text-alternative {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+  max-height: 13rem;
+  overflow: auto;
+  padding: 0.65rem 0.8rem 0.8rem;
+  background: color-mix(in srgb, var(--sl-color-bg) 94%, var(--sl-color-gray-6));
+}
+
+.flow-map-text-alternative section {
+  min-width: 0;
+  border: 1px solid var(--explorer-border);
+  border-radius: 0.58rem;
+  padding: 0.55rem;
+  background: var(--sl-color-bg);
+}
+
+.flow-map-text-alternative h3,
+.flow-map-text-alternative p,
+.flow-map-text-alternative ul {
+  margin: 0;
+}
+
+.flow-map-text-alternative h3 {
+  margin-bottom: 0.38rem;
+  font-size: 0.72rem;
+}
+
+.flow-map-text-alternative p {
+  color: var(--sl-color-gray-3);
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.flow-map-text-alternative ul {
+  display: grid;
+  gap: 0.28rem;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-map-text-alternative button {
+  display: grid;
+  gap: 0.08rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 0.45rem;
+  padding: 0.42rem 0.48rem;
+  color: var(--sl-color-text);
+  background: var(--sl-color-bg-nav);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.flow-map-text-alternative button:hover,
+.flow-map-text-alternative button:focus-visible {
+  border-color: var(--sl-color-accent);
+  outline: none;
+}
+
+.flow-map-text-alternative button strong {
+  font-size: 0.68rem;
+  line-height: 1.35;
+}
+
+.flow-map-text-alternative button span,
+.flow-map-text-alternative button small {
+  color: var(--sl-color-gray-3);
+  font-size: 0.61rem;
+}
+
+.flow-map-text-alternative button small {
+  color: var(--sl-color-orange-high);
+  font-weight: 700;
+}
+
+@media (max-width: 64rem) {
+  .flow-map-view {
+    grid-template-rows: auto minmax(27rem, 1fr) auto auto;
+  }
+
+  .flow-map-text-alternative {
+    grid-template-columns: 1fr;
+    max-height: 18rem;
+  }
+}
+
+@media (max-width: 40rem) {
+  .flow-map-context {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .flow-map-actions {
+    justify-content: space-between;
+  }
+
+  .flow-map-canvas {
+    min-height: 28rem;
+  }
+
+  .flow-map-legend {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flow-map-canvas .react-flow__edge-path {
+    animation: none !important;
+  }
+}
