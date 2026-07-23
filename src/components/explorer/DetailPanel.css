@@ -1,0 +1,165 @@
+.detail-panel-content {
+  min-height: 0;
+  overflow: auto;
+  scrollbar-gutter: stable;
+}
+
+.detail-panel-summary {
+  padding: 1rem;
+  border-bottom: 1px solid var(--explorer-border);
+}
+
+.detail-panel-summary h3,
+.detail-panel-summary p {
+  margin: 0;
+}
+
+.detail-panel-id {
+  margin-bottom: 0.2rem !important;
+  color: var(--sl-color-gray-3);
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.detail-panel-summary h3 {
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.detail-panel-summary > p:last-child {
+  margin-top: 0.65rem;
+  color: var(--sl-color-gray-2);
+  font-size: 0.8rem;
+  line-height: 1.65;
+}
+
+.detail-panel-summary > p.is-unregistered,
+.detail-section-empty {
+  color: var(--sl-color-gray-3);
+  font-style: italic;
+}
+
+.detail-panel-sections details {
+  border-bottom: 1px solid var(--explorer-border);
+}
+
+.detail-panel-sections summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.72rem 0.85rem;
+  color: var(--sl-color-text);
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 82%, transparent);
+  font-size: 0.78rem;
+  font-weight: 720;
+  cursor: pointer;
+  list-style-position: inside;
+}
+
+.detail-panel-sections summary:hover,
+.detail-panel-sections summary:focus-visible {
+  outline: none;
+  color: var(--sl-color-text-accent);
+  background: var(--sl-color-gray-6);
+}
+
+.detail-panel-sections summary small {
+  min-width: 2rem;
+  border-radius: 999px;
+  padding: 0.12rem 0.4rem;
+  color: var(--sl-color-gray-3);
+  background: var(--sl-color-bg);
+  font-size: 0.62rem;
+  text-align: center;
+}
+
+.detail-section-body {
+  padding: 0.7rem 0.8rem 0.85rem;
+}
+
+.detail-section-help {
+  margin: 0 0 0.55rem;
+  color: var(--sl-color-gray-3);
+  font-size: 0.67rem;
+  line-height: 1.55;
+}
+
+.detail-section-empty {
+  margin: 0;
+  border: 1px dashed var(--explorer-border);
+  border-radius: 0.5rem;
+  padding: 0.62rem;
+  background: color-mix(in srgb, var(--sl-color-gray-6) 45%, transparent);
+  font-size: 0.7rem;
+  line-height: 1.5;
+}
+
+.detail-section-body ul {
+  display: grid;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.detail-section-body button {
+  display: grid;
+  gap: 0.12rem;
+  width: 100%;
+  border: 1px solid var(--explorer-border);
+  border-radius: 0.55rem;
+  padding: 0.58rem 0.65rem;
+  color: var(--sl-color-text);
+  background: var(--sl-color-bg);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.detail-section-body button:hover,
+.detail-section-body button:focus-visible {
+  border-color: var(--sl-color-accent);
+  outline: none;
+  background: var(--sl-color-gray-6);
+}
+
+.detail-section-body button span {
+  color: var(--sl-color-text-accent);
+  font-size: 0.62rem;
+  font-weight: 750;
+}
+
+.detail-section-body button strong {
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
+.detail-section-body button small {
+  color: var(--sl-color-gray-3);
+  font-size: 0.62rem;
+}
+
+.detail-panel-actions {
+  padding: 0.9rem;
+}
+
+.detail-panel-actions .detail-section-empty {
+  margin-bottom: 0.8rem;
+}
+
+.explorer-node-type.type-artifact {
+  color: var(--sl-color-blue-high);
+  background: color-mix(in srgb, var(--sl-color-blue-low) 65%, transparent);
+}
+
+.explorer-node-type.type-role {
+  color: var(--sl-color-purple-high);
+  background: color-mix(in srgb, var(--sl-color-purple-low) 65%, transparent);
+}
+
+.explorer-node-type.type-standard {
+  color: var(--sl-color-orange-high);
+  background: color-mix(in srgb, var(--sl-color-orange-low) 65%, transparent);
+}
