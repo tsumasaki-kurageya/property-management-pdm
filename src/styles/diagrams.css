@@ -11,6 +11,38 @@
   max-width: 100%;
 }
 
+@media (min-width: 72rem) {
+  :root {
+    --guide-toc-width: 14rem;
+    --sl-content-width: 52rem;
+  }
+
+  .right-sidebar-container {
+    width: max(
+      var(--guide-toc-width),
+      calc(
+        var(--guide-toc-width) +
+          (100% - var(--sl-content-width) - var(--guide-toc-width)) / 2
+      )
+    );
+  }
+
+  [data-has-sidebar][data-has-toc] .main-pane {
+    width: min(
+      calc(100% - var(--guide-toc-width)),
+      calc(
+        var(--sl-content-width) +
+          (100% - var(--sl-content-width) - var(--guide-toc-width)) / 2
+      )
+    );
+  }
+
+  .right-sidebar-panel .sl-container {
+    width: calc(var(--guide-toc-width) - 2 * var(--sl-sidebar-pad-x));
+    max-width: calc(var(--guide-toc-width) - 2 * var(--sl-sidebar-pad-x));
+  }
+}
+
 @media (max-width: 50rem) {
   .mermaid svg {
     min-width: 38rem;
