@@ -12,6 +12,7 @@ import {
 import '@xyflow/react/dist/style.css';
 import { explorerGraph, explorerNodesById, getExplorerEdgesForNode } from '../../data/explorer';
 import type { ExplorerEdge, ExplorerNode } from '../../data/explorer/schema';
+import BusinessNavigator from './BusinessNavigator';
 import './ExplorerShell.css';
 
 const BASE_URL = import.meta.env.BASE_URL;
@@ -121,23 +122,11 @@ async function layoutMap(selectedId: string, mode: ViewMode): Promise<{ nodes: F
 
 function ExplorerAppContent() {
   const [selectedId, setSelectedId] = useState(getInitialNodeId);
-  const [query, setQuery] = useState('');
   const [viewMode, setViewMode] = useState<ViewMode>('flow');
   const [layoutState, setLayoutState] = useState<LayoutState>('loading');
   const [flowNodes, setFlowNodes] = useState<FlowNode[]>([]);
   const [flowEdges, setFlowEdges] = useState<FlowEdge[]>([]);
 
-  const businessNodes = useMemo(
-    () => explorerGraph.nodes.filter((node) => node.type === 'business'),
-    [],
-  );
-  const filteredNodes = useMemo(() => {
-    const normalized = query.trim().toLowerCase();
-    if (!normalized) return businessNodes.slice(0, 24);
-    return businessNodes
-      .filter((node) => `${node.id} ${node.label}`.toLowerCase().includes(normalized))
-      .slice(0, 40);
-  }, [businessNodes, query]);
   const selectedNode = explorerNodesById.get(selectedId);
   const selectedEdges = useMemo(() => getExplorerEdgesForNode(selectedId), [selectedId]);
   const lifecycleIds = useMemo(
@@ -208,40 +197,7 @@ function ExplorerAppContent() {
         </div>
       </header>
 
-      <aside className="explorer-pane explorer-list-pane" aria-labelledby="explorer-list-title">
-        <div className="explorer-pane-heading">
-          <h2 id="explorer-list-title">業務を選ぶ</h2>
-          <span>{businessNodes.length}業務</span>
-        </div>
-        <label className="explorer-search">
-          <span>業務ID・業務名で検索</span>
-          <input
-            type="search"
-            value={query}
-            placeholder="例: BM-09-06、点検異常"
-            onChange={(event) => setQuery(event.currentTarget.value)}
-          />
-        </label>
-        <div className="explorer-business-list" role="listbox" aria-label="業務一覧">
-          {filteredNodes.length === 0 ? (
-            <p className="explorer-empty">該当する業務がありません。</p>
-          ) : (
-            filteredNodes.map((node) => (
-              <button
-                type="button"
-                key={node.id}
-                role="option"
-                aria-selected={node.id === selectedId}
-                className={node.id === selectedId ? 'is-selected' : ''}
-                onClick={() => selectNode(node.id)}
-              >
-                <span>{node.id}</span>
-                <strong>{node.label}</strong>
-              </button>
-            ))
-          )}
-        </div>
-      </aside>
+      <BusinessNavigator selectedId={selectedId} onSelect={selectNode} />
 
       <main className="explorer-pane explorer-map-pane" aria-labelledby="explorer-map-title">
         <div className="explorer-pane-heading">
