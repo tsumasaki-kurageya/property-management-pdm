@@ -11,6 +11,7 @@ import {
 } from '@xyflow/react';
 import { explorerNodesById, getExplorerEdgesForNode } from '../../data/explorer';
 import type { ExplorerEdge, ExplorerNode } from '../../data/explorer/schema';
+import { useExplorerMediaPreferences } from './explorerMedia';
 import './FlowMap.css';
 
 interface FlowMapProps {
@@ -285,10 +286,11 @@ export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
   const [edges, setEdges] = useState<ReactFlowEdge[]>([]);
   const [state, setState] = useState<FlowMapState>('loading');
   const { fitView } = useReactFlow();
+  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
 
   const centerMap = useCallback(() => {
-    void fitView({ padding: 0.24, duration: 240, maxZoom: 1.1 });
-  }, [fitView]);
+    void fitView({ padding: 0.24, duration: reducedMotion ? 0 : 240, maxZoom: 1.1 });
+  }, [fitView, reducedMotion]);
 
   useEffect(() => {
     let active = true;
@@ -339,10 +341,10 @@ export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
             minZoom={0.38}
             maxZoom={1.55}
             nodesConnectable={false}
-            nodesDraggable
+            nodesDraggable={!coarsePointer}
             elementsSelectable
-            panOnDrag
-            zoomOnScroll
+            panOnDrag={!coarsePointer}
+            zoomOnScroll={!coarsePointer}
             onNodeClick={(_event, node) => {
               if (!node.id.startsWith('__missing_')) onSelect(node.id);
             }}

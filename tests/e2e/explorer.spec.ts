@@ -1,9 +1,9 @@
 import AxeBuilder from '@axe-core/playwright';
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
 const representativeUrl = 'explorer/?business=BM-09-06&view=flow';
 
-async function openRepresentative(page: Parameters<typeof test>[0] extends never ? never : any) {
+async function openRepresentative(page: Page) {
   await page.goto(representativeUrl);
   await expect(page.getByRole('heading', { name: '業務エクスプローラー' })).toBeVisible();
   await expect(page.locator('.detail-panel-id')).toHaveText('BM-09-06');
