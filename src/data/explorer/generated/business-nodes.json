@@ -1,0 +1,7831 @@
+[
+  {
+    "id": "ART-0085947D8E",
+    "type": "artifact",
+    "label": "作業割当",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-00FB6BF03B",
+    "type": "artifact",
+    "label": "変更内容",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-024252369D",
+    "type": "artifact",
+    "label": "再計画",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-0301DB7369",
+    "type": "artifact",
+    "label": "説明記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-042A5C46E0",
+    "type": "artifact",
+    "label": "適用法令",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-0445A8E3CB",
+    "type": "artifact",
+    "label": "台帳",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-04F2E29576",
+    "type": "artifact",
+    "label": "解除確認",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-05A0B6B394",
+    "type": "artifact",
+    "label": "利用影響",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-05B1BC93EB",
+    "type": "artifact",
+    "label": "停止範囲",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-064641B2E2",
+    "type": "artifact",
+    "label": "採算・差異分析",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-06CAA5E090",
+    "type": "artifact",
+    "label": "追加作業承認",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-0724A7C159",
+    "type": "artifact",
+    "label": "緊急対応条件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-076072A1B8",
+    "type": "artifact",
+    "label": "各種台帳",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-089BDEC2D8",
+    "type": "artifact",
+    "label": "法令義務マスター",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-09464A48F7",
+    "type": "artifact",
+    "label": "顧客要求",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-09815D0DAA",
+    "type": "artifact",
+    "label": "法定業務計画",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-09959435C3",
+    "type": "artifact",
+    "label": "契約終了記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-09A14AFC90",
+    "type": "artifact",
+    "label": "一次対応",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-0A30319F0B",
+    "type": "artifact",
+    "label": "部品管理票",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-0BF693ED93",
+    "type": "artifact",
+    "label": "単価",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-0DFB22BD5F",
+    "type": "artifact",
+    "label": "義務主体",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-0E2F85245B",
+    "type": "artifact",
+    "label": "次の対応",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-0E7CB38800",
+    "type": "artifact",
+    "label": "確認結果",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-0FB625B8E5",
+    "type": "artifact",
+    "label": "判定結果",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-11ED636321",
+    "type": "artifact",
+    "label": "巡回表",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-124F7D2D0B",
+    "type": "artifact",
+    "label": "更新済み履歴",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-13180A2DEA",
+    "type": "artifact",
+    "label": "建物・設備情報",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-151E3FA6BB",
+    "type": "artifact",
+    "label": "部品表",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-153412DC91",
+    "type": "artifact",
+    "label": "前提・除外条件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-158EFCCCF0",
+    "type": "artifact",
+    "label": "対応案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-1591E052DE",
+    "type": "artifact",
+    "label": "避難経路",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-15C58DF576",
+    "type": "artifact",
+    "label": "判定",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-16C2219A6A",
+    "type": "artifact",
+    "label": "連絡事項",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-1B1B5806B2",
+    "type": "artifact",
+    "label": "予定",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-1B508FD6C1",
+    "type": "artifact",
+    "label": "作業原価",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-1B8D4654BA",
+    "type": "artifact",
+    "label": "権限",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-1CAE3C8DD2",
+    "type": "artifact",
+    "label": "請求対象一覧",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-1D51593DC5",
+    "type": "artifact",
+    "label": "適用根拠",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-1F966AF85F",
+    "type": "artifact",
+    "label": "初期計画",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-1FD150F3D7",
+    "type": "artifact",
+    "label": "効果見込み",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-1FF4261327",
+    "type": "artifact",
+    "label": "原因仮説",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-203C7F56A4",
+    "type": "artifact",
+    "label": "不適合記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-220A3A7984",
+    "type": "artifact",
+    "label": "勤務・管理方式",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-229C372ADB",
+    "type": "artifact",
+    "label": "周知記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-24715AE559",
+    "type": "artifact",
+    "label": "警報一覧",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-250E47EB38",
+    "type": "artifact",
+    "label": "保安規程",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-256EDDC746",
+    "type": "artifact",
+    "label": "作業依頼",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-25CC38EF00",
+    "type": "artifact",
+    "label": "対応期限",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-260951C43B",
+    "type": "artifact",
+    "label": "資格",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-26A4D51E5F",
+    "type": "artifact",
+    "label": "エスカレーション経路",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-28DF457482",
+    "type": "artifact",
+    "label": "品質記録",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-2907FF6C59",
+    "type": "artifact",
+    "label": "追加確認事項",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-296ADF4974",
+    "type": "artifact",
+    "label": "証跡要件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-2A24AA3754",
+    "type": "artifact",
+    "label": "用途・規模",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-2AA0E55022",
+    "type": "artifact",
+    "label": "発生事実",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-2B6755C0B9",
+    "type": "artifact",
+    "label": "修繕結果",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-2C845156EA",
+    "type": "artifact",
+    "label": "推奨対応",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-2D3347041E",
+    "type": "artifact",
+    "label": "試験結果",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-2DE0878CBD",
+    "type": "artifact",
+    "label": "実施体制",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-2E5355AA6F",
+    "type": "artifact",
+    "label": "事実",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-2F90E400FD",
+    "type": "artifact",
+    "label": "使用量",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-30584E5077",
+    "type": "artifact",
+    "label": "メーカー手順",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-30F097DF6D",
+    "type": "artifact",
+    "label": "是正措置",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-330F73B3C4",
+    "type": "artifact",
+    "label": "設備台帳",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-33B6B4EBA5",
+    "type": "artifact",
+    "label": "課題",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-345260317C",
+    "type": "artifact",
+    "label": "支払対象",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-34FDBDAC03",
+    "type": "artifact",
+    "label": "数量内訳",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-35F7A16846",
+    "type": "artifact",
+    "label": "安全手順",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-3AAC14495B",
+    "type": "artifact",
+    "label": "受領済み引渡し",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-3BD8275BF5",
+    "type": "artifact",
+    "label": "完了・継続回答",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-3C74369697",
+    "type": "artifact",
+    "label": "受領記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-3EFCCEA5B9",
+    "type": "artifact",
+    "label": "異常受付票",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-3F0EB50C77",
+    "type": "artifact",
+    "label": "設備履歴",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-3F177F523E",
+    "type": "artifact",
+    "label": "検査・指摘結果",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-4100E90E79",
+    "type": "artifact",
+    "label": "分類",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-46B165C1CE",
+    "type": "artifact",
+    "label": "保存記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-48B5F93E11",
+    "type": "artifact",
+    "label": "契約情報",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-4A3466352F",
+    "type": "artifact",
+    "label": "安全確保・隔離状態",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-4B6F69A29F",
+    "type": "artifact",
+    "label": "端末",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-4D06593325",
+    "type": "artifact",
+    "label": "報告資料",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-4D08400F95",
+    "type": "artifact",
+    "label": "体制表",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-4E068977AC",
+    "type": "artifact",
+    "label": "連絡・上申先",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-4ED6742FB9",
+    "type": "artifact",
+    "label": "緊急操作票",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-525630D7FC",
+    "type": "artifact",
+    "label": "清掃基準",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-52761CF328",
+    "type": "artifact",
+    "label": "停止・制限範囲",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-52F222AA5A",
+    "type": "artifact",
+    "label": "必要時カメラ",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-53150405DA",
+    "type": "artifact",
+    "label": "作業表",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-54B6B356D7",
+    "type": "artifact",
+    "label": "SDS",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-55A653CEBE",
+    "type": "artifact",
+    "label": "優先度",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-59F0BF4775",
+    "type": "artifact",
+    "label": "期限",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-5B09926136",
+    "type": "artifact",
+    "label": "年間計画",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-5B4E352A47",
+    "type": "artifact",
+    "label": "物件別連絡網",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-5CD2969895",
+    "type": "artifact",
+    "label": "契約仕様",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-5D103C64A3",
+    "type": "artifact",
+    "label": "承認",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-5EBDB47BD8",
+    "type": "artifact",
+    "label": "過去値",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-5FA5345A84",
+    "type": "artifact",
+    "label": "検査記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-60A4D58E7D",
+    "type": "artifact",
+    "label": "除外・保留理由",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-628DE6DCEA",
+    "type": "artifact",
+    "label": "根拠",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-634E6A5CCA",
+    "type": "artifact",
+    "label": "条件付き事項",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-63A20C73E2",
+    "type": "artifact",
+    "label": "資格確認",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-63D4CFC499",
+    "type": "artifact",
+    "label": "発生時刻",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-64EC4C5126",
+    "type": "artifact",
+    "label": "図示",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-666097C389",
+    "type": "artifact",
+    "label": "請求書",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-67304BA496",
+    "type": "artifact",
+    "label": "問い合わせ内容",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-685F4D5943",
+    "type": "artifact",
+    "label": "月間・日次計画",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-69C087789D",
+    "type": "artifact",
+    "label": "評価結果",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-69D4EBFDA3",
+    "type": "artifact",
+    "label": "承認済み仕様",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-6AC1DCBE09",
+    "type": "artifact",
+    "label": "受付記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-6BA67C1FDD",
+    "type": "artifact",
+    "label": "施工記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-6C78D1BE22",
+    "type": "artifact",
+    "label": "警報・異常",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-6F4BFBC3B9",
+    "type": "artifact",
+    "label": "承認済み申請",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-70EFAE680F",
+    "type": "artifact",
+    "label": "過去履歴",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-714162251F",
+    "type": "artifact",
+    "label": "見積",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-71BFC9833A",
+    "type": "artifact",
+    "label": "連絡網",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-735801B2A8",
+    "type": "artifact",
+    "label": "一次情報",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-74240947AF",
+    "type": "artifact",
+    "label": "緊急対応票",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-742A4D4928",
+    "type": "artifact",
+    "label": "案件一覧",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-742ECB26F6",
+    "type": "artifact",
+    "label": "差戻し",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-7501A853E4",
+    "type": "artifact",
+    "label": "異常内容",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-77B6370940",
+    "type": "artifact",
+    "label": "過去記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-77E31587D2",
+    "type": "artifact",
+    "label": "異常・未実施の抽出",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-78539F14BE",
+    "type": "artifact",
+    "label": "系統図",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-799C28232C",
+    "type": "artifact",
+    "label": "物件別適用判定",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-7B680A13FF",
+    "type": "artifact",
+    "label": "写真・計測値",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-7C522E321D",
+    "type": "artifact",
+    "label": "物件別法令義務台帳",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-7DBD5DDA96",
+    "type": "artifact",
+    "label": "自治体ルール",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-7DF9D56DEF",
+    "type": "artifact",
+    "label": "指摘",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-7EAD5E7396",
+    "type": "artifact",
+    "label": "提出・受理記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-7F3781979E",
+    "type": "artifact",
+    "label": "監査記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-7F674368D6",
+    "type": "artifact",
+    "label": "安全対策",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-7FCA68E8C8",
+    "type": "artifact",
+    "label": "ゾーニング",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-8011AED6E3",
+    "type": "artifact",
+    "label": "商談記録",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-803B8E978F",
+    "type": "artifact",
+    "label": "必要に応じカメラ",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-826B4ECDB3",
+    "type": "artifact",
+    "label": "提案書",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-828D4CEC1F",
+    "type": "artifact",
+    "label": "場所",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-833C46FC24",
+    "type": "artifact",
+    "label": "停止・影響範囲",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-8347ACE8A5",
+    "type": "artifact",
+    "label": "担当・期限",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-835FE120C5",
+    "type": "artifact",
+    "label": "案件記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-86FED5985B",
+    "type": "artifact",
+    "label": "法令影響",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-89432B6540",
+    "type": "artifact",
+    "label": "鍵・物品",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-896A6CC0A7",
+    "type": "artifact",
+    "label": "点検基準",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-896FAC94D8",
+    "type": "artifact",
+    "label": "更新予定",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-8991CCC4A6",
+    "type": "artifact",
+    "label": "測定値",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-8B1214D550",
+    "type": "artifact",
+    "label": "承認・連絡記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-8B8CE3CC55",
+    "type": "artifact",
+    "label": "提出期限",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-8CAF885BDF",
+    "type": "artifact",
+    "label": "入退場記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-8CFB1DC8C0",
+    "type": "artifact",
+    "label": "期限管理",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-8DFD1E7B72",
+    "type": "artifact",
+    "label": "リスク評価",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-8ECF75A8E3",
+    "type": "artifact",
+    "label": "業務仕様案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-8FFA2D33AC",
+    "type": "artifact",
+    "label": "技術的復旧又は条件付き引渡し",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-92C5B2D3C1",
+    "type": "artifact",
+    "label": "対象一覧",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-9418DB0C8B",
+    "type": "artifact",
+    "label": "設備・場所",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-943EAB1649",
+    "type": "artifact",
+    "label": "作業票",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-94ADFA1B68",
+    "type": "artifact",
+    "label": "差戻し理由",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-955B31B0AE",
+    "type": "artifact",
+    "label": "払出・発注・準備記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-971EB2DA6B",
+    "type": "artifact",
+    "label": "管理権原",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-9AD7D8A0DC",
+    "type": "artifact",
+    "label": "再清掃等",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-9C3250FF63",
+    "type": "artifact",
+    "label": "写真",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-9E611752AD",
+    "type": "artifact",
+    "label": "判定・承認結果",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-A03CD4AB64",
+    "type": "artifact",
+    "label": "運用合意",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-A08C280003",
+    "type": "artifact",
+    "label": "義務一覧",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-A0A1719440",
+    "type": "artifact",
+    "label": "帳票",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-A1FB28E1C2",
+    "type": "artifact",
+    "label": "現地調査結果",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-A2E377EE5E",
+    "type": "artifact",
+    "label": "未実施一覧",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-A3060F3EB1",
+    "type": "artifact",
+    "label": "協力会社",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-A316090F6F",
+    "type": "artifact",
+    "label": "承認・検収状態",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-A5A4AE55FA",
+    "type": "artifact",
+    "label": "施設利用状況",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-A64BDD12BE",
+    "type": "artifact",
+    "label": "実施措置",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-A7268AFD6A",
+    "type": "artifact",
+    "label": "変更履歴",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-A7A63832B2",
+    "type": "artifact",
+    "label": "手順",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-A8604C82B1",
+    "type": "artifact",
+    "label": "実施票",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-AC3CA98DD3",
+    "type": "artifact",
+    "label": "変更計画",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-AD26A5317A",
+    "type": "artifact",
+    "label": "再発防止策",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-AD4101328E",
+    "type": "artifact",
+    "label": "工事写真",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-AF350B69D5",
+    "type": "artifact",
+    "label": "報告書",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-AF5DE72BE4",
+    "type": "artifact",
+    "label": "顧客影響",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-AFFD918EF3",
+    "type": "artifact",
+    "label": "承認済み実績",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-B0B8D3BAA2",
+    "type": "artifact",
+    "label": "速報",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-B1779940D6",
+    "type": "artifact",
+    "label": "業務仕様書",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-B1C9D25952",
+    "type": "artifact",
+    "label": "初期情報一式",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-B1D1D18EE3",
+    "type": "artifact",
+    "label": "保証開始日",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-B1E5651329",
+    "type": "artifact",
+    "label": "責任分界",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-B25FF3DA67",
+    "type": "artifact",
+    "label": "必要資格",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-B29EF6FB3E",
+    "type": "artifact",
+    "label": "根拠実績",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-B3AFC66CF0",
+    "type": "artifact",
+    "label": "点検・測定・訓練記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-B4C6941557",
+    "type": "artifact",
+    "label": "作業記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-B6311F1396",
+    "type": "artifact",
+    "label": "予算条件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-B6C6AF8410",
+    "type": "artifact",
+    "label": "更新済み台帳",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-B7E2574192",
+    "type": "artifact",
+    "label": "施工・修繕準備",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-B8E1CF9F89",
+    "type": "artifact",
+    "label": "対象",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-B8F946524D",
+    "type": "artifact",
+    "label": "改善・投資提案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-C03BFC829B",
+    "type": "artifact",
+    "label": "基準値",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-C0DA6EF3A1",
+    "type": "artifact",
+    "label": "作業実績集計",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-C1166FF79D",
+    "type": "artifact",
+    "label": "異常",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-C342B69DB3",
+    "type": "artifact",
+    "label": "役割分担表",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-C3DB3A3359",
+    "type": "artifact",
+    "label": "物品・権限一覧",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-C40023F571",
+    "type": "artifact",
+    "label": "管理体制",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-C44F3BB195",
+    "type": "artifact",
+    "label": "発行記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-C4CD590FE9",
+    "type": "artifact",
+    "label": "未実施理由",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-C618F5B38A",
+    "type": "artifact",
+    "label": "作業指示",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-C669BA566B",
+    "type": "artifact",
+    "label": "建物・設備台帳",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-C6B938A9D7",
+    "type": "artifact",
+    "label": "未解決事項一覧",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-C785B8EDD5",
+    "type": "artifact",
+    "label": "操作権限",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-C826667472",
+    "type": "artifact",
+    "label": "継続案件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-C854778444",
+    "type": "artifact",
+    "label": "更新契約",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-C8A6032275",
+    "type": "artifact",
+    "label": "商談情報",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-C9AF938785",
+    "type": "artifact",
+    "label": "作業開始条件",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-CA79140EB9",
+    "type": "artifact",
+    "label": "実績",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-CAD00EE9E1",
+    "type": "artifact",
+    "label": "作業計画",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-CBBC87A9DA",
+    "type": "artifact",
+    "label": "顧客台帳",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-CBCD5A3E60",
+    "type": "artifact",
+    "label": "人的安全",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-CC0784B2A4",
+    "type": "artifact",
+    "label": "期間",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-CD048CB48C",
+    "type": "artifact",
+    "label": "契約・法定条件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-CD32688170",
+    "type": "artifact",
+    "label": "品質基準案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-CE633C2516",
+    "type": "artifact",
+    "label": "法令・用途条件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-D0B16127AB",
+    "type": "artifact",
+    "label": "検収状態",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-D0BF06CD7A",
+    "type": "artifact",
+    "label": "終了計画",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-D17C056CEE",
+    "type": "artifact",
+    "label": "要求事項",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-D1D7396364",
+    "type": "artifact",
+    "label": "承認・却下・延期",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-D20E760BDC",
+    "type": "artifact",
+    "label": "原価見積",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-D2F7F74270",
+    "type": "artifact",
+    "label": "承認・差戻し記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-D34C4B8374",
+    "type": "artifact",
+    "label": "引渡し一覧",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-D4924D11F5",
+    "type": "artifact",
+    "label": "点検記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-D5BE412F1B",
+    "type": "artifact",
+    "label": "契約",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-D8633611E3",
+    "type": "artifact",
+    "label": "引継ぎ記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-D92E103743",
+    "type": "artifact",
+    "label": "対象設備",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-DB1C9EEDF9",
+    "type": "artifact",
+    "label": "初動指示",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-DCC9CEA44E",
+    "type": "artifact",
+    "label": "区域設定記録",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-DCFF9DAAAF",
+    "type": "artifact",
+    "label": "取消・未実施情報",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-DDDA5FF5A2",
+    "type": "artifact",
+    "label": "適合・再差戻し判定",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-DE1E0F505C",
+    "type": "artifact",
+    "label": "提出・受領記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-DE73158B82",
+    "type": "artifact",
+    "label": "連絡履歴",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-E171777A02",
+    "type": "artifact",
+    "label": "品質基準",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-E19654EE80",
+    "type": "artifact",
+    "label": "建物情報",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-E1A6A7640D",
+    "type": "artifact",
+    "label": "補足要求",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-E273620642",
+    "type": "artifact",
+    "label": "運転基準",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-E2BB782A11",
+    "type": "artifact",
+    "label": "見積書",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-E62D456535",
+    "type": "artifact",
+    "label": "計器",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-E750B2BED7",
+    "type": "artifact",
+    "label": "資格証跡",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-E86B643ADC",
+    "type": "artifact",
+    "label": "完成図書",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-E99F143ABC",
+    "type": "artifact",
+    "label": "保存証跡",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-E99F451EDF",
+    "type": "artifact",
+    "label": "受領済み速報",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-EA93A1C45F",
+    "type": "artifact",
+    "label": "残存リスク",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-EAC5FF6B54",
+    "type": "artifact",
+    "label": "状況連絡記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-EB0896689F",
+    "type": "artifact",
+    "label": "改訂済み仕様・計画",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-EB5C5C53F7",
+    "type": "artifact",
+    "label": "理由",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-ECB57A64C8",
+    "type": "artifact",
+    "label": "既存運用",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-F09ABBE90A",
+    "type": "artifact",
+    "label": "配置・系統図",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-F09ECFF215",
+    "type": "artifact",
+    "label": "設備状態",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-F0F39B3FE6",
+    "type": "artifact",
+    "label": "チェックリスト",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-F1008B9355",
+    "type": "artifact",
+    "label": "材質表",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "kind": "procedure-input"
+    }
+  },
+  {
+    "id": "ART-F1A71F226F",
+    "type": "artifact",
+    "label": "異常記録",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-F1AEAD6BEE",
+    "type": "artifact",
+    "label": "再発防止・改善案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-F2536F5B3F",
+    "type": "artifact",
+    "label": "KPI",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-F290BB32ED",
+    "type": "artifact",
+    "label": "現場状況",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-F3C91499F5",
+    "type": "artifact",
+    "label": "傾向",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-F411B1E116",
+    "type": "artifact",
+    "label": "修繕計画案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-F497C63A5F",
+    "type": "artifact",
+    "label": "更新条件案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-F52D52C5CA",
+    "type": "artifact",
+    "label": "顧客情報",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-F55A0A926B",
+    "type": "artifact",
+    "label": "関係者承認",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-F5F03F9819",
+    "type": "artifact",
+    "label": "影響",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "output"
+    }
+  },
+  {
+    "id": "ART-F702081A6C",
+    "type": "artifact",
+    "label": "現場所見",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-F95F0B25AB",
+    "type": "artifact",
+    "label": "変更案",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-F9A87C02AC",
+    "type": "artifact",
+    "label": "設備情報",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-FC8FFB1A45",
+    "type": "artifact",
+    "label": "証跡",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-FD1AAD1860",
+    "type": "artifact",
+    "label": "更新対象",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "ART-FD30CFF313",
+    "type": "artifact",
+    "label": "連絡先",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-FD6FE73624",
+    "type": "artifact",
+    "label": "契約条件",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    },
+    "metadata": {
+      "kind": "input"
+    }
+  },
+  {
+    "id": "ART-FF1FBDBD5F",
+    "type": "artifact",
+    "label": "外注検収",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "kind": "process-output"
+    }
+  },
+  {
+    "id": "BM-01",
+    "type": "area",
+    "label": "営業・提案",
+    "href": "/reference/business-catalog/bm-01/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01"
+    },
+    "metadata": {
+      "taskCount": 8
+    }
+  },
+  {
+    "id": "BM-01-01",
+    "type": "business",
+    "label": "顧客・案件情報を管理する",
+    "description": "見込み顧客、対象施設、商談状況、顧客要求、提案履歴を管理する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-01"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 1
+    }
+  },
+  {
+    "id": "BM-01-02",
+    "type": "business",
+    "label": "顧客要求を確認する",
+    "description": "顧客が求める管理品質、対象業務、実施周期、報告内容、対応時間等を確認する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-02"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 2
+    }
+  },
+  {
+    "id": "BM-01-03",
+    "type": "business",
+    "label": "現地調査を行う",
+    "description": "対象建物を訪問し、面積、用途、設備、作業条件、劣化状態、既存運用等を確認する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-03"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 3
+    }
+  },
+  {
+    "id": "BM-01-04",
+    "type": "business",
+    "label": "業務仕様を設計する",
+    "description": "現地調査と顧客要求を基に、作業対象、作業方法、周期、品質基準、体制を設計する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-04"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 4
+    }
+  },
+  {
+    "id": "BM-01-05",
+    "type": "business",
+    "label": "作業数量を積算する",
+    "description": "面積、設備数、作業回数、必要人数、所要時間等から作業量を算出する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-05"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 5
+    }
+  },
+  {
+    "id": "BM-01-06",
+    "type": "business",
+    "label": "原価を見積もる",
+    "description": "労務費、材料費、外注費、交通費、管理費等を算出する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-06"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 6
+    }
+  },
+  {
+    "id": "BM-01-07",
+    "type": "business",
+    "label": "見積書を作成する",
+    "description": "業務仕様、実施回数、単価、期間、条件を基に見積書を作成する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-07"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 7
+    }
+  },
+  {
+    "id": "BM-01-08",
+    "type": "business",
+    "label": "提案書を作成・提出する",
+    "description": "実施体制、業務方法、品質管理、改善提案等を取りまとめて顧客へ提出する",
+    "href": "/reference/business-catalog/bm-01/#bm-01-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-01-08"
+    },
+    "metadata": {
+      "areaId": "BM-01",
+      "catalogOrder": 8
+    }
+  },
+  {
+    "id": "BM-02",
+    "type": "area",
+    "label": "契約管理",
+    "href": "/reference/business-catalog/bm-02/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02"
+    },
+    "metadata": {
+      "taskCount": 7
+    }
+  },
+  {
+    "id": "BM-02-01",
+    "type": "business",
+    "label": "契約内容を登録する",
+    "description": "契約先、対象建物、期間、金額、支払条件等を登録する",
+    "href": "/reference/business-catalog/bm-02/#bm-02-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02-01"
+    },
+    "metadata": {
+      "areaId": "BM-02",
+      "catalogOrder": 9
+    }
+  },
+  {
+    "id": "BM-02-02",
+    "type": "business",
+    "label": "契約業務仕様を管理する",
+    "description": "清掃、点検、警備等の対象範囲、作業内容、周期、品質基準を管理する",
+    "href": "/reference/business-catalog/bm-02/#bm-02-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02-02"
+    },
+    "metadata": {
+      "areaId": "BM-02",
+      "catalogOrder": 10
+    }
+  },
+  {
+    "id": "BM-02-03",
+    "type": "business",
+    "label": "契約単価を管理する",
+    "description": "基本料金、作業別単価、時間外単価、追加作業単価等を管理する",
+    "href": "/reference/business-catalog/bm-02/#bm-02-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02-03"
+    },
+    "metadata": {
+      "areaId": "BM-02",
+      "catalogOrder": 11
+    }
+  },
+  {
+    "id": "BM-02-04",
+    "type": "business",
+    "label": "契約変更を管理する",
+    "description": "作業追加、対象設備変更、単価改定、契約期間変更等を記録する",
+    "href": "/reference/business-catalog/bm-02/#bm-02-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02-04"
+    },
+    "metadata": {
+      "areaId": "BM-02",
+      "catalogOrder": 12
+    }
+  },
+  {
+    "id": "BM-02-05",
+    "type": "business",
+    "label": "契約更新時期を管理する",
+    "description": "契約終了日と更新時期を把握し、更新手続きを開始する",
+    "href": "/reference/business-catalog/bm-02/#bm-02-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02-05"
+    },
+    "metadata": {
+      "areaId": "BM-02",
+      "catalogOrder": 13
+    }
+  },
+  {
+    "id": "BM-02-06",
+    "type": "business",
+    "label": "契約更新条件を検討する",
+    "description": "作業実績、原価、品質、顧客要望等を基に契約条件を見直す",
+    "href": "/reference/business-catalog/bm-02/#bm-02-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02-06"
+    },
+    "metadata": {
+      "areaId": "BM-02",
+      "catalogOrder": 14
+    }
+  },
+  {
+    "id": "BM-02-07",
+    "type": "business",
+    "label": "解約・契約終了を管理する",
+    "description": "解約通知、終了手続き、データ引き渡し、撤収作業を管理する",
+    "href": "/reference/business-catalog/bm-02/#bm-02-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-02-07"
+    },
+    "metadata": {
+      "areaId": "BM-02",
+      "catalogOrder": 15
+    }
+  },
+  {
+    "id": "BM-03",
+    "type": "area",
+    "label": "業務立ち上げ",
+    "href": "/reference/business-catalog/bm-03/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03"
+    },
+    "metadata": {
+      "taskCount": 8
+    }
+  },
+  {
+    "id": "BM-03-01",
+    "type": "business",
+    "label": "建物情報を収集する",
+    "description": "所在地、用途、構造、規模、竣工年、運用時間等を収集する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-01"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 16
+    }
+  },
+  {
+    "id": "BM-03-02",
+    "type": "business",
+    "label": "設備情報を収集する",
+    "description": "設備名称、型式、設置場所、数量、メーカー、耐用年数等を収集する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-02"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 17
+    }
+  },
+  {
+    "id": "BM-03-03",
+    "type": "business",
+    "label": "既存資料を収集する",
+    "description": "図面、設備台帳、点検記録、修繕履歴、マニュアル等を収集する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-03"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 18
+    }
+  },
+  {
+    "id": "BM-03-04",
+    "type": "business",
+    "label": "管理体制を構築する",
+    "description": "責任者、担当者、作業員、協力会社、緊急連絡先を決定する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-04"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 19
+    }
+  },
+  {
+    "id": "BM-03-05",
+    "type": "business",
+    "label": "業務手順を定義する",
+    "description": "通常作業、異常対応、報告、承認、緊急時対応等の手順を定義する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-05"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 20
+    }
+  },
+  {
+    "id": "BM-03-06",
+    "type": "business",
+    "label": "帳票を準備する",
+    "description": "点検表、作業報告書、日報、月報、事故報告書等を準備する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-06"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 21
+    }
+  },
+  {
+    "id": "BM-03-07",
+    "type": "business",
+    "label": "初期計画を作成する",
+    "description": "契約期間内の定期作業、点検、清掃、訓練等の計画を作成する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-07"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 22
+    }
+  },
+  {
+    "id": "BM-03-08",
+    "type": "business",
+    "label": "顧客・関係者へ運用を説明する",
+    "description": "連絡方法、承認方法、報告期限、緊急時対応等を共有する",
+    "href": "/reference/business-catalog/bm-03/#bm-03-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-03-08"
+    },
+    "metadata": {
+      "areaId": "BM-03",
+      "catalogOrder": 23
+    }
+  },
+  {
+    "id": "BM-04",
+    "type": "area",
+    "label": "計画・スケジュール管理",
+    "href": "/reference/business-catalog/bm-04/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-04-01",
+    "type": "business",
+    "label": "年間計画を作成する",
+    "description": "契約仕様、法定周期、設備周期等から年間の作業予定を作成する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-01"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 24
+    }
+  },
+  {
+    "id": "BM-04-02",
+    "type": "business",
+    "label": "月間計画を作成する",
+    "description": "年間計画を基に、当月の作業、担当者、予定日を決定する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-02"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 25
+    }
+  },
+  {
+    "id": "BM-04-03",
+    "type": "business",
+    "label": "週間・日次計画を作成する",
+    "description": "現場単位・担当者単位で、具体的な作業順序と時間を決定する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-03"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 26
+    }
+  },
+  {
+    "id": "BM-04-04",
+    "type": "business",
+    "label": "作業日を調整する",
+    "description": "顧客、テナント、作業員、協力会社等と日程を調整する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-04"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 27
+    }
+  },
+  {
+    "id": "BM-04-05",
+    "type": "business",
+    "label": "作業担当者を割り当てる",
+    "description": "必要資格、スキル、勤務状況、作業場所を考慮して担当者を決める",
+    "href": "/reference/business-catalog/bm-04/#bm-04-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-05"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 28
+    }
+  },
+  {
+    "id": "BM-04-06",
+    "type": "business",
+    "label": "協力会社へ作業を依頼する",
+    "description": "対象業務、作業日、場所、仕様、提出物等を通知する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-06"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 29
+    }
+  },
+  {
+    "id": "BM-04-07",
+    "type": "business",
+    "label": "作業前連絡を行う",
+    "description": "作業者、顧客、テナント等へ作業予定や注意事項を通知する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-07"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 30
+    }
+  },
+  {
+    "id": "BM-04-08",
+    "type": "business",
+    "label": "入館・作業申請を行う",
+    "description": "入館申請、作業届、火気使用申請、停電申請等を提出する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-08"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 31
+    }
+  },
+  {
+    "id": "BM-04-09",
+    "type": "business",
+    "label": "計画変更を管理する",
+    "description": "延期、中止、担当変更、追加作業等を計画へ反映する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-09"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 32
+    }
+  },
+  {
+    "id": "BM-04-10",
+    "type": "business",
+    "label": "作業遅延・未実施を管理する",
+    "description": "期限超過や未実施作業を検出し、再計画する",
+    "href": "/reference/business-catalog/bm-04/#bm-04-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-04-10"
+    },
+    "metadata": {
+      "areaId": "BM-04",
+      "catalogOrder": 33
+    }
+  },
+  {
+    "id": "BM-05",
+    "type": "area",
+    "label": "人員・協力会社管理",
+    "href": "/reference/business-catalog/bm-05/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-05-01",
+    "type": "business",
+    "label": "作業員情報を管理する",
+    "description": "所属、連絡先、雇用形態、勤務可能場所等を管理する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-01"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 34
+    }
+  },
+  {
+    "id": "BM-05-02",
+    "type": "business",
+    "label": "保有資格を管理する",
+    "description": "電気、消防、ボイラー、清掃、警備等の資格と有効期限を管理する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-02"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 35
+    }
+  },
+  {
+    "id": "BM-05-03",
+    "type": "business",
+    "label": "スキル・経験を管理する",
+    "description": "設備、建物用途、作業種別ごとの経験・習熟度を管理する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-03"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 36
+    }
+  },
+  {
+    "id": "BM-05-04",
+    "type": "business",
+    "label": "シフトを作成する",
+    "description": "常駐、巡回、夜間、休日等の勤務シフトを作成する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-04"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 37
+    }
+  },
+  {
+    "id": "BM-05-05",
+    "type": "business",
+    "label": "勤怠を管理する",
+    "description": "出退勤、休憩、時間外、休日勤務等を記録する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-05"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 38
+    }
+  },
+  {
+    "id": "BM-05-06",
+    "type": "business",
+    "label": "教育・研修を管理する",
+    "description": "法定教育、安全教育、技能研修、現場教育等の受講を管理する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-06"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 39
+    }
+  },
+  {
+    "id": "BM-05-07",
+    "type": "business",
+    "label": "協力会社情報を管理する",
+    "description": "会社情報、対応業務、資格、契約条件、対応地域等を管理する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-07"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 40
+    }
+  },
+  {
+    "id": "BM-05-08",
+    "type": "business",
+    "label": "協力会社を選定する",
+    "description": "能力、価格、対応地域、実績等から委託先を決定する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-08"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 41
+    }
+  },
+  {
+    "id": "BM-05-09",
+    "type": "business",
+    "label": "協力会社を評価する",
+    "description": "品質、納期、安全、報告、価格等を評価する",
+    "href": "/reference/business-catalog/bm-05/#bm-05-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-09"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 42
+    }
+  },
+  {
+    "id": "BM-05-10",
+    "type": "business",
+    "label": "勤務・担当を引き継ぐ",
+    "description": "勤務交代又は担当変更時に、実施体制、対象の状態、継続案件、注意事項、物品・権限及び次の行動を引継ぎ者と受領者が照合する。受領可否、未解決事項の担当・期限・上申条件及び責任移管の成立を記録し、業務の空白や情報欠落を防ぐ",
+    "href": "/reference/business-catalog/bm-05/#bm-05-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-05-10"
+    },
+    "metadata": {
+      "areaId": "BM-05",
+      "catalogOrder": 43
+    }
+  },
+  {
+    "id": "BM-06",
+    "type": "area",
+    "label": "清掃管理",
+    "href": "/reference/business-catalog/bm-06/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06"
+    },
+    "metadata": {
+      "taskCount": 11
+    }
+  },
+  {
+    "id": "BM-06-01",
+    "type": "business",
+    "label": "清掃仕様を設定する",
+    "description": "場所、材質、用途ごとに清掃方法、頻度、品質基準を定義する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-01"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 44
+    }
+  },
+  {
+    "id": "BM-06-02",
+    "type": "business",
+    "label": "日常清掃を計画する",
+    "description": "床、トイレ、共用部、ゴミ回収等の毎日・高頻度作業を計画する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-02"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 45
+    }
+  },
+  {
+    "id": "BM-06-03",
+    "type": "business",
+    "label": "日常清掃を実施する",
+    "description": "定められた手順に従って清掃を実施する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-03"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 46
+    }
+  },
+  {
+    "id": "BM-06-04",
+    "type": "business",
+    "label": "定期清掃を計画する",
+    "description": "床洗浄、ワックス、カーペット、窓ガラス等の定期作業を計画する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-04"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 47
+    }
+  },
+  {
+    "id": "BM-06-05",
+    "type": "business",
+    "label": "定期・特別清掃を実施する",
+    "description": "専門機材や薬剤を使用して定期・特別清掃を行う",
+    "href": "/reference/business-catalog/bm-06/#bm-06-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-05"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 48
+    }
+  },
+  {
+    "id": "BM-06-06",
+    "type": "business",
+    "label": "廃棄物を回収・分別する",
+    "description": "一般廃棄物、資源物、産業廃棄物等を、契約と自治体ルールに従って回収・分別し、建物内の指定集積所まで館内搬送する。敷地外への収集運搬を当然には含めない",
+    "href": "/reference/business-catalog/bm-06/#bm-06-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-06"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 49
+    }
+  },
+  {
+    "id": "BM-06-07",
+    "type": "business",
+    "label": "消耗品を補充する",
+    "description": "トイレットペーパー、石けん、消毒液等を補充する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-07"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 50
+    }
+  },
+  {
+    "id": "BM-06-08",
+    "type": "business",
+    "label": "清掃結果を記録する",
+    "description": "実施箇所、時間、担当者、異常、写真等を記録する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-08"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 51
+    }
+  },
+  {
+    "id": "BM-06-09",
+    "type": "business",
+    "label": "清掃品質を検査する",
+    "description": "目視、数値、顧客基準等により清掃品質を評価する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-09"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 52
+    }
+  },
+  {
+    "id": "BM-06-10",
+    "type": "business",
+    "label": "清掃不良を是正する",
+    "description": "検査や苦情で発見された不良箇所を再清掃する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-10"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 53
+    }
+  },
+  {
+    "id": "BM-06-11",
+    "type": "business",
+    "label": "清掃方法を改善する",
+    "description": "作業時間、品質、コスト、苦情等を基に手順を改善する",
+    "href": "/reference/business-catalog/bm-06/#bm-06-11",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-06-11"
+    },
+    "metadata": {
+      "areaId": "BM-06",
+      "catalogOrder": 54
+    }
+  },
+  {
+    "id": "BM-07",
+    "type": "area",
+    "label": "衛生管理",
+    "href": "/reference/business-catalog/bm-07/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07"
+    },
+    "metadata": {
+      "taskCount": 11
+    }
+  },
+  {
+    "id": "BM-07-01",
+    "type": "business",
+    "label": "空気環境測定を計画する",
+    "description": "対象区域、測定地点、測定周期、測定項目を決定する。特定建築物への該当性、用途変更や新築・大規模改修等の条件を確認し、ホルムアルデヒド測定が必要となる場合を識別する",
+    "href": "/reference/business-catalog/bm-07/#bm-07-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-01"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 55
+    }
+  },
+  {
+    "id": "BM-07-02",
+    "type": "business",
+    "label": "空気環境を測定する",
+    "description": "温度、相対湿度、二酸化炭素、一酸化炭素、浮遊粉じん、気流を測定し、該当する場合はホルムアルデヒドも測定する",
+    "href": "/reference/business-catalog/bm-07/#bm-07-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-02"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 56
+    }
+  },
+  {
+    "id": "BM-07-03",
+    "type": "business",
+    "label": "空気環境の異常を判定する",
+    "description": "測定結果と基準値を比較し、逸脱を判定する",
+    "href": "/reference/business-catalog/bm-07/#bm-07-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-03"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 57
+    }
+  },
+  {
+    "id": "BM-07-04",
+    "type": "business",
+    "label": "給水・空調衛生設備を点検する",
+    "description": "受水槽、高置水槽、配管、ポンプに加え、冷却塔、加湿装置、排水受け等を対象に、設備ごとの周期で点検・清掃・必要な水質管理を行う。空調ダクトは汚染状況を確認し、必要に応じて清掃する",
+    "href": "/reference/business-catalog/bm-07/#bm-07-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-04"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 58
+    }
+  },
+  {
+    "id": "BM-07-05",
+    "type": "business",
+    "label": "水質を検査する",
+    "description": "飲料水と雑用水を区別し、それぞれに適用される項目・基準・周期に従って、残留塩素、色、濁り等を測定・記録する",
+    "href": "/reference/business-catalog/bm-07/#bm-07-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-05"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 59
+    }
+  },
+  {
+    "id": "BM-07-06",
+    "type": "business",
+    "label": "貯水槽を清掃する",
+    "description": "貯水槽の排水、清掃、消毒、復旧を行う",
+    "href": "/reference/business-catalog/bm-07/#bm-07-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-06"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 60
+    }
+  },
+  {
+    "id": "BM-07-07",
+    "type": "business",
+    "label": "排水設備を点検する",
+    "description": "排水槽、汚水槽、ポンプ、配管等を点検する",
+    "href": "/reference/business-catalog/bm-07/#bm-07-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-07"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 61
+    }
+  },
+  {
+    "id": "BM-07-08",
+    "type": "business",
+    "label": "排水槽を清掃する",
+    "description": "排水槽・汚水槽の清掃、汚泥処理等を行う",
+    "href": "/reference/business-catalog/bm-07/#bm-07-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-08"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 62
+    }
+  },
+  {
+    "id": "BM-07-09",
+    "type": "business",
+    "label": "害虫・害獣を調査する",
+    "description": "ねずみ、昆虫等の生息状況を調査する",
+    "href": "/reference/business-catalog/bm-07/#bm-07-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-09"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 63
+    }
+  },
+  {
+    "id": "BM-07-10",
+    "type": "business",
+    "label": "防除作業を行う",
+    "description": "薬剤、トラップ、侵入防止等による防除を行う",
+    "href": "/reference/business-catalog/bm-07/#bm-07-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-10"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 64
+    }
+  },
+  {
+    "id": "BM-07-11",
+    "type": "business",
+    "label": "衛生状態を報告・記録する",
+    "description": "測定結果、異常、是正内容を特定建築物所有者等、維持管理権原者、建築物環境衛生管理技術者等へ報告し、適用される保存期間に従って維持管理帳簿を保存する。特定建築物では、所有者等が管理技術者を選任し、届出・変更届およびその意見を尊重する運用を管理する。([厚生労働省][4])",
+    "href": "/reference/business-catalog/bm-07/#bm-07-11",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-07-11"
+    },
+    "metadata": {
+      "areaId": "BM-07",
+      "catalogOrder": 65
+    }
+  },
+  {
+    "id": "BM-08",
+    "type": "area",
+    "label": "設備運転管理",
+    "href": "/reference/business-catalog/bm-08/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08"
+    },
+    "metadata": {
+      "taskCount": 9
+    }
+  },
+  {
+    "id": "BM-08-01",
+    "type": "business",
+    "label": "設備の運転条件を設定する",
+    "description": "運転時間、温度、圧力等の運転条件を設定する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-01"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 66
+    }
+  },
+  {
+    "id": "BM-08-02",
+    "type": "business",
+    "label": "設備を起動・停止する",
+    "description": "建物利用状況に応じて設備を操作する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-02"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 67
+    }
+  },
+  {
+    "id": "BM-08-03",
+    "type": "business",
+    "label": "中央監視装置を監視する",
+    "description": "設備状態、警報、計測値等を継続的に確認する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-03"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 68
+    }
+  },
+  {
+    "id": "BM-08-04",
+    "type": "business",
+    "label": "現場を巡回する",
+    "description": "機械室、電気室、屋上等を巡回し、異音、漏れ、異臭等を確認する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-04"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 69
+    }
+  },
+  {
+    "id": "BM-08-05",
+    "type": "business",
+    "label": "メーターを検針する",
+    "description": "電気、水道、ガス、熱量等を読み取り記録する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-05"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 70
+    }
+  },
+  {
+    "id": "BM-08-06",
+    "type": "business",
+    "label": "運転状態を記録する",
+    "description": "運転時間、温度、圧力、電流値等を日誌へ記録する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-06"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 71
+    }
+  },
+  {
+    "id": "BM-08-07",
+    "type": "business",
+    "label": "警報に対応する",
+    "description": "警報内容を確認し、現場確認、復旧、連絡等を行う",
+    "href": "/reference/business-catalog/bm-08/#bm-08-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-07"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 72
+    }
+  },
+  {
+    "id": "BM-08-08",
+    "type": "business",
+    "label": "運転条件を調整する",
+    "description": "利用状況、外気条件、エネルギー消費等に応じて設定を変更する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-08"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 73
+    }
+  },
+  {
+    "id": "BM-08-09",
+    "type": "business",
+    "label": "エネルギー使用量を管理する",
+    "description": "使用量を集計し、過去実績や目標と比較する",
+    "href": "/reference/business-catalog/bm-08/#bm-08-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-08-09"
+    },
+    "metadata": {
+      "areaId": "BM-08",
+      "catalogOrder": 74
+    }
+  },
+  {
+    "id": "BM-09",
+    "type": "area",
+    "label": "点検・保守管理",
+    "href": "/reference/business-catalog/bm-09/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-09-01",
+    "type": "business",
+    "label": "点検対象を登録する",
+    "description": "設備、部位、点検項目、点検周期を登録する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-01"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 75
+    }
+  },
+  {
+    "id": "BM-09-02",
+    "type": "business",
+    "label": "日常点検を実施する",
+    "description": "巡回時に外観、動作、計測値等を確認する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-02"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 76
+    }
+  },
+  {
+    "id": "BM-09-03",
+    "type": "business",
+    "label": "定期点検を実施する",
+    "description": "月次、四半期、半年、年次等の周期で点検する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-03"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 77
+    }
+  },
+  {
+    "id": "BM-09-04",
+    "type": "business",
+    "label": "法定点検を実施する",
+    "description": "法定業務マスターを参照し、対象、法的義務主体、実施者、必要資格、周期、行政報告・顧客承認の要否を確認する。資格要件を満たす者が調査・検査・点検を行い、義務主体が結果を確認して所定の報告・保存を行う。ビルメンテナンス会社は、契約範囲に応じて実施、手配、進捗管理、証跡管理を担う",
+    "href": "/reference/business-catalog/bm-09/#bm-09-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-04"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 78
+    }
+  },
+  {
+    "id": "BM-09-05",
+    "type": "business",
+    "label": "点検値を記録する",
+    "description": "測定値、判定、コメント、写真等を記録する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-05"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 79
+    }
+  },
+  {
+    "id": "BM-09-06",
+    "type": "business",
+    "label": "点検異常を判定する",
+    "description": "基準値、過去値、点検基準等から正常・異常を判定する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-06"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 80
+    }
+  },
+  {
+    "id": "BM-09-07",
+    "type": "business",
+    "label": "消耗品・部品を交換する",
+    "description": "フィルター、ベルト、ランプ、パッキン等を交換する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-07"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 81
+    }
+  },
+  {
+    "id": "BM-09-08",
+    "type": "business",
+    "label": "清掃・給油・調整を行う",
+    "description": "設備性能を維持するための軽微な保守を実施する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-08"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 82
+    }
+  },
+  {
+    "id": "BM-09-09",
+    "type": "business",
+    "label": "点検未実施を管理する",
+    "description": "期限を超えた点検を検出し、実施を促す",
+    "href": "/reference/business-catalog/bm-09/#bm-09-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-09"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 83
+    }
+  },
+  {
+    "id": "BM-09-10",
+    "type": "business",
+    "label": "点検結果を承認する",
+    "description": "現場責任者や管理者が結果を確認・承認する",
+    "href": "/reference/business-catalog/bm-09/#bm-09-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-09-10"
+    },
+    "metadata": {
+      "areaId": "BM-09",
+      "catalogOrder": 84
+    }
+  },
+  {
+    "id": "BM-10",
+    "type": "area",
+    "label": "不具合・修繕管理",
+    "href": "/reference/business-catalog/bm-10/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10"
+    },
+    "metadata": {
+      "taskCount": 13
+    }
+  },
+  {
+    "id": "BM-10-01",
+    "type": "business",
+    "label": "不具合を受け付ける",
+    "description": "警報、点検、顧客連絡、作業員報告等から不具合を登録する",
+    "href": "/reference/business-catalog/bm-10/#bm-10-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-01"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 85
+    }
+  },
+  {
+    "id": "BM-10-02",
+    "type": "business",
+    "label": "不具合の緊急度を判断する",
+    "description": "安全性、業務影響、法令、設備停止範囲等から優先度を決める",
+    "href": "/reference/business-catalog/bm-10/#bm-10-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-02"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 86
+    }
+  },
+  {
+    "id": "BM-10-03",
+    "type": "business",
+    "label": "一次対応を行う",
+    "description": "現場確認、設備停止、応急処置、利用制限等を行う",
+    "href": "/reference/business-catalog/bm-10/#bm-10-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-03"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 87
+    }
+  },
+  {
+    "id": "BM-10-04",
+    "type": "business",
+    "label": "原因を調査する",
+    "description": "設備状態、履歴、計測値等から故障原因を特定する",
+    "href": "/reference/business-catalog/bm-10/#bm-10-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-04"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 88
+    }
+  },
+  {
+    "id": "BM-10-05",
+    "type": "business",
+    "label": "修繕方法を検討する",
+    "description": "修理、部品交換、設備更新、経過観察等から対応方法を決める",
+    "href": "/reference/business-catalog/bm-10/#bm-10-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-05"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 89
+    }
+  },
+  {
+    "id": "BM-10-06",
+    "type": "business",
+    "label": "修繕見積もりを作成する",
+    "description": "作業、部品、工期、外注費等を算出する",
+    "href": "/reference/business-catalog/bm-10/#bm-10-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-06"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 90
+    }
+  },
+  {
+    "id": "BM-10-07",
+    "type": "business",
+    "label": "顧客承認を得る",
+    "description": "修繕内容、金額、工期等を提示し、実施承認を得る",
+    "href": "/reference/business-catalog/bm-10/#bm-10-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-07"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 91
+    }
+  },
+  {
+    "id": "BM-10-08",
+    "type": "business",
+    "label": "修繕・工事を手配する",
+    "description": "作業員、協力会社、部品、日程を手配する。着工前に、施工計画、作業許可、火気・停電・断水等の影響調整、必要資格・建設業許可、石綿含有の事前調査と結果報告・掲示の要否を確認する。解体・改修工事は規模にかかわらず、原則として石綿の事前調査の対象となる。([厚生労働省][6])",
+    "href": "/reference/business-catalog/bm-10/#bm-10-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-08"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 92
+    }
+  },
+  {
+    "id": "BM-10-09",
+    "type": "business",
+    "label": "修繕・工事を実施する",
+    "description": "承認済みの施工計画と安全作業手順に従い、必要な有資格者・許可事業者の管理下で修繕・更新作業を行う。工程、品質、安全、周辺影響、変更内容、工事写真を記録する",
+    "href": "/reference/business-catalog/bm-10/#bm-10-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-09"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 93
+    }
+  },
+  {
+    "id": "BM-10-10",
+    "type": "business",
+    "label": "完了検査・引渡しを行う",
+    "description": "修繕後の動作、品質、安全性を確認し、完成図書、試験成績書、工事写真、取扱説明書、保証書等を受領する。顧客の検収、設備台帳・図面の更新、引渡し日と保証開始日を記録する",
+    "href": "/reference/business-catalog/bm-10/#bm-10-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-10"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 94
+    }
+  },
+  {
+    "id": "BM-10-11",
+    "type": "business",
+    "label": "修繕履歴を登録する",
+    "description": "原因、対応、費用、部品、写真等を設備履歴へ記録する",
+    "href": "/reference/business-catalog/bm-10/#bm-10-11",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-11"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 95
+    }
+  },
+  {
+    "id": "BM-10-12",
+    "type": "business",
+    "label": "再発防止策を検討する",
+    "description": "故障傾向や原因を分析し、点検内容や周期を見直す",
+    "href": "/reference/business-catalog/bm-10/#bm-10-12",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-12"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 96
+    }
+  },
+  {
+    "id": "BM-10-13",
+    "type": "business",
+    "label": "中長期修繕計画を作成する",
+    "description": "劣化、耐用年数、故障履歴、法定点検結果、予算等から将来の修繕・更新案を作成する。ビルメンテナンス会社は調査・技術提案・原案作成を担い得るが、投資判断と計画承認の主体は、契約・権限に基づくビルオーナー、管理者、PM・FM部門等として明示する",
+    "href": "/reference/business-catalog/bm-10/#bm-10-13",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-10-13"
+    },
+    "metadata": {
+      "areaId": "BM-10",
+      "catalogOrder": 97
+    }
+  },
+  {
+    "id": "BM-11",
+    "type": "area",
+    "label": "警備・防災管理",
+    "href": "/reference/business-catalog/bm-11/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-11-01",
+    "type": "business",
+    "label": "警備計画を作成する",
+    "description": "配置、巡回経路、時間、重点監視箇所等を決定する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-01"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 98
+    }
+  },
+  {
+    "id": "BM-11-02",
+    "type": "business",
+    "label": "入退館を管理する",
+    "description": "来館者、業者、従業員等の入退館を記録・確認する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-02"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 99
+    }
+  },
+  {
+    "id": "BM-11-03",
+    "type": "business",
+    "label": "鍵を管理する",
+    "description": "鍵の保管、貸出、返却、紛失等を管理する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-03"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 100
+    }
+  },
+  {
+    "id": "BM-11-04",
+    "type": "business",
+    "label": "巡回警備を行う",
+    "description": "建物内外を巡回し、異常、施錠、火気等を確認する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-04"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 101
+    }
+  },
+  {
+    "id": "BM-11-05",
+    "type": "business",
+    "label": "監視設備を確認する",
+    "description": "監視カメラ、防犯設備等を監視する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-05"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 102
+    }
+  },
+  {
+    "id": "BM-11-06",
+    "type": "business",
+    "label": "事故・事件へ対応する",
+    "description": "不審者、盗難、設備事故等の初動対応と連絡を行う",
+    "href": "/reference/business-catalog/bm-11/#bm-11-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-06"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 103
+    }
+  },
+  {
+    "id": "BM-11-07",
+    "type": "business",
+    "label": "防災設備を確認する",
+    "description": "消火器、避難経路、防火戸等の状態を確認する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-07"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 104
+    }
+  },
+  {
+    "id": "BM-11-08",
+    "type": "business",
+    "label": "防災訓練を計画・実施する",
+    "description": "管理権原者が選任した防火管理者・防災管理者の責任と消防計画に基づき、避難、通報、消火等の訓練を計画・実施する。ビルメンテナンス会社が支援・受託する場合も、責任者、承認者、参加者、消防機関への届出・連絡の要否を明確にする。([消防庁][5])",
+    "href": "/reference/business-catalog/bm-11/#bm-11-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-08"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 105
+    }
+  },
+  {
+    "id": "BM-11-09",
+    "type": "business",
+    "label": "災害時対応を行う",
+    "description": "地震、火災、風水害等の発生時に初動対応する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-09"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 106
+    }
+  },
+  {
+    "id": "BM-11-10",
+    "type": "business",
+    "label": "警備・防災記録を報告する",
+    "description": "巡回、事故、災害、訓練等の結果を報告する",
+    "href": "/reference/business-catalog/bm-11/#bm-11-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-11-10"
+    },
+    "metadata": {
+      "areaId": "BM-11",
+      "catalogOrder": 107
+    }
+  },
+  {
+    "id": "BM-12",
+    "type": "area",
+    "label": "テナント・顧客対応",
+    "href": "/reference/business-catalog/bm-12/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-12-01",
+    "type": "business",
+    "label": "問い合わせを受け付ける",
+    "description": "電話、メール、Web等から問い合わせを登録する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-01"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 108
+    }
+  },
+  {
+    "id": "BM-12-02",
+    "type": "business",
+    "label": "作業依頼を受け付ける",
+    "description": "不具合、清掃、温度調整等の依頼を登録する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-02"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 109
+    }
+  },
+  {
+    "id": "BM-12-03",
+    "type": "business",
+    "label": "苦情を受け付ける",
+    "description": "サービス品質や建物環境に関する苦情を記録する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-03"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 110
+    }
+  },
+  {
+    "id": "BM-12-04",
+    "type": "business",
+    "label": "依頼を分類・優先付けする",
+    "description": "内容、緊急度、担当部門等を判断する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-04"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 111
+    }
+  },
+  {
+    "id": "BM-12-05",
+    "type": "business",
+    "label": "担当者へ割り当てる",
+    "description": "依頼内容に応じて社内担当者または協力会社を決める",
+    "href": "/reference/business-catalog/bm-12/#bm-12-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-05"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 112
+    }
+  },
+  {
+    "id": "BM-12-06",
+    "type": "business",
+    "label": "対応状況を連絡する",
+    "description": "受付、着手、延期、完了等を依頼者へ連絡する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-06"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 113
+    }
+  },
+  {
+    "id": "BM-12-07",
+    "type": "business",
+    "label": "対応結果を報告する",
+    "description": "実施内容、原因、今後の対応等を説明する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-07"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 114
+    }
+  },
+  {
+    "id": "BM-12-08",
+    "type": "business",
+    "label": "顧客への周知を行う",
+    "description": "停電、断水、工事、設備停止等を周知する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-08"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 115
+    }
+  },
+  {
+    "id": "BM-12-09",
+    "type": "business",
+    "label": "SLAを管理する",
+    "description": "受付時間、初動時間、完了時間等を測定・管理する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-09"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 116
+    }
+  },
+  {
+    "id": "BM-12-10",
+    "type": "business",
+    "label": "顧客満足度を確認する",
+    "description": "アンケート、苦情、契約更新等から満足度を把握する",
+    "href": "/reference/business-catalog/bm-12/#bm-12-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-12-10"
+    },
+    "metadata": {
+      "areaId": "BM-12",
+      "catalogOrder": 117
+    }
+  },
+  {
+    "id": "BM-13",
+    "type": "area",
+    "label": "作業結果・報告管理",
+    "href": "/reference/business-catalog/bm-13/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13"
+    },
+    "metadata": {
+      "taskCount": 11
+    }
+  },
+  {
+    "id": "BM-13-01",
+    "type": "business",
+    "label": "作業開始を記録する",
+    "description": "作業者、開始日時、場所等を記録する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-01"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 118
+    }
+  },
+  {
+    "id": "BM-13-02",
+    "type": "business",
+    "label": "作業内容を記録する",
+    "description": "実施項目、測定値、使用部品、異常等を記録する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-02"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 119
+    }
+  },
+  {
+    "id": "BM-13-03",
+    "type": "business",
+    "label": "写真・動画を登録する",
+    "description": "作業前後、異常箇所、修繕結果等を記録する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-03"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 120
+    }
+  },
+  {
+    "id": "BM-13-04",
+    "type": "business",
+    "label": "作業完了を報告する",
+    "description": "作業者から管理者へ完了と結果を報告する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-04"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 121
+    }
+  },
+  {
+    "id": "BM-13-05",
+    "type": "business",
+    "label": "作業結果を確認する",
+    "description": "未入力、異常値、写真不足等を確認する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-05"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 122
+    }
+  },
+  {
+    "id": "BM-13-06",
+    "type": "business",
+    "label": "作業結果を承認する",
+    "description": "管理者が結果を承認または差し戻す",
+    "href": "/reference/business-catalog/bm-13/#bm-13-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-06"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 123
+    }
+  },
+  {
+    "id": "BM-13-07",
+    "type": "business",
+    "label": "顧客向け報告書を作成する",
+    "description": "作業情報を顧客指定様式へ編集・転記する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-07"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 124
+    }
+  },
+  {
+    "id": "BM-13-08",
+    "type": "business",
+    "label": "定期報告書を作成する",
+    "description": "日報、週報、月報、年次報告書等を作成する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-08"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 125
+    }
+  },
+  {
+    "id": "BM-13-09",
+    "type": "business",
+    "label": "報告書を提出する",
+    "description": "紙、メール、ポータル等で顧客へ提出する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-09"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 126
+    }
+  },
+  {
+    "id": "BM-13-10",
+    "type": "business",
+    "label": "提出・承認状況を管理する",
+    "description": "提出日、受領、承認、差し戻し等を管理する",
+    "href": "/reference/business-catalog/bm-13/#bm-13-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-10"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 127
+    }
+  },
+  {
+    "id": "BM-13-11",
+    "type": "business",
+    "label": "異常を速報・上申する",
+    "description": "現場、警報、顧客・利用者連絡等から認知した異常について、人命・安全を優先して一次対応を行い、確認済みの事実、影響、緊急度、残留リスク及び必要な判断を適切な責任者へ速報・上申する。受領者、受領時刻、指示、対応責任者、次の行動及び期限を記録し、発信しただけの状態と対応責任の引渡しが成立した状態を区別する。上申完了は、異常の解消、技術的復旧又は施設利用再開を意味しない",
+    "href": "/reference/business-catalog/bm-13/#bm-13-11",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-13-11"
+    },
+    "metadata": {
+      "areaId": "BM-13",
+      "catalogOrder": 128
+    }
+  },
+  {
+    "id": "BM-14",
+    "type": "area",
+    "label": "建物・設備情報管理",
+    "href": "/reference/business-catalog/bm-14/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-14-01",
+    "type": "business",
+    "label": "建物台帳を管理する",
+    "description": "所在地、用途、構造、面積、竣工年等を管理する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-01"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 129
+    }
+  },
+  {
+    "id": "BM-14-02",
+    "type": "business",
+    "label": "区画・場所を管理する",
+    "description": "棟、階、室、エリア、設備設置場所等を階層管理する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-02"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 130
+    }
+  },
+  {
+    "id": "BM-14-03",
+    "type": "business",
+    "label": "設備台帳を管理する",
+    "description": "設備名称、型式、メーカー、設置日、能力等を管理する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-03"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 131
+    }
+  },
+  {
+    "id": "BM-14-04",
+    "type": "business",
+    "label": "設備構成を管理する",
+    "description": "親設備、子設備、系統、接続関係等を管理する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-04"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 132
+    }
+  },
+  {
+    "id": "BM-14-05",
+    "type": "business",
+    "label": "図面を管理する",
+    "description": "平面図、設備図、系統図、竣工図等を保存する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-05"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 133
+    }
+  },
+  {
+    "id": "BM-14-06",
+    "type": "business",
+    "label": "マニュアル・仕様書を管理する",
+    "description": "取扱説明書、作業手順、メーカー資料等を管理する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-06"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 134
+    }
+  },
+  {
+    "id": "BM-14-07",
+    "type": "business",
+    "label": "点検・作業履歴を管理する",
+    "description": "設備・場所ごとの作業履歴を蓄積する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-07"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 135
+    }
+  },
+  {
+    "id": "BM-14-08",
+    "type": "business",
+    "label": "故障・修繕履歴を管理する",
+    "description": "不具合、原因、修繕、費用等を管理する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-08"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 136
+    }
+  },
+  {
+    "id": "BM-14-09",
+    "type": "business",
+    "label": "契約・保証情報を管理する",
+    "description": "保守契約、メーカー保証、保証期限等を管理する",
+    "href": "/reference/business-catalog/bm-14/#bm-14-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-09"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 137
+    }
+  },
+  {
+    "id": "BM-14-10",
+    "type": "business",
+    "label": "情報の変更履歴を管理する",
+    "description": "台帳、図面、設定値等の変更履歴を残す",
+    "href": "/reference/business-catalog/bm-14/#bm-14-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-14-10"
+    },
+    "metadata": {
+      "areaId": "BM-14",
+      "catalogOrder": 138
+    }
+  },
+  {
+    "id": "BM-15",
+    "type": "area",
+    "label": "資材・在庫・購買管理",
+    "href": "/reference/business-catalog/bm-15/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15"
+    },
+    "metadata": {
+      "taskCount": 9
+    }
+  },
+  {
+    "id": "BM-15-01",
+    "type": "business",
+    "label": "資材・部品を登録する",
+    "description": "名称、型式、単価、仕入先、対応設備等を登録する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-01"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 139
+    }
+  },
+  {
+    "id": "BM-15-02",
+    "type": "business",
+    "label": "在庫数を管理する",
+    "description": "倉庫・現場ごとの在庫数量を把握する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-02"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 140
+    }
+  },
+  {
+    "id": "BM-15-03",
+    "type": "business",
+    "label": "入出庫を記録する",
+    "description": "購入、使用、返却、廃棄等を記録する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-03"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 141
+    }
+  },
+  {
+    "id": "BM-15-04",
+    "type": "business",
+    "label": "発注点を管理する",
+    "description": "在庫不足を検出し、補充を促す",
+    "href": "/reference/business-catalog/bm-15/#bm-15-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-04"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 142
+    }
+  },
+  {
+    "id": "BM-15-05",
+    "type": "business",
+    "label": "資材・部品を発注する",
+    "description": "仕入先へ数量、納期等を指定して発注する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-05"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 143
+    }
+  },
+  {
+    "id": "BM-15-06",
+    "type": "business",
+    "label": "入荷・検品する",
+    "description": "納入品の数量、型式、品質等を確認する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-06"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 144
+    }
+  },
+  {
+    "id": "BM-15-07",
+    "type": "business",
+    "label": "工具・計測器を管理する",
+    "description": "保有工具、貸出、返却、保管場所等を管理する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-07"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 145
+    }
+  },
+  {
+    "id": "BM-15-08",
+    "type": "business",
+    "label": "校正期限を管理する",
+    "description": "測定機器の校正日と次回期限を管理する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-08"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 146
+    }
+  },
+  {
+    "id": "BM-15-09",
+    "type": "business",
+    "label": "棚卸しを行う",
+    "description": "実在庫とシステム在庫を照合する",
+    "href": "/reference/business-catalog/bm-15/#bm-15-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-15-09"
+    },
+    "metadata": {
+      "areaId": "BM-15",
+      "catalogOrder": 147
+    }
+  },
+  {
+    "id": "BM-16",
+    "type": "area",
+    "label": "売上・請求・原価管理",
+    "href": "/reference/business-catalog/bm-16/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-16-01",
+    "type": "business",
+    "label": "作業実績を集計する",
+    "description": "契約作業、追加作業、工事等の実績を集計する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-01"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 148
+    }
+  },
+  {
+    "id": "BM-16-02",
+    "type": "business",
+    "label": "請求対象を確定する",
+    "description": "契約条件と実績から請求対象を決定する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-02"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 149
+    }
+  },
+  {
+    "id": "BM-16-03",
+    "type": "business",
+    "label": "請求金額を計算する",
+    "description": "月額、回数、従量、追加作業等に基づいて計算する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-03"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 150
+    }
+  },
+  {
+    "id": "BM-16-04",
+    "type": "business",
+    "label": "請求書を作成・発行する",
+    "description": "請求書を作成し、顧客へ送付する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-04"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 151
+    }
+  },
+  {
+    "id": "BM-16-05",
+    "type": "business",
+    "label": "請求漏れを確認する",
+    "description": "実施済み作業と請求済み作業を照合する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-05"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 152
+    }
+  },
+  {
+    "id": "BM-16-06",
+    "type": "business",
+    "label": "協力会社への発注を管理する",
+    "description": "委託内容、発注金額、支払条件等を管理する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-06"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 153
+    }
+  },
+  {
+    "id": "BM-16-07",
+    "type": "business",
+    "label": "協力会社の請求を検収する",
+    "description": "作業実績と請求内容を照合する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-07"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 154
+    }
+  },
+  {
+    "id": "BM-16-08",
+    "type": "business",
+    "label": "作業原価を集計する",
+    "description": "労務費、材料費、外注費等を集計する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-08"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 155
+    }
+  },
+  {
+    "id": "BM-16-09",
+    "type": "business",
+    "label": "物件・契約別採算を分析する",
+    "description": "売上、原価、粗利、作業時間等を比較する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-09"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 156
+    }
+  },
+  {
+    "id": "BM-16-10",
+    "type": "business",
+    "label": "予算と実績を比較する",
+    "description": "計画原価と実績原価の差異を確認する",
+    "href": "/reference/business-catalog/bm-16/#bm-16-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-16-10"
+    },
+    "metadata": {
+      "areaId": "BM-16",
+      "catalogOrder": 157
+    }
+  },
+  {
+    "id": "BM-17",
+    "type": "area",
+    "label": "品質・安全・法令管理",
+    "href": "/reference/business-catalog/bm-17/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17"
+    },
+    "metadata": {
+      "taskCount": 11
+    }
+  },
+  {
+    "id": "BM-17-01",
+    "type": "business",
+    "label": "品質基準を定義する",
+    "description": "作業、清掃、報告等の合格基準を設定する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-01"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 158
+    }
+  },
+  {
+    "id": "BM-17-02",
+    "type": "business",
+    "label": "品質検査を行う",
+    "description": "現場や提出物の品質を確認・評価する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-02"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 159
+    }
+  },
+  {
+    "id": "BM-17-03",
+    "type": "business",
+    "label": "不適合を管理する",
+    "description": "基準未達、作業漏れ、報告不備等を登録する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-03"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 160
+    }
+  },
+  {
+    "id": "BM-17-04",
+    "type": "business",
+    "label": "是正措置を管理する",
+    "description": "原因、対応、期限、責任者を設定する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-04"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 161
+    }
+  },
+  {
+    "id": "BM-17-05",
+    "type": "business",
+    "label": "安全作業手順を管理する",
+    "description": "高所、電気、火気、薬剤等の安全手順を定義する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-05"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 162
+    }
+  },
+  {
+    "id": "BM-17-06",
+    "type": "business",
+    "label": "危険予知・リスク評価を行う",
+    "description": "作業前に危険要因を特定し、対策を決定する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-06"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 163
+    }
+  },
+  {
+    "id": "BM-17-07",
+    "type": "business",
+    "label": "事故・ヒヤリハットを管理する",
+    "description": "発生状況、原因、対応、再発防止策を記録する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-07"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 164
+    }
+  },
+  {
+    "id": "BM-17-08",
+    "type": "business",
+    "label": "法令・点検義務を管理する",
+    "description": "法定業務マスターに、対象法令・条例、対象建物・設備、法的義務主体、実施主体、受託可能な主体、必要資格、周期、顧客承認、行政報告、証跡と保存期間を登録し、改正・対象変更を管理する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-08"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 165
+    }
+  },
+  {
+    "id": "BM-17-09",
+    "type": "business",
+    "label": "証跡・報告書を保存する",
+    "description": "法定保存期間や顧客要件に従って記録を保管する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-09"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 166
+    }
+  },
+  {
+    "id": "BM-17-10",
+    "type": "business",
+    "label": "監査へ対応する",
+    "description": "顧客監査、社内監査、行政検査等に必要な資料を準備する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-10"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 167
+    }
+  },
+  {
+    "id": "BM-17-11",
+    "type": "business",
+    "label": "作業区域を設定・解除する",
+    "description": "作業、点検、異常対応等に伴う危険源から利用者、第三者及び作業者を保護するため、危険と動線に応じて作業区域、立入制限、表示、防護設備、代替動線及び監視方法を設定・維持する。危険除去、原状回復及び必要な確認・承認の後に区域を解除し、設定・変更・巡視・解除の状態を記録する。作業完了、技術的復旧、区域解除及び施設利用再開を区別する",
+    "href": "/reference/business-catalog/bm-17/#bm-17-11",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-17-11"
+    },
+    "metadata": {
+      "areaId": "BM-17",
+      "catalogOrder": 168
+    }
+  },
+  {
+    "id": "BM-18",
+    "type": "area",
+    "label": "分析・改善・経営管理",
+    "href": "/reference/business-catalog/bm-18/",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18"
+    },
+    "metadata": {
+      "taskCount": 10
+    }
+  },
+  {
+    "id": "BM-18-01",
+    "type": "business",
+    "label": "作業実施状況を分析する",
+    "description": "実施率、遅延率、未実施件数等を確認する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-01",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-01"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 169
+    }
+  },
+  {
+    "id": "BM-18-02",
+    "type": "business",
+    "label": "品質を分析する",
+    "description": "不適合、苦情、再作業、検査結果等を分析する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-02",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-02"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 170
+    }
+  },
+  {
+    "id": "BM-18-03",
+    "type": "business",
+    "label": "設備故障傾向を分析する",
+    "description": "設備、メーカー、年数、部位等ごとの故障傾向を分析する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-03",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-03"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 171
+    }
+  },
+  {
+    "id": "BM-18-04",
+    "type": "business",
+    "label": "人員生産性を分析する",
+    "description": "作業時間、処理件数、移動時間等を分析する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-04",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-04"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 172
+    }
+  },
+  {
+    "id": "BM-18-05",
+    "type": "business",
+    "label": "協力会社実績を分析する",
+    "description": "品質、価格、納期、安全等を比較する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-05",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-05"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 173
+    }
+  },
+  {
+    "id": "BM-18-06",
+    "type": "business",
+    "label": "物件別採算を分析する",
+    "description": "物件ごとの売上、原価、利益率を比較する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-06",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-06"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 174
+    }
+  },
+  {
+    "id": "BM-18-07",
+    "type": "business",
+    "label": "契約条件を見直す",
+    "description": "作業実績、採算、品質、顧客要求を基に条件を再検討する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-07",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-07"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 175
+    }
+  },
+  {
+    "id": "BM-18-08",
+    "type": "business",
+    "label": "作業計画を改善する",
+    "description": "作業時期、配置、頻度、手順等を見直す",
+    "href": "/reference/business-catalog/bm-18/#bm-18-08",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-08"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 176
+    }
+  },
+  {
+    "id": "BM-18-09",
+    "type": "business",
+    "label": "保全方式を改善する",
+    "description": "事後保全、予防保全、予知保全の適用を見直す",
+    "href": "/reference/business-catalog/bm-18/#bm-18-09",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-09"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 177
+    }
+  },
+  {
+    "id": "BM-18-10",
+    "type": "business",
+    "label": "経営指標を可視化する",
+    "description": "売上、利益、人員、品質、契約更新等を経営層へ提示する",
+    "href": "/reference/business-catalog/bm-18/#bm-18-10",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md",
+      "anchor": "bm-18-10"
+    },
+    "metadata": {
+      "areaId": "BM-18",
+      "catalogOrder": 178
+    }
+  },
+  {
+    "id": "CHK-CLN-001",
+    "type": "artifact",
+    "label": "共用部日常清掃チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/01_cleaning/CHK-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-CLN-002",
+    "type": "artifact",
+    "label": "トイレ清掃チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/01_cleaning/CHK-CLN-002_restroom-cleaning.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-CLN-003",
+    "type": "artifact",
+    "label": "清掃品質検査・再清掃チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/01_cleaning/CHK-CLN-003_quality-inspection-and-recleaning.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-CLN-004",
+    "type": "artifact",
+    "label": "廃棄物回収・分別チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/01_cleaning/CHK-CLN-004_waste-collection-and-sorting.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-CLN-005",
+    "type": "artifact",
+    "label": "消耗品確認・補充チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/01_cleaning/CHK-CLN-005_consumables-check-and-replenishment.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-CLN-006",
+    "type": "artifact",
+    "label": "定期床面清掃チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/01_cleaning/CHK-CLN-006_periodic-floor-cleaning.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-COM-001",
+    "type": "artifact",
+    "label": "作業前安全確認チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/00_common/CHK-COM-001_pre-work-safety-check.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-COM-002",
+    "type": "artifact",
+    "label": "異常上申チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/00_common/CHK-COM-002_abnormality-escalation.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-COM-003",
+    "type": "artifact",
+    "label": "作業区域設定・解除チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/00_common/CHK-COM-003_work-area-control.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-COM-004",
+    "type": "artifact",
+    "label": "完了報告チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/00_common/CHK-COM-004_completion-reporting.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-001",
+    "type": "artifact",
+    "label": "設備巡回点検チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-001_routine-inspection.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-002",
+    "type": "artifact",
+    "label": "警報・設備異常対応チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-002_alarm-response.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-003",
+    "type": "artifact",
+    "label": "試運転・復旧確認チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-003_restoration-verification.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-004",
+    "type": "artifact",
+    "label": "中央監視・運転状態確認チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-004_central-monitoring.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-005",
+    "type": "artifact",
+    "label": "検針・測定値記録チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-005_meter-reading-and-measurement.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-006",
+    "type": "artifact",
+    "label": "設備運転操作・切替えチェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-006_equipment-operation-and-switching.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-007",
+    "type": "artifact",
+    "label": "緊急停止・隔離チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-007_emergency-shutdown-and-isolation.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-EQP-008",
+    "type": "artifact",
+    "label": "設備日常保守チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/02_equipment/CHK-EQP-008_routine-maintenance.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-001",
+    "type": "artifact",
+    "label": "巡回警備チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-001_security-patrol.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-002",
+    "type": "artifact",
+    "label": "警備勤務開始・交代チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-002_duty-handover.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-003",
+    "type": "artifact",
+    "label": "事故・急病・現場保全チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-003_incident-illness-scene-preservation.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-004",
+    "type": "artifact",
+    "label": "入退館受付・確認チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-004_access-reception-and-verification.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-005",
+    "type": "artifact",
+    "label": "鍵・入館証管理チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-005_key-and-access-card-management.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-006",
+    "type": "artifact",
+    "label": "警報・防犯監視チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-006_alarm-and-security-monitoring.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-007",
+    "type": "artifact",
+    "label": "不審者・不審物対応チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-007_suspicious-person-and-object-response.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "CHK-SEC-008",
+    "type": "artifact",
+    "label": "火災・地震等の災害初動チェックリスト",
+    "source": {
+      "path": "docs/03_checklists/03_security/CHK-SEC-008_disaster-initial-response.md"
+    },
+    "metadata": {
+      "kind": "checklist"
+    }
+  },
+  {
+    "id": "LC-01",
+    "type": "lifecycle",
+    "label": "要求・契約",
+    "description": "顧客要求を業務仕様・見積・契約へ変える",
+    "href": "/overview/business-lifecycle/",
+    "source": {
+      "path": "src/content/docs/overview/business-lifecycle.md"
+    },
+    "metadata": {
+      "processIds": [
+        "P01"
+      ]
+    }
+  },
+  {
+    "id": "LC-02",
+    "type": "lifecycle",
+    "label": "立ち上げ",
+    "description": "情報・体制・手順を揃えて運用開始可能にする",
+    "href": "/overview/business-lifecycle/",
+    "source": {
+      "path": "src/content/docs/overview/business-lifecycle.md"
+    },
+    "metadata": {
+      "processIds": [
+        "P02"
+      ]
+    }
+  },
+  {
+    "id": "LC-03",
+    "type": "lifecycle",
+    "label": "計画・準備",
+    "description": "年間・月間・日次計画と作業条件を整える",
+    "href": "/overview/business-lifecycle/",
+    "source": {
+      "path": "src/content/docs/overview/business-lifecycle.md"
+    },
+    "metadata": {
+      "processIds": [
+        "P03"
+      ]
+    }
+  },
+  {
+    "id": "LC-04",
+    "type": "lifecycle",
+    "label": "実施・受付",
+    "description": "定常業務、顧客依頼、法定業務を実施する",
+    "href": "/overview/business-lifecycle/",
+    "source": {
+      "path": "src/content/docs/overview/business-lifecycle.md"
+    },
+    "metadata": {
+      "processIds": [
+        "P04",
+        "P07",
+        "P08"
+      ]
+    }
+  },
+  {
+    "id": "LC-05",
+    "type": "lifecycle",
+    "label": "確認・報告",
+    "description": "結果確認、品質是正、顧客報告へつなぐ",
+    "href": "/overview/business-lifecycle/",
+    "source": {
+      "path": "src/content/docs/overview/business-lifecycle.md"
+    },
+    "metadata": {
+      "processIds": [
+        "P05",
+        "P09"
+      ]
+    }
+  },
+  {
+    "id": "LC-06",
+    "type": "lifecycle",
+    "label": "復旧・精算",
+    "description": "異常復旧と実績・請求・原価を確定する",
+    "href": "/overview/business-lifecycle/",
+    "source": {
+      "path": "src/content/docs/overview/business-lifecycle.md"
+    },
+    "metadata": {
+      "processIds": [
+        "P06",
+        "P10"
+      ]
+    }
+  },
+  {
+    "id": "LC-07",
+    "type": "lifecycle",
+    "label": "改善・更新・終了",
+    "description": "分析結果を改善、契約更新又は終了へ反映する",
+    "href": "/overview/business-lifecycle/",
+    "source": {
+      "path": "src/content/docs/overview/business-lifecycle.md"
+    },
+    "metadata": {
+      "processIds": [
+        "P11",
+        "P12"
+      ]
+    }
+  },
+  {
+    "id": "P01",
+    "type": "process",
+    "label": "引き合い・提案・契約",
+    "href": "/reference/processes/p01/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p01"
+    }
+  },
+  {
+    "id": "P02",
+    "type": "process",
+    "label": "受託立ち上げ",
+    "href": "/reference/processes/p02/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p02"
+    }
+  },
+  {
+    "id": "P03",
+    "type": "process",
+    "label": "計画・作業準備",
+    "href": "/reference/processes/p03/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p03"
+    }
+  },
+  {
+    "id": "P04",
+    "type": "process",
+    "label": "定常業務の実施",
+    "href": "/reference/processes/p04/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p04"
+    }
+  },
+  {
+    "id": "P05",
+    "type": "process",
+    "label": "結果確認・報告",
+    "href": "/reference/processes/p05/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p05"
+    }
+  },
+  {
+    "id": "P06",
+    "type": "process",
+    "label": "異常・修繕・復旧",
+    "href": "/reference/processes/p06/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p06"
+    }
+  },
+  {
+    "id": "P07",
+    "type": "process",
+    "label": "顧客依頼・苦情対応",
+    "href": "/reference/processes/p07/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p07"
+    }
+  },
+  {
+    "id": "P08",
+    "type": "process",
+    "label": "法定業務管理",
+    "href": "/reference/processes/p08/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p08"
+    }
+  },
+  {
+    "id": "P09",
+    "type": "process",
+    "label": "品質不適合・是正",
+    "href": "/reference/processes/p09/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p09"
+    }
+  },
+  {
+    "id": "P10",
+    "type": "process",
+    "label": "実績・請求・原価",
+    "href": "/reference/processes/p10/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p10"
+    }
+  },
+  {
+    "id": "P11",
+    "type": "process",
+    "label": "分析・改善",
+    "href": "/reference/processes/p11/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p11"
+    }
+  },
+  {
+    "id": "P12",
+    "type": "process",
+    "label": "契約更新・終了",
+    "href": "/reference/processes/p12/",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md",
+      "anchor": "p12"
+    }
+  },
+  {
+    "id": "PROC-CLN-001",
+    "type": "procedure",
+    "label": "共用部日常清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-002",
+    "type": "procedure",
+    "label": "トイレ清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-003",
+    "type": "procedure",
+    "label": "廃棄物回収・分別",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-004",
+    "type": "procedure",
+    "label": "消耗品確認・補充",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-005",
+    "type": "procedure",
+    "label": "定期床面清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-006",
+    "type": "procedure",
+    "label": "清掃品質検査・再清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-COM-001",
+    "type": "procedure",
+    "label": "勤務・担当引継ぎ",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md"
+    },
+    "metadata": {
+      "category": "COM"
+    }
+  },
+  {
+    "id": "PROC-COM-002",
+    "type": "procedure",
+    "label": "作業前安全確認・危険予知",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md"
+    },
+    "metadata": {
+      "category": "COM"
+    }
+  },
+  {
+    "id": "PROC-COM-003",
+    "type": "procedure",
+    "label": "作業区域設定・解除",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-003_work-area-control.md"
+    },
+    "metadata": {
+      "category": "COM"
+    }
+  },
+  {
+    "id": "PROC-COM-004",
+    "type": "procedure",
+    "label": "異常上申",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md"
+    },
+    "metadata": {
+      "category": "COM"
+    }
+  },
+  {
+    "id": "PROC-COM-005",
+    "type": "procedure",
+    "label": "完了報告",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-005_completion-reporting.md"
+    },
+    "metadata": {
+      "category": "COM"
+    }
+  },
+  {
+    "id": "PROC-EQP-001",
+    "type": "procedure",
+    "label": "中央監視・運転状態確認",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-EQP-002",
+    "type": "procedure",
+    "label": "設備巡回点検",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-EQP-003",
+    "type": "procedure",
+    "label": "検針・測定値記録",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-EQP-004",
+    "type": "procedure",
+    "label": "設備運転操作・切替え",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-004_equipment-operation-and-switching.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-EQP-005",
+    "type": "procedure",
+    "label": "警報・設備異常対応",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-EQP-006",
+    "type": "procedure",
+    "label": "緊急停止・隔離",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-EQP-007",
+    "type": "procedure",
+    "label": "試運転・復旧確認",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-EQP-008",
+    "type": "procedure",
+    "label": "設備日常保守",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
+    "id": "PROC-SEC-001",
+    "type": "procedure",
+    "label": "警備勤務開始・交代",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-002",
+    "type": "procedure",
+    "label": "入退館受付・確認",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-003",
+    "type": "procedure",
+    "label": "鍵・入館証管理",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-004",
+    "type": "procedure",
+    "label": "巡回警備",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-004_security-patrol.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-005",
+    "type": "procedure",
+    "label": "警報・防犯監視",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-006",
+    "type": "procedure",
+    "label": "不審者・不審物対応",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-007",
+    "type": "procedure",
+    "label": "事故・急病・現場保全",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-008",
+    "type": "procedure",
+    "label": "火災・地震等の災害初動",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "ROLE-0634CC2853",
+    "type": "role",
+    "label": "受付",
+    "description": "受付・現場担当が初期分類し、設備責任者又は管理責任者が優先度を確定する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-066386180C",
+    "type": "role",
+    "label": "各社",
+    "description": "受託責任者が構築し、各社・各部門の責任者が担当受諾を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-09610E5F1E",
+    "type": "role",
+    "label": "防災センター・監視担当",
+    "description": "情報集約、館内放送、設備状態、連絡統制",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md"
+    }
+  },
+  {
+    "id": "ROLE-12538771A3",
+    "type": "role",
+    "label": "法的義務主体",
+    "description": "必要資格を満たす実施者が行い、法的義務主体・管理責任者が結果と報告を確認する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-12A0885425",
+    "type": "role",
+    "label": "専門業者",
+    "description": "現場担当又は専門業者が実施し、安全・利用制限は権限者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-163F344CF1",
+    "type": "role",
+    "label": "計測器管理者",
+    "description": "識別、点検、校正、有効期限管理",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md"
+    }
+  },
+  {
+    "id": "ROLE-163F349BC5",
+    "type": "role",
+    "label": "第一認知者",
+    "description": "退避、緊急通報、権限内の停止、事実伝達",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md"
+    }
+  },
+  {
+    "id": "ROLE-1885CCBF36",
+    "type": "role",
+    "label": "作業リーダー",
+    "description": "確認の進行、役割分担、対策と開始可否の判定、再確認の指示",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md"
+    }
+  },
+  {
+    "id": "ROLE-1A1C8D4BA8",
+    "type": "role",
+    "label": "監視員",
+    "description": "監視、受信、時刻記録、初期判定、連絡",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md"
+    }
+  },
+  {
+    "id": "ROLE-1B497FF31B",
+    "type": "role",
+    "label": "監視担当",
+    "description": "映像・警報確認、対象追跡情報、証跡保全",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md"
+    }
+  },
+  {
+    "id": "ROLE-1EC02A6C9E",
+    "type": "role",
+    "label": "法的義務主体と受託責任者",
+    "description": "法令・技術担当が判定し、法的義務主体と受託責任者が責任分界を確認する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-1F53653C16",
+    "type": "role",
+    "label": "管理者・受領者",
+    "description": "報告を受領し、不足、差戻し、後続案件、担当及び期限を確定する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-005_completion-reporting.md"
+    }
+  },
+  {
+    "id": "ROLE-203F8BBCA5",
+    "type": "role",
+    "label": "作業実施者・専門業者",
+    "description": "作業内容、変更、未完了、試験要領及び自主検査結果を申告する",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md"
+    }
+  },
+  {
+    "id": "ROLE-21126CFE72",
+    "type": "role",
+    "label": "受領者",
+    "description": "記録・現物・状態を照合し、復唱又は再確認して受領可否を示す",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md"
+    }
+  },
+  {
+    "id": "ROLE-22F7AB8AB9",
+    "type": "role",
+    "label": "在庫管理者",
+    "description": "在庫数、入出庫、発注点、保管状態の管理",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md"
+    }
+  },
+  {
+    "id": "ROLE-31B57CBC6B",
+    "type": "role",
+    "label": "警備責任者",
+    "description": "配置、人員不足、未解決事項、例外開始を判断する",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md"
+    }
+  },
+  {
+    "id": "ROLE-3285506433",
+    "type": "role",
+    "label": "警備・防災担当",
+    "description": "区域管理、避難、通報、利用者安全",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    }
+  },
+  {
+    "id": "ROLE-368F637155",
+    "type": "role",
+    "label": "巡回警備員",
+    "description": "巡回、確認、記録、安全確保、応援要請",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-004_security-patrol.md"
+    }
+  },
+  {
+    "id": "ROLE-36A859415D",
+    "type": "role",
+    "label": "請求担当",
+    "description": "請求担当が照合し、契約責任者又は顧客側検収者が対象可否を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-36ADF44956",
+    "type": "role",
+    "label": "受領責任者",
+    "description": "異常認知者が速報し、受領責任者が対応開始・追加上申を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-37D661B430",
+    "type": "role",
+    "label": "回収作業者",
+    "description": "対象照合、安全確認、回収、分別、搬送、記録",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md"
+    }
+  },
+  {
+    "id": "ROLE-3AC596D1E5",
+    "type": "role",
+    "label": "受託責任者",
+    "description": "受託責任者が構築し、各社・各部門の責任者が担当受諾を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-3B18440CAD",
+    "type": "role",
+    "label": "元請け・統括者",
+    "description": "再委託先等からの速報を受領し、顧客・関係者への統合報告を行う",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md"
+    }
+  },
+  {
+    "id": "ROLE-3BB20AECC1",
+    "type": "role",
+    "label": "利用再開権限者",
+    "description": "施設運用上の利用再開を判断する。解除確認者と異なる場合がある",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-003_work-area-control.md"
+    }
+  },
+  {
+    "id": "ROLE-3C4C8D8332",
+    "type": "role",
+    "label": "警備責任者・自衛消防担当",
+    "description": "配置、避難・初期消火、点呼、現場統制",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md"
+    }
+  },
+  {
+    "id": "ROLE-3D6EBF1E6E",
+    "type": "role",
+    "label": "消防・警察・自治体",
+    "description": "公的な消火、救助、避難指示、現場指揮",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md"
+    }
+  },
+  {
+    "id": "ROLE-3EA9175670",
+    "type": "role",
+    "label": "区域監視者",
+    "description": "人の誘導、巡視、無人時間の確認、緊急連絡を行う",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-003_work-area-control.md"
+    }
+  },
+  {
+    "id": "ROLE-4068169F61",
+    "type": "role",
+    "label": "借用者",
+    "description": "指定範囲・期限での使用、第三者貸与禁止、返却・紛失連絡",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
+    }
+  },
+  {
+    "id": "ROLE-41F9790EC8",
+    "type": "role",
+    "label": "引継ぎ者",
+    "description": "事実、実施結果、未解決事項、対象状態及び受渡物を整理して説明する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md"
+    }
+  },
+  {
+    "id": "ROLE-44CCFB1BDE",
+    "type": "role",
+    "label": "施設・警備担当",
+    "description": "動線、鍵、拾得物、危険区域等の連携",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-458B3CD060",
+    "type": "role",
+    "label": "受付・警備担当者",
+    "description": "本人・予約・目的・範囲の照合、記録、案内",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md"
+    }
+  },
+  {
+    "id": "ROLE-45F5A96D0E",
+    "type": "role",
+    "label": "監視・受付者",
+    "description": "受信、復唱、時刻記録、初期判定、連絡",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    }
+  },
+  {
+    "id": "ROLE-4720C0B1A6",
+    "type": "role",
+    "label": "運用担当",
+    "description": "営業、技術・運用担当が作成し、受託責任者と顧客側権限者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-49265E719B",
+    "type": "role",
+    "label": "試運転実施者",
+    "description": "資格・操作権限の範囲で起動・切替え・測定を行う",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md"
+    }
+  },
+  {
+    "id": "ROLE-4965D2FDF5",
+    "type": "role",
+    "label": "技術担当",
+    "description": "技術担当が検査し、契約上の検収者と施設利用権限者がそれぞれ判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-4B62574194",
+    "type": "role",
+    "label": "施設・顧客責任者",
+    "description": "仕様変更、利用制限、契約外対応、検収",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-4E01714954",
+    "type": "role",
+    "label": "法定期限や顧客影響は責任者",
+    "description": "計画管理者が検知・調整し、法定期限や顧客影響は責任者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-5448C2D427",
+    "type": "role",
+    "label": "専門担当",
+    "description": "設備、警備、防災、衛生等の専門状態と操作権限を確認する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md"
+    }
+  },
+  {
+    "id": "ROLE-552FBF96FB",
+    "type": "role",
+    "label": "発注・購買担当",
+    "description": "発注、納期、入荷・検品の後続対応",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md"
+    }
+  },
+  {
+    "id": "ROLE-581C772FE5",
+    "type": "role",
+    "label": "警察・消防・救急",
+    "description": "公的対応と現場指揮",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-004_security-patrol.md"
+    }
+  },
+  {
+    "id": "ROLE-5C3F608444",
+    "type": "role",
+    "label": "区域設置者",
+    "description": "承認された計画に従い、表示・柵・施錠等を設置して記録する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-003_work-area-control.md"
+    }
+  },
+  {
+    "id": "ROLE-60F72730F4",
+    "type": "role",
+    "label": "運用責任者",
+    "description": "利用制限、営業・業務継続、利用再開の判断",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md"
+    }
+  },
+  {
+    "id": "ROLE-62A1B33FAE",
+    "type": "role",
+    "label": "検査者",
+    "description": "乾燥・仕上がり・安全性の独立確認",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-6811852FA9",
+    "type": "role",
+    "label": "立会・確認者",
+    "description": "重要操作の復唱、対象・順序・応答の独立確認",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-004_equipment-operation-and-switching.md"
+    }
+  },
+  {
+    "id": "ROLE-6AAFCACAA2",
+    "type": "role",
+    "label": "設備・防災担当",
+    "description": "設備停止、警報、火気・防災上の注意を共有する",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md"
+    }
+  },
+  {
+    "id": "ROLE-6AC1446B50",
+    "type": "role",
+    "label": "救急・消防・警察",
+    "description": "公的な救護、捜査、現場指揮",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md"
+    }
+  },
+  {
+    "id": "ROLE-6E0D667D6D",
+    "type": "role",
+    "label": "現場確認者",
+    "description": "安全確認、現物・関連設備の確認、結果報告",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md"
+    }
+  },
+  {
+    "id": "ROLE-703B7E408C",
+    "type": "role",
+    "label": "解除確認者",
+    "description": "危険除去、原状回復及び関係者確認後に区域解除を承認する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-003_work-area-control.md"
+    }
+  },
+  {
+    "id": "ROLE-71808A4F39",
+    "type": "role",
+    "label": "収集運搬等の受領者",
+    "description": "契約範囲での受領と後続処理",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md"
+    }
+  },
+  {
+    "id": "ROLE-744DF7E994",
+    "type": "role",
+    "label": "警察・消防等",
+    "description": "公的な初動・現場指揮",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md"
+    }
+  },
+  {
+    "id": "ROLE-749D7196AD",
+    "type": "role",
+    "label": "作業者",
+    "description": "養生、清掃、回収、復旧、実績記録",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-76C546AFAE",
+    "type": "role",
+    "label": "運転監視担当",
+    "description": "操作前後状態、警報、関連設備、監視復帰の確認",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md"
+    }
+  },
+  {
+    "id": "ROLE-7B8B0F8DE4",
+    "type": "role",
+    "label": "訪問先・受入担当者",
+    "description": "来訪目的、受入可否、同行・範囲、時間の承認",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md"
+    }
+  },
+  {
+    "id": "ROLE-7CC31F4FD0",
+    "type": "role",
+    "label": "技術",
+    "description": "営業、技術・運用担当が作成し、受託責任者と顧客側権限者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-7E99CB42AC",
+    "type": "role",
+    "label": "廃棄物管理責任者",
+    "description": "法令・契約適合、保管、許可業者・処理工程への引渡し",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md"
+    }
+  },
+  {
+    "id": "ROLE-835A96F3BA",
+    "type": "role",
+    "label": "施設責任者",
+    "description": "長時間閉鎖、利用制限、代替運用等の決定",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-842A95371A",
+    "type": "role",
+    "label": "契約責任者",
+    "description": "請求担当が照合し、契約責任者又は顧客側検収者が対象可否を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-84317B466A",
+    "type": "role",
+    "label": "資格者",
+    "description": "点検者が一次判定し、資格者又は設備責任者が技術判断を確定する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-862E004C60",
+    "type": "role",
+    "label": "設備担当",
+    "description": "漏水、設備破損、電気等の専門判断",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-863BA8D743",
+    "type": "role",
+    "label": "BM・元請責任者",
+    "description": "契約範囲の完了確認、証跡受領、異常案件・修繕履歴への接続を行う",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md"
+    }
+  },
+  {
+    "id": "ROLE-8911DAD4BA",
+    "type": "role",
+    "label": "機械警備会社",
+    "description": "契約範囲の監視、駆付け、設備連携",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md"
+    }
+  },
+  {
+    "id": "ROLE-898646A9ED",
+    "type": "role",
+    "label": "必要資格を満たす実施者",
+    "description": "必要資格を満たす実施者が行い、法的義務主体・管理責任者が結果と報告を確認する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-8A228383BD",
+    "type": "role",
+    "label": "発見者・受付者",
+    "description": "人命・安全を優先し、観察事実、時刻、場所及び発生源を記録する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md"
+    }
+  },
+  {
+    "id": "ROLE-8D2FFE2A9D",
+    "type": "role",
+    "label": "安全・監視担当",
+    "description": "第三者動線、電源、濡れ床、区域維持の確認",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-8E02319923",
+    "type": "role",
+    "label": "排出部門・テナント",
+    "description": "排出区分、機密・危険物情報、分別不良の是正",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md"
+    }
+  },
+  {
+    "id": "ROLE-8E43833406",
+    "type": "role",
+    "label": "システム管理者",
+    "description": "電子媒体の有効化・停止・ログ保全",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
+    }
+  },
+  {
+    "id": "ROLE-8E715478C7",
+    "type": "role",
+    "label": "施設・衛生責任者",
+    "description": "品目・品質基準、利用制限、代替品の承認",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md"
+    }
+  },
+  {
+    "id": "ROLE-940BBE93FB",
+    "type": "role",
+    "label": "専門責任者",
+    "description": "技術判断、停止・隔離、復旧条件及び専門業者への接続を判断する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md"
+    }
+  },
+  {
+    "id": "ROLE-95859F11C9",
+    "type": "role",
+    "label": "各部門の責任者",
+    "description": "受託責任者が構築し、各社・各部門の責任者が担当受諾を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-98B1DBCF34",
+    "type": "role",
+    "label": "技術・品質確認者",
+    "description": "必要な場合に測定値、品質、復旧条件及び判定根拠を確認する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-005_completion-reporting.md"
+    }
+  },
+  {
+    "id": "ROLE-9AD4C8AE0B",
+    "type": "role",
+    "label": "現場担当",
+    "description": "受付・現場担当が初期分類し、設備責任者又は管理責任者が優先度を確定する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-9CF0AD9A99",
+    "type": "role",
+    "label": "技術確認者",
+    "description": "試運転結果、保護機能、関連系統及び残留リスクを評価する",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md"
+    }
+  },
+  {
+    "id": "ROLE-A01D6C8142",
+    "type": "role",
+    "label": "運用・施設責任者",
+    "description": "利用影響、周知、施設運用・利用再開の判断",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-004_equipment-operation-and-switching.md"
+    }
+  },
+  {
+    "id": "ROLE-A1EC0D8D7B",
+    "type": "role",
+    "label": "未解決事項は現場責任者",
+    "description": "引継ぎ者と受領者が照合し、未解決事項は現場責任者が担当・期限を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-A26DBB8EEB",
+    "type": "role",
+    "label": "顧客側検収者",
+    "description": "請求担当が照合し、契約責任者又は顧客側検収者が対象可否を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-A8A71C4E56",
+    "type": "role",
+    "label": "上位責任者・顧客側権限者",
+    "description": "契約外対応、利用制限、業務縮小、リスク受容等を決定する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md"
+    }
+  },
+  {
+    "id": "ROLE-AFB63A620B",
+    "type": "role",
+    "label": "安全",
+    "description": "現場担当又は専門業者が実施し、安全・利用制限は権限者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-B4D108F1EB",
+    "type": "role",
+    "label": "現場責任者",
+    "description": "現場責任者又は管理者が形式・内容を確認し、技術判断は資格者・専門担当へ回す",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-B65958F34F",
+    "type": "role",
+    "label": "資格者・専門責任者",
+    "description": "法令、保安規程又は専門技術上必要な確認・指示",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md"
+    }
+  },
+  {
+    "id": "ROLE-B6A9145CDB",
+    "type": "role",
+    "label": "管理責任者",
+    "description": "必要資格を満たす実施者が行い、法的義務主体・管理責任者が結果と報告を確認する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-B787AD79C7",
+    "type": "role",
+    "label": "鍵・証票管理担当",
+    "description": "保管、本人・承認照合、貸出・返却、台帳記録",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
+    }
+  },
+  {
+    "id": "ROLE-B8F19A33B5",
+    "type": "role",
+    "label": "引継ぎ者と受領者",
+    "description": "引継ぎ者と受領者が照合し、未解決事項は現場責任者が担当・期限を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-BA792DB630",
+    "type": "role",
+    "label": "契約・施設側権限者",
+    "description": "利用制限、対外周知、契約外対応、費用及び施設利用再開を判断する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md"
+    }
+  },
+  {
+    "id": "ROLE-BF499E4B9C",
+    "type": "role",
+    "label": "点検者",
+    "description": "点検者が一次判定し、資格者又は設備責任者が技術判断を確定する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-BFD0BD3A9D",
+    "type": "role",
+    "label": "第一認知者・警備員",
+    "description": "距離・退路確保、観察、通報、利用者誘導、記録",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md"
+    }
+  },
+  {
+    "id": "ROLE-C34D461B13",
+    "type": "role",
+    "label": "作業責任者",
+    "description": "作業責任者が設定し、安全責任者と施設利用権限者が解除可否を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-C470F09CA9",
+    "type": "role",
+    "label": "異常認知者",
+    "description": "異常認知者が速報し、受領責任者が対応開始・追加上申を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-C6BE121342",
+    "type": "role",
+    "label": "管理者",
+    "description": "現場責任者又は管理者が形式・内容を確認し、技術判断は資格者・専門担当へ回す",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-C7F18CDE0A",
+    "type": "role",
+    "label": "データ確認者",
+    "description": "転記、桁、単位、欠測、前回値との整合確認",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md"
+    }
+  },
+  {
+    "id": "ROLE-C987B66116",
+    "type": "role",
+    "label": "補充作業者",
+    "description": "対象照合、残量・状態確認、補充、記録",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md"
+    }
+  },
+  {
+    "id": "ROLE-CECC23E33F",
+    "type": "role",
+    "label": "作業実施者",
+    "description": "現場状態の確認、危険要因の申告、対策の実施、開始可否への同意、記録",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md"
+    }
+  },
+  {
+    "id": "ROLE-D104803DE6",
+    "type": "role",
+    "label": "法令",
+    "description": "法令・技術担当が判定し、法的義務主体と受託責任者が責任分界を確認する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-D36EAC1505",
+    "type": "role",
+    "label": "利用制限は権限者",
+    "description": "現場担当又は専門業者が実施し、安全・利用制限は権限者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-D38ACC9F38",
+    "type": "role",
+    "label": "停止操作者",
+    "description": "対象照合、停止操作、応答確認、時刻記録",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md"
+    }
+  },
+  {
+    "id": "ROLE-D3F54CDD5B",
+    "type": "role",
+    "label": "施設運用責任者",
+    "description": "区域解除後の施設利用再開を判断する",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-D4F2A063F7",
+    "type": "role",
+    "label": "専門・保安担当",
+    "description": "資格・規程を要する診断、操作、事故対応",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md"
+    }
+  },
+  {
+    "id": "ROLE-D7C0932956",
+    "type": "role",
+    "label": "現場対応者",
+    "description": "権限範囲内で安全確保・一次対応を行い、状態変化を継続報告する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md"
+    }
+  },
+  {
+    "id": "ROLE-D872C45F7D",
+    "type": "role",
+    "label": "専門担当・選任者",
+    "description": "法定・技術判断、専門対応",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    }
+  },
+  {
+    "id": "ROLE-D894377C2B",
+    "type": "role",
+    "label": "検針・測定者",
+    "description": "対象確認、条件確認、読取り、再確認、記録",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md"
+    }
+  },
+  {
+    "id": "ROLE-D9B0DB9A93",
+    "type": "role",
+    "label": "システム・証票管理者",
+    "description": "予約・権限情報、入館証等の有効性管理",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md"
+    }
+  },
+  {
+    "id": "ROLE-DBA1DEF294",
+    "type": "role",
+    "label": "設備・保安責任者",
+    "description": "系統影響、隔離方法、残留エネルギー、安全状態の判断",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md"
+    }
+  },
+  {
+    "id": "ROLE-DC444E5365",
+    "type": "role",
+    "label": "専門業者・メーカー",
+    "description": "専門診断、修理、技術的復旧確認",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-005_alarm-response.md"
+    }
+  },
+  {
+    "id": "ROLE-DCFF455766",
+    "type": "role",
+    "label": "監視担当者",
+    "description": "監視、認知、比較、一次記録、連絡",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md"
+    }
+  },
+  {
+    "id": "ROLE-DD98072E79",
+    "type": "role",
+    "label": "巡回実施者",
+    "description": "巡回、点検、測定、記録、初期の安全確保",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md"
+    }
+  },
+  {
+    "id": "ROLE-E0AE8CCDBB",
+    "type": "role",
+    "label": "清掃責任者",
+    "description": "指示、区域・仕様確認、品質判定、上申",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-E0ED87922D",
+    "type": "role",
+    "label": "契約上の検収者と施設利用権限者",
+    "description": "技術担当が検査し、契約上の検収者と施設利用権限者がそれぞれ判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-E0EFA9C03B",
+    "type": "role",
+    "label": "救命教育修了者等",
+    "description": "受講内容と物件計画の範囲で救命処置",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md"
+    }
+  },
+  {
+    "id": "ROLE-E14B5372C1",
+    "type": "role",
+    "label": "受託責任者と顧客側権限者",
+    "description": "営業、技術・運用担当が作成し、受託責任者と顧客側権限者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-E18E3F8AB2",
+    "type": "role",
+    "label": "操作者",
+    "description": "対象照合、一操作一確認、前後状態・時刻の記録",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-004_equipment-operation-and-switching.md"
+    }
+  },
+  {
+    "id": "ROLE-E41DD0D2F7",
+    "type": "role",
+    "label": "安全責任者と施設利用権限者",
+    "description": "作業責任者が設定し、安全責任者と施設利用権限者が解除可否を判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-E84DC7C948",
+    "type": "role",
+    "label": "施設責任者・災害対策本部",
+    "description": "施設運用、避難・待機、事業継続、再開判断",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md"
+    }
+  },
+  {
+    "id": "ROLE-EC39E58988",
+    "type": "role",
+    "label": "計画管理者",
+    "description": "計画管理者が検知・調整し、法定期限や顧客影響は責任者が判断する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-EFB749C451",
+    "type": "role",
+    "label": "清掃作業者",
+    "description": "準備、清掃、品質確認、記録、異常報告",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-001_common-area-cleaning.md"
+    }
+  },
+  {
+    "id": "ROLE-F293391297",
+    "type": "role",
+    "label": "設備責任者",
+    "description": "点検者が一次判定し、資格者又は設備責任者が技術判断を確定する",
+    "source": {
+      "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-F52CB1FCA4",
+    "type": "role",
+    "label": "施設・権限管理者",
+    "description": "権限範囲、失効、錠・カード停止、運用変更の判断",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
+    }
+  },
+  {
+    "id": "ROLE-FD55639264",
+    "type": "role",
+    "label": "作業調整者・立会者",
+    "description": "競合作業、利用者動線、設備停止等の調整・確認",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-002_pre-work-safety-check.md"
+    }
+  },
+  {
+    "id": "ROLE-FDC0A0FDAA",
+    "type": "role",
+    "label": "顧客・施設側権限者",
+    "description": "契約上の検収、利用再開、追加対応又はリスク受容を判断する",
+    "source": {
+      "path": "docs/02_field-procedures/00_common/PROC-COM-005_completion-reporting.md"
+    }
+  },
+  {
+    "id": "STD-11BB502D19",
+    "type": "standard",
+    "label": "浄化槽法：保守点検・清掃・法定検査",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.7"
+    }
+  },
+  {
+    "id": "STD-24E0F8EF1B",
+    "type": "standard",
+    "label": "電気事業法：自家用電気工作物の保安",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.5"
+    }
+  },
+  {
+    "id": "STD-2D0CA8C150",
+    "type": "standard",
+    "label": "フロン排出抑制法：業務用冷凍空調機器",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.6"
+    }
+  },
+  {
+    "id": "STD-5ACF3D33AE",
+    "type": "standard",
+    "label": "建築基準法：定期報告制度",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.1"
+    }
+  },
+  {
+    "id": "STD-62F930A1C9",
+    "type": "standard",
+    "label": "水道法：専用水道・簡易専用水道等",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.4"
+    }
+  },
+  {
+    "id": "STD-C00B366C58",
+    "type": "standard",
+    "label": "消防法：防火管理・消防用設備等",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.2"
+    }
+  },
+  {
+    "id": "STD-C07196F7B0",
+    "type": "standard",
+    "label": "省エネ法：エネルギー使用状況の管理・報告",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.9"
+    }
+  },
+  {
+    "id": "STD-C2EFC13478",
+    "type": "standard",
+    "label": "建築物衛生法：特定建築物の環境衛生管理",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.3"
+    }
+  },
+  {
+    "id": "STD-CA2AE6C798",
+    "type": "standard",
+    "label": "廃棄物・有害物質等",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.10"
+    }
+  },
+  {
+    "id": "STD-D80B03ABBF",
+    "type": "standard",
+    "label": "労働安全衛生法：ボイラー・圧力容器・作業用機械等",
+    "href": "/variations/statutory-duties/",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md",
+      "anchor": "8.8"
+    }
+  }
+]
