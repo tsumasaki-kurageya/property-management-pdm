@@ -11,11 +11,11 @@ import {
 } from '@xyflow/react';
 import { explorerGraph, explorerNodesById, getExplorerEdgesForNode } from '../../data/explorer';
 import type { ExplorerEdge, ExplorerEdgeType, ExplorerNode, ExplorerNodeType } from '../../data/explorer/schema';
+import type { ExplorerRelationFilter } from './explorerState';
 import './ContextMap.css';
 
 export type ContextMapMode = 'hierarchy' | 'relations';
 
-type RelationFilter = 'all' | 'related_to' | 'uses' | 'produces' | 'people' | 'governed_by';
 type ContextMapState = 'loading' | 'ready' | 'error';
 type HierarchyRole = 'parent' | 'selected' | 'sibling' | 'child';
 
@@ -23,6 +23,8 @@ interface ContextMapProps {
   mode: ContextMapMode;
   selectedId: string;
   onSelect: (nodeId: string) => void;
+  relationFilter?: ExplorerRelationFilter;
+  onRelationFilterChange?: (filter: ExplorerRelationFilter) => void;
 }
 
 interface DisplayNode {
@@ -71,7 +73,11 @@ const nodeTypeLabels: Record<ExplorerNodeType, string> = {
   process: '横断プロセス',
 };
 
-const relationFilterOptions: Array<{ id: RelationFilter; label: string; edgeTypes: ExplorerEdgeType[] }> = [
+const relationFilterOptions: Array<{
+  id: ExplorerRelationFilter;
+  label: string;
+  edgeTypes: ExplorerEdgeType[];
+}> = [
   { id: 'all', label: 'すべて', edgeTypes: [] },
   { id: 'related_to', label: '関係する仕事・手順', edgeTypes: ['related_to'] },
   { id: 'uses', label: '必要なもの', edgeTypes: ['uses'] },
@@ -101,7 +107,7 @@ function relationLabel(edge: ExplorerEdge, selectedId: string): string {
   return edge.label || labels[edge.type][outgoing ? 0 : 1];
 }
 
-function matchesFilter(edge: ExplorerEdge, filter: RelationFilter): boolean {
+function matchesFilter(edge: ExplorerEdge, filter: ExplorerRelationFilter): boolean {
   if (filter === 'all') return true;
   return relationFilterOptions.find((option) => option.id === filter)?.edgeTypes.includes(edge.type) ?? false;
 }
@@ -202,7 +208,8 @@ function buildHierarchyContext(selectedId: string, expanded: boolean): ContextDa
   const hierarchyApplicable = ['area', 'business', 'procedure'].includes(selectedNode.type);
   const hasHierarchy = Boolean(parentEdge) || directChildren.length > 0;
   const informationState = hasHierarchy ? 'available' : hierarchyApplicable ? 'unregistered' : 'not-applicable';
-  const omitted = Math.max(0, siblingTotal - siblingEdges.length) + Math.max(0, directChildren.length - childEdges.length);
+  const omitted = Math.max(0, siblingTotal - siblingEdges.length)
+    + Math.max(0, directChildren.length - childEdges.length);
   const textItems = [...nodesById.values()]
     .filter((item) => item.node.id !== selectedId)
     .map((item) => ({
@@ -215,7 +222,11 @@ function buildHierarchyContext(selectedId: string, expanded: boolean): ContextDa
   return { nodes: [...nodesById.values()], edges: displayEdges, omitted, informationState, textItems };
 }
 
-function buildRelationContext(selectedId: string, filter: RelationFilter, expanded: boolean): ContextData {
+function buildRelationContext(
+  selectedId: string,
+  filter: ExplorerRelationFilter,
+  expanded: boolean,
+): ContextData {
   const selectedNode = explorerNodesById.get(selectedId);
   if (!selectedNode) {
     return { nodes: [], edges: [], omitted: 0, informationState: 'unregistered', textItems: [] };
@@ -224,8 +235,16 @@ function buildRelationContext(selectedId: string, filter: RelationFilter, expand
   const allRelations = getExplorerEdgesForNode(selectedId)
     .filter((edge) => relationEdgeTypes.has(edge.type))
     .sort((left, right) => {
-      const priorities: ExplorerEdgeType[] = ['related_to', 'uses', 'produces', 'performed_by', 'approved_by', 'governed_by'];
-      return priorities.indexOf(left.type) - priorities.indexOf(right.type) || left.id.localeCompare(right.id);
+      const priorities: ExplorerEdgeType[] = [
+        'related_to',
+        'uses',
+        'produces',
+        'performed_by',
+        'approved_by',
+        'governed_by',
+      ];
+      return priorities.indexOf(left.type) - priorities.indexOf(right.type)
+        || left.id.localeCompare(right.id);
     });
   const filtered = allRelations.filter((edge) => matchesFilter(edge, filter));
   const limit = expanded ? 24 : 12;
@@ -277,7 +296,10 @@ function NodeLabel({ item }: { item: DisplayNode }): ReactNode {
   );
 }
 
-async function layoutContext(data: ContextData, mode: ContextMapMode): Promise<{ nodes: ReactFlowNode[]; edges: ReactFlowEdge[] }> {
+async function layoutContext(
+  data: ContextData,
+  mode: ContextMapMode,
+): Promise<{ nodes: ReactFlowNode[]; edges: ReactFlowEdge[] }> {
   const layout = await elk.layout({
     id: 'context-root',
     layoutOptions: {
@@ -290,7 +312,9 @@ async function layoutContext(data: ContextData, mode: ContextMapMode): Promise<{
     children: data.nodes.map((item) => ({ id: item.node.id, width: NODE_WIDTH, height: NODE_HEIGHT })),
     edges: data.edges.map((edge) => ({ id: edge.id, sources: [edge.source], targets: [edge.target] })),
   });
-  const positions = new Map((layout.children ?? []).map((node) => [node.id, { x: node.x ?? 0, y: node.y ?? 0 }]));
+  const positions = new Map(
+    (layout.children ?? []).map((node) => [node.id, { x: node.x ?? 0, y: node.y ?? 0 }]),
+  );
   const nodes: ReactFlowNode[] = data.nodes.map((item) => ({
     id: item.node.id,
     position: positions.get(item.node.id) ?? { x: 0, y: 0 },
@@ -317,14 +341,21 @@ function stateMessage(mode: ContextMapMode, state: ContextData['informationState
     : '関係がないとは断定できません。表示できる関係情報がまだ登録されていません。';
 }
 
-export default function ContextMap({ mode, selectedId, onSelect }: ContextMapProps) {
-  const [filter, setFilter] = useState<RelationFilter>('all');
+export default function ContextMap({
+  mode,
+  selectedId,
+  onSelect,
+  relationFilter,
+  onRelationFilterChange,
+}: ContextMapProps) {
+  const [localFilter, setLocalFilter] = useState<ExplorerRelationFilter>('all');
   const [expanded, setExpanded] = useState(false);
   const [mapState, setMapState] = useState<ContextMapState>('loading');
   const [nodes, setNodes] = useState<ReactFlowNode[]>([]);
   const [edges, setEdges] = useState<ReactFlowEdge[]>([]);
   const { fitView } = useReactFlow();
   const selectedNode = explorerNodesById.get(selectedId);
+  const filter = relationFilter ?? localFilter;
   const allRelationEdges = useMemo(
     () => getExplorerEdgesForNode(selectedId).filter((edge) => relationEdgeTypes.has(edge.type)),
     [selectedId],
@@ -338,8 +369,8 @@ export default function ContextMap({ mode, selectedId, onSelect }: ContextMapPro
 
   useEffect(() => {
     setExpanded(false);
-    if (mode === 'hierarchy') setFilter('all');
-  }, [mode, selectedId]);
+    if (mode === 'hierarchy' && relationFilter === undefined) setLocalFilter('all');
+  }, [mode, relationFilter, selectedId]);
 
   useEffect(() => {
     let active = true;
@@ -366,12 +397,19 @@ export default function ContextMap({ mode, selectedId, onSelect }: ContextMapPro
     };
   }, [data, fitView, mode]);
 
+  const updateFilter = (nextFilter: ExplorerRelationFilter) => {
+    if (relationFilter === undefined) setLocalFilter(nextFilter);
+    onRelationFilterChange?.(nextFilter);
+  };
+
   const filterCounts = useMemo(() => Object.fromEntries(
     relationFilterOptions.map((option) => [
       option.id,
-      option.id === 'all' ? allRelationEdges.length : allRelationEdges.filter((edge) => matchesFilter(edge, option.id)).length,
+      option.id === 'all'
+        ? allRelationEdges.length
+        : allRelationEdges.filter((edge) => matchesFilter(edge, option.id)).length,
     ]),
-  ) as Record<RelationFilter, number>, [allRelationEdges]);
+  ) as Record<ExplorerRelationFilter, number>, [allRelationEdges]);
 
   const title = mode === 'hierarchy' ? '全体の中の位置を見る' : '関係する情報から探す';
   const description = mode === 'hierarchy'
@@ -400,7 +438,7 @@ export default function ContextMap({ mode, selectedId, onSelect }: ContextMapPro
               key={option.id}
               aria-pressed={filter === option.id}
               className={filter === option.id ? 'is-active' : ''}
-              onClick={() => setFilter(option.id)}
+              onClick={() => updateFilter(option.id)}
             >
               <span>{option.label}</span>
               <small>{filterCounts[option.id]}</small>
