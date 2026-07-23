@@ -1,0 +1,112 @@
+name: Revise explorer redesign spec
+
+on:
+  push:
+    branches:
+      - agent/explorer-redesign-spec
+
+permissions:
+  contents: write
+
+jobs:
+  revise:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/explorer-redesign-spec
+      - name: Revise specification
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          path = Path('docs/explorer-redesign-spec.md')
+          text = path.read_text()
+
+          text = text.replace(
+              'この状態は一時的なプレビューであり、選択業務、URL、ブラウザ履歴を変更しない。',
+              'この状態は一時的なプレビューであり、選択業務を変更しない。URLやブラウザ履歴への反映は必須要件としない。',
+          )
+          text = text.replace(
+              '代表業務、検索結果、共有URL、業務プロセス内の別業務、詳細内の関連業務のいずれかから業務を選択した状態。',
+              '代表業務、検索結果、業務プロセス内の別業務、詳細内の関連業務のいずれかから業務を選択した状態。',
+          )
+
+          section10 = '''## 10. 状態保持とURLの位置づけ
+
+URL共有、再読み込み、ブラウザの戻る・進むによる状態復元は、業務エクスプローラーの中核価値ではなく補助機能とする。
+
+優先順位は次のとおりとする。
+
+1. 全体地図から代表業務を選択できる
+2. 選択業務を含む業務プロセスを開始から終了まで理解できる
+3. 選択業務の詳細を確認できる
+4. 検索から業務または業務プロセスへ移動できる
+5. 必要性が確認できた場合に、URL共有や履歴復元を追加する
+
+URLへ状態を保持する場合も、選択業務IDと表示中の業務プロセスID程度に限定する。ホバーやフォーカスによる代表業務プレビューは保持しない。
+
+URL・履歴対応のために画面状態やコンポーネント構造を複雑化させない。主要な利用体験と実装の単純さを優先する。
+
+---
+
+'''
+          text = re.sub(
+              r'## 10\. URLと履歴\n.*?\n---\n\n(?=## 11\.)',
+              section10,
+              text,
+              flags=re.S,
+          )
+
+          section12 = '''## 12. 既存実装の扱い
+
+既存実装の再利用を前提条件にしない。
+
+新しい情報構造と操作を単純に実現できる場合に限り、データ処理や小さなUI部品を再利用する。既存の状態管理、画面構造、コンポーネント境界が再設計の妨げになる場合は、削除または作り直す。
+
+| 現在の要素 | 方針 |
+|---|---|
+| 業務データと参照情報 | 内容を検証したうえで再利用候補とする |
+| 検索ロジック | 新しい検索要件に合う部分だけ再利用候補とする |
+| 業務詳細の表示部品 | 新しい情報構造に合う小部品だけ再利用候補とする |
+| React Flow／ELK | 全体地図・プロセス表現に適する場合だけ採用する。必須技術としない |
+| URL・履歴同期 | 中核機能完成後に必要性を判断する |
+| 1ホップの仕事の流れ | 廃止する |
+| 全体から見る・関係から探す | 廃止し、新しい全体地図・業務詳細へ置き換える |
+| 下部ライフサイクル | 廃止し、全体地図の構造へ統合する |
+| 3表示タブ | 廃止する |
+
+既存コードを残すことより、利用者が画面の意味を理解できることと、実装の状態遷移が単純であることを優先する。
+
+---
+
+'''
+          text = re.sub(
+              r'## 12\. 既存実装の扱い\n.*?\n---\n\n(?=## 13\.)',
+              section12,
+              text,
+              flags=re.S,
+          )
+
+          text = text.replace(
+              '## 13. 明示的に採用しない設計\n\n次の設計へ戻さない。',
+              '## 13. 業務エクスプローラー再設計で採用しない設計\n\n本仕様の対象である業務エクスプローラーでは、次の設計を採用しない。',
+          )
+          text = text.replace(
+              '- ホバーだけで選択業務やURLを変更する',
+              '- ホバーだけで選択業務を確定する',
+          )
+          text = text.replace(
+              '- URL共有・再読み込み・戻る・進むで同じ状態を復元できる\n',
+              '',
+          )
+
+          path.write_text(text)
+          PY
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add docs/explorer-redesign-spec.md
+          git commit -m "再設計仕様の優先順位を修正" || exit 0
+          git push
