@@ -13,6 +13,7 @@ import '@xyflow/react/dist/style.css';
 import { explorerGraph, explorerNodesById, getExplorerEdgesForNode } from '../../data/explorer';
 import type { ExplorerEdge, ExplorerNode } from '../../data/explorer/schema';
 import BusinessNavigator from './BusinessNavigator';
+import FlowMap from './FlowMap';
 import './ExplorerShell.css';
 
 const BASE_URL = import.meta.env.BASE_URL;
@@ -50,14 +51,7 @@ function chooseMapEdges(selectedId: string, mode: ViewMode): ExplorerEdge[] {
       .slice(0, 10);
   }
 
-  const processFlow = selectedEdges.filter(
-    (edge) => edge.type === 'precedes' && edge.metadata?.basis === 'process-map',
-  );
-  const incoming = processFlow.filter((edge) => edge.to === selectedId).slice(0, 2);
-  const outgoing = processFlow.filter((edge) => edge.from === selectedId).slice(0, 2);
-  const branches = selectedEdges.filter((edge) => edge.type === 'branches_to').slice(0, 2);
-  const area = selectedEdges.filter((edge) => edge.type === 'contains' && edge.to === selectedId).slice(0, 1);
-  return [...area, ...incoming, ...outgoing, ...branches];
+  return [];
 }
 
 function flowLabel(edge: ExplorerEdge): string {
@@ -114,7 +108,6 @@ async function layoutMap(selectedId: string, mode: ViewMode): Promise<{ nodes: F
     target: edge.to,
     label: flowLabel(edge),
     markerEnd: { type: MarkerType.ArrowClosed },
-    animated: edge.type === 'branches_to',
   }));
 
   return { nodes, edges };
@@ -152,6 +145,11 @@ function ExplorerAppContent() {
   }, [selectedId]);
 
   useEffect(() => {
+    if (viewMode === 'flow') {
+      setLayoutState('ready');
+      return undefined;
+    }
+
     let active = true;
     setLayoutState('loading');
     layoutMap(selectedId, viewMode)
@@ -205,26 +203,32 @@ function ExplorerAppContent() {
           <span>{selectedNode?.id ?? '未選択'}</span>
         </div>
         <div className="explorer-map" aria-live="polite">
-          {layoutState === 'loading' && <div className="explorer-state">関係を配置しています…</div>}
-          {layoutState === 'error' && <div className="explorer-state is-error">表示データの準備に失敗しました。</div>}
-          {layoutState === 'ready' && !selectedNode && <div className="explorer-state">対象業務がありません。</div>}
-          {layoutState === 'ready' && selectedNode && (
-            <ReactFlow
-              nodes={flowNodes}
-              edges={flowEdges}
-              fitView
-              fitViewOptions={{ padding: 0.24 }}
-              minZoom={0.4}
-              maxZoom={1.6}
-              nodesDraggable={false}
-              nodesConnectable={false}
-              elementsSelectable
-              onNodeClick={(_event, node) => selectNode(node.id)}
-              proOptions={{ hideAttribution: true }}
-            >
-              <Background gap={20} size={1} />
-              <Controls showInteractive={false} />
-            </ReactFlow>
+          {viewMode === 'flow' ? (
+            <FlowMap selectedId={selectedId} onSelect={selectNode} />
+          ) : (
+            <>
+              {layoutState === 'loading' && <div className="explorer-state">関係を配置しています…</div>}
+              {layoutState === 'error' && <div className="explorer-state is-error">表示データの準備に失敗しました。</div>}
+              {layoutState === 'ready' && !selectedNode && <div className="explorer-state">対象業務がありません。</div>}
+              {layoutState === 'ready' && selectedNode && (
+                <ReactFlow
+                  nodes={flowNodes}
+                  edges={flowEdges}
+                  fitView
+                  fitViewOptions={{ padding: 0.24 }}
+                  minZoom={0.4}
+                  maxZoom={1.6}
+                  nodesDraggable={false}
+                  nodesConnectable={false}
+                  elementsSelectable
+                  onNodeClick={(_event, node) => selectNode(node.id)}
+                  proOptions={{ hideAttribution: true }}
+                >
+                  <Background gap={20} size={1} />
+                  <Controls showInteractive={false} />
+                </ReactFlow>
+              )}
+            </>
           )}
         </div>
       </main>
