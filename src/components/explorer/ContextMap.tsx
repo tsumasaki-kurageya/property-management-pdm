@@ -12,6 +12,7 @@ import {
 import { explorerGraph, explorerNodesById, getExplorerEdgesForNode } from '../../data/explorer';
 import type { ExplorerEdge, ExplorerEdgeType, ExplorerNode, ExplorerNodeType } from '../../data/explorer/schema';
 import type { ExplorerRelationFilter } from './explorerState';
+import { useExplorerMediaPreferences } from './explorerMedia';
 import './ContextMap.css';
 
 export type ContextMapMode = 'hierarchy' | 'relations';
@@ -354,6 +355,7 @@ export default function ContextMap({
   const [nodes, setNodes] = useState<ReactFlowNode[]>([]);
   const [edges, setEdges] = useState<ReactFlowEdge[]>([]);
   const { fitView } = useReactFlow();
+  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();
   const selectedNode = explorerNodesById.get(selectedId);
   const filter = relationFilter ?? localFilter;
   const allRelationEdges = useMemo(
@@ -387,7 +389,7 @@ export default function ContextMap({
         setNodes(layout.nodes);
         setEdges(layout.edges);
         setMapState('ready');
-        requestAnimationFrame(() => fitView({ padding: 0.2, duration: 180 }));
+        requestAnimationFrame(() => fitView({ padding: 0.2, duration: reducedMotion ? 0 : 180 }));
       })
       .catch(() => {
         if (active) setMapState('error');
@@ -395,7 +397,7 @@ export default function ContextMap({
     return () => {
       active = false;
     };
-  }, [data, fitView, mode]);
+  }, [data, fitView, mode, reducedMotion]);
 
   const updateFilter = (nextFilter: ExplorerRelationFilter) => {
     if (relationFilter === undefined) setLocalFilter(nextFilter);
@@ -426,7 +428,7 @@ export default function ContextMap({
         </div>
         <div className="context-map-actions">
           <span>{data.nodes.length}項目</span>
-          <button type="button" onClick={() => fitView({ padding: 0.2, duration: 180 })}>中央へ戻す</button>
+          <button type="button" onClick={() => fitView({ padding: 0.2, duration: reducedMotion ? 0 : 180 })}>中央へ戻す</button>
         </div>
       </header>
 
@@ -465,6 +467,8 @@ export default function ContextMap({
             minZoom={0.38}
             maxZoom={1.65}
             nodesDraggable={false}
+            panOnDrag={!coarsePointer}
+            zoomOnScroll={!coarsePointer}
             nodesConnectable={false}
             elementsSelectable
             onNodeClick={(_event, node) => onSelect(node.id)}
