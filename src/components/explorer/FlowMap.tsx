@@ -12,11 +12,14 @@ import {
 import { explorerNodesById, getExplorerEdgesForNode } from '../../data/explorer';
 import type { ExplorerEdge, ExplorerNode } from '../../data/explorer/schema';
 import { useExplorerMediaPreferences } from './explorerMedia';
+import ProcessNavigator from './ProcessNavigator';
 import './FlowMap.css';
 
 interface FlowMapProps {
   selectedId: string;
+  selectedProcessId?: string;
   onSelect: (nodeId: string) => void;
+  onProcessSelect: (processId: string) => void;
 }
 
 type FlowRelation = 'previous' | 'selected' | 'next' | 'branch' | 'missing';
@@ -280,7 +283,12 @@ function NodeLinkList({
   );
 }
 
-export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
+export default function FlowMap({
+  selectedId,
+  selectedProcessId,
+  onSelect,
+  onProcessSelect,
+}: FlowMapProps) {
   const localFlow = useMemo(() => collectLocalFlow(selectedId), [selectedId]);
   const [nodes, setNodes] = useState<ReactFlowNode[]>([]);
   const [edges, setEdges] = useState<ReactFlowEdge[]>([]);
@@ -316,6 +324,12 @@ export default function FlowMap({ selectedId, onSelect }: FlowMapProps) {
 
   return (
     <div className="flow-map-view">
+      <ProcessNavigator
+        selectedBusinessId={selectedId}
+        selectedProcessId={selectedProcessId}
+        onSelect={onProcessSelect}
+      />
+
       <div className="flow-map-context">
         <div>
           <span>局所表示</span>
