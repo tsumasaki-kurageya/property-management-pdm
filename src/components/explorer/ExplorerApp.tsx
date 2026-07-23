@@ -55,7 +55,7 @@ function ExplorerAppContent() {
   const [relationFilter, setRelationFilter] = useState<ExplorerRelationFilter>(initialState.relationFilter);
   const [urlNotice, setUrlNotice] = useState<string>();
   const [copyStatus, setCopyStatus] = useState('');
-  const copyTimer = useRef<number>();
+  const copyTimer = useRef<number | undefined>(undefined);
   const selectedNode = explorerNodesById.get(selectedId);
 
   const applyState = (state: ExplorerUiState) => {
@@ -67,8 +67,11 @@ function ExplorerAppContent() {
   const writeHistory = (state: ExplorerUiState, mode: 'push' | 'replace') => {
     if (typeof window === 'undefined') return;
     const url = buildExplorerUrl(new URL(window.location.href), state);
-    const method = mode === 'push' ? 'pushState' : 'replaceState';
-    window.history[method]({ explorer: state }, '', url);
+    if (mode === 'push') {
+      window.history.pushState({ explorer: state }, '', url.href);
+    } else {
+      window.history.replaceState({ explorer: state }, '', url.href);
+    }
   };
 
   const navigate = (nextState: ExplorerUiState) => {
