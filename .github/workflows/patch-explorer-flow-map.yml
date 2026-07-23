@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - agent/explorer-flow-map
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -66,9 +67,10 @@ jobs:
     };
   }, [selectedId, viewMode]);
 """
-          if old_effect not in source:
+          if old_effect in source:
+              source = source.replace(old_effect, new_effect)
+          elif new_effect not in source:
               raise SystemExit('layout effect block was not found')
-          source = source.replace(old_effect, new_effect)
 
           old_map = """        <div className=\"explorer-map\" aria-live=\"polite\">
           {layoutState === 'loading' && <div className=\"explorer-state\">関係を配置しています…</div>}
@@ -124,9 +126,11 @@ jobs:
           )}
         </div>
 """
-          if old_map not in source:
+          if old_map in source:
+              source = source.replace(old_map, new_map)
+          elif new_map not in source:
               raise SystemExit('map render block was not found')
-          source = source.replace(old_map, new_map)
+
           path.write_text(source)
           PY
       - name: Commit integration
