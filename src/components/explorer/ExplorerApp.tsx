@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import ELK from 'elkjs';
+import ELK from 'elkjs/lib/elk.bundled.js';
 import {
   Background,
   Controls,
