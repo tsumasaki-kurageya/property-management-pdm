@@ -1,0 +1,48 @@
+name: Patch explorer generator
+
+on:
+  push:
+    branches:
+      - agent/explorer-data-model
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/explorer-data-model
+      - name: Replace embedded business ID parser
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('scripts/generate-explorer-data.mjs')
+          source = path.read_text()
+          import_line = "import { expandBusinessReferences } from './explorer-business-references.mjs';\n"
+          if import_line not in source:
+              marker = "import { dirname, join, relative } from 'node:path';\n"
+              source = source.replace(marker, marker + import_line)
+
+          start_marker = 'function expandNumberExpression(area, expression) {'
+          end_marker = 'function parseProcessMappings(markdown, catalog) {'
+          if start_marker in source:
+              start = source.index(start_marker)
+              end = source.index(end_marker)
+              source = source[:start] + source[end:]
+
+          path.write_text(source)
+          PY
+      - name: Commit patch
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add scripts/generate-explorer-data.mjs
+          git commit -m "Use robust business ID parser"
+          git push origin HEAD:agent/explorer-data-model
