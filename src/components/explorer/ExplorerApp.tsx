@@ -26,7 +26,7 @@ const viewLabels: Record<ExplorerViewMode, string> = {
 };
 
 const viewDescriptions: Record<ExplorerViewMode, string> = {
-  flow: 'この前とこの後、条件による分岐を確認します。',
+  flow: '選択業務を含む横断プロセスを開始から完了まで確認します。',
   hierarchy: '一つ上のまとまり、同じ階層、詳しい内容を確認します。',
   relations: '資料、成果物、担当者、法令などの登録済み関係を確認します。',
 };
