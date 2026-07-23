@@ -14,6 +14,7 @@ import { explorerGraph, explorerNodesById, getExplorerEdgesForNode } from '../..
 import type { ExplorerEdge, ExplorerNode } from '../../data/explorer/schema';
 import './ExplorerShell.css';
 
+const BASE_URL = import.meta.env.BASE_URL;
 const DEFAULT_NODE_ID = 'BM-09-06';
 const NODE_WIDTH = 196;
 const NODE_HEIGHT = 76;
@@ -288,7 +289,7 @@ function ExplorerAppContent() {
               <div><dt>作られるもの</dt><dd>{selectedEdges.filter((edge) => edge.type === 'produces').length}</dd></div>
               <div><dt>手順・主要関連</dt><dd>{selectedEdges.filter((edge) => edge.type === 'related_to' || edge.type === 'contains').length}</dd></div>
             </dl>
-            {selectedNode.href && <a className="explorer-reference-link" href={selectedNode.href}>リファレンスで詳しく見る</a>}
+            {selectedNode.href && <a className="explorer-reference-link" href={`${BASE_URL}${selectedNode.href.replace(/^\//, '')}`}>リファレンスで詳しく見る</a>}
             <p className="explorer-source">参照元: <code>{selectedNode.source.path}</code></p>
           </div>
         ) : (
