@@ -105,6 +105,10 @@ if (existsSync(dist)) {
   assert(renderedSite.includes('starlight-theme-select'), 'ライト／ダークモード選択がありません');
   assert(renderedSite.includes('starlight-menu-button'), 'スマートフォン用メニューボタンがありません');
   assert(renderedSite.includes('site-search'), '全文検索UIがありません');
+  assert(
+    !renderedSite.includes('@astrojs/starlight/components'),
+    'Starlightコンポーネントのimport文が本文として表示されています',
+  );
 
   const css = readFileSync(join(root, 'src/styles/diagrams.css'), 'utf8');
   assert(css.includes('@media (max-width: 50rem)'), 'スマートフォン向け図解スタイルがありません');

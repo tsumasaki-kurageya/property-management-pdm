@@ -24,7 +24,9 @@ for (const file of files) {
     const bases = target.startsWith('/')
       ? [resolve(docsRoot, `.${target}`)]
       : [resolve(routeBase, target)];
-    const candidates = bases.flatMap((base) => extname(base) ? [base] : [base, `${base}.md`, join(base, 'index.md')]);
+    const candidates = bases.flatMap((base) => extname(base)
+      ? [base]
+      : [base, `${base}.md`, `${base}.mdx`, join(base, 'index.md'), join(base, 'index.mdx')]);
     const found = await Promise.all(candidates.map((candidate) => stat(candidate).then(() => true).catch(() => false)));
     if (!found.some(Boolean)) missing.push(`${file.replace(`${docsRoot}/`, '')}: ${match[1]}`);
   }
