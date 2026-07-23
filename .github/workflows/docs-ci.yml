@@ -20,11 +20,27 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Verify release candidate
-        run: npm run verify
-      - name: Upload explorer data
+      - name: Generate explorer data
+        id: explorer
+        shell: bash
+        run: |
+          set +e
+          npm run generate:explorer > explorer-generator.log 2>&1
+          status=$?
+          cat explorer-generator.log
+          echo "status=$status" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Upload explorer diagnostics
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: explorer-data
-          path: src/data/explorer/generated
-          if-no-files-found: error
+          path: |
+            explorer-generator.log
+            src/data/explorer/generated
+          if-no-files-found: warn
+      - name: Fail when explorer generation failed
+        if: steps.explorer.outputs.status != '0'
+        run: exit 1
+      - name: Verify release candidate
+        run: npm run check && npm run build
