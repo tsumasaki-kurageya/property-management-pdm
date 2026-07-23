@@ -51,11 +51,11 @@ flowchart TB
 
 主な関連業務：BM-04、BM-07、BM-09、BM-11、BM-13〜14、BM-17-08。
 
-次は[四つの責任主体](./responsibility-types/)で、義務、実施、判断、報告を分けて確認します。
+次は[四つの責任主体](../responsibility-types/)で、義務、実施、判断、報告を分けて確認します。
 
 ## さらに詳しく
 
 - [法令義務プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/statutory-duty-profiles.md)
-- [点検・保守管理](../field-work/inspection-and-maintenance/)
+- [点検・保守管理](../../field-work/inspection-and-maintenance/)
 
 最終確認日：2026年7月23日。記載状態：標準モデル。個別物件の法令適用を判断するものではありません。

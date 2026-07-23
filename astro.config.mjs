@@ -106,7 +106,10 @@ export default defineConfig({
         },
         {
           label: 'このサイトについて',
-          items: [{ label: '図解の表示確認', slug: 'about/diagram-support' }],
+          items: [
+            { label: '初版の範囲と品質', slug: 'about/initial-release' },
+            { label: '図解の表示確認', slug: 'about/diagram-support' },
+          ],
         },
       ],
     }),

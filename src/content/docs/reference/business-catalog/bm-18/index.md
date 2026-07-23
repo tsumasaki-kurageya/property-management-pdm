@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-18 分析・改善・経営管理
 
-[本文でこの領域を学ぶ](/overview/business-lifecycle/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../overview/business-lifecycle/) · [18領域へ戻る](../)
 
 ## 業務一覧
 

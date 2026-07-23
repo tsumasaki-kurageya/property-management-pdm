@@ -35,14 +35,14 @@ flowchart TB
 
 | 段階 | 確認する問い | ページ |
 |---|---|---|
-| 仕事を定める | 何を、どの条件で受託するのか | [営業・現地調査・業務仕様・見積](./operations/pre-contract-and-specification/) |
-| 境界を決める | 誰が何を行い、判断し、受け取るのか | [契約と責任分界](./operations/contracts-and-responsibilities/) |
-| 開始可能にする | 運用開始までに何を揃えるのか | [管理体制の構築と業務立ち上げ](./operations/startup/) |
-| 実施を統制する | 予定変更や未実施をどう扱うのか | [計画・割当・変更・未実施管理](./operations/planning-and-unperformed-work/) |
-| 結果を渡す | 記録を誰が確認し、何を報告するのか | [作業記録の確認・承認・月次報告](./operations/records-approval-and-reporting/) |
-| お金を確定する | 追加作業をどう検収・請求するのか | [追加作業・検収・請求・原価管理](./operations/additional-work-billing-and-costs/) |
-| 異常を収束させる | 発見から復旧・利用再開までどう進むのか | [点検異常から修繕・引渡しまで](./incidents/abnormality-to-restoration/) |
-| 人と組織へ応答する | 苦情、事故、災害で何が変わるのか | [苦情・要望・事故・災害への対応](./incidents/complaints-accidents-and-disasters/) |
+| 仕事を定める | 何を、どの条件で受託するのか | [営業・現地調査・業務仕様・見積](../operations/pre-contract-and-specification/) |
+| 境界を決める | 誰が何を行い、判断し、受け取るのか | [契約と責任分界](../operations/contracts-and-responsibilities/) |
+| 開始可能にする | 運用開始までに何を揃えるのか | [管理体制の構築と業務立ち上げ](../operations/startup/) |
+| 実施を統制する | 予定変更や未実施をどう扱うのか | [計画・割当・変更・未実施管理](../operations/planning-and-unperformed-work/) |
+| 結果を渡す | 記録を誰が確認し、何を報告するのか | [作業記録の確認・承認・月次報告](../operations/records-approval-and-reporting/) |
+| お金を確定する | 追加作業をどう検収・請求するのか | [追加作業・検収・請求・原価管理](../operations/additional-work-billing-and-costs/) |
+| 異常を収束させる | 発見から復旧・利用再開までどう進むのか | [点検異常から修繕・引渡しまで](../incidents/abnormality-to-restoration/) |
+| 人と組織へ応答する | 苦情、事故、災害で何が変わるのか | [苦情・要望・事故・災害への対応](../incidents/complaints-accidents-and-disasters/) |
 
 ## 通常系と例外系を同時に管理する
 

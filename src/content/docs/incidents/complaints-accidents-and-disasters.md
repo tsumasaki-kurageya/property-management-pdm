@@ -89,7 +89,7 @@ flowchart LR
 ## さらに詳しく
 
 - [業務カタログ BM-11・BM-12](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md#bm-11-警備防災管理)
-- [警備・防災の現場業務](../field-work/security-and-disaster-prevention/)
+- [警備・防災の現場業務](../../field-work/security-and-disaster-prevention/)
 - [業務プロセスマップ P07・P09・P12](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/04_mappings/business-process-map.md)
 
 最終確認日：2026年7月22日。記載状態：標準モデル。具体的な通報、避難、指揮、対外連絡は施設の計画・法令・権限に従います。

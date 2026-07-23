@@ -25,4 +25,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 準備と安全条件が成立した作業だけをP04へ渡す。法定期限に影響する未実施はP08、顧客影響を伴う変更はP07にも接続する。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

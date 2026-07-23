@@ -16,18 +16,19 @@ npm run dev
 ## 検証する
 
 ```bash
-npm run check
-npm run build
+npm run verify
 ```
 
-Pull RequestではDocs CIが同じ検証を自動実行します。
+`verify`は、原本と生成リファレンスの一致、ローカルリンク、型とコンテンツ、本番ビルド、base path、404、全文検索、見出し階層、画像の代替テキストを確認します。Pull RequestではDocs CIが同じ検証を自動実行します。
 
 ## コンテンツを更新する
 
 - サイト本文は `src/content/docs/` にMarkdownまたはMDXで配置します。
 - 学習順序とページの責務は `docs/pages-information-architecture.md` を基準にします。
 - 既存の `docs/` 配下の分析成果物を正本とし、事実や業務IDを変更するときは正本を先に更新します。
+- 正本を更新したら `npm run generate:reference` で表示用リファレンスを再生成します。
 - Mermaid図は `mermaid` 言語指定のコードブロックで記述できます。
+- 変更後は `npm run verify` を実行し、Pull RequestでDocs CIを確認します。
 
 ## GitHub Pagesを有効にする
 
@@ -36,6 +37,8 @@ Pull RequestではDocs CIが同じ検証を自動実行します。
 3. mainへ反映すると `Deploy GitHub Pages` ワークフローがサイトを公開します。
 
 公開先は通常 `https://tsumasaki-kurageya.github.io/property-management-pdm/` です。privateリポジトリからのGitHub Pages公開にはGitHub Pro、Team、Enterprise CloudまたはEnterprise Serverが必要です。契約プランと公開範囲は、公開前にSettingsで確認してください。
+
+初版の対象範囲、対象外、検証項目、今後の改善候補は `src/content/docs/about/initial-release.md` に記載しています。公開前の通読とデプロイ確認は `docs/initial-release-review.md` に記録します。
 
 ## 自動化
 

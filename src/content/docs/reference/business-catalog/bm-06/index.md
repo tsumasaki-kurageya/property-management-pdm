@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-06 清掃管理
 
-[本文でこの領域を学ぶ](/field-work/cleaning/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../field-work/cleaning/) · [18領域へ戻る](../)
 
 ## 業務一覧
 

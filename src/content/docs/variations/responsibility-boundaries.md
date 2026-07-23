@@ -41,11 +41,11 @@ flowchart TB
 
 主な関連業務：BM-02、BM-10、BM-12〜14、BM-16〜18。
 
-次は[法令業務の考え方](./statutory-duties/)で、法令上の義務を日常業務へ具体化する流れを見ます。
+次は[法令業務の考え方](../statutory-duties/)で、法令上の義務を日常業務へ具体化する流れを見ます。
 
 ## さらに詳しく
 
 - [オーナー・PM・FM・BM責任分界プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/owner-pm-fm-bm-responsibility-profiles.md)
-- [関係者と役割](../introduction/people-and-roles/)
+- [関係者と役割](../../introduction/people-and-roles/)
 
 最終確認日：2026年7月23日。記載状態：標準モデル。一律の組織図・役割分担を示すものではありません。

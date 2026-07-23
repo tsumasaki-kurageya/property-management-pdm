@@ -24,4 +24,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 作業完了又は報告提出だけで請求可能とはせず、契約上必要な承認・検収と請求条件を確認する。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

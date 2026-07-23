@@ -23,4 +23,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 作業者の自己確認、独立した品質検査、是正実施、再検査及び不適合案件の完了を区別する。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

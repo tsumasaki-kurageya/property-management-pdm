@@ -48,11 +48,11 @@ flowchart TB
 
 主な関連業務：BM-05-04〜06、BM-08-03〜07、BM-10-01〜03、BM-11、BM-13。
 
-次は[元請け・再委託先・専門業者](./contract-layers/)で、契約階層による役割差を見ます。
+次は[元請け・再委託先・専門業者](../contract-layers/)で、契約階層による役割差を見ます。
 
 ## さらに詳しく
 
 - [管理方式プロファイル](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/management-operation-profiles.md)
-- [点検異常から修繕・引渡しまで](../incidents/abnormality-to-restoration/)
+- [点検異常から修繕・引渡しまで](../../incidents/abnormality-to-restoration/)
 
 最終確認日：2026年7月23日。記載状態：標準モデル。方式名だけで到着時間や対応範囲を保証するものではありません。

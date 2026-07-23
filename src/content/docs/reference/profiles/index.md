@@ -16,8 +16,8 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 | 条件軸 | 本文 | 分析用原本 |
 |---|---|---|
-| 建物用途 | [解説](/variations/building-use/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-use-profiles.md) |
-| 管理方式 | [解説](/variations/management-methods/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/management-operation-profiles.md) |
-| 契約役割 | [解説](/variations/contract-layers/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/contract-role-profiles.md) |
-| オーナー・PM・FM・BM責任分界 | [解説](/variations/responsibility-boundaries/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/owner-pm-fm-bm-responsibility-profiles.md) |
-| 法令義務 | [解説](/variations/statutory-duties/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/statutory-duty-profiles.md) |
+| 建物用途 | [解説](../../variations/building-use/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-use-profiles.md) |
+| 管理方式 | [解説](../../variations/management-methods/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/management-operation-profiles.md) |
+| 契約役割 | [解説](../../variations/contract-layers/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/contract-role-profiles.md) |
+| オーナー・PM・FM・BM責任分界 | [解説](../../variations/responsibility-boundaries/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/owner-pm-fm-bm-responsibility-profiles.md) |
+| 法令義務 | [解説](../../variations/statutory-duties/) | [原本](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/statutory-duty-profiles.md) |

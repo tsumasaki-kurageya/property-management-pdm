@@ -8,7 +8,11 @@
     "start": "astro dev",
     "generate:reference": "node scripts/generate-reference.mjs",
     "check:reference": "node scripts/generate-reference.mjs --check && node scripts/check-reference-links.mjs",
+    "check:release": "node scripts/check-release.mjs",
+    "verify": "npm run check && npm run build",
+    "prebuild": "npm run check:reference",
     "build": "astro build",
+    "postbuild": "npm run check:release",
     "preview": "astro preview",
     "check": "astro check"
   },

@@ -13,7 +13,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 :::
 # BM-14 建物・設備情報管理
 
-[本文でこの領域を学ぶ](/operations/startup/) · [18領域へ戻る](../)
+[本文でこの領域を学ぶ](../../../operations/startup/) · [18領域へ戻る](../)
 
 ## 業務一覧
 

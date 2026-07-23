@@ -24,4 +24,4 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 不採用又は条件変更の場合は、要求、仕様、数量又は価格の該当工程へ戻る。契約前の技術案と、締結後の契約業務仕様を区別する。
 
-[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](/overview/business-lifecycle/)
+[12横断プロセスへ戻る](../) · [流れを本文で学ぶ](../../../overview/business-lifecycle/)

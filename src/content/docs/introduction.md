@@ -31,14 +31,23 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 初めて読む場合は、次の順序がおすすめです。
 
 <CardGrid>
-  <Card title="1. ビルメンテナンスとは" icon="open-book">
-    建物を何のために、どのような仕事で支えるのかを学びます。[読み始める](./what-is-building-maintenance/)
+  <Card title="1. 目的と関係者" icon="open-book">
+    建物を何のために支え、誰が方針・調整・実施を担うのかを学びます。[読み始める](./what-is-building-maintenance/)
   </Card>
-  <Card title="2. 関係者と役割" icon="information">
-    誰が方針を決め、調整し、現場で実施するのかを学びます。[次へ進む](./people-and-roles/)
+  <Card title="2. 業務の全体像" icon="right-arrow">
+    18の業務領域と、契約から実施、報告、改善までの循環を学びます。[全体像へ進む](../overview/)
   </Card>
-  <Card title="3. 業務の全体像" icon="right-arrow">
-    契約から実施、報告、改善までの循環を学びます。本文は現在準備中です。
+  <Card title="3. 現場の定常業務" icon="information">
+    清掃、衛生、設備、警備・防災と、それを支える人員・資材・記録を学びます。[現場業務へ進む](../field-work/)
+  </Card>
+  <Card title="4. 周辺業務と異常対応" icon="warning">
+    契約、立ち上げ、報告、請求と、異常・苦情・災害時の分岐を学びます。[周辺業務へ進む](../incidents-and-operations/)
+  </Card>
+  <Card title="5. 条件による違い" icon="seti:config">
+    用途、管理方式、契約階層、責任主体、法令を分けて考えます。[条件差へ進む](../variations/)
+  </Card>
+  <Card title="6. 詳細を調べる" icon="magnifier">
+    業務ID、横断プロセス、重要業務、条件差プロファイルを検索します。[リファレンスへ進む](../reference/)
   </Card>
 </CardGrid>
 
