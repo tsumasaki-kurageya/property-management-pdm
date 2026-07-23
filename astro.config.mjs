@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
 import starlight from '@astrojs/starlight';
 import mermaid from 'astro-mermaid';
 
@@ -7,6 +8,7 @@ export default defineConfig({
   base: '/property-management-pdm',
   trailingSlash: 'always',
   integrations: [
+    react(),
     mermaid({
       autoTheme: true,
       enableLog: false,
@@ -32,6 +34,10 @@ export default defineConfig({
         baseUrl: 'https://github.com/tsumasaki-kurageya/property-management-pdm/edit/main/',
       },
       sidebar: [
+        {
+          label: '業務を探索する',
+          items: [{ label: '業務エクスプローラー', link: '/explorer/' }],
+        },
         {
           label: 'はじめに',
           items: [
