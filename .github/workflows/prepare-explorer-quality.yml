@@ -1,0 +1,91 @@
+name: Prepare explorer quality branch
+
+on:
+  push:
+    branches:
+      - agent/explorer-quality
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/explorer-quality
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - name: Patch explorer interaction preferences
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          flow = Path('src/components/explorer/FlowMap.tsx')
+          source = flow.read_text()
+          media_import = "import { useExplorerMediaPreferences } from './explorerMedia';\n"
+          marker = "import './FlowMap.css';\n"
+          if media_import not in source:
+              source = source.replace(marker, media_import + marker)
+          source = source.replace(
+              "  const { fitView } = useReactFlow();\n",
+              "  const { fitView } = useReactFlow();\n  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();\n",
+          )
+          source = source.replace(
+              "void fitView({ padding: 0.24, duration: 240, maxZoom: 1.1 });",
+              "void fitView({ padding: 0.24, duration: reducedMotion ? 0 : 240, maxZoom: 1.1 });",
+          )
+          source = source.replace("  }, [fitView]);", "  }, [fitView, reducedMotion]);")
+          source = source.replace("            nodesDraggable\n", "            nodesDraggable={!coarsePointer}\n")
+          source = source.replace("            panOnDrag\n", "            panOnDrag={!coarsePointer}\n")
+          source = source.replace("            zoomOnScroll\n", "            zoomOnScroll={!coarsePointer}\n")
+          flow.write_text(source)
+
+          context = Path('src/components/explorer/ContextMap.tsx')
+          source = context.read_text()
+          marker = "import './ContextMap.css';\n"
+          if media_import not in source:
+              source = source.replace(marker, media_import + marker)
+          source = source.replace(
+              "  const { fitView } = useReactFlow();\n",
+              "  const { fitView } = useReactFlow();\n  const { coarsePointer, reducedMotion } = useExplorerMediaPreferences();\n",
+          )
+          source = source.replace("duration: 180", "duration: reducedMotion ? 0 : 180")
+          source = source.replace(
+              "  }, [data, fitView, mode]);",
+              "  }, [data, fitView, mode, reducedMotion]);",
+          )
+          source = source.replace(
+              "            nodesDraggable={false}\n",
+              "            nodesDraggable={false}\n            panOnDrag={!coarsePointer}\n            zoomOnScroll={!coarsePointer}\n",
+          )
+          context.write_text(source)
+
+          tests = Path('tests/e2e/explorer.spec.ts')
+          source = tests.read_text()
+          source = source.replace(
+              "import { expect, test } from '@playwright/test';",
+              "import { expect, test, type Page } from '@playwright/test';",
+          )
+          source = source.replace(
+              "async function openRepresentative(page: Parameters<typeof test>[0] extends never ? never : any) {",
+              "async function openRepresentative(page: Page) {",
+          )
+          tests.write_text(source)
+          PY
+      - name: Update dependency lock
+        run: npm install --package-lock-only --ignore-scripts
+      - name: Commit prepared files
+        run: |
+          if git diff --quiet; then
+            exit 0
+          fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add package-lock.json src/components/explorer/FlowMap.tsx src/components/explorer/ContextMap.tsx tests/e2e/explorer.spec.ts
+          git commit -m "Prepare explorer quality checks"
+          git push origin HEAD:agent/explorer-quality
