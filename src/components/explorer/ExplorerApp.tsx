@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent }
 import { ReactFlowProvider } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import { explorerNodesById } from '../../data/explorer';
+import BusinessAreaMap from './BusinessAreaMap';
 import BusinessNavigator from './BusinessNavigator';
 import ContextMap from './ContextMap';
 import DetailPanel from './DetailPanel';
@@ -81,6 +82,7 @@ async function copyText(value: string): Promise<void> {
 function ExplorerAppContent() {
   const initialState = getDefaultExplorerState();
   const [selectedId, setSelectedId] = useState(initialState.selectedId);
+  const [isOverview, setIsOverview] = useState(true);
   const [selectedProcessId, setSelectedProcessId] = useState(initialState.selectedProcessId);
   const [viewMode, setViewMode] = useState<ExplorerViewMode>(initialState.viewMode);
   const [relationFilter, setRelationFilter] = useState<ExplorerRelationFilter>(initialState.relationFilter);
@@ -115,10 +117,13 @@ function ExplorerAppContent() {
 
   useEffect(() => {
     const applyLocation = () => {
-      const parsed = parseExplorerUrl(new URL(window.location.href));
+      const url = new URL(window.location.href);
+      const parsed = parseExplorerUrl(url);
+      const isOverviewLocation = !['business', 'item', 'node'].some((key) => url.searchParams.has(key));
       applyState(parsed.state);
+      setIsOverview(isOverviewLocation);
       setUrlNotice(parsed.notice);
-      writeHistory(parsed.state, 'replace');
+      if (!isOverviewLocation) writeHistory(parsed.state, 'replace');
     };
 
     applyLocation();
@@ -132,6 +137,7 @@ function ExplorerAppContent() {
 
   const selectNode = (nodeId: string) => {
     if (!explorerNodesById.has(nodeId)) return;
+    setIsOverview(false);
     navigate({
       selectedId: nodeId,
       selectedProcessId: resolveExplorerProcessId(nodeId, selectedProcessId),
@@ -203,109 +209,123 @@ function ExplorerAppContent() {
   };
 
   return (
-    <section className={`explorer-shell mobile-panel-${mobilePanel}`} aria-label="業務エクスプローラー">
+    <section
+      className={`explorer-shell mobile-panel-${mobilePanel}${isOverview ? ' is-overview' : ''}`}
+      aria-label="業務エクスプローラー"
+    >
       <header className="explorer-toolbar">
         <div>
           <p className="explorer-eyebrow">BUSINESS EXPLORER</p>
           <h1>業務エクスプローラー</h1>
-          <p>業務の前後、全体の中の位置、手順・記録・役割との関係を同じ画面で確認します。</p>
+          <p>
+            {isOverview
+              ? '18の業務領域から、確認したいビルメンテナンス業務を探します。'
+              : '業務の前後、全体の中の位置、手順・記録・役割との関係を同じ画面で確認します。'}
+          </p>
         </div>
-        <div className="explorer-toolbar-controls">
-          <div className="explorer-view-tabs" role="tablist" aria-label="表示方法">
-            {(Object.keys(viewLabels) as ExplorerViewMode[]).map((mode) => (
-              <button
-                id={`explorer-view-tab-${mode}`}
-                data-view-mode={mode}
-                key={mode}
-                type="button"
-                role="tab"
-                tabIndex={viewMode === mode ? 0 : -1}
-                aria-selected={viewMode === mode}
-                aria-controls="explorer-map-panel"
-                className={viewMode === mode ? 'is-active' : ''}
-                onClick={() => selectView(mode)}
-                onKeyDown={(event) => handleViewTabKeyDown(event, mode)}
-              >
-                {viewLabels[mode]}
+        {!isOverview && (
+          <div className="explorer-toolbar-controls">
+            <div className="explorer-view-tabs" role="tablist" aria-label="表示方法">
+              {(Object.keys(viewLabels) as ExplorerViewMode[]).map((mode) => (
+                <button
+                  id={`explorer-view-tab-${mode}`}
+                  data-view-mode={mode}
+                  key={mode}
+                  type="button"
+                  role="tab"
+                  tabIndex={viewMode === mode ? 0 : -1}
+                  aria-selected={viewMode === mode}
+                  aria-controls="explorer-map-panel"
+                  className={viewMode === mode ? 'is-active' : ''}
+                  onClick={() => selectView(mode)}
+                  onKeyDown={(event) => handleViewTabKeyDown(event, mode)}
+                >
+                  {viewLabels[mode]}
+                </button>
+              ))}
+            </div>
+            <p className="explorer-keyboard-help">表示方法は左右矢印キー、Home、Endでも切り替えられます。</p>
+            <div className="explorer-share-row">
+              <button className="explorer-copy-url" type="button" onClick={copyCurrentUrl}>
+                URLをコピー
               </button>
-            ))}
+              <span className="explorer-copy-status" role="status" aria-live="polite">{copyStatus}</span>
+            </div>
           </div>
-          <p className="explorer-keyboard-help">表示方法は左右矢印キー、Home、Endでも切り替えられます。</p>
-          <div className="explorer-share-row">
-            <button className="explorer-copy-url" type="button" onClick={copyCurrentUrl}>
-              URLをコピー
-            </button>
-            <span className="explorer-copy-status" role="status" aria-live="polite">{copyStatus}</span>
-          </div>
-        </div>
+        )}
       </header>
 
       {urlNotice && <p className="explorer-url-notice" role="status">{urlNotice}</p>}
 
-      <div className="explorer-mobile-panel-tabs" role="tablist" aria-label="スマートフォン表示">
-        {(Object.keys(mobilePanelLabels) as MobilePanel[]).map((panel) => (
-          <button
-            id={`explorer-mobile-tab-${panel}`}
-            key={panel}
-            type="button"
-            role="tab"
-            tabIndex={mobilePanel === panel ? 0 : -1}
-            aria-selected={mobilePanel === panel}
-            aria-controls={mobilePanelTargets[panel]}
-            onClick={() => setMobilePanel(panel)}
-            onKeyDown={(event) => handleMobilePanelKeyDown(event, panel)}
-          >
-            {mobilePanelLabels[panel]}
-          </button>
-        ))}
-      </div>
-
-      <BusinessNavigator selectedId={selectedId} onSelect={selectNode} />
-
-      <main className="explorer-pane explorer-map-pane" aria-labelledby="explorer-map-title">
-        <div className="explorer-pane-heading">
-          <div>
-            <h2 id="explorer-map-title">{viewLabels[viewMode]}</h2>
-            <small>{viewDescriptions[viewMode]}</small>
+      {isOverview ? (
+        <BusinessAreaMap onSelectBusiness={selectNode} />
+      ) : (
+        <>
+          <div className="explorer-mobile-panel-tabs" role="tablist" aria-label="スマートフォン表示">
+            {(Object.keys(mobilePanelLabels) as MobilePanel[]).map((panel) => (
+              <button
+                id={`explorer-mobile-tab-${panel}`}
+                key={panel}
+                type="button"
+                role="tab"
+                tabIndex={mobilePanel === panel ? 0 : -1}
+                aria-selected={mobilePanel === panel}
+                aria-controls={mobilePanelTargets[panel]}
+                onClick={() => setMobilePanel(panel)}
+                onKeyDown={(event) => handleMobilePanelKeyDown(event, panel)}
+              >
+                {mobilePanelLabels[panel]}
+              </button>
+            ))}
           </div>
-          <span>{selectedNode?.id ?? '未選択'}</span>
-        </div>
-        <div
-          id="explorer-map-panel"
-          className="explorer-map"
-          role="tabpanel"
-          aria-labelledby={`explorer-view-tab-${viewMode}`}
-          aria-live="polite"
-        >
-          {viewMode === 'flow' && (
-            <FlowMap
-              selectedId={selectedId}
-              selectedProcessId={selectedProcessId}
-              onSelect={selectNode}
-              onProcessSelect={selectProcess}
-            />
-          )}
-          {viewMode === 'hierarchy' && (
-            <ContextMap mode="hierarchy" selectedId={selectedId} onSelect={selectNode} />
-          )}
-          {viewMode === 'relations' && (
-            <ContextMap
-              mode="relations"
-              selectedId={selectedId}
-              onSelect={selectNode}
-              relationFilter={relationFilter}
-              onRelationFilterChange={selectRelationFilter}
-            />
-          )}
-        </div>
-      </main>
+          <BusinessNavigator selectedId={selectedId} onSelect={selectNode} />
 
-      <div id="explorer-detail-mobile-panel" className="explorer-mobile-detail-slot">
-        <DetailPanel selectedId={selectedId} onSelect={selectNode} />
-      </div>
-      <div id="explorer-lifecycle-mobile-panel" className="explorer-mobile-lifecycle-slot">
-        <LifecycleNavigator selectedId={selectedId} onSelect={selectNode} />
-      </div>
+          <main className="explorer-pane explorer-map-pane" aria-labelledby="explorer-map-title">
+            <div className="explorer-pane-heading">
+              <div>
+                <h2 id="explorer-map-title">{viewLabels[viewMode]}</h2>
+                <small>{viewDescriptions[viewMode]}</small>
+              </div>
+              <span>{selectedNode?.id ?? '未選択'}</span>
+            </div>
+            <div
+              id="explorer-map-panel"
+              className="explorer-map"
+              role="tabpanel"
+              aria-labelledby={`explorer-view-tab-${viewMode}`}
+              aria-live="polite"
+            >
+              {viewMode === 'flow' && (
+                <FlowMap
+                  selectedId={selectedId}
+                  selectedProcessId={selectedProcessId}
+                  onSelect={selectNode}
+                  onProcessSelect={selectProcess}
+                />
+              )}
+              {viewMode === 'hierarchy' && (
+                <ContextMap mode="hierarchy" selectedId={selectedId} onSelect={selectNode} />
+              )}
+              {viewMode === 'relations' && (
+                <ContextMap
+                  mode="relations"
+                  selectedId={selectedId}
+                  onSelect={selectNode}
+                  relationFilter={relationFilter}
+                  onRelationFilterChange={selectRelationFilter}
+                />
+              )}
+            </div>
+          </main>
+
+          <div id="explorer-detail-mobile-panel" className="explorer-mobile-detail-slot">
+            <DetailPanel selectedId={selectedId} onSelect={selectNode} />
+          </div>
+          <div id="explorer-lifecycle-mobile-panel" className="explorer-mobile-lifecycle-slot">
+            <LifecycleNavigator selectedId={selectedId} onSelect={selectNode} />
+          </div>
+        </>
+      )}
     </section>
   );
 }
