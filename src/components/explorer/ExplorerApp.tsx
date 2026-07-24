@@ -1,267 +1,262 @@
-import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
-import { ReactFlowProvider } from '@xyflow/react';
-import '@xyflow/react/dist/style.css';
-import { explorerNodesById } from '../../data/explorer';
-import BusinessAreaMap from './BusinessAreaMap';
-import DetailPanel from './DetailPanel';
-import ExplorerSearch from './ExplorerSearch';
-import FlowMap from './FlowMap';
 import {
-  buildExplorerUrl,
-  getDefaultExplorerState,
-  openExplorerProcess,
-  parseExplorerUrl,
-  selectExplorerBusiness,
-  selectExplorerProcess,
-  showExplorerOverview,
-  type ExplorerUiState,
-} from './explorerState';
-import './ExplorerShell.css';
-import './ExplorerStateControls.css';
-import './ExplorerQuality.css';
+  Background,
+  Controls,
+  ReactFlow,
+  ReactFlowProvider,
+  useReactFlow,
+  type Edge,
+  type Node,
+  type NodeMouseHandler,
+  type NodeProps,
+} from '@xyflow/react';
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import '@xyflow/react/dist/style.css';
+import { explorerAreasById, explorerGraph, explorerNodesById } from '../../data/explorer';
+import './ExplorerApp.css';
 
-type MobilePanel = 'map' | 'detail';
+type ExplorerNodeKind = 'area' | 'business';
 
-const mobilePanelLabels: Record<MobilePanel, string> = {
-  map: 'プロセスを見る',
-  detail: '業務詳細を見る',
-};
-
-const mobilePanelTargets: Record<MobilePanel, string> = {
-  map: 'explorer-map-panel',
-  detail: 'explorer-detail-mobile-panel',
-};
-
-function rovingTarget<T extends string>(
-  event: ReactKeyboardEvent<HTMLButtonElement>,
-  values: readonly T[],
-  current: T,
-): T | undefined {
-  if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return undefined;
-  const currentIndex = values.indexOf(current);
-  if (currentIndex < 0) return undefined;
-  if (event.key === 'Home') return values[0];
-  if (event.key === 'End') return values[values.length - 1];
-  const movement = event.key === 'ArrowRight' ? 1 : -1;
-  return values[(currentIndex + movement + values.length) % values.length];
+interface ExplorerNodeData extends Record<string, unknown> {
+  kind: ExplorerNodeKind;
+  id: string;
+  label: string;
+  dimmed?: boolean;
+  expanded?: boolean;
+  onFocus?: (id: string) => void;
+  onToggle?: (id: string) => void;
 }
 
-async function copyText(value: string): Promise<void> {
-  if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(value);
-    return;
+type ExplorerFlowNode = Node<ExplorerNodeData, ExplorerNodeKind>;
+
+const AREA_COLUMNS = 6;
+const AREA_X_GAP = 420;
+const AREA_Y_GAP = 390;
+const AREA_ORIGIN_X = 170;
+const AREA_ORIGIN_Y = 170;
+const OPEN_DELAY = 150;
+const CLOSE_DELAY = 250;
+
+const businessAreas = [...explorerGraph.businessAreas].sort((left, right) => left.order - right.order);
+
+function areaPosition(index: number) {
+  return {
+    x: AREA_ORIGIN_X + (index % AREA_COLUMNS) * AREA_X_GAP,
+    y: AREA_ORIGIN_Y + Math.floor(index / AREA_COLUMNS) * AREA_Y_GAP,
+  };
+}
+
+function businessPositions(count: number) {
+  const positions: Array<{ x: number; y: number }> = [];
+  const rings = count <= 8 ? [count] : [6, count - 6];
+  let offset = 0;
+
+  rings.forEach((ringCount, ringIndex) => {
+    const radius = ringIndex === 0 ? 175 : 290;
+    const angleOffset = ringIndex === 0 ? -Math.PI / 2 : -Math.PI / 2 + Math.PI / ringCount;
+    for (let index = 0; index < ringCount; index += 1) {
+      const angle = angleOffset + (Math.PI * 2 * index) / ringCount;
+      positions[offset + index] = {
+        x: Math.cos(angle) * radius,
+        y: Math.sin(angle) * radius,
+      };
+    }
+    offset += ringCount;
+  });
+
+  return positions;
+}
+
+function ExplorerNodeCard({ data }: NodeProps<ExplorerFlowNode>) {
+  const label = `${data.id} ${data.label}`;
+  if (data.kind === 'business') {
+    return (
+      <div className="explorer-business-node" role="group" aria-label={`業務 ${label}`}>
+        <span>{data.id}</span>
+        <strong>{data.label}</strong>
+      </div>
+    );
   }
 
-  const textarea = document.createElement('textarea');
-  textarea.value = value;
-  textarea.setAttribute('readonly', '');
-  textarea.style.position = 'fixed';
-  textarea.style.opacity = '0';
-  document.body.append(textarea);
-  textarea.select();
-  const copied = document.execCommand('copy');
-  textarea.remove();
-  if (!copied) throw new Error('copy failed');
+  return (
+    <button
+      type="button"
+      className={`explorer-area-node${data.expanded ? ' is-expanded' : ''}${data.dimmed ? ' is-dimmed' : ''}`}
+      aria-label={`${data.id} 業務領域「${data.label}」`}
+      aria-expanded={data.expanded}
+      onFocus={() => data.onFocus?.(data.id)}
+      onClick={() => data.onToggle?.(data.id)}
+    >
+      <span>{data.id}</span>
+      <strong>{data.label}</strong>
+    </button>
+  );
 }
 
-function ExplorerAppContent() {
-  const initialState = getDefaultExplorerState();
-  const [explorerState, setExplorerState] = useState<ExplorerUiState>(initialState);
-  const [mobilePanel, setMobilePanel] = useState<MobilePanel>('map');
-  const [urlNotice, setUrlNotice] = useState<string>();
-  const [copyStatus, setCopyStatus] = useState('');
-  const copyTimer = useRef<number | undefined>(undefined);
-  const {
-    screen,
-    selectedBusinessId,
-    selectedProcessId,
-  } = explorerState;
-  const isOverview = screen === 'overview';
-  const selectedNode = selectedBusinessId
-    ? explorerNodesById.get(selectedBusinessId)
-    : undefined;
+const nodeTypes = {
+  area: ExplorerNodeCard,
+  business: ExplorerNodeCard,
+};
 
-  const applyState = (state: ExplorerUiState) => {
-    setExplorerState(state);
-  };
+function ExplorerCanvas() {
+  const [expandedAreaId, setExpandedAreaId] = useState<string>();
+  const { fitView } = useReactFlow<ExplorerFlowNode>();
+  const openTimer = useRef<number | null>(null);
+  const closeTimer = useRef<number | null>(null);
 
-  const writeHistory = (state: ExplorerUiState, mode: 'push' | 'replace') => {
-    if (typeof window === 'undefined') return;
-    const url = buildExplorerUrl(new URL(window.location.href), state);
-    if (mode === 'push') {
-      window.history.pushState({ explorer: state }, '', url.href);
-    } else {
-      window.history.replaceState({ explorer: state }, '', url.href);
-    }
-  };
-
-  const navigate = (nextState: ExplorerUiState) => {
-    applyState(nextState);
-    setUrlNotice(undefined);
-    writeHistory(nextState, 'push');
-  };
-
-  useEffect(() => {
-    const applyLocation = () => {
-      const url = new URL(window.location.href);
-      const parsed = parseExplorerUrl(url);
-      applyState(parsed.state);
-      setUrlNotice(parsed.notice);
-      writeHistory(parsed.state, 'replace');
-    };
-
-    applyLocation();
-    window.addEventListener('popstate', applyLocation);
-    return () => window.removeEventListener('popstate', applyLocation);
+  const clearOpenTimer = useCallback(() => {
+    if (openTimer.current) window.clearTimeout(openTimer.current);
+    openTimer.current = null;
   }, []);
+
+  const clearCloseTimer = useCallback(() => {
+    if (closeTimer.current) window.clearTimeout(closeTimer.current);
+    closeTimer.current = null;
+  }, []);
+
+  const openArea = useCallback((areaId: string, delayed = false) => {
+    clearOpenTimer();
+    clearCloseTimer();
+    if (!delayed) {
+      setExpandedAreaId(areaId);
+      return;
+    }
+    openTimer.current = window.setTimeout(() => setExpandedAreaId(areaId), OPEN_DELAY);
+  }, [clearCloseTimer, clearOpenTimer]);
+
+  const scheduleClose = useCallback(() => {
+    clearOpenTimer();
+    clearCloseTimer();
+    closeTimer.current = window.setTimeout(() => setExpandedAreaId(undefined), CLOSE_DELAY);
+  }, [clearCloseTimer, clearOpenTimer]);
 
   useEffect(() => () => {
-    if (copyTimer.current) window.clearTimeout(copyTimer.current);
-  }, []);
+    clearOpenTimer();
+    clearCloseTimer();
+  }, [clearCloseTimer, clearOpenTimer]);
 
-  const selectBusiness = (businessId: string) => {
-    const nextState = selectExplorerBusiness(explorerState, businessId);
-    if (!nextState) return;
-    navigate(nextState);
-  };
+  const toggleArea = useCallback((areaId: string) => {
+    clearOpenTimer();
+    clearCloseTimer();
+    setExpandedAreaId((current) => current === areaId ? undefined : areaId);
+  }, [clearCloseTimer, clearOpenTimer]);
 
-  const selectProcess = (nextProcessId: string) => {
-    const nextState = selectExplorerProcess(explorerState, nextProcessId);
-    if (!nextState) return;
-    navigate(nextState);
-  };
+  const nodes = useMemo<ExplorerFlowNode[]>(() => {
+    const areaNodes = businessAreas.map((area, index): ExplorerFlowNode => ({
+      id: area.id,
+      type: 'area',
+      position: areaPosition(index),
+      draggable: false,
+      selectable: false,
+      data: {
+        kind: 'area',
+        id: area.id,
+        label: area.label,
+        expanded: area.id === expandedAreaId,
+        dimmed: Boolean(expandedAreaId && area.id !== expandedAreaId),
+        onFocus: openArea,
+        onToggle: toggleArea,
+      },
+    }));
 
-  const openProcess = (nextProcessId: string) => {
-    const nextState = openExplorerProcess(explorerState, nextProcessId);
-    if (!nextState) return;
-    setMobilePanel('map');
-    navigate(nextState);
-  };
+    if (!expandedAreaId) return areaNodes;
+    const area = explorerAreasById.get(expandedAreaId);
+    const parent = areaNodes.find((node) => node.id === expandedAreaId);
+    if (!area || !parent) return areaNodes;
+    const offsets = businessPositions(area.businessIds.length);
 
-  const showOverview = () => {
-    setMobilePanel('map');
-    navigate(showExplorerOverview(explorerState));
-  };
+    return [
+      ...areaNodes,
+      ...area.businessIds.flatMap((businessId, index): ExplorerFlowNode[] => {
+        const business = explorerNodesById.get(businessId);
+        if (!business) return [];
+        return [{
+          id: business.id,
+          type: 'business',
+          position: {
+            x: parent.position.x + offsets[index].x,
+            y: parent.position.y + offsets[index].y,
+          },
+          draggable: false,
+          selectable: false,
+          data: {
+            kind: 'business',
+            id: business.id,
+            label: business.label,
+          },
+        }];
+      }),
+    ];
+  }, [expandedAreaId, openArea, toggleArea]);
 
-  const handleMobilePanelKeyDown = (
-    event: ReactKeyboardEvent<HTMLButtonElement>,
-    current: MobilePanel,
-  ) => {
-    const values = Object.keys(mobilePanelLabels) as MobilePanel[];
-    const next = rovingTarget(event, values, current);
-    if (!next) return;
-    event.preventDefault();
-    setMobilePanel(next);
-    window.requestAnimationFrame(() => document.getElementById(`explorer-mobile-tab-${next}`)?.focus());
-  };
+  const edges = useMemo<Edge[]>(() => {
+    const area = expandedAreaId ? explorerAreasById.get(expandedAreaId) : undefined;
+    if (!area) return [];
+    return area.businessIds.map((businessId) => ({
+      id: `${area.id}-${businessId}`,
+      source: area.id,
+      target: businessId,
+      type: 'straight',
+      selectable: false,
+      style: { strokeWidth: 2.5 },
+      className: 'explorer-business-edge',
+    }));
+  }, [expandedAreaId]);
 
-  const copyCurrentUrl = async () => {
-    const url = buildExplorerUrl(
-      new URL(window.location.href),
-      explorerState,
-    );
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      if (expandedAreaId) {
+        const area = explorerAreasById.get(expandedAreaId);
+        const visibleIds = new Set([expandedAreaId, ...(area?.businessIds ?? [])]);
+        void fitView({
+          nodes: nodes.filter((node) => visibleIds.has(node.id)),
+          padding: 0.18,
+          minZoom: 0.45,
+          maxZoom: 1,
+          duration: 220,
+        });
+      } else {
+        void fitView({ nodes, padding: 0.13, minZoom: 0.35, maxZoom: 1, duration: 220 });
+      }
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [expandedAreaId, fitView, nodes]);
 
-    try {
-      await copyText(url.href);
-      setCopyStatus('URLをコピーしました');
-    } catch {
-      setCopyStatus('コピーできませんでした');
-    }
+  const handleNodeMouseEnter = useCallback<NodeMouseHandler<ExplorerFlowNode>>((_, node) => {
+    if (node.data.kind === 'area') openArea(node.id, true);
+    else clearCloseTimer();
+  }, [clearCloseTimer, openArea]);
 
-    if (copyTimer.current) window.clearTimeout(copyTimer.current);
-    copyTimer.current = window.setTimeout(() => setCopyStatus(''), 2800);
-  };
+  const handleNodeMouseLeave = useCallback<NodeMouseHandler<ExplorerFlowNode>>(() => {
+    scheduleClose();
+  }, [scheduleClose]);
 
   return (
-    <section
-      className={`explorer-shell mobile-panel-${mobilePanel}${isOverview ? ' is-overview' : ''}`}
-      aria-label="業務エクスプローラー"
-    >
-      <header className="explorer-toolbar">
-        <div>
-          <p className="explorer-eyebrow">BUSINESS EXPLORER</p>
-          <h1>業務エクスプローラー</h1>
-          <p>
-            {isOverview
-              ? '18の業務領域から、確認したいビルメンテナンス業務を探します。'
-              : '選択業務を含む横断プロセスを開始から終了まで確認し、右側で詳細と関連業務を参照します。'}
-          </p>
-        </div>
-        <div className="explorer-toolbar-actions">
-          <ExplorerSearch
-            selectedBusinessId={selectedBusinessId}
-            selectedProcessId={selectedProcessId}
-            onSelectBusiness={selectBusiness}
-            onSelectProcess={openProcess}
-          />
-          {!isOverview && (
-            <div className="explorer-toolbar-controls">
-              <button className="explorer-overview-button" type="button" onClick={showOverview}>
-                全体の業務地図へ戻る
-              </button>
-              <div className="explorer-share-row">
-                <button className="explorer-copy-url" type="button" onClick={copyCurrentUrl}>
-                  URLをコピー
-                </button>
-                <span className="explorer-copy-status" role="status" aria-live="polite">{copyStatus}</span>
-              </div>
-            </div>
-          )}
-        </div>
+    <section className="explorer-shell" aria-label="業務エクスプローラー">
+      <header className="explorer-title">
+        <h1>業務エクスプローラー</h1>
       </header>
-
-      {urlNotice && <p className="explorer-url-notice" role="status">{urlNotice}</p>}
-
-      {isOverview ? (
-        <BusinessAreaMap onSelectBusiness={selectBusiness} />
-      ) : (
-        <>
-          <div className="explorer-mobile-panel-tabs" role="tablist" aria-label="スマートフォン表示">
-            {(Object.keys(mobilePanelLabels) as MobilePanel[]).map((panel) => (
-              <button
-                id={`explorer-mobile-tab-${panel}`}
-                key={panel}
-                type="button"
-                role="tab"
-                tabIndex={mobilePanel === panel ? 0 : -1}
-                aria-selected={mobilePanel === panel}
-                aria-controls={mobilePanelTargets[panel]}
-                onClick={() => setMobilePanel(panel)}
-                onKeyDown={(event) => handleMobilePanelKeyDown(event, panel)}
-              >
-                {mobilePanelLabels[panel]}
-              </button>
-            ))}
-          </div>
-
-          <main className="explorer-pane explorer-map-pane" aria-labelledby="explorer-map-title">
-            <div className="explorer-pane-heading">
-              <div>
-                <h2 id="explorer-map-title">業務プロセス</h2>
-                <small>選択業務を含む横断プロセスを開始から終了まで表示</small>
-              </div>
-              <span>{selectedNode?.id ?? '未選択'}</span>
-            </div>
-            <div
-              id="explorer-map-panel"
-              className="explorer-map"
-              aria-labelledby="explorer-map-title"
-              aria-live="polite"
-            >
-              <FlowMap
-                selectedId={selectedBusinessId ?? ''}
-                selectedProcessId={selectedProcessId}
-                onSelect={selectBusiness}
-                onProcessSelect={selectProcess}
-              />
-            </div>
-          </main>
-
-          <div id="explorer-detail-mobile-panel" className="explorer-mobile-detail-slot">
-            <DetailPanel selectedId={selectedBusinessId ?? ''} onSelect={selectBusiness} />
-          </div>
-        </>
-      )}
+      <div className="explorer-canvas" data-expanded-area={expandedAreaId ?? ''}>
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          nodeTypes={nodeTypes}
+          fitView
+          fitViewOptions={{ padding: 0.13, minZoom: 0.35, maxZoom: 1 }}
+          minZoom={0.25}
+          maxZoom={1.5}
+          nodesDraggable={false}
+          nodesConnectable={false}
+          elementsSelectable={false}
+          onNodeMouseEnter={handleNodeMouseEnter}
+          onNodeMouseLeave={handleNodeMouseLeave}
+          onPaneMouseEnter={scheduleClose}
+          proOptions={{ hideAttribution: true }}
+          aria-label="18業務領域のグラフ"
+        >
+          <Background gap={26} size={1} />
+          <Controls showInteractive={false} position="bottom-right" />
+        </ReactFlow>
+      </div>
     </section>
   );
 }
@@ -269,7 +264,7 @@ function ExplorerAppContent() {
 export default function ExplorerApp() {
   return (
     <ReactFlowProvider>
-      <ExplorerAppContent />
+      <ExplorerCanvas />
     </ReactFlowProvider>
   );
 }
