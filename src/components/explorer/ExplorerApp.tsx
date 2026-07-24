@@ -1,6 +1,8 @@
 import {
   Background,
   Controls,
+  Handle,
+  Position,
   ReactFlow,
   ReactFlowProvider,
   useReactFlow,
@@ -71,6 +73,12 @@ function ExplorerNodeCard({ data }: NodeProps<ExplorerFlowNode>) {
   if (data.kind === 'business') {
     return (
       <div className="explorer-business-node" role="group" aria-label={`業務 ${label}`}>
+        <Handle
+          type="target"
+          position={Position.Left}
+          isConnectable={false}
+          style={{ opacity: 0, pointerEvents: 'none' }}
+        />
         <span>{data.id}</span>
         <strong>{data.label}</strong>
       </div>
@@ -86,6 +94,12 @@ function ExplorerNodeCard({ data }: NodeProps<ExplorerFlowNode>) {
       onFocus={() => data.onFocus?.(data.id)}
       onClick={() => data.onToggle?.(data.id)}
     >
+      <Handle
+        type="source"
+        position={Position.Right}
+        isConnectable={false}
+        style={{ opacity: 0, pointerEvents: 'none' }}
+      />
       <span>{data.id}</span>
       <strong>{data.label}</strong>
     </button>
