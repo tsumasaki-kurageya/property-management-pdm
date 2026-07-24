@@ -2,8 +2,7 @@
   display: none;
 }
 
-.explorer-mobile-detail-slot,
-.explorer-mobile-lifecycle-slot {
+.explorer-mobile-detail-slot {
   display: contents;
 }
 
@@ -19,13 +18,11 @@
   border: 0;
 }
 
-.explorer-view-tabs button:focus-visible,
 .explorer-mobile-panel-tabs button:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--sl-color-accent) 48%, transparent);
   outline-offset: 2px;
 }
 
-.explorer-view-tabs button.is-active,
 .explorer-reference-link,
 .explorer-reference-link:hover {
   color: #fff !important;
@@ -38,7 +35,7 @@
 @media (max-width: 56rem) {
   .explorer-mobile-panel-tabs {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.3rem;
     order: 2;
     border: 1px solid var(--explorer-border);
@@ -66,17 +63,12 @@
   }
 
   .explorer-shell.mobile-panel-map .explorer-mobile-detail-slot,
-  .explorer-shell.mobile-panel-map .explorer-mobile-lifecycle-slot,
-  .explorer-shell.mobile-panel-detail .explorer-map-pane,
-  .explorer-shell.mobile-panel-detail .explorer-mobile-lifecycle-slot,
-  .explorer-shell.mobile-panel-lifecycle .explorer-map-pane,
-  .explorer-shell.mobile-panel-lifecycle .explorer-mobile-detail-slot {
+  .explorer-shell.mobile-panel-detail .explorer-map-pane {
     display: none;
   }
 
   .explorer-shell.mobile-panel-map .explorer-map-pane,
-  .explorer-shell.mobile-panel-detail .explorer-detail-pane,
-  .explorer-shell.mobile-panel-lifecycle .explorer-lifecycle {
+  .explorer-shell.mobile-panel-detail .explorer-detail-pane {
     min-height: min(38rem, calc(100dvh - 12rem));
   }
 

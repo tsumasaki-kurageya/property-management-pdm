@@ -6,7 +6,7 @@ import { expandBusinessReferences } from './explorer-business-references.mjs';
 const root = process.cwd();
 const outputRoot = join(root, 'src/data/explorer/generated');
 const checkOnly = process.argv.includes('--check');
-const schemaVersion = '2.0.0';
+const schemaVersion = '3.0.0';
 const allowedNodeTypes = new Set([
   'area',
   'business',
@@ -14,7 +14,6 @@ const allowedNodeTypes = new Set([
   'artifact',
   'role',
   'standard',
-  'lifecycle',
   'process',
 ]);
 const allowedEdgeTypes = new Set([
@@ -379,16 +378,6 @@ function parseStandards(markdown) {
   }));
 }
 
-const lifecycleDefinitions = [
-  { id: 'LC-01', label: '要求・契約', description: '顧客要求を業務仕様・見積・契約へ変える', processIds: ['P01'] },
-  { id: 'LC-02', label: '立ち上げ', description: '情報・体制・手順を揃えて運用開始可能にする', processIds: ['P02'] },
-  { id: 'LC-03', label: '計画・準備', description: '年間・月間・日次計画と作業条件を整える', processIds: ['P03'] },
-  { id: 'LC-04', label: '実施・受付', description: '定常業務、顧客依頼、法定業務を実施する', processIds: ['P04', 'P07', 'P08'] },
-  { id: 'LC-05', label: '確認・報告', description: '結果確認、品質是正、顧客報告へつなぐ', processIds: ['P05', 'P09'] },
-  { id: 'LC-06', label: '復旧・精算', description: '異常復旧と実績・請求・原価を確定する', processIds: ['P06', 'P10'] },
-  { id: 'LC-07', label: '改善・更新・終了', description: '分析結果を改善、契約更新又は終了へ反映する', processIds: ['P11', 'P12'] },
-];
-
 const standardAreaRules = [
   [/建築基準/, ['BM-09', 'BM-10', 'BM-17']],
   [/消防/, ['BM-09', 'BM-11', 'BM-17']],
@@ -527,16 +516,6 @@ for (const process of processes) {
 for (const task of catalog.tasks) {
   const processIds = processMappings.get(task.id) ?? [];
   for (const processId of processIds) addEdge({ type: 'participates_in', from: task.id, to: processId, source: { path: 'docs/04_mappings/business-process-map.md' } });
-}
-
-for (const lifecycle of lifecycleDefinitions) {
-  addNode({ id: lifecycle.id, type: 'lifecycle', label: lifecycle.label, description: lifecycle.description, href: '/overview/business-lifecycle/', source: { path: 'src/content/docs/overview/business-lifecycle.md' }, metadata: { processIds: lifecycle.processIds } });
-  for (const processId of lifecycle.processIds) addEdge({ type: 'participates_in', from: processId, to: lifecycle.id, source: { path: 'src/content/docs/overview/business-lifecycle.md' } });
-}
-const lifecycleByProcess = new Map(lifecycleDefinitions.flatMap((stage) => stage.processIds.map((processId) => [processId, stage.id])));
-for (const task of catalog.tasks) for (const processId of processMappings.get(task.id) ?? []) {
-  const lifecycleId = lifecycleByProcess.get(processId);
-  if (lifecycleId) addEdge({ type: 'participates_in', from: task.id, to: lifecycleId, source: { path: 'src/content/docs/overview/business-lifecycle.md' } });
 }
 
 for (const item of criticalBusinesses) {
@@ -696,7 +675,6 @@ const businessAreas = catalog.areas.map((area, index) => ({
   description: process.description,
   startTrigger: process.startTrigger,
   endState: process.endState,
-  lifecycleId: lifecycleByProcess.get(process.id),
   entryBusinessIds,
   exitBusinessIds,
   businessIds,
@@ -726,7 +704,6 @@ const outputs = new Map([
   ['business-edges.json', `${JSON.stringify(edgeList, null, 2)}\n`],
   ['business-areas.json', `${JSON.stringify(businessAreas, null, 2)}\n`],
   ['business-index.json', `${JSON.stringify(businessIndex, null, 2)}\n`],
-  ['lifecycle-stages.json', `${JSON.stringify(lifecycleDefinitions, null, 2)}\n`],
   ['processes.json', `${JSON.stringify(processIndex, null, 2)}\n`],
   ['manifest.json', `${JSON.stringify(manifest, null, 2)}\n`],
 ]);

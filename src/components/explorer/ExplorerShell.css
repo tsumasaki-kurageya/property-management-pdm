@@ -1,8 +1,8 @@
 .explorer-shell {
   --explorer-border: color-mix(in srgb, var(--sl-color-gray-5) 72%, transparent);
   display: grid;
-  grid-template-columns: minmax(15rem, 0.78fr) minmax(28rem, 1.8fr) minmax(18rem, 0.95fr);
-  grid-template-rows: auto minmax(34rem, 1fr) auto;
+  grid-template-columns: minmax(28rem, 1.8fr) minmax(18rem, 0.95fr);
+  grid-template-rows: auto minmax(34rem, 1fr);
   gap: 0.8rem;
   width: 100%;
   min-height: calc(100vh - 8rem);
@@ -19,9 +19,7 @@
 }
 
 .explorer-toolbar h1,
-.explorer-toolbar p,
-.explorer-lifecycle h2,
-.explorer-lifecycle p {
+.explorer-toolbar p {
   margin: 0;
 }
 
@@ -78,42 +76,7 @@
   text-underline-offset: 0.2rem;
 }
 
-.explorer-view-tabs {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0.3rem;
-  padding: 0.25rem;
-  border: 1px solid var(--explorer-border);
-  border-radius: 0.7rem;
-  background: var(--sl-color-bg-nav);
-}
-
-.explorer-view-tabs button {
-  border: 0;
-  border-radius: 0.48rem;
-  padding: 0.55rem 0.75rem;
-  color: var(--sl-color-gray-2);
-  background: transparent;
-  font: inherit;
-  font-size: 0.82rem;
-  font-weight: 650;
-  cursor: pointer;
-}
-
-.explorer-view-tabs button:hover,
-.explorer-view-tabs button:focus-visible {
-  color: var(--sl-color-text-accent);
-  background: var(--sl-color-gray-6);
-}
-
-.explorer-view-tabs button.is-active {
-  color: var(--sl-color-white);
-  background: var(--sl-color-accent);
-}
-
-.explorer-pane,
-.explorer-lifecycle {
+.explorer-pane {
   min-width: 0;
   border: 1px solid var(--explorer-border);
   border-radius: 0.85rem;
@@ -150,79 +113,6 @@
   font-variant-numeric: tabular-nums;
 }
 
-.explorer-search {
-  display: grid;
-  gap: 0.35rem;
-  padding: 0.8rem;
-  border-bottom: 1px solid var(--explorer-border);
-  color: var(--sl-color-gray-2);
-  font-size: 0.72rem;
-  font-weight: 650;
-}
-
-.explorer-search input {
-  width: 100%;
-  min-height: 2.35rem;
-  border: 1px solid var(--explorer-border);
-  border-radius: 0.5rem;
-  padding: 0.45rem 0.65rem;
-  color: var(--sl-color-text);
-  background: var(--sl-color-bg);
-  font: inherit;
-  font-size: 0.82rem;
-}
-
-.explorer-search input:focus {
-  border-color: var(--sl-color-accent);
-  outline: 2px solid color-mix(in srgb, var(--sl-color-accent) 25%, transparent);
-  outline-offset: 1px;
-}
-
-.explorer-business-list {
-  display: flex;
-  min-height: 0;
-  flex: 1;
-  flex-direction: column;
-  gap: 0.25rem;
-  overflow: auto;
-  padding: 0.55rem;
-}
-
-.explorer-business-list button {
-  display: grid;
-  gap: 0.1rem;
-  width: 100%;
-  border: 1px solid transparent;
-  border-radius: 0.55rem;
-  padding: 0.55rem 0.65rem;
-  text-align: left;
-  color: var(--sl-color-text);
-  background: transparent;
-  cursor: pointer;
-}
-
-.explorer-business-list button:hover,
-.explorer-business-list button:focus-visible {
-  border-color: var(--explorer-border);
-  background: var(--sl-color-gray-6);
-}
-
-.explorer-business-list button.is-selected {
-  border-color: color-mix(in srgb, var(--sl-color-accent) 55%, transparent);
-  background: color-mix(in srgb, var(--sl-color-accent-low) 70%, transparent);
-}
-
-.explorer-business-list button span {
-  color: var(--sl-color-accent-high);
-  font-size: 0.67rem;
-  font-weight: 750;
-}
-
-.explorer-business-list button strong {
-  font-size: 0.79rem;
-  line-height: 1.35;
-}
-
 .explorer-map-pane {
   position: relative;
 }
@@ -235,25 +125,6 @@
 
 .explorer-map .react-flow {
   background: radial-gradient(circle at 50% 20%, color-mix(in srgb, var(--sl-color-accent-low) 25%, transparent), transparent 48%);
-}
-
-.explorer-flow-node {
-  display: flex;
-  align-items: center;
-  border: 1px solid var(--explorer-border) !important;
-  border-radius: 0.72rem !important;
-  padding: 0.72rem !important;
-  color: var(--sl-color-text) !important;
-  background: var(--sl-color-bg) !important;
-  box-shadow: 0 0.35rem 1rem rgb(0 0 0 / 9%) !important;
-  font-size: 0.75rem !important;
-  font-weight: 650 !important;
-  line-height: 1.35 !important;
-}
-
-.explorer-flow-node.is-selected {
-  border-color: var(--sl-color-accent) !important;
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--sl-color-accent) 25%, transparent), 0 0.35rem 1rem rgb(0 0 0 / 10%) !important;
 }
 
 .explorer-map .react-flow__edge-text {
@@ -300,12 +171,6 @@
   color: var(--sl-color-red-high);
 }
 
-.explorer-detail-content {
-  min-height: 0;
-  overflow: auto;
-  padding: 1rem;
-}
-
 .explorer-node-type {
   display: inline-block;
   margin: 0 0 0.5rem;
@@ -316,45 +181,6 @@
   font-size: 0.68rem;
   font-weight: 750;
   text-transform: uppercase;
-}
-
-.explorer-detail-content h3 {
-  margin: 0 0 0.7rem;
-  font-size: 1.1rem;
-  line-height: 1.45;
-}
-
-.explorer-detail-content > p:not(.explorer-node-type, .explorer-source) {
-  color: var(--sl-color-gray-2);
-  font-size: 0.84rem;
-  line-height: 1.65;
-}
-
-.explorer-detail-content dl {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.45rem;
-  margin: 1rem 0;
-}
-
-.explorer-detail-content dl div {
-  display: grid;
-  gap: 0.15rem;
-  border: 1px solid var(--explorer-border);
-  border-radius: 0.55rem;
-  padding: 0.55rem;
-  background: var(--sl-color-bg-nav);
-}
-
-.explorer-detail-content dt {
-  color: var(--sl-color-gray-3);
-  font-size: 0.67rem;
-}
-
-.explorer-detail-content dd {
-  margin: 0;
-  font-size: 1rem;
-  font-weight: 750;
 }
 
 .explorer-reference-link {
@@ -388,70 +214,15 @@
   font-size: 0.8rem;
 }
 
-.explorer-lifecycle {
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: minmax(12rem, 0.4fr) minmax(0, 1.6fr);
-  align-items: center;
-  gap: 1rem;
-  padding: 0.8rem 0.9rem;
-}
-
-.explorer-lifecycle h2 {
-  margin-top: 0.2rem;
-  font-size: 0.9rem;
-}
-
-.explorer-lifecycle ol {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(6rem, 1fr));
-  gap: 0.35rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  overflow-x: auto;
-}
-
-.explorer-lifecycle li {
-  display: grid;
-  gap: 0.12rem;
-  min-width: 6rem;
-  border: 1px solid var(--explorer-border);
-  border-radius: 0.5rem;
-  padding: 0.48rem 0.55rem;
-  color: var(--sl-color-gray-3);
-  background: var(--sl-color-bg-nav);
-}
-
-.explorer-lifecycle li span {
-  font-size: 0.6rem;
-  font-weight: 750;
-}
-
-.explorer-lifecycle li strong {
-  font-size: 0.7rem;
-  line-height: 1.3;
-}
-
-.explorer-lifecycle li.is-current {
-  border-color: var(--sl-color-accent);
-  color: var(--sl-color-text);
-  background: var(--sl-color-accent-low);
-}
-
 @media (max-width: 78rem) {
   .explorer-shell {
-    grid-template-columns: minmax(14rem, 0.8fr) minmax(25rem, 1.6fr);
-    grid-template-rows: auto minmax(31rem, 1fr) auto auto;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(31rem, 1fr) auto;
   }
 
   .explorer-detail-pane {
     grid-column: 1 / -1;
     min-height: 18rem;
-  }
-
-  .explorer-lifecycle {
-    grid-row: 4;
   }
 }
 
@@ -473,32 +244,12 @@
     flex-direction: column;
   }
 
-  .explorer-view-tabs {
-    justify-content: stretch;
-  }
-
-  .explorer-view-tabs button {
-    flex: 1;
-  }
-
-  .explorer-list-pane {
-    min-height: 22rem;
-  }
-
   .explorer-map-pane {
     min-height: 32rem;
   }
 
   .explorer-detail-pane {
     min-height: 18rem;
-  }
-
-  .explorer-lifecycle {
-    display: block;
-  }
-
-  .explorer-lifecycle ol {
-    margin-top: 0.75rem;
   }
 }
 
