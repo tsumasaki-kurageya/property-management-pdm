@@ -36,6 +36,14 @@
 | `BM-06-07` | 消耗品を補充する | `PROC-CLN-004` | [消耗品確認・補充](../02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md) | 草案あり | BM-13-02、BM-15-02〜04 |
 | `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-005` | [定期床面清掃](../02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md) | 草案あり | BM-04、BM-12、BM-13、BM-17 |
 | `BM-06-09` | 清掃品質を検査する | `PROC-CLN-006` | [清掃品質検査・再清掃](../02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md) | 草案あり | BM-06-10〜11、BM-13、BM-17 |
+| `BM-06-03` | 日常清掃を実施する | `PROC-CLN-007` | [給湯室・食堂清掃](../02_field-procedures/01_cleaning/PROC-CLN-007_food-service-area-cleaning.md) | 草案あり | BM-06-06〜10、BM-13、BM-17 |
+| `BM-06-03` | 日常清掃を実施する | `PROC-CLN-008` | [浴室・シャワー室清掃](../02_field-procedures/01_cleaning/PROC-CLN-008_bath-and-shower-cleaning.md) | 草案あり | BM-06-05・07〜10、BM-07、BM-13、BM-17 |
+| `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-009` | [カーペット定期清掃](../02_field-procedures/01_cleaning/PROC-CLN-009_carpet-periodic-cleaning.md) | 草案あり | BM-06-04・08〜10、BM-13、BM-17 |
+| `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-010` | [手の届く範囲のガラス清掃](../02_field-procedures/01_cleaning/PROC-CLN-010_accessible-glass-cleaning.md) | 草案あり | BM-06-04・08〜10、BM-13、BM-17 |
+| `BM-06-03` | 日常清掃を実施する | `PROC-CLN-011` | [外周・駐車場清掃](../02_field-procedures/01_cleaning/PROC-CLN-011_exterior-and-parking-cleaning.md) | 草案あり | BM-06-05〜10、BM-11、BM-13、BM-17 |
+| `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-012` | [高所・外壁清掃](../02_field-procedures/01_cleaning/PROC-CLN-012_high-place-and-exterior-wall-cleaning.md) | 草案あり | BM-04、BM-06-04、BM-13、BM-17 |
+| `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-013` | [汚染物発見時の初動対応](../02_field-procedures/01_cleaning/PROC-CLN-013_contamination-discovery-response.md) | 草案あり | BM-06-03・06・08〜10、BM-11、BM-13、BM-17 |
+| `BM-06-05` | 定期・特別清掃を実施する | `PROC-CLN-014` | [漏水・こぼれ等の臨時清掃](../02_field-procedures/01_cleaning/PROC-CLN-014_spill-and-leak-emergency-cleaning.md) | 草案あり | BM-06-03・08〜10、BM-08、BM-10、BM-13、BM-17 |
 
 ### 4.1 清掃業務から見た対応
 
@@ -43,12 +51,12 @@
 |---|---|---|
 | `BM-06-01` 清掃仕様を設定する | 現場手順の前提 | 手順本文ではなく契約・物件別仕様として参照する |
 | `BM-06-02` 日常清掃を計画する | 現場手順の前工程 | 作業指示・日次計画として開始条件へ接続する |
-| `BM-06-03` 日常清掃を実施する | 対応あり | `PROC-CLN-001`、`PROC-CLN-002` |
-| `BM-06-04` 定期清掃を計画する | 現場手順の前工程 | `PROC-CLN-005`の作業計画へ接続する |
-| `BM-06-05` 定期・特別清掃を実施する | 対応あり | [`PROC-CLN-005`](../02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md) |
+| `BM-06-03` 日常清掃を実施する | 対応あり | `PROC-CLN-001`、`002`、`007`、`008`、`011` |
+| `BM-06-04` 定期清掃を計画する | 現場手順の前工程 | `PROC-CLN-005`、`009`、`010`、`012`の作業計画へ接続する |
+| `BM-06-05` 定期・特別清掃を実施する | 対応あり | `PROC-CLN-005`、`008`〜`010`、`012`〜`014` |
 | `BM-06-06` 廃棄物を回収・分別する | 対応あり | `PROC-CLN-003` |
 | `BM-06-07` 消耗品を補充する | 対応あり | [`PROC-CLN-004`](../02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md)、`PROC-CLN-002` |
-| `BM-06-08` 清掃結果を記録する | 各清掃手順の共通関連業務 | 独立手順ではなく記録工程として組み込む |
+| `BM-06-08` 清掃結果を記録する | 各清掃手順の共通関連業務 | `PROC-CLN-001`〜`014`の記録工程として組み込む |
 | `BM-06-09` 清掃品質を検査する | 対応あり | `PROC-CLN-006` |
 | `BM-06-10` 清掃不良を是正する | 関連対応あり | `PROC-CLN-006`内の再清掃・不適合分岐 |
 | `BM-06-11` 清掃方法を改善する | 現場手順の後工程 | 実績・不適合分析から改善業務へ接続する |

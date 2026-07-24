@@ -4,12 +4,12 @@
   "counts": {
     "area": 18,
     "business": 178,
-    "procedure": 34,
+    "procedure": 42,
     "artifact": 295,
     "role": 134,
     "standard": 10,
     "process": 12,
-    "edges": 2989
+    "edges": 3133
   },
   "sourceHashes": {
     "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md": "75937a00329c98c19a78a27786de4de0404b6735530c4eb3a14af3fd40733df0",
@@ -23,6 +23,14 @@
     "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md": "d854e47a3ceb9b606fd0ced9acf057cad2fa4599c7d535971fdf32f0de51e135",
     "docs/02_field-procedures/01_cleaning/PROC-CLN-005_periodic-floor-cleaning.md": "7b90b220d691e1032b24690ceb8182715796f7a7ac222c7c8716c7ae0fd9a5b0",
     "docs/02_field-procedures/01_cleaning/PROC-CLN-006_quality-inspection-and-recleaning.md": "a3b3f5a32445dd8ae0368a40c37f47866d0c04f5fc67e1538750326a53b3211d",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-007_food-service-area-cleaning.md": "2881775d8e288d2b9c249a90567922c711809446537a7936180e1da75a42d0e6",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-008_bath-and-shower-cleaning.md": "9827a118563028384099dfe82036ba617d8b78f9a7c900f2cda2f31424bcca58",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-009_carpet-periodic-cleaning.md": "4dd50c8834638978897b2b4a5d1a22517840860c3fdf3a261ed35572de3ff807",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-010_accessible-glass-cleaning.md": "3202570454abf4b7f6343b480dcaf7065120dde782a4d04d376ae835d369ba3d",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-011_exterior-and-parking-cleaning.md": "e17ec4cdce39525cfaa252fbfa917d73583eb28e42c2596149aab3c0cacc8ef3",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-012_high-place-and-exterior-wall-cleaning.md": "2c5032353c0a57dcedfa6af82db9c3fda8bd186d8fbd7da7662967b4633423ea",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-013_contamination-discovery-response.md": "31a1a333b4952124a251da07803abbc6d4d10634902e66758069f81691a737ce",
+    "docs/02_field-procedures/01_cleaning/PROC-CLN-014_spill-and-leak-emergency-cleaning.md": "db8cf223b34feb7037917c23c4051e1b132452d2eda6c9870e6748c4b2be42c0",
     "docs/02_field-procedures/02_equipment/PROC-EQP-001_central-monitoring.md": "397ec1d4fb1fc7ee4e2d49d67862d5a4280a60e86732a2fb3bec114b333a69d4",
     "docs/02_field-procedures/02_equipment/PROC-EQP-002_routine-inspection.md": "e6c06e025655784212996c67efad9feb9856c44d417dc2eb3794ecd509798673",
     "docs/02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md": "e5a2ddbedbf075b8b6f858bf730201db5ad58a31ffd4ecff1e8fdbf126e4df95",
