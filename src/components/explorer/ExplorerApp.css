@@ -112,8 +112,9 @@
   font-size: 0.72rem;
 }
 
-.explorer-business-edge {
+.explorer-business-edge .react-flow__edge-path {
   stroke: color-mix(in srgb, var(--sl-color-accent-high) 78%, var(--sl-color-text)) !important;
+  stroke-width: 2.5px;
 }
 
 .explorer-canvas .react-flow__controls {
