@@ -21,7 +21,7 @@ export default function BusinessAreaMap({ onSelectBusiness }: BusinessAreaMapPro
   const closeExpandedArea = () => setExpandedAreaId(undefined);
 
   const handleMapPointerLeave = () => {
-    closeExpandedArea();
+    if (window.matchMedia('(hover: hover)').matches) closeExpandedArea();
   };
 
   const openAreaAndFocusFirstBusiness = (areaId: string) => {
