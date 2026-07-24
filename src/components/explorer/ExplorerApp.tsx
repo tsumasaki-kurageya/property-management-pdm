@@ -12,7 +12,9 @@ import {
   buildExplorerUrl,
   getDefaultExplorerState,
   parseExplorerUrl,
-  resolveExplorerProcessId,
+  selectExplorerBusiness,
+  selectExplorerProcess,
+  showExplorerOverview,
   type ExplorerRelationFilter,
   type ExplorerUiState,
   type ExplorerViewMode,
@@ -81,22 +83,25 @@ async function copyText(value: string): Promise<void> {
 
 function ExplorerAppContent() {
   const initialState = getDefaultExplorerState();
-  const [selectedId, setSelectedId] = useState(initialState.selectedId);
-  const [isOverview, setIsOverview] = useState(true);
-  const [selectedProcessId, setSelectedProcessId] = useState(initialState.selectedProcessId);
-  const [viewMode, setViewMode] = useState<ExplorerViewMode>(initialState.viewMode);
-  const [relationFilter, setRelationFilter] = useState<ExplorerRelationFilter>(initialState.relationFilter);
+  const [explorerState, setExplorerState] = useState<ExplorerUiState>(initialState);
   const [mobilePanel, setMobilePanel] = useState<MobilePanel>('map');
   const [urlNotice, setUrlNotice] = useState<string>();
   const [copyStatus, setCopyStatus] = useState('');
   const copyTimer = useRef<number | undefined>(undefined);
-  const selectedNode = explorerNodesById.get(selectedId);
+  const {
+    screen,
+    selectedBusinessId,
+    selectedProcessId,
+    viewMode,
+    relationFilter,
+  } = explorerState;
+  const isOverview = screen === 'overview';
+  const selectedNode = selectedBusinessId
+    ? explorerNodesById.get(selectedBusinessId)
+    : undefined;
 
   const applyState = (state: ExplorerUiState) => {
-    setSelectedId(state.selectedId);
-    setSelectedProcessId(state.selectedProcessId);
-    setViewMode(state.viewMode);
-    setRelationFilter(state.relationFilter);
+    setExplorerState(state);
   };
 
   const writeHistory = (state: ExplorerUiState, mode: 'push' | 'replace') => {
@@ -119,11 +124,9 @@ function ExplorerAppContent() {
     const applyLocation = () => {
       const url = new URL(window.location.href);
       const parsed = parseExplorerUrl(url);
-      const isOverviewLocation = !['business', 'item', 'node'].some((key) => url.searchParams.has(key));
       applyState(parsed.state);
-      setIsOverview(isOverviewLocation);
       setUrlNotice(parsed.notice);
-      if (!isOverviewLocation) writeHistory(parsed.state, 'replace');
+      writeHistory(parsed.state, 'replace');
     };
 
     applyLocation();
@@ -135,36 +138,35 @@ function ExplorerAppContent() {
     if (copyTimer.current) window.clearTimeout(copyTimer.current);
   }, []);
 
-  const selectNode = (nodeId: string) => {
-    if (!explorerNodesById.has(nodeId)) return;
-    setIsOverview(false);
-    navigate({
-      selectedId: nodeId,
-      selectedProcessId: resolveExplorerProcessId(nodeId, selectedProcessId),
-      viewMode,
-      relationFilter,
-    });
+  const selectBusiness = (businessId: string) => {
+    const nextState = selectExplorerBusiness(explorerState, businessId);
+    if (!nextState) return;
+    navigate(nextState);
   };
 
   const selectView = (nextView: ExplorerViewMode) => {
     setMobilePanel('map');
-    navigate({ selectedId, selectedProcessId, viewMode: nextView, relationFilter });
+    applyState({ ...explorerState, viewMode: nextView });
   };
 
   const selectRelationFilter = (nextFilter: ExplorerRelationFilter) => {
     setMobilePanel('map');
-    navigate({
-      selectedId,
-      selectedProcessId,
+    applyState({
+      ...explorerState,
       viewMode: 'relations',
       relationFilter: nextFilter,
     });
   };
 
   const selectProcess = (nextProcessId: string) => {
-    const resolvedProcessId = resolveExplorerProcessId(selectedId, nextProcessId);
-    if (resolvedProcessId !== nextProcessId) return;
-    navigate({ selectedId, selectedProcessId: nextProcessId, viewMode, relationFilter });
+    const nextState = selectExplorerProcess(explorerState, nextProcessId);
+    if (!nextState) return;
+    navigate(nextState);
+  };
+
+  const showOverview = () => {
+    setMobilePanel('map');
+    navigate(showExplorerOverview(explorerState));
   };
 
   const handleViewTabKeyDown = (
@@ -194,7 +196,7 @@ function ExplorerAppContent() {
   const copyCurrentUrl = async () => {
     const url = buildExplorerUrl(
       new URL(window.location.href),
-      { selectedId, selectedProcessId, viewMode, relationFilter },
+      explorerState,
     );
 
     try {
@@ -225,6 +227,9 @@ function ExplorerAppContent() {
         </div>
         {!isOverview && (
           <div className="explorer-toolbar-controls">
+            <button className="explorer-overview-button" type="button" onClick={showOverview}>
+              全体の業務地図へ戻る
+            </button>
             <div className="explorer-view-tabs" role="tablist" aria-label="表示方法">
               {(Object.keys(viewLabels) as ExplorerViewMode[]).map((mode) => (
                 <button
@@ -258,7 +263,7 @@ function ExplorerAppContent() {
       {urlNotice && <p className="explorer-url-notice" role="status">{urlNotice}</p>}
 
       {isOverview ? (
-        <BusinessAreaMap onSelectBusiness={selectNode} />
+        <BusinessAreaMap onSelectBusiness={selectBusiness} />
       ) : (
         <>
           <div className="explorer-mobile-panel-tabs" role="tablist" aria-label="スマートフォン表示">
@@ -278,7 +283,7 @@ function ExplorerAppContent() {
               </button>
             ))}
           </div>
-          <BusinessNavigator selectedId={selectedId} onSelect={selectNode} />
+          <BusinessNavigator selectedId={selectedBusinessId ?? ''} onSelect={selectBusiness} />
 
           <main className="explorer-pane explorer-map-pane" aria-labelledby="explorer-map-title">
             <div className="explorer-pane-heading">
@@ -297,20 +302,24 @@ function ExplorerAppContent() {
             >
               {viewMode === 'flow' && (
                 <FlowMap
-                  selectedId={selectedId}
+                  selectedId={selectedBusinessId ?? ''}
                   selectedProcessId={selectedProcessId}
-                  onSelect={selectNode}
+                  onSelect={selectBusiness}
                   onProcessSelect={selectProcess}
                 />
               )}
               {viewMode === 'hierarchy' && (
-                <ContextMap mode="hierarchy" selectedId={selectedId} onSelect={selectNode} />
+                <ContextMap
+                  mode="hierarchy"
+                  selectedId={selectedBusinessId ?? ''}
+                  onSelect={selectBusiness}
+                />
               )}
               {viewMode === 'relations' && (
                 <ContextMap
                   mode="relations"
-                  selectedId={selectedId}
-                  onSelect={selectNode}
+                  selectedId={selectedBusinessId ?? ''}
+                  onSelect={selectBusiness}
                   relationFilter={relationFilter}
                   onRelationFilterChange={selectRelationFilter}
                 />
@@ -319,10 +328,10 @@ function ExplorerAppContent() {
           </main>
 
           <div id="explorer-detail-mobile-panel" className="explorer-mobile-detail-slot">
-            <DetailPanel selectedId={selectedId} onSelect={selectNode} />
+            <DetailPanel selectedId={selectedBusinessId ?? ''} onSelect={selectBusiness} />
           </div>
           <div id="explorer-lifecycle-mobile-panel" className="explorer-mobile-lifecycle-slot">
-            <LifecycleNavigator selectedId={selectedId} onSelect={selectNode} />
+            <LifecycleNavigator selectedId={selectedBusinessId ?? ''} onSelect={selectBusiness} />
           </div>
         </>
       )}

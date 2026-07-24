@@ -42,6 +42,34 @@
   letter-spacing: 0.14em;
 }
 
+.explorer-toolbar-controls {
+  display: grid;
+  justify-items: end;
+  gap: 0.35rem;
+}
+
+.explorer-overview-button {
+  border: 0;
+  padding: 0.25rem 0;
+  color: var(--sl-color-text-accent);
+  background: transparent;
+  font: inherit;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.explorer-overview-button::before {
+  content: '←';
+  margin-right: 0.35rem;
+}
+
+.explorer-overview-button:hover,
+.explorer-overview-button:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
 .explorer-view-tabs {
   display: inline-flex;
   flex-wrap: wrap;

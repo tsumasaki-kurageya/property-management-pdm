@@ -10,9 +10,11 @@ export const explorerRelationFilters = ['all', 'related_to', 'uses', 'produces',
 
 export type ExplorerViewMode = (typeof explorerViewModes)[number];
 export type ExplorerRelationFilter = (typeof explorerRelationFilters)[number];
+export type ExplorerScreen = 'overview' | 'process';
 
 export interface ExplorerUiState {
-  selectedId: string;
+  screen: ExplorerScreen;
+  selectedBusinessId?: string;
   selectedProcessId?: string;
   viewMode: ExplorerViewMode;
   relationFilter: ExplorerRelationFilter;
@@ -25,11 +27,15 @@ export interface ParsedExplorerState {
 
 const DEFAULT_NODE_ID = 'BM-09-06';
 
+function isBusinessId(nodeId: string): boolean {
+  return explorerNodesById.get(nodeId)?.type === 'business';
+}
+
 export function resolveExplorerProcessId(
-  selectedId: string,
+  selectedBusinessId: string,
   currentProcessId?: string,
 ): string | undefined {
-  const processIds = explorerProcessIdsByBusinessId.get(selectedId) ?? [];
+  const processIds = explorerProcessIdsByBusinessId.get(selectedBusinessId) ?? [];
   if (currentProcessId && processIds.includes(currentProcessId)) return currentProcessId;
 
   return processIds
@@ -38,18 +44,47 @@ export function resolveExplorerProcessId(
     .sort((left, right) => left.order - right.order)[0]?.id;
 }
 
-function isOneOf<T extends readonly string[]>(value: string | null, candidates: T): value is T[number] {
-  return Boolean(value && candidates.includes(value as T[number]));
+export function getDefaultExplorerState(): ExplorerUiState {
+  return {
+    screen: 'overview',
+    selectedBusinessId: undefined,
+    selectedProcessId: undefined,
+    viewMode: 'flow',
+    relationFilter: 'all',
+  };
 }
 
-export function getDefaultExplorerState(): ExplorerUiState {
-  const selectedId = explorerNodesById.has(DEFAULT_NODE_ID)
-    ? DEFAULT_NODE_ID
-    : explorerGraph.nodes.find((node) => node.type === 'business')?.id ?? '';
+export function selectExplorerBusiness(
+  state: ExplorerUiState,
+  businessId: string,
+): ExplorerUiState | undefined {
+  if (!isBusinessId(businessId)) return undefined;
 
   return {
-    selectedId,
-    selectedProcessId: resolveExplorerProcessId(selectedId),
+    ...state,
+    screen: 'process',
+    selectedBusinessId: businessId,
+    selectedProcessId: resolveExplorerProcessId(businessId, state.selectedProcessId),
+  };
+}
+
+export function selectExplorerProcess(
+  state: ExplorerUiState,
+  processId: string,
+): ExplorerUiState | undefined {
+  if (!state.selectedBusinessId) return undefined;
+  const selectedProcessId = resolveExplorerProcessId(state.selectedBusinessId, processId);
+  if (selectedProcessId !== processId) return undefined;
+
+  return { ...state, screen: 'process', selectedProcessId };
+}
+
+export function showExplorerOverview(state: ExplorerUiState): ExplorerUiState {
+  return {
+    ...state,
+    screen: 'overview',
+    selectedBusinessId: undefined,
+    selectedProcessId: undefined,
     viewMode: 'flow',
     relationFilter: 'all',
   };
@@ -57,70 +92,59 @@ export function getDefaultExplorerState(): ExplorerUiState {
 
 export function parseExplorerUrl(url: URL): ParsedExplorerState {
   const fallback = getDefaultExplorerState();
-  const requestedId = url.searchParams.get('item')
-    ?? url.searchParams.get('business')
+  const requestedId = url.searchParams.get('business')
+    ?? url.searchParams.get('item')
     ?? url.searchParams.get('node');
-  const requestedView = url.searchParams.get('view');
-  const requestedFilter = url.searchParams.get('type');
   const requestedProcessId = url.searchParams.get('process');
   const notices: string[] = [];
 
-  const selectedId = requestedId && explorerNodesById.has(requestedId)
-    ? requestedId
-    : fallback.selectedId;
-  if (requestedId && selectedId !== requestedId) {
-    notices.push(`指定された項目「${requestedId}」は見つからないため、既定の業務を表示しました。`);
+  if (!requestedId) {
+    return { state: fallback };
   }
 
-  const selectedProcessId = resolveExplorerProcessId(selectedId, requestedProcessId ?? undefined);
+  const fallbackBusinessId = isBusinessId(DEFAULT_NODE_ID)
+    ? DEFAULT_NODE_ID
+    : explorerGraph.nodes.find((node) => node.type === 'business')?.id;
+  const selectedBusinessId = isBusinessId(requestedId)
+    ? requestedId
+    : fallbackBusinessId;
+  if (selectedBusinessId !== requestedId) {
+    notices.push(`指定された業務「${requestedId}」は見つからないため、既定の業務を表示しました。`);
+  }
+
+  const selectedProcessId = selectedBusinessId
+    ? resolveExplorerProcessId(selectedBusinessId, requestedProcessId ?? undefined)
+    : undefined;
   if (requestedProcessId && selectedProcessId !== requestedProcessId) {
     notices.push(
       `指定されたプロセス「${requestedProcessId}」には選択業務が含まれないため、先頭のプロセスを表示しました。`,
     );
   }
 
-  const viewMode = isOneOf(requestedView, explorerViewModes) ? requestedView : fallback.viewMode;
-  if (requestedView && viewMode !== requestedView) {
-    notices.push(`指定された表示方法「${requestedView}」は利用できないため、「仕事の流れ」を表示しました。`);
-  }
-
-  let relationFilter: ExplorerRelationFilter = 'all';
-  if (viewMode === 'relations' && requestedFilter) {
-    if (isOneOf(requestedFilter, explorerRelationFilters)) {
-      relationFilter = requestedFilter;
-    } else {
-      notices.push(`指定された関係分類「${requestedFilter}」は利用できないため、すべての関係を表示します。`);
-    }
-  } else if (requestedFilter) {
-    notices.push('関係分類は「関係から探す」表示でのみ使用するため、指定を解除しました。');
-  }
-
   return {
-    state: { selectedId, selectedProcessId, viewMode, relationFilter },
+    state: {
+      screen: 'process',
+      selectedBusinessId,
+      selectedProcessId,
+      viewMode: 'flow',
+      relationFilter: 'all',
+    },
     notice: notices.length > 0 ? notices.join(' ') : undefined,
   };
 }
 
 export function buildExplorerUrl(currentUrl: URL, state: ExplorerUiState): URL {
   const url = new URL(currentUrl);
-  const selectedNode = explorerNodesById.get(state.selectedId);
 
   for (const key of ['business', 'item', 'node', 'process', 'view', 'type']) {
     url.searchParams.delete(key);
   }
 
-  if (selectedNode?.type === 'business') {
-    url.searchParams.set('business', state.selectedId);
-  } else {
-    url.searchParams.set('item', state.selectedId);
+  if (state.screen === 'process' && state.selectedBusinessId) {
+    url.searchParams.set('business', state.selectedBusinessId);
   }
-  if (selectedNode?.type === 'business' && state.selectedProcessId) {
+  if (state.screen === 'process' && state.selectedProcessId) {
     url.searchParams.set('process', state.selectedProcessId);
-  }
-  url.searchParams.set('view', state.viewMode);
-
-  if (state.viewMode === 'relations' && state.relationFilter !== 'all') {
-    url.searchParams.set('type', state.relationFilter);
   }
 
   return url;
