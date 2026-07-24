@@ -6650,6 +6650,17 @@
     }
   },
   {
+    "id": "PROC-EQP-009",
+    "type": "procedure",
+    "label": "修繕・工事実施",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    },
+    "metadata": {
+      "category": "EQP"
+    }
+  },
+  {
     "id": "PROC-HYG-001",
     "type": "procedure",
     "label": "空気環境測定・異常判定",
@@ -7256,6 +7267,15 @@
     }
   },
   {
+    "id": "ROLE-647A7508E5",
+    "type": "role",
+    "label": "監理・検査担当",
+    "description": "指定された立会点、隠蔽前、材料、施工品質及び試験結果を確認する",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "ROLE-64A376411B",
     "type": "role",
     "label": "専門事業者",
@@ -7589,6 +7609,15 @@
     }
   },
   {
+    "id": "ROLE-A686CD57E9",
+    "type": "role",
+    "label": "作業責任者・専門業者",
+    "description": "工種別施工要領に従って施工し、状態、実績、異常及び変更要求を報告する",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "ROLE-A8A71C4E56",
     "type": "role",
     "label": "上位責任者・顧客側権限者",
@@ -7658,6 +7687,15 @@
     "description": "保管、本人・承認照合、貸出・返却、台帳記録",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
+    }
+  },
+  {
+    "id": "ROLE-B8515451B3",
+    "type": "role",
+    "label": "顧客・発注権限者",
+    "description": "修繕範囲、予算、工期、重要な変更及び契約上の受領を承認する",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -7775,6 +7813,15 @@
     "description": "法令・技術担当が判定し、法的義務主体と受託責任者が責任分界を確認する",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-D1AE4443E6",
+    "type": "role",
+    "label": "工事責任者",
+    "description": "施工計画、作業指示、資格、品質、安全、工程、変更及び自主検査を管理する",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
