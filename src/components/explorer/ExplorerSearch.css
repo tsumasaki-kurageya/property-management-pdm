@@ -1,0 +1,125 @@
+.explorer-global-search {
+  position: relative;
+  z-index: 30;
+  width: min(32rem, 42vw);
+}
+
+.explorer-global-search > label {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--sl-color-gray-2);
+  font-size: 0.68rem;
+  font-weight: 700;
+}
+
+.explorer-global-search-field {
+  display: flex;
+  min-height: 2.55rem;
+  border: 1px solid var(--explorer-border);
+  border-radius: 0.62rem;
+  background: var(--sl-color-bg);
+  box-shadow: 0 0.2rem 0.8rem rgb(0 0 0 / 6%);
+}
+
+.explorer-global-search-field:focus-within {
+  border-color: var(--sl-color-accent);
+  outline: 2px solid color-mix(in srgb, var(--sl-color-accent) 24%, transparent);
+  outline-offset: 1px;
+}
+
+.explorer-global-search-field input {
+  min-width: 0;
+  flex: 1;
+  border: 0;
+  padding: 0.55rem 0.7rem;
+  color: var(--sl-color-text);
+  background: transparent;
+  font: inherit;
+  font-size: 0.82rem;
+  outline: 0;
+}
+
+.explorer-global-search-field button {
+  border: 0;
+  padding: 0.4rem 0.65rem;
+  color: var(--sl-color-text-accent);
+  background: transparent;
+  font: inherit;
+  font-size: 0.7rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.explorer-global-search-results {
+  position: absolute;
+  inset: calc(100% + 0.35rem) 0 auto;
+  max-height: min(32rem, 70vh);
+  border: 1px solid var(--explorer-border);
+  border-radius: 0.7rem;
+  padding: 0.35rem;
+  background: var(--sl-color-bg);
+  box-shadow: 0 0.8rem 2rem rgb(0 0 0 / 18%);
+  overflow: auto;
+}
+
+.explorer-global-search-results > p {
+  margin: 0;
+  padding: 0.35rem 0.5rem;
+  color: var(--sl-color-gray-3);
+  font-size: 0.68rem;
+}
+
+.explorer-global-search-results > button {
+  display: grid;
+  gap: 0.12rem;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 0.5rem;
+  padding: 0.55rem 0.65rem;
+  color: var(--sl-color-text);
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.explorer-global-search-results > button:hover,
+.explorer-global-search-results > button:focus-visible,
+.explorer-global-search-results > button[aria-current='true'] {
+  border-color: var(--explorer-border);
+  outline: 0;
+  background: var(--sl-color-gray-6);
+}
+
+.explorer-global-search-results span,
+.explorer-global-search-results small {
+  color: var(--sl-color-gray-3);
+  font-size: 0.65rem;
+}
+
+.explorer-global-search-results strong {
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.explorer-global-search-empty {
+  padding: 0.8rem;
+  color: var(--sl-color-gray-2);
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 72rem) {
+  .explorer-global-search {
+    width: min(28rem, 50vw);
+  }
+}
+
+@media (max-width: 50rem) {
+  .explorer-global-search {
+    width: 100%;
+  }
+
+  .explorer-global-search-results {
+    max-height: 56vh;
+  }
+}
