@@ -196,6 +196,65 @@ test('キーボードで表示切替と業務検索を完了できる', async ({
   await expect(page).toHaveURL(/business=BM-/);
 });
 
+test('業務詳細で開始契機・完了条件と業務別の関連情報を確認できる', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop');
+  await openRepresentative(page);
+
+  const detail = explorerShell(page).getByRole('complementary', { name: '業務詳細' });
+  await expect(detail.getByText('開始契機', { exact: true })).toBeVisible();
+  await expect(detail.getByText(/点検値、目視結果又は機器状態が記録されたとき/)).toBeVisible();
+  await expect(detail.getByText('完了条件', { exact: true })).toBeVisible();
+  await expect(detail.getByText(/判定根拠と後続経路が記録され/)).toBeVisible();
+  await expect(detail.getByText('入力', { exact: true }).first()).toBeVisible();
+  await expect(detail.getByText('成果物', { exact: true }).first()).toBeVisible();
+  await expect(detail.getByText('実施者', { exact: true }).first()).toBeVisible();
+  await expect(detail.getByText('判断者・承認者', { exact: true })).toBeVisible();
+  await expect(detail.getByText('法令・基準', { exact: true })).toBeVisible();
+  await expect(detail.getByText('作業手順', { exact: true })).toBeVisible();
+  await expect(detail.getByText('チェックリスト・帳票', { exact: true })).toBeVisible();
+  await expect(detail.getByText('関連業務', { exact: true })).toBeVisible();
+  await expect(detail.getByText(/参照元:/)).toBeVisible();
+});
+
+test('関連業務の選択で共通の業務選択処理を呼び出す', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop');
+  await openRepresentative(page);
+
+  const detail = explorerShell(page).getByRole('complementary', { name: '業務詳細' });
+  const relatedSection = detail.locator('details').filter({ hasText: '関連業務' });
+  await relatedSection.getByRole('button', { name: /BM-10-01/ }).click();
+
+  await expect(explorerShell(page).locator('.detail-panel-id')).toHaveText('BM-10-01');
+  await expect(page).toHaveURL(/business=BM-10-01/);
+  await expect(page).toHaveURL(/process=P06/);
+});
+
+test('プロセスID・名称の検索から開始業務を選び横断プロセスを直接表示する', async ({ page }) => {
+  await page.goto('explorer/');
+
+  const search = explorerShell(page).getByRole('searchbox', { name: '業務ID・名前・説明から検索' });
+  await search.fill('P06');
+  await search.press('ArrowDown');
+  await page.keyboard.press('Enter');
+
+  await expect(explorerShell(page).locator('.flow-map-canvas')).toHaveAttribute('data-process-id', 'P06');
+  await expect(explorerShell(page).locator('.detail-panel-id')).toHaveText('BM-08-07');
+  await expect(page).toHaveURL(/business=BM-08-07/);
+  await expect(page).toHaveURL(/process=P06/);
+});
+
+test('全体地図から業務領域名で検索して任意の業務へ移動できる', async ({ page }) => {
+  await page.goto('explorer/');
+
+  const search = explorerShell(page).getByRole('searchbox', { name: '業務ID・名前・説明から検索' });
+  await search.fill('不具合・修繕管理');
+  await search.press('ArrowDown');
+  await page.keyboard.press('Enter');
+
+  await expect(explorerShell(page).locator('.detail-panel-id')).toHaveText('BM-10-01');
+  await expect(page).toHaveURL(/business=BM-10-01/);
+});
+
 test('業務とプロセスだけをURLとブラウザ履歴から復元する', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop');
   await openRepresentative(page);

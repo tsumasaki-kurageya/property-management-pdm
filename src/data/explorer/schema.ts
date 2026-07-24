@@ -40,6 +40,17 @@ export interface ExplorerNode {
   metadata?: Record<string, unknown>;
 }
 
+export interface ExplorerBusinessMetadata extends Record<string, unknown> {
+  areaId?: string;
+  catalogOrder?: number;
+  startTrigger?: string;
+  completionCondition?: string;
+  primaryActivity?: string;
+  decisionAndException?: string;
+  actorAndDecisionMaker?: string;
+  relatedBusinessExpression?: string;
+}
+
 export interface ExplorerEdge {
   id: string;
   type: ExplorerEdgeType;

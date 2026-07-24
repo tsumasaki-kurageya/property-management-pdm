@@ -1,6 +1,11 @@
 import { useMemo } from 'react';
 import { explorerNodesById, getExplorerEdgesForNode } from '../../data/explorer';
-import type { ExplorerEdge, ExplorerNode, ExplorerNodeType } from '../../data/explorer/schema';
+import type {
+  ExplorerBusinessMetadata,
+  ExplorerEdge,
+  ExplorerNode,
+  ExplorerNodeType,
+} from '../../data/explorer/schema';
 import './DetailPanel.css';
 
 interface DetailPanelProps {
@@ -8,141 +13,178 @@ interface DetailPanelProps {
   onSelect: (nodeId: string) => void;
 }
 
+interface DetailItem {
+  id: string;
+  node: ExplorerNode;
+  relation: string;
+  via?: string;
+}
+
+interface DetailSection {
+  id: string;
+  title: string;
+  help: string;
+  items: DetailItem[];
+  open?: boolean;
+}
+
 const BASE_URL = import.meta.env.BASE_URL;
 
 const nodeTypeLabels: Record<ExplorerNodeType, string> = {
   area: '業務領域',
   business: '業務',
-  procedure: '詳しい手順',
-  artifact: '記録・帳票',
+  procedure: '作業手順',
+  artifact: 'チェックリスト・帳票',
   role: '担当者・関係者',
   standard: '法令・基準',
   lifecycle: 'ライフサイクル段階',
   process: '横断プロセス',
 };
 
-interface DetailSection {
-  id: string;
-  title: string;
-  help: string;
-  edges: ExplorerEdge[];
-  open?: boolean;
-  applicableTypes?: ExplorerNodeType[];
-}
-
 function otherNode(edge: ExplorerEdge, selectedId: string): ExplorerNode | undefined {
   return explorerNodesById.get(edge.from === selectedId ? edge.to : edge.from);
 }
 
-function relationText(edge: ExplorerEdge, selectedId: string): string {
-  const outgoing = edge.from === selectedId;
-  const labels: Record<ExplorerEdge['type'], [string, string]> = {
-    contains: ['含まれる項目', '一つ上のまとまり'],
-    precedes: ['この後の仕事', 'この前の仕事'],
-    branches_to: ['条件による次の仕事', '分岐元の仕事'],
-    uses: ['この仕事に必要', 'この項目を使う仕事'],
-    produces: ['この仕事で作成', 'この項目を作る仕事'],
-    performed_by: ['主な担当者', 'この担当者が行う仕事'],
-    approved_by: ['確認・承認する人', 'この人が確認する仕事'],
-    governed_by: ['関係する法令・基準', 'この基準が関係する仕事'],
-    participates_in: ['全体の中の位置', 'この段階に属する仕事'],
-    related_to: ['関連する項目', '関連する項目'],
-  };
-  return edge.label || labels[edge.type][outgoing ? 0 : 1];
-}
-
-function emptyMessage(node: ExplorerNode, section: DetailSection): string {
-  if (section.applicableTypes && !section.applicableTypes.includes(node.type)) {
-    return 'この種類の項目には該当しません。';
-  }
-  return 'この情報はまだ登録されていません。';
-}
-
-function uniqueEdges(edges: ExplorerEdge[]): ExplorerEdge[] {
+function uniqueItems(items: DetailItem[]): DetailItem[] {
   const seen = new Set<string>();
-  return edges.filter((edge) => {
-    const key = `${edge.type}:${edge.from}:${edge.to}`;
-    if (seen.has(key)) return false;
-    seen.add(key);
+  return items.filter((item) => {
+    if (seen.has(item.id)) return false;
+    seen.add(item.id);
     return true;
   });
+}
+
+function metadataText(metadata: ExplorerBusinessMetadata, key: keyof ExplorerBusinessMetadata): string {
+  const value = metadata[key];
+  return typeof value === 'string' ? value : '';
+}
+
+function relatedBusinessLabel(edge: ExplorerEdge, selectedId: string): string {
+  if (edge.type === 'precedes') return edge.from === selectedId ? '後続業務' : '前工程';
+  if (edge.type === 'branches_to') return edge.from === selectedId ? '条件分岐先' : '分岐元';
+  return edge.label || '関連業務';
 }
 
 export default function DetailPanel({ selectedId, onSelect }: DetailPanelProps) {
   const node = explorerNodesById.get(selectedId);
   const edges = useMemo(() => getExplorerEdgesForNode(selectedId), [selectedId]);
+  const metadata = (node?.metadata ?? {}) as ExplorerBusinessMetadata;
 
   const sections = useMemo<DetailSection[]>(() => {
     if (!node) return [];
-
-    const relatedWork = edges.filter((edge) => {
+    const itemsForEdges = (
+      filteredEdges: ExplorerEdge[],
+      relation: (edge: ExplorerEdge) => string,
+    ): DetailItem[] => uniqueItems(filteredEdges.flatMap((edge) => {
       const target = otherNode(edge, selectedId);
-      return Boolean(target && ['area', 'business', 'procedure'].includes(target.type)
-        && ['contains', 'precedes', 'branches_to', 'related_to'].includes(edge.type));
-    });
+      return target ? [{ id: target.id, node: target, relation: relation(edge) }] : [];
+    }));
 
-    const definitions: DetailSection[] = [
+    const procedures = itemsForEdges(
+      edges.filter((edge) => otherNode(edge, selectedId)?.type === 'procedure'),
+      () => '対応する作業手順',
+    );
+    const procedureChecklistItems = procedures.flatMap((procedure) =>
+      getExplorerEdgesForNode(procedure.node.id).flatMap((edge) => {
+        const target = otherNode(edge, procedure.node.id);
+        if (target?.type !== 'artifact' || target.metadata?.kind !== 'checklist') return [];
+        return [{
+          id: target.id,
+          node: target,
+          relation: '実行記録',
+          via: procedure.node.id,
+        }];
+      }));
+    const directArtifacts = itemsForEdges(
+      edges.filter((edge) => otherNode(edge, selectedId)?.type === 'artifact'),
+      (edge) => edge.type === 'uses' ? '入力' : '成果物',
+    );
+
+    return [
       {
-        id: 'needs',
-        title: 'この仕事に必要なもの',
-        help: '作業前に確認・参照する資料、台帳、記録などです。',
-        edges: edges.filter((edge) => edge.type === 'uses'),
+        id: 'inputs',
+        title: '入力',
+        help: 'この業務を始める前に必要な情報、資料、記録です。',
+        items: itemsForEdges(edges.filter((edge) => edge.type === 'uses'), () => '入力'),
         open: true,
-        applicableTypes: ['business', 'procedure'],
       },
       {
         id: 'outputs',
-        title: 'この仕事で作られるもの',
-        help: 'この仕事の結果として残る記録、報告、帳票などです。',
-        edges: edges.filter((edge) => edge.type === 'produces'),
+        title: '成果物',
+        help: 'この業務の結果として作成・更新される記録や情報です。',
+        items: itemsForEdges(edges.filter((edge) => edge.type === 'produces'), () => '成果物'),
         open: true,
-        applicableTypes: ['business', 'procedure'],
       },
       {
-        id: 'people',
-        title: '担当・確認する人',
-        help: '実施者、責任者、確認者、承認者として登録された関係者です。',
-        edges: edges.filter((edge) => edge.type === 'performed_by' || edge.type === 'approved_by'),
-        applicableTypes: ['business', 'procedure'],
+        id: 'performers',
+        title: '実施者',
+        help: '実作業、調査、確認などを担当する主体です。',
+        items: itemsForEdges(edges.filter((edge) => edge.type === 'performed_by'), () => '実施者'),
+      },
+      {
+        id: 'approvers',
+        title: '判断者・承認者',
+        help: '判断、確認、承認、責任の確定を担う主体です。',
+        items: itemsForEdges(edges.filter((edge) => edge.type === 'approved_by'), () => '判断・承認'),
       },
       {
         id: 'standards',
-        title: '関係する法令・基準',
-        help: 'この項目へ直接関連付けられた法令・基準です。個別物件への適用判断を示すものではありません。',
-        edges: edges.filter((edge) => edge.type === 'governed_by'),
-        applicableTypes: ['business', 'procedure'],
+        title: '法令・基準',
+        help: '直接関連付けられた法令・基準です。個別物件への適用判断は別途必要です。',
+        items: itemsForEdges(edges.filter((edge) => edge.type === 'governed_by'), () => '適用候補'),
+      },
+      {
+        id: 'procedures',
+        title: '作業手順',
+        help: 'この業務を現場で実施するために接続された標準手順です。',
+        items: procedures,
+      },
+      {
+        id: 'forms',
+        title: 'チェックリスト・帳票',
+        help: '対応手順の実行記録を含む、登録済みのチェックリスト・帳票です。',
+        items: uniqueItems([
+          ...directArtifacts.filter((item) => item.node.metadata?.kind === 'checklist'),
+          ...procedureChecklistItems,
+        ]),
       },
       {
         id: 'related',
-        title: '前後・関連する仕事',
-        help: '前後工程、条件分岐、上位・下位、主要な関連業務です。',
-        edges: relatedWork,
+        title: '関連業務',
+        help: '業務ID単位で接続された前後工程、条件分岐、関連業務です。',
+        items: itemsForEdges(
+          edges.filter((edge) => {
+            const target = otherNode(edge, selectedId);
+            return target?.type === 'business'
+              && ['precedes', 'branches_to', 'related_to'].includes(edge.type);
+          }),
+          (edge) => relatedBusinessLabel(edge, selectedId),
+        ),
         open: true,
       },
     ];
-
-    return definitions.map((section) => ({ ...section, edges: uniqueEdges(section.edges) }));
   }, [edges, node, selectedId]);
 
   if (!node) {
     return (
       <aside className="explorer-pane explorer-detail-pane" aria-labelledby="explorer-detail-title">
-        <div className="explorer-pane-heading">
-          <h2 id="explorer-detail-title">選択中の項目</h2>
-        </div>
-        <p className="explorer-empty">対象項目がありません。</p>
+        <div className="explorer-pane-heading"><h2 id="explorer-detail-title">業務詳細</h2></div>
+        <p className="explorer-empty">対象業務がありません。</p>
       </aside>
     );
   }
+
+  const startTrigger = metadataText(metadata, 'startTrigger');
+  const completionCondition = metadataText(metadata, 'completionCondition');
 
   return (
     <aside className="explorer-pane explorer-detail-pane" aria-labelledby="explorer-detail-title">
       <div className="explorer-pane-heading">
         <div>
-          <h2 id="explorer-detail-title">選択中の項目</h2>
-          <small>図だけでは分からない説明と登録情報</small>
+          <h2 id="explorer-detail-title">業務詳細</h2>
+          <small>正本に登録された業務属性と関連情報</small>
         </div>
-        <span>{edges.length}関係</span>
+        <span>{node.id}</span>
       </div>
 
       <div className="detail-panel-content">
@@ -150,9 +192,26 @@ export default function DetailPanel({ selectedId, onSelect }: DetailPanelProps) 
           <p className={`explorer-node-type type-${node.type}`}>{nodeTypeLabels[node.type]}</p>
           <p className="detail-panel-id">{node.id}</p>
           <h3>{node.label}</h3>
-          <p className={node.description ? '' : 'is-unregistered'}>
-            {node.description || '初学者向けの説明はまだ登録されていません。'}
-          </p>
+          <dl className="detail-panel-core-fields">
+            <div>
+              <dt>概要</dt>
+              <dd className={node.description ? '' : 'is-unregistered'}>
+                {node.description || 'この情報はまだ登録されていません。'}
+              </dd>
+            </div>
+            <div>
+              <dt>開始契機</dt>
+              <dd className={startTrigger ? '' : 'is-unregistered'}>
+                {startTrigger || 'この情報はまだ登録されていません。'}
+              </dd>
+            </div>
+            <div>
+              <dt>完了条件</dt>
+              <dd className={completionCondition ? '' : 'is-unregistered'}>
+                {completionCondition || 'この情報はまだ登録されていません。'}
+              </dd>
+            </div>
+          </dl>
         </header>
 
         <div className="detail-panel-sections">
@@ -160,27 +219,34 @@ export default function DetailPanel({ selectedId, onSelect }: DetailPanelProps) 
             <details key={section.id} open={section.open}>
               <summary>
                 <span>{section.title}</span>
-                <small>{section.edges.length}件</small>
+                <small>{section.items.length}件</small>
               </summary>
               <div className="detail-section-body">
                 <p className="detail-section-help">{section.help}</p>
-                {section.edges.length === 0 ? (
-                  <p className="detail-section-empty">{emptyMessage(node, section)}</p>
+                {section.items.length === 0 ? (
+                  <p className="detail-section-empty">この情報はまだ登録されていません。</p>
                 ) : (
                   <ul>
-                    {section.edges.map((edge) => {
-                      const target = otherNode(edge, selectedId);
-                      if (!target) return null;
-                      return (
-                        <li key={edge.id}>
-                          <button type="button" onClick={() => onSelect(target.id)}>
-                            <span>{relationText(edge, selectedId)}</span>
-                            <strong>{target.label}</strong>
-                            <small>{nodeTypeLabels[target.type]} · {target.id}</small>
+                    {section.items.map((item) => (
+                      <li key={item.id}>
+                        {item.node.type === 'business' ? (
+                          <button type="button" onClick={() => onSelect(item.node.id)}>
+                            <span>{item.relation}</span>
+                            <strong>{item.node.label}</strong>
+                            <small>{item.node.id}</small>
                           </button>
-                        </li>
-                      );
-                    })}
+                        ) : (
+                          <div className="detail-section-item">
+                            <span>{item.relation}</span>
+                            <strong>{item.node.label}</strong>
+                            <small>
+                              {nodeTypeLabels[item.node.type]} · {item.node.id}
+                              {item.via ? ` · ${item.via}経由` : ''}
+                            </small>
+                          </div>
+                        )}
+                      </li>
+                    ))}
                   </ul>
                 )}
               </div>
@@ -194,9 +260,11 @@ export default function DetailPanel({ selectedId, onSelect }: DetailPanelProps) 
               詳細ページで確認する
             </a>
           ) : (
-            <p className="detail-section-empty">この項目の詳細ページはまだ登録されていません。</p>
+            <p className="detail-section-empty">この業務の詳細ページはまだ登録されていません。</p>
           )}
-          <p className="explorer-source">参照元: <code>{node.source.path}</code></p>
+          <p className="explorer-source">
+            参照元: <code>{node.source.path}{node.source.anchor ? `#${node.source.anchor}` : ''}</code>
+          </p>
         </div>
       </div>
     </aside>

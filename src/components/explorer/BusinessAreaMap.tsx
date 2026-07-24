@@ -16,12 +16,13 @@ export default function BusinessAreaMap({ onSelectBusiness }: BusinessAreaMapPro
   const [expandedAreaId, setExpandedAreaId] = useState<string>();
   const mapRef = useRef<HTMLElement>(null);
   const pointerInteractionRef = useRef(false);
+  const pointerTypeRef = useRef('');
   const expandedArea = expandedAreaId ? explorerAreasById.get(expandedAreaId) : undefined;
 
   const closeExpandedArea = () => setExpandedAreaId(undefined);
 
   const handleMapPointerLeave = () => {
-    closeExpandedArea();
+    if (window.matchMedia('(hover: hover)').matches) closeExpandedArea();
   };
 
   const openAreaAndFocusFirstBusiness = (areaId: string) => {
@@ -82,8 +83,10 @@ export default function BusinessAreaMap({ onSelectBusiness }: BusinessAreaMapPro
                 onMouseEnter={() => {
                   if (window.matchMedia('(hover: hover)').matches) setExpandedAreaId(area.id);
                 }}
-                onPointerDown={() => {
+                onPointerDown={(event) => {
                   pointerInteractionRef.current = true;
+                  pointerTypeRef.current = event.pointerType;
+                  if (event.pointerType !== 'mouse') setExpandedAreaId(area.id);
                 }}
                 onPointerUp={() => {
                   window.setTimeout(() => {
@@ -97,8 +100,14 @@ export default function BusinessAreaMap({ onSelectBusiness }: BusinessAreaMapPro
                   if (!pointerInteractionRef.current) setExpandedAreaId(area.id);
                 }}
                 onClick={() => {
+                  if (pointerInteractionRef.current && pointerTypeRef.current !== 'mouse') {
+                    pointerInteractionRef.current = false;
+                    pointerTypeRef.current = '';
+                    return;
+                  }
                   setExpandedAreaId((currentAreaId) => currentAreaId === area.id ? undefined : area.id);
                   pointerInteractionRef.current = false;
+                  pointerTypeRef.current = '';
                 }}
                 onKeyDown={(event) => {
                   if (event.key !== 'ArrowDown') return;

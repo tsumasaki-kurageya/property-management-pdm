@@ -79,6 +79,24 @@ export function selectExplorerProcess(
   return { ...state, screen: 'process', selectedProcessId };
 }
 
+export function openExplorerProcess(
+  state: ExplorerUiState,
+  processId: string,
+): ExplorerUiState | undefined {
+  const process = explorerProcessesById.get(processId);
+  if (!process) return undefined;
+  const selectedBusinessId = process.entryBusinessIds[0] ?? process.businessIds[0];
+  if (!selectedBusinessId || !isBusinessId(selectedBusinessId)) return undefined;
+
+  return {
+    ...state,
+    screen: 'process',
+    selectedBusinessId,
+    selectedProcessId: process.id,
+    viewMode: 'flow',
+  };
+}
+
 export function showExplorerOverview(state: ExplorerUiState): ExplorerUiState {
   return {
     ...state,

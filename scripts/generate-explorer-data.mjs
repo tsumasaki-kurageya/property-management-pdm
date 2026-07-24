@@ -541,6 +541,18 @@ for (const task of catalog.tasks) for (const processId of processMappings.get(ta
 
 for (const item of criticalBusinesses) {
   const values = parseKeyValueTable(item.body);
+  const businessNode = nodes.get(item.id);
+  if (businessNode?.type === 'business') {
+    businessNode.metadata = {
+      ...businessNode.metadata,
+      startTrigger: values.get('開始契機') ?? '',
+      completionCondition: values.get('完了条件') ?? '',
+      primaryActivity: values.get('主な活動') ?? '',
+      decisionAndException: values.get('主要判断・例外') ?? '',
+      actorAndDecisionMaker: values.get('実施主体・判断主体') ?? '',
+      relatedBusinessExpression: values.get('後続業務') ?? '',
+    };
+  }
   for (const input of splitItems(values.get('入力') ?? '')) {
     const artifactId = addArtifact(input, 'docs/04_mappings/critical-business-analysis.md', 'input');
     if (artifactId) addEdge({ type: 'uses', from: item.id, to: artifactId, source: { path: 'docs/04_mappings/critical-business-analysis.md' } });
