@@ -35,6 +35,14 @@
   color: var(--sl-color-gray-2);
 }
 
+.explorer-toolbar-actions {
+  display: flex;
+  min-width: 0;
+  align-items: end;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
 .explorer-eyebrow {
   color: var(--sl-color-accent-high);
   font-size: 0.68rem;
@@ -455,6 +463,12 @@
   }
 
   .explorer-toolbar {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .explorer-toolbar-actions {
+    width: 100%;
     align-items: stretch;
     flex-direction: column;
   }
