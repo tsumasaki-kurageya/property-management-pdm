@@ -6,11 +6,13 @@ import BusinessAreaMap from './BusinessAreaMap';
 import BusinessNavigator from './BusinessNavigator';
 import ContextMap from './ContextMap';
 import DetailPanel from './DetailPanel';
+import ExplorerSearch from './ExplorerSearch';
 import FlowMap from './FlowMap';
 import LifecycleNavigator from './LifecycleNavigator';
 import {
   buildExplorerUrl,
   getDefaultExplorerState,
+  openExplorerProcess,
   parseExplorerUrl,
   selectExplorerBusiness,
   selectExplorerProcess,
@@ -164,6 +166,13 @@ function ExplorerAppContent() {
     navigate(nextState);
   };
 
+  const openProcess = (nextProcessId: string) => {
+    const nextState = openExplorerProcess(explorerState, nextProcessId);
+    if (!nextState) return;
+    setMobilePanel('map');
+    navigate(nextState);
+  };
+
   const showOverview = () => {
     setMobilePanel('map');
     navigate(showExplorerOverview(explorerState));
@@ -225,39 +234,47 @@ function ExplorerAppContent() {
               : '業務の前後、全体の中の位置、手順・記録・役割との関係を同じ画面で確認します。'}
           </p>
         </div>
-        {!isOverview && (
-          <div className="explorer-toolbar-controls">
-            <button className="explorer-overview-button" type="button" onClick={showOverview}>
-              全体の業務地図へ戻る
-            </button>
-            <div className="explorer-view-tabs" role="tablist" aria-label="表示方法">
-              {(Object.keys(viewLabels) as ExplorerViewMode[]).map((mode) => (
-                <button
-                  id={`explorer-view-tab-${mode}`}
-                  data-view-mode={mode}
-                  key={mode}
-                  type="button"
-                  role="tab"
-                  tabIndex={viewMode === mode ? 0 : -1}
-                  aria-selected={viewMode === mode}
-                  aria-controls="explorer-map-panel"
-                  className={viewMode === mode ? 'is-active' : ''}
-                  onClick={() => selectView(mode)}
-                  onKeyDown={(event) => handleViewTabKeyDown(event, mode)}
-                >
-                  {viewLabels[mode]}
-                </button>
-              ))}
-            </div>
-            <p className="explorer-keyboard-help">表示方法は左右矢印キー、Home、Endでも切り替えられます。</p>
-            <div className="explorer-share-row">
-              <button className="explorer-copy-url" type="button" onClick={copyCurrentUrl}>
-                URLをコピー
+        <div className="explorer-toolbar-actions">
+          <ExplorerSearch
+            selectedBusinessId={selectedBusinessId}
+            selectedProcessId={selectedProcessId}
+            onSelectBusiness={selectBusiness}
+            onSelectProcess={openProcess}
+          />
+          {!isOverview && (
+            <div className="explorer-toolbar-controls">
+              <button className="explorer-overview-button" type="button" onClick={showOverview}>
+                全体の業務地図へ戻る
               </button>
-              <span className="explorer-copy-status" role="status" aria-live="polite">{copyStatus}</span>
+              <div className="explorer-view-tabs" role="tablist" aria-label="表示方法">
+                {(Object.keys(viewLabels) as ExplorerViewMode[]).map((mode) => (
+                  <button
+                    id={`explorer-view-tab-${mode}`}
+                    data-view-mode={mode}
+                    key={mode}
+                    type="button"
+                    role="tab"
+                    tabIndex={viewMode === mode ? 0 : -1}
+                    aria-selected={viewMode === mode}
+                    aria-controls="explorer-map-panel"
+                    className={viewMode === mode ? 'is-active' : ''}
+                    onClick={() => selectView(mode)}
+                    onKeyDown={(event) => handleViewTabKeyDown(event, mode)}
+                  >
+                    {viewLabels[mode]}
+                  </button>
+                ))}
+              </div>
+              <p className="explorer-keyboard-help">表示方法は左右矢印キー、Home、Endでも切り替えられます。</p>
+              <div className="explorer-share-row">
+                <button className="explorer-copy-url" type="button" onClick={copyCurrentUrl}>
+                  URLをコピー
+                </button>
+                <span className="explorer-copy-status" role="status" aria-live="polite">{copyStatus}</span>
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
       </header>
 
       {urlNotice && <p className="explorer-url-notice" role="status">{urlNotice}</p>}
