@@ -4,12 +4,12 @@
   "counts": {
     "area": 18,
     "business": 178,
-    "procedure": 27,
+    "procedure": 34,
     "artifact": 295,
-    "role": 117,
+    "role": 134,
     "standard": 10,
     "process": 12,
-    "edges": 2932
+    "edges": 2983
   },
   "sourceHashes": {
     "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md": "75937a00329c98c19a78a27786de4de0404b6735530c4eb3a14af3fd40733df0",
@@ -39,6 +39,13 @@
     "docs/02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md": "0ed795ae33ac141f8300535018cd2fce1bb2cca91afb859cebb2c39bdb36eebf",
     "docs/02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md": "377ac3543581feac93c35298ea17feeab5ac072ecaed9ba508e5b165c2ebbe86",
     "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md": "66f15a61ab9a562f380ff939c49194c88692d63d85267441352eb65dc20b9897",
+    "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md": "2634faf8d0cadb62722a415fb7fea03598f80f877712d26b3bc22987fb4a2eb4",
+    "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md": "6fdbe00f707d4c0a52fca0208c61d0571622a7d9942c22d7e250bfdfd8edc720",
+    "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md": "1442673f0204fb5d87dcba8a24eac1a62a5f837eb7ca89a118254a86eb45cd89",
+    "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md": "3a18b20febe3f55f50bd356ada25c2996fd9a0ee4b6cd7795afd578faaf7d64c",
+    "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md": "76b66f579e1baceb39f59a7cb8e4545eddb7c70953fbdb52c1a135853854b2e8",
+    "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md": "36dda0084fa39a519e688373dca0c3a28ae78a3289f5ff066f610ea69abaeb88",
+    "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md": "b40adc10dd05cbf6095a6137a14f117788f76730dab17aa3cef1af88ccc74a1c",
     "docs/03_checklists/00_common/CHK-COM-001_pre-work-safety-check.md": "8fc4fc510f4e73735cba1f8f6bef1e1c3e8167cb01b84913282ded8616624e05",
     "docs/03_checklists/00_common/CHK-COM-002_abnormality-escalation.md": "4d6de8800e19936a32271d761c8ff5d6d6d65928ca34733591961c23d6643f5a",
     "docs/03_checklists/00_common/CHK-COM-003_work-area-control.md": "8607c45f0efc2691289239ca1717ae92eaa3fdb39305a51ce83c61d727d85c91",
