@@ -2,7 +2,7 @@
 title: BM-12 テナント・顧客対応
 description: テナント・顧客対応に含まれる10業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md
@@ -36,7 +36,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 **接続するプロセス:** [P07](../../processes/p07/)、[P03](../../processes/p03/)、[P06](../../processes/p06/)、[P09](../../processes/p09/)、[P11](../../processes/p11/)
 
-[前の業務: BM-11-10](../bm-11/#bm-11-10) · [次の業務: BM-12-02](../bm-12/#bm-12-02)
+[前の業務: BM-11-12](../bm-11/#bm-11-12) · [次の業務: BM-12-02](../bm-12/#bm-12-02)
 
 <span id="bm-12-02"></span>
 

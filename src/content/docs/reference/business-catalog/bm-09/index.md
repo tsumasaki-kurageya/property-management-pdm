@@ -2,7 +2,7 @@
 title: BM-09 点検・保守管理
 description: 点検・保守管理に含まれる10業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md
@@ -32,7 +32,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 ## BM-09-01 点検対象を登録する
 
-設備、部位、点検項目、点検周期を登録する。
+建築部位、電気・機械・防災・搬送設備、工作物、外構、植栽等について、対象、位置、点検項目、点検周期及び判定基準を登録する。
 
 **接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
 
@@ -42,7 +42,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 ## BM-09-02 日常点検を実施する
 
-巡回時に外観、動作、計測値等を確認する。
+巡回時に建物、設備、工作物、外構、植栽等の外観、動作、計測値及び利用支障を確認する。
 
 **接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
 
@@ -52,7 +52,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 ## BM-09-03 定期点検を実施する
 
-月次、四半期、半年、年次等の周期で点検する。
+建築部位、設備、工作物、外構、植栽等を、月次、四半期、半年、年次等の定めた周期と基準で点検する。石綿含有が確認又は推定された吹付け材等を維持管理する場合は、対象台帳と管理計画に基づき、損傷、劣化、飛散のおそれ等の状態確認を資格・安全条件に従って行い、工事前の石綿事前調査とは区別する。
 
 **接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
 
@@ -62,7 +62,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 ## BM-09-04 法定点検を実施する
 
-法定業務マスターを参照し、対象、法的義務主体、実施者、必要資格、周期、行政報告・顧客承認の要否を確認する。資格要件を満たす者が調査・検査・点検を行い、義務主体が結果を確認して所定の報告・保存を行う。ビルメンテナンス会社は、契約範囲に応じて実施、手配、進捗管理、証跡管理を担う。
+法定業務マスターを参照し、建築物・設備・工作物・外構等の対象、法的義務主体、実施者、必要資格、周期、行政報告・顧客承認の要否を確認する。資格要件を満たす者が調査・検査・点検を行い、義務主体が結果を確認して所定の報告・保存を行う。ビルメンテナンス会社は、契約範囲に応じて実施、手配、進捗管理、証跡管理を担う。
 
 **接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
 
@@ -74,7 +74,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 ## BM-09-05 点検値を記録する
 
-測定値、判定、コメント、写真等を記録する。
+温度、圧力、電流、照度等の測定値、測定点・条件、判定、コメント、写真等を記録する。測定項目の違いは新しい業務を作らず、点検基準と記録項目で区別する。
 
 **接続するプロセス:** [P05](../../processes/p05/)、[P08](../../processes/p08/)
 

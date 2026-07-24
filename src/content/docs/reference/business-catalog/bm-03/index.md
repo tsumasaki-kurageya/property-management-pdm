@@ -2,7 +2,7 @@
 title: BM-03 業務立ち上げ
 description: 業務立ち上げに含まれる8業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md

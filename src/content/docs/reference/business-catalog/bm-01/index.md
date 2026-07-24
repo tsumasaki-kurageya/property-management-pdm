@@ -2,7 +2,7 @@
 title: BM-01 営業・提案
 description: 営業・提案に含まれる8業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md

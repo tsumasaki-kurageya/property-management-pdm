@@ -1,8 +1,8 @@
 ---
 title: BM-17 品質・安全・法令管理
-description: 品質・安全・法令管理に含まれる11業務のリファレンスです。
+description: 品質・安全・法令管理に含まれる12業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md
@@ -28,6 +28,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 - [BM-17-09 証跡・報告書を保存する](#bm-17-09)
 - [BM-17-10 監査へ対応する](#bm-17-10)
 - [BM-17-11 作業区域を設定・解除する](#bm-17-11)
+- [BM-17-12 汚染・感染・有害物質対応を管理する](#bm-17-12)
 
 <span id="bm-17-01"></span>
 
@@ -141,4 +142,14 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 **重要業務分析:** [判断・完了条件を確認](../../critical-businesses/#bm-17-11)
 
-[前の業務: BM-17-10](../bm-17/#bm-17-10) · [次の業務: BM-18-01](../bm-18/#bm-18-01)
+[前の業務: BM-17-10](../bm-17/#bm-17-10) · [次の業務: BM-17-12](../bm-17/#bm-17-12)
+
+<span id="bm-17-12"></span>
+
+## BM-17-12 汚染・感染・有害物質対応を管理する
+
+体液、感染性物質、薬品、油、石綿等の有害物質又は性状不明物による汚染が疑われる場合に、発見情報、健康・環境影響、拡散範囲及び緊急度を評価する。接触回避、区域管理、関係者連絡、物質同定、専門業者・有資格者の手配、除染・回収・廃棄、品質確認及び利用再開への引渡しを一つの対応案件として管理し、法的義務主体、排出事業者、実施者、確認者及び利用再開権限者を区別する。一般作業者は教育・資機材・承認範囲を超える処理を行わない。
+
+**接続するプロセス:** [P06](../../processes/p06/)、[P08](../../processes/p08/)、[P09](../../processes/p09/)
+
+[前の業務: BM-17-11](../bm-17/#bm-17-11) · [次の業務: BM-18-01](../bm-18/#bm-18-01)
