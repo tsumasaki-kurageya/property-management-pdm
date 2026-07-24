@@ -134,7 +134,6 @@ export default function ExplorerSearch({
           value={query}
           placeholder="業務ID・名称、領域、P01〜P12"
           aria-label="業務ID・名前・説明から検索"
-          aria-controls="explorer-global-search-results"
           onChange={(event) => setQuery(event.currentTarget.value)}
           onKeyDown={handleInputKeyDown}
         />
