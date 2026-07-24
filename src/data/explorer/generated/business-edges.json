@@ -18,6 +18,15 @@
     }
   },
   {
+    "id": "EDGE-0026E8EE1F",
+    "type": "related_to",
+    "from": "BM-07-04",
+    "to": "PROC-HYG-003",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
+    }
+  },
+  {
     "id": "EDGE-0027655D7D",
     "type": "precedes",
     "from": "BM-16-06",
@@ -200,6 +209,15 @@
     "to": "STD-62F930A1C9",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-025E5B7072",
+    "type": "related_to",
+    "from": "BM-13-10",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -974,6 +992,15 @@
     }
   },
   {
+    "id": "EDGE-084142127F",
+    "type": "performed_by",
+    "from": "PROC-HYG-007",
+    "to": "ROLE-6610B58384",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-084A87BC02",
     "type": "precedes",
     "from": "BM-05-08",
@@ -1116,6 +1143,15 @@
     "to": "ROLE-12538771A3",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-0952386565",
+    "type": "approved_by",
+    "from": "PROC-HYG-006",
+    "to": "ROLE-B1B26BEA41",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
     }
   },
   {
@@ -1288,6 +1324,15 @@
     "to": "ART-3AAC14495B",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-0A99734BC2",
+    "type": "performed_by",
+    "from": "PROC-HYG-005",
+    "to": "ROLE-D0CAAC6C9A",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
     }
   },
   {
@@ -2055,6 +2100,15 @@
     }
   },
   {
+    "id": "EDGE-109C131A0F",
+    "type": "approved_by",
+    "from": "PROC-HYG-001",
+    "to": "ROLE-862E004C60",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
+    }
+  },
+  {
     "id": "EDGE-10B5AB0361",
     "type": "approved_by",
     "from": "PROC-SEC-006",
@@ -2470,6 +2524,15 @@
     "to": "PROC-CLN-003",
     "source": {
       "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-003_waste-collection-and-sorting.md"
+    }
+  },
+  {
+    "id": "EDGE-14647E58BF",
+    "type": "contains",
+    "from": "BM-07-02",
+    "to": "PROC-HYG-001",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
     }
   },
   {
@@ -2892,6 +2955,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P08"
+    }
+  },
+  {
+    "id": "EDGE-17B6B404EF",
+    "type": "performed_by",
+    "from": "PROC-HYG-005",
+    "to": "ROLE-BF499E4B9C",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
     }
   },
   {
@@ -3688,6 +3760,15 @@
     }
   },
   {
+    "id": "EDGE-1ECF94A2CD",
+    "type": "approved_by",
+    "from": "PROC-HYG-002",
+    "to": "ROLE-E6F171A55F",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    }
+  },
+  {
     "id": "EDGE-1EDE3940A3",
     "type": "contains",
     "from": "BM-06",
@@ -3757,6 +3838,15 @@
     "to": "STD-24E0F8EF1B",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-1F8515D83E",
+    "type": "related_to",
+    "from": "BM-13-09",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -3911,6 +4001,15 @@
     "to": "ART-25CC38EF00",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-210C0D7060",
+    "type": "approved_by",
+    "from": "PROC-HYG-007",
+    "to": "ROLE-5A5592C6AE",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -4069,6 +4168,15 @@
     }
   },
   {
+    "id": "EDGE-22211F4245",
+    "type": "performed_by",
+    "from": "PROC-HYG-005",
+    "to": "ROLE-47F6F4619F",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
+    }
+  },
+  {
     "id": "EDGE-222236B0B7",
     "type": "contains",
     "from": "BM-02",
@@ -4160,6 +4268,15 @@
     }
   },
   {
+    "id": "EDGE-22B1BFC2FC",
+    "type": "contains",
+    "from": "BM-07-08",
+    "to": "PROC-HYG-005",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
+    }
+  },
+  {
     "id": "EDGE-22B697367D",
     "type": "participates_in",
     "from": "BM-09-06",
@@ -4238,6 +4355,15 @@
     "to": "ROLE-B4D108F1EB",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-231AB85ABB",
+    "type": "related_to",
+    "from": "BM-07-05",
+    "to": "PROC-HYG-004",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
     }
   },
   {
@@ -5259,6 +5385,24 @@
     }
   },
   {
+    "id": "EDGE-2DA33EDE51",
+    "type": "performed_by",
+    "from": "PROC-HYG-002",
+    "to": "ROLE-64A376411B",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    }
+  },
+  {
+    "id": "EDGE-2DEF3B19DE",
+    "type": "approved_by",
+    "from": "PROC-HYG-003",
+    "to": "ROLE-E6F171A55F",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
+    }
+  },
+  {
     "id": "EDGE-2DF5ECB820",
     "type": "contains",
     "from": "BM-14",
@@ -5315,6 +5459,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P08"
+    }
+  },
+  {
+    "id": "EDGE-2E3C4056F2",
+    "type": "related_to",
+    "from": "BM-07-11",
+    "to": "PROC-HYG-005",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
     }
   },
   {
@@ -5829,6 +5982,15 @@
     "to": "P06",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-33A8EF6FBE",
+    "type": "contains",
+    "from": "BM-07-11",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -7975,6 +8137,15 @@
     }
   },
   {
+    "id": "EDGE-4519B083A6",
+    "type": "related_to",
+    "from": "BM-17-08",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-45311CD396",
     "type": "related_to",
     "from": "BM-13-01",
@@ -8406,6 +8577,15 @@
     }
   },
   {
+    "id": "EDGE-4780C8AF4A",
+    "type": "contains",
+    "from": "BM-07-10",
+    "to": "PROC-HYG-006",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
+    }
+  },
+  {
     "id": "EDGE-478236BD04",
     "type": "precedes",
     "from": "BM-06-11",
@@ -8724,6 +8904,15 @@
     "to": "STD-C00B366C58",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-49F8F84159",
+    "type": "contains",
+    "from": "BM-07-04",
+    "to": "PROC-HYG-002",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
     }
   },
   {
@@ -9529,6 +9718,15 @@
     }
   },
   {
+    "id": "EDGE-51098A96D7",
+    "type": "contains",
+    "from": "BM-07-07",
+    "to": "PROC-HYG-005",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
+    }
+  },
+  {
     "id": "EDGE-510D36898C",
     "type": "approved_by",
     "from": "BM-17-11",
@@ -9747,6 +9945,15 @@
     }
   },
   {
+    "id": "EDGE-52C235BF71",
+    "type": "related_to",
+    "from": "BM-07-03",
+    "to": "PROC-HYG-002",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    }
+  },
+  {
     "id": "EDGE-52DE23E113",
     "type": "precedes",
     "from": "BM-07-09",
@@ -9873,6 +10080,15 @@
     }
   },
   {
+    "id": "EDGE-542CC7FE7F",
+    "type": "related_to",
+    "from": "BM-07-11",
+    "to": "PROC-HYG-001",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
+    }
+  },
+  {
     "id": "EDGE-5430D50071",
     "type": "precedes",
     "from": "BM-09-09",
@@ -9973,6 +10189,15 @@
     }
   },
   {
+    "id": "EDGE-54DD09332C",
+    "type": "related_to",
+    "from": "BM-13-06",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-54E0FA4190",
     "type": "governed_by",
     "from": "BM-07-04",
@@ -9997,6 +10222,15 @@
     "to": "ART-B1E5651329",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-55679FE519",
+    "type": "approved_by",
+    "from": "PROC-HYG-004",
+    "to": "ROLE-D26952CCD2",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
     }
   },
   {
@@ -10383,6 +10617,15 @@
     "to": "PROC-SEC-003",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
+    }
+  },
+  {
+    "id": "EDGE-58005062B8",
+    "type": "contains",
+    "from": "BM-07-09",
+    "to": "PROC-HYG-006",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
     }
   },
   {
@@ -10795,6 +11038,15 @@
     "to": "ART-3AAC14495B",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-5C29D487E3",
+    "type": "related_to",
+    "from": "BM-13-04",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -12835,6 +13087,15 @@
     "to": "P12",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-6A8B3BD4DE",
+    "type": "related_to",
+    "from": "BM-13-07",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -14988,6 +15249,15 @@
     }
   },
   {
+    "id": "EDGE-7B06B78A36",
+    "type": "performed_by",
+    "from": "PROC-HYG-003",
+    "to": "ROLE-23FA0024AE",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
+    }
+  },
+  {
     "id": "EDGE-7B06DDE3DC",
     "type": "performed_by",
     "from": "PROC-COM-005",
@@ -15293,6 +15563,15 @@
     "to": "P03",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-7DCBFFA372",
+    "type": "approved_by",
+    "from": "PROC-HYG-003",
+    "to": "ROLE-B1CBAABABF",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
     }
   },
   {
@@ -16207,6 +16486,15 @@
     }
   },
   {
+    "id": "EDGE-85EECF1A50",
+    "type": "performed_by",
+    "from": "PROC-HYG-004",
+    "to": "ROLE-47F6F4619F",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
+    }
+  },
+  {
     "id": "EDGE-86047CC998",
     "type": "performed_by",
     "from": "PROC-EQP-007",
@@ -16603,6 +16891,15 @@
     }
   },
   {
+    "id": "EDGE-89ACCEC7C2",
+    "type": "related_to",
+    "from": "BM-07-11",
+    "to": "PROC-HYG-006",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
+    }
+  },
+  {
     "id": "EDGE-89C16885FB",
     "type": "governed_by",
     "from": "BM-17-10",
@@ -16896,6 +17193,15 @@
     "to": "ART-5EBDB47BD8",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-8C088E90DB",
+    "type": "related_to",
+    "from": "BM-17-09",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -17443,6 +17749,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P08"
+    }
+  },
+  {
+    "id": "EDGE-8FDACAB103",
+    "type": "performed_by",
+    "from": "PROC-HYG-006",
+    "to": "ROLE-2E79FCEDEB",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
     }
   },
   {
@@ -18053,6 +18368,15 @@
     }
   },
   {
+    "id": "EDGE-93EF994E55",
+    "type": "approved_by",
+    "from": "PROC-HYG-001",
+    "to": "ROLE-660D096149",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
+    }
+  },
+  {
     "id": "EDGE-93EF9A27D2",
     "type": "uses",
     "from": "BM-10-03",
@@ -18142,6 +18466,15 @@
     "to": "ART-B3AFC66CF0",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-9481558B6F",
+    "type": "performed_by",
+    "from": "PROC-HYG-003",
+    "to": "ROLE-1F3F4CA52F",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
     }
   },
   {
@@ -18459,6 +18792,15 @@
     }
   },
   {
+    "id": "EDGE-981C68B678",
+    "type": "performed_by",
+    "from": "PROC-HYG-006",
+    "to": "ROLE-93B509B6FB",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
+    }
+  },
+  {
     "id": "EDGE-98376FC667",
     "type": "produces",
     "from": "BM-17-08",
@@ -18474,6 +18816,15 @@
     "to": "P07",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-986BF144D7",
+    "type": "contains",
+    "from": "BM-07-05",
+    "to": "PROC-HYG-003",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
     }
   },
   {
@@ -19096,6 +19447,15 @@
     }
   },
   {
+    "id": "EDGE-9D35DBA159",
+    "type": "related_to",
+    "from": "BM-07-11",
+    "to": "PROC-HYG-002",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    }
+  },
+  {
     "id": "EDGE-9D3A069A9D",
     "type": "precedes",
     "from": "BM-07-09",
@@ -19414,6 +19774,15 @@
     "to": "ART-EB0896689F",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-9FA7DB1C9A",
+    "type": "related_to",
+    "from": "BM-07-11",
+    "to": "PROC-HYG-003",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
     }
   },
   {
@@ -19766,6 +20135,15 @@
     }
   },
   {
+    "id": "EDGE-A3AD259CEF",
+    "type": "performed_by",
+    "from": "PROC-HYG-002",
+    "to": "ROLE-BF499E4B9C",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    }
+  },
+  {
     "id": "EDGE-A3B2929F1D",
     "type": "participates_in",
     "from": "BM-06-02",
@@ -20065,6 +20443,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P08"
+    }
+  },
+  {
+    "id": "EDGE-A581734E2E",
+    "type": "approved_by",
+    "from": "PROC-HYG-005",
+    "to": "ROLE-C34D461B13",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
     }
   },
   {
@@ -20542,6 +20929,15 @@
     "to": "P07",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-AA0A2CF03C",
+    "type": "related_to",
+    "from": "BM-17-10",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -21815,6 +22211,15 @@
     }
   },
   {
+    "id": "EDGE-B3D7FBB6D0",
+    "type": "related_to",
+    "from": "BM-07-03",
+    "to": "PROC-HYG-001",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
+    }
+  },
+  {
     "id": "EDGE-B3DBD99812",
     "type": "precedes",
     "from": "BM-16-09",
@@ -22398,6 +22803,15 @@
     "to": "P01",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-B7FDFEF25E",
+    "type": "contains",
+    "from": "BM-07-06",
+    "to": "PROC-HYG-004",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
     }
   },
   {
@@ -23007,6 +23421,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P06"
+    }
+  },
+  {
+    "id": "EDGE-BD7FF2519C",
+    "type": "performed_by",
+    "from": "PROC-HYG-002",
+    "to": "ROLE-862E004C60",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
     }
   },
   {
@@ -24197,6 +24620,15 @@
     }
   },
   {
+    "id": "EDGE-C6A7BFE809",
+    "type": "approved_by",
+    "from": "PROC-HYG-006",
+    "to": "ROLE-8E715478C7",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
+    }
+  },
+  {
     "id": "EDGE-C6AE9A7EEA",
     "type": "precedes",
     "from": "BM-17-02",
@@ -24922,6 +25354,15 @@
     }
   },
   {
+    "id": "EDGE-CE465A2992",
+    "type": "performed_by",
+    "from": "PROC-HYG-004",
+    "to": "ROLE-6BFD0BEE19",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
+    }
+  },
+  {
     "id": "EDGE-CE501E874D",
     "type": "precedes",
     "from": "BM-05-07",
@@ -25541,6 +25982,15 @@
     }
   },
   {
+    "id": "EDGE-D30425DA6F",
+    "type": "approved_by",
+    "from": "PROC-HYG-007",
+    "to": "ROLE-660D096149",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-D31AC66C6A",
     "type": "contains",
     "from": "BM-12",
@@ -25804,6 +26254,15 @@
     }
   },
   {
+    "id": "EDGE-D56DE697E7",
+    "type": "related_to",
+    "from": "BM-13-08",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-D5756A5EA9",
     "type": "produces",
     "from": "BM-05-08",
@@ -25851,6 +26310,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P02"
+    }
+  },
+  {
+    "id": "EDGE-D5E678A774",
+    "type": "performed_by",
+    "from": "PROC-HYG-001",
+    "to": "ROLE-BAED2A66B7",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
     }
   },
   {
@@ -26252,6 +26720,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P12"
+    }
+  },
+  {
+    "id": "EDGE-D8FDECED06",
+    "type": "approved_by",
+    "from": "PROC-HYG-001",
+    "to": "ROLE-D3F54CDD5B",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
     }
   },
   {
@@ -28541,6 +29018,15 @@
     }
   },
   {
+    "id": "EDGE-ED0F76B654",
+    "type": "related_to",
+    "from": "BM-13-05",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-ED22AFAC1D",
     "type": "precedes",
     "from": "BM-02-06",
@@ -28880,6 +29366,15 @@
     "to": "P12",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-EFDAB13D18",
+    "type": "approved_by",
+    "from": "PROC-HYG-007",
+    "to": "ROLE-1139D7A2DB",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -29226,6 +29721,15 @@
     },
     "metadata": {
       "basis": "catalog-order"
+    }
+  },
+  {
+    "id": "EDGE-F3C98A099C",
+    "type": "related_to",
+    "from": "BM-07-11",
+    "to": "PROC-HYG-004",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
     }
   },
   {
@@ -30207,6 +30711,15 @@
     "to": "BM-07-07",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
+    "id": "EDGE-FCF4BBA578",
+    "type": "approved_by",
+    "from": "PROC-HYG-004",
+    "to": "ROLE-C34D461B13",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
     }
   },
   {
