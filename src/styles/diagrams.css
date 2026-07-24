@@ -1,6 +1,3 @@
-@import './explorer-workspace.css';
-@import './explorer-starlight-reset.css';
-
 .mermaid {
   max-width: 100%;
   overflow-x: auto;

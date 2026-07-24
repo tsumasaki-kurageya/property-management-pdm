@@ -1,9 +1,10 @@
 import {
   Background,
   Controls,
+  Handle,
+  Position,
   ReactFlow,
   ReactFlowProvider,
-  useReactFlow,
   type Edge,
   type Node,
   type NodeMouseHandler,
@@ -71,6 +72,12 @@ function ExplorerNodeCard({ data }: NodeProps<ExplorerFlowNode>) {
   if (data.kind === 'business') {
     return (
       <div className="explorer-business-node" role="group" aria-label={`業務 ${label}`}>
+        <Handle
+          type="target"
+          position={Position.Left}
+          isConnectable={false}
+          style={{ opacity: 0, pointerEvents: 'none' }}
+        />
         <span>{data.id}</span>
         <strong>{data.label}</strong>
       </div>
@@ -86,6 +93,12 @@ function ExplorerNodeCard({ data }: NodeProps<ExplorerFlowNode>) {
       onFocus={() => data.onFocus?.(data.id)}
       onClick={() => data.onToggle?.(data.id)}
     >
+      <Handle
+        type="source"
+        position={Position.Right}
+        isConnectable={false}
+        style={{ opacity: 0, pointerEvents: 'none' }}
+      />
       <span>{data.id}</span>
       <strong>{data.label}</strong>
     </button>
@@ -99,7 +112,6 @@ const nodeTypes = {
 
 function ExplorerCanvas() {
   const [expandedAreaId, setExpandedAreaId] = useState<string>();
-  const { fitView } = useReactFlow<ExplorerFlowNode>();
   const openTimer = useRef<number | null>(null);
   const closeTimer = useRef<number | null>(null);
 
@@ -201,25 +213,6 @@ function ExplorerCanvas() {
       className: 'explorer-business-edge',
     }));
   }, [expandedAreaId]);
-
-  useEffect(() => {
-    const frame = window.requestAnimationFrame(() => {
-      if (expandedAreaId) {
-        const area = explorerAreasById.get(expandedAreaId);
-        const visibleIds = new Set([expandedAreaId, ...(area?.businessIds ?? [])]);
-        void fitView({
-          nodes: nodes.filter((node) => visibleIds.has(node.id)),
-          padding: 0.18,
-          minZoom: 0.45,
-          maxZoom: 1,
-          duration: 220,
-        });
-      } else {
-        void fitView({ nodes, padding: 0.13, minZoom: 0.35, maxZoom: 1, duration: 220 });
-      }
-    });
-    return () => window.cancelAnimationFrame(frame);
-  }, [expandedAreaId, fitView, nodes]);
 
   const handleNodeMouseEnter = useCallback<NodeMouseHandler<ExplorerFlowNode>>((_, node) => {
     if (node.data.kind === 'area') openArea(node.id, true);
