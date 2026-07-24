@@ -20,6 +20,14 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Generate reference diagnostic
+        run: npm run generate:reference
+      - name: Upload reference diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: reference-generated-data
+          path: src/content/docs/reference/field-procedures/index.md
+          retention-days: 1
       - name: Verify release candidate
         run: npm run verify
       - name: Install Playwright Chromium
