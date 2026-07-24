@@ -20,6 +20,14 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
+      - name: Generate explorer diagnostic
+        run: npm run generate:explorer
+      - name: Upload explorer diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: explorer-generated-data
+          path: src/data/explorer/generated
+          retention-days: 1
       - name: Verify release candidate
         run: npm run verify
       - name: Install Playwright Chromium
