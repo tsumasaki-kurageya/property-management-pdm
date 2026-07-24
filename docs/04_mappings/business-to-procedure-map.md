@@ -98,13 +98,20 @@
 | 主業務ID | 業務名 | 手順ID | 手順名 | 状態 | 主な関連業務 |
 |---|---|---|---|---|---|
 | `BM-05-10` | 勤務・担当を引き継ぐ | `PROC-SEC-001` | [警備勤務開始・交代](../02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md) | 草案あり | PROC-COM-001、BM-05-04、BM-11-01・10、BM-13、BM-17 |
-| `BM-11-02` | 人・物品・車両の出入を管理する | `PROC-SEC-002` | [入退館受付・確認](../02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md) | 一部草案あり | BM-12、BM-13。現行手順は人の出入を扱い、物品・車両は#77で追加する |
+| `BM-11-02` | 人・物品・車両の出入を管理する | `PROC-SEC-002` | [入退館受付・確認](../02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md) | 草案あり | 人の受付、本人・訪問先・権限確認 |
+| `BM-11-02` | 人・物品・車両の出入を管理する | `PROC-SEC-010` | [物品・車両出入管理](../02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md) | 草案あり | 搬入出承認、車両安全、受渡し証跡 |
 | `BM-11-03` | 鍵を管理する | `PROC-SEC-003` | [鍵・入館証管理](../02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md) | 草案あり | BM-11-02、BM-13、BM-14、BM-17 |
 | `BM-11-04` | 巡回警備を行う | `PROC-SEC-004` | [巡回警備](../02_field-procedures/03_security/PROC-SEC-004_security-patrol.md) | 草案あり | BM-11-07・10、BM-13、BM-17 |
 | `BM-11-05` | 監視設備を確認する | `PROC-SEC-005` | [警報・防犯監視](../02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md) | 草案あり | BM-11-06・09〜10、BM-13 |
 | `BM-11-06` | 事故・事件へ対応する | `PROC-SEC-006` | [不審者・不審物対応](../02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md) | 草案あり | BM-12、BM-13、BM-17 |
 | `BM-11-06` | 事故・事件へ対応する | `PROC-SEC-007` | [事故・急病・現場保全](../02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md) | 草案あり | BM-11-10、BM-12、BM-13、BM-17 |
 | `BM-11-09` | 災害時対応を行う | `PROC-SEC-008` | [火災・地震等の災害初動](../02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md) | 草案あり | BM-11-07〜08・10、BM-12、BM-13、BM-17 |
+| `BM-11-04` | 巡回警備を行う | `PROC-SEC-009` | [立哨・座哨警備](../02_field-procedures/03_security/PROC-SEC-009_fixed-post-security.md) | 草案あり | BM-11-02・06・10、BM-13、BM-17 |
+| `BM-11-11` | 遺失物・拾得物を管理する | `PROC-SEC-011` | [遺失物・拾得物管理](../02_field-procedures/03_security/PROC-SEC-011_lost-and-found-management.md) | 草案あり | BM-11-06・10、BM-13 |
+| `BM-11-12` | 機械警備の緊急駆付けを行う | `PROC-SEC-012` | [機械警備緊急駆付け](../02_field-procedures/03_security/PROC-SEC-012_emergency-dispatch.md) | 草案あり | BM-11-05・06・09〜10、BM-13 |
+| `BM-11-04` | 巡回警備を行う | `PROC-SEC-013` | [交通・混雑警備](../02_field-procedures/03_security/PROC-SEC-013_traffic-and-crowd-control.md) | 草案あり | BM-11-02・06・09〜10、BM-13、BM-17 |
+| `BM-11-04` | 巡回警備を行う | `PROC-SEC-014` | [開館・閉館確認](../02_field-procedures/03_security/PROC-SEC-014_opening-and-closing.md) | 草案あり | BM-11-03・05・10、BM-13 |
+| `BM-11-08` | 防災訓練を計画・実施する | `PROC-SEC-015` | [防災訓練の計画・実施・評価](../02_field-procedures/03_security/PROC-SEC-015_disaster_drill.md) | 草案あり | BM-11-07・09〜10、BM-13、BM-17 |
 
 ## 8. 業務カタログの不足・粒度確認結果
 
@@ -139,6 +146,7 @@
 
 | 版 | 改訂日 | 改訂内容 |
 |---|---|---|
+| 1.6 | 2026-07-25 | PROC-SEC-009〜015を追加し、定常警備、搬入出、遺失物、駆付け、開閉館及び防災訓練を具体化 |
 | 1.5 | 2026-07-25 | 独立業務ID候補7件を解決し、追加3件と既存業務の拡張・接続を反映 |
 | 1.4 | 2026-07-24 | PROC-EQP-009を追加し、修繕・工事の施工中管理と完了検査への引渡しを具体化 |
 | 1.3 | 2026-07-24 | 設備別点検・判定基準レイヤーと業務―手順―基準―記録の追跡規則を追加 |

@@ -1375,6 +1375,15 @@
     }
   },
   {
+    "id": "EDGE-0A42BE4BF8",
+    "type": "related_to",
+    "from": "BM-11-06",
+    "to": "PROC-SEC-011",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-011_lost-and-found-management.md"
+    }
+  },
+  {
     "id": "EDGE-0A90C1646B",
     "type": "precedes",
     "from": "BM-04-08",
@@ -4763,6 +4772,15 @@
     }
   },
   {
+    "id": "EDGE-256AEB166D",
+    "type": "contains",
+    "from": "BM-11-04",
+    "to": "PROC-SEC-014",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-014_opening-and-closing.md"
+    }
+  },
+  {
     "id": "EDGE-259A9C44BC",
     "type": "produces",
     "from": "BM-16-02",
@@ -6730,6 +6748,15 @@
     }
   },
   {
+    "id": "EDGE-3708AC9D04",
+    "type": "related_to",
+    "from": "BM-12-04",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
+    }
+  },
+  {
     "id": "EDGE-371A054294",
     "type": "produces",
     "from": "BM-13-07",
@@ -7164,6 +7191,15 @@
     "to": "ROLE-49265E719B",
     "source": {
       "path": "docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md"
+    }
+  },
+  {
+    "id": "EDGE-3B5547ABD0",
+    "type": "contains",
+    "from": "BM-11-12",
+    "to": "PROC-SEC-012",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-012_emergency-dispatch.md"
     }
   },
   {
@@ -8406,6 +8442,15 @@
     }
   },
   {
+    "id": "EDGE-44F9AA25F8",
+    "type": "related_to",
+    "from": "BM-11-09",
+    "to": "PROC-SEC-015",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-015_disaster_drill.md"
+    }
+  },
+  {
     "id": "EDGE-45060D1F40",
     "type": "produces",
     "from": "BM-17-08",
@@ -8608,6 +8653,15 @@
     }
   },
   {
+    "id": "EDGE-45F393A6CD",
+    "type": "related_to",
+    "from": "BM-11-09",
+    "to": "PROC-SEC-012",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-012_emergency-dispatch.md"
+    }
+  },
+  {
     "id": "EDGE-45FF69023E",
     "type": "participates_in",
     "from": "BM-12-03",
@@ -8678,6 +8732,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P08"
+    }
+  },
+  {
+    "id": "EDGE-46530B2213",
+    "type": "contains",
+    "from": "BM-11-08",
+    "to": "PROC-SEC-015",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-015_disaster_drill.md"
     }
   },
   {
@@ -9366,6 +9429,15 @@
     }
   },
   {
+    "id": "EDGE-4B5968559F",
+    "type": "related_to",
+    "from": "BM-11-05",
+    "to": "PROC-SEC-014",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-014_opening-and-closing.md"
+    }
+  },
+  {
     "id": "EDGE-4BA8916370",
     "type": "governed_by",
     "from": "BM-18-06",
@@ -9709,6 +9781,15 @@
     }
   },
   {
+    "id": "EDGE-4E23CF9F2F",
+    "type": "related_to",
+    "from": "BM-11-06",
+    "to": "PROC-SEC-009",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-009_fixed-post-security.md"
+    }
+  },
+  {
     "id": "EDGE-4E3EA7F8D4",
     "type": "produces",
     "from": "BM-13-04",
@@ -9742,6 +9823,15 @@
     "to": "STD-2D0CA8C150",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-4EA36EF0C8",
+    "type": "contains",
+    "from": "BM-11-04",
+    "to": "PROC-SEC-009",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-009_fixed-post-security.md"
     }
   },
   {
@@ -9999,6 +10089,15 @@
     }
   },
   {
+    "id": "EDGE-511E73C04F",
+    "type": "contains",
+    "from": "BM-11-04",
+    "to": "PROC-SEC-013",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-013_traffic-and-crowd-control.md"
+    }
+  },
+  {
     "id": "EDGE-5127F57921",
     "type": "uses",
     "from": "BM-09-04",
@@ -10218,6 +10317,15 @@
     "to": "PROC-HYG-002",
     "source": {
       "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    }
+  },
+  {
+    "id": "EDGE-52EB6FC520",
+    "type": "related_to",
+    "from": "BM-11-07",
+    "to": "PROC-SEC-015",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-015_disaster_drill.md"
     }
   },
   {
@@ -11082,6 +11190,15 @@
     }
   },
   {
+    "id": "EDGE-5929398A77",
+    "type": "related_to",
+    "from": "BM-13-02",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
+    }
+  },
+  {
     "id": "EDGE-5933658DCB",
     "type": "produces",
     "from": "BM-01-04",
@@ -11272,6 +11389,15 @@
     "to": "PROC-CLN-002",
     "source": {
       "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-002_restroom-cleaning.md"
+    }
+  },
+  {
+    "id": "EDGE-5B4D409FBC",
+    "type": "related_to",
+    "from": "BM-11-03",
+    "to": "PROC-SEC-014",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-014_opening-and-closing.md"
     }
   },
   {
@@ -11995,6 +12121,15 @@
     },
     "metadata": {
       "basis": "catalog-order"
+    }
+  },
+  {
+    "id": "EDGE-6055A59994",
+    "type": "contains",
+    "from": "BM-11-02",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
     }
   },
   {
@@ -12729,6 +12864,15 @@
     "to": "STD-24E0F8EF1B",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-655A41F1E8",
+    "type": "related_to",
+    "from": "BM-12-02",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
     }
   },
   {
@@ -15363,6 +15507,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P01"
+    }
+  },
+  {
+    "id": "EDGE-77F759DEAC",
+    "type": "related_to",
+    "from": "BM-11-10",
+    "to": "PROC-SEC-014",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-014_opening-and-closing.md"
     }
   },
   {
@@ -18335,6 +18488,15 @@
     }
   },
   {
+    "id": "EDGE-8FF7661C9C",
+    "type": "related_to",
+    "from": "BM-12-01",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
+    }
+  },
+  {
     "id": "EDGE-8FF9D1A8A2",
     "type": "related_to",
     "from": "BM-06-09",
@@ -18880,6 +19042,15 @@
     },
     "metadata": {
       "basis": "catalog-order"
+    }
+  },
+  {
+    "id": "EDGE-9362B20A0A",
+    "type": "related_to",
+    "from": "BM-11-09",
+    "to": "PROC-SEC-013",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-013_traffic-and-crowd-control.md"
     }
   },
   {
@@ -20255,6 +20426,15 @@
     }
   },
   {
+    "id": "EDGE-9E122B4C87",
+    "type": "related_to",
+    "from": "BM-11-06",
+    "to": "PROC-SEC-013",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-013_traffic-and-crowd-control.md"
+    }
+  },
+  {
     "id": "EDGE-9E44FFD968",
     "type": "precedes",
     "from": "BM-11-07",
@@ -21364,6 +21544,15 @@
     "to": "STD-5ACF3D33AE",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-A7BB992692",
+    "type": "related_to",
+    "from": "BM-11-10",
+    "to": "PROC-SEC-011",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-011_lost-and-found-management.md"
     }
   },
   {
@@ -24669,6 +24858,15 @@
     }
   },
   {
+    "id": "EDGE-BFFBF2B164",
+    "type": "related_to",
+    "from": "BM-11-10",
+    "to": "PROC-SEC-009",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-009_fixed-post-security.md"
+    }
+  },
+  {
     "id": "EDGE-C01148AA16",
     "type": "related_to",
     "from": "BM-17-09",
@@ -25005,6 +25203,15 @@
     "to": "PROC-CLN-004",
     "source": {
       "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md"
+    }
+  },
+  {
+    "id": "EDGE-C253CEB83B",
+    "type": "related_to",
+    "from": "BM-11-05",
+    "to": "PROC-SEC-012",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-012_emergency-dispatch.md"
     }
   },
   {
@@ -27576,6 +27783,15 @@
     }
   },
   {
+    "id": "EDGE-D78D920831",
+    "type": "related_to",
+    "from": "BM-11-03",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
+    }
+  },
+  {
     "id": "EDGE-D79F7096C1",
     "type": "produces",
     "from": "BM-18-06",
@@ -28261,6 +28477,15 @@
     }
   },
   {
+    "id": "EDGE-DC650CEE62",
+    "type": "related_to",
+    "from": "BM-11-06",
+    "to": "PROC-SEC-012",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-012_emergency-dispatch.md"
+    }
+  },
+  {
     "id": "EDGE-DC6CB843A7",
     "type": "contains",
     "from": "BM-06-05",
@@ -28276,6 +28501,15 @@
     "to": "ART-30584E5077",
     "source": {
       "path": "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md"
+    }
+  },
+  {
+    "id": "EDGE-DC7F727C86",
+    "type": "contains",
+    "from": "BM-11-11",
+    "to": "PROC-SEC-011",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-011_lost-and-found-management.md"
     }
   },
   {
@@ -28529,6 +28763,15 @@
     }
   },
   {
+    "id": "EDGE-DE2827E9C7",
+    "type": "related_to",
+    "from": "BM-11-10",
+    "to": "PROC-SEC-015",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-015_disaster_drill.md"
+    }
+  },
+  {
     "id": "EDGE-DE33FF6820",
     "type": "governed_by",
     "from": "BM-17-08",
@@ -28571,6 +28814,24 @@
     "to": "STD-C2EFC13478",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-DE6EF5E101",
+    "type": "related_to",
+    "from": "BM-11-02",
+    "to": "PROC-SEC-013",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-013_traffic-and-crowd-control.md"
+    }
+  },
+  {
+    "id": "EDGE-DE77C34012",
+    "type": "related_to",
+    "from": "BM-11-02",
+    "to": "PROC-SEC-009",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-009_fixed-post-security.md"
     }
   },
   {
@@ -29837,6 +30098,15 @@
     }
   },
   {
+    "id": "EDGE-EA5FD745D1",
+    "type": "related_to",
+    "from": "BM-12-05",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
+    }
+  },
+  {
     "id": "EDGE-EA843053F1",
     "type": "precedes",
     "from": "BM-03-02",
@@ -30782,6 +31052,15 @@
     }
   },
   {
+    "id": "EDGE-F1DF2C82A6",
+    "type": "related_to",
+    "from": "BM-13-02",
+    "to": "PROC-SEC-011",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-011_lost-and-found-management.md"
+    }
+  },
+  {
     "id": "EDGE-F1E6EBF0F2",
     "type": "branches_to",
     "from": "BM-13-06",
@@ -30921,6 +31200,15 @@
     "to": "STD-D80B03ABBF",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-F397A602AE",
+    "type": "related_to",
+    "from": "BM-12-03",
+    "to": "PROC-SEC-010",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
     }
   },
   {

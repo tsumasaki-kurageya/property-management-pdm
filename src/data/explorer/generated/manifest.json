@@ -4,12 +4,12 @@
   "counts": {
     "area": 18,
     "business": 181,
-    "procedure": 43,
+    "procedure": 50,
     "artifact": 302,
     "role": 138,
     "standard": 10,
     "process": 12,
-    "edges": 3166
+    "edges": 3198
   },
   "sourceHashes": {
     "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md": "75937a00329c98c19a78a27786de4de0404b6735530c4eb3a14af3fd40733df0",
@@ -48,6 +48,13 @@
     "docs/02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md": "0ed795ae33ac141f8300535018cd2fce1bb2cca91afb859cebb2c39bdb36eebf",
     "docs/02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md": "377ac3543581feac93c35298ea17feeab5ac072ecaed9ba508e5b165c2ebbe86",
     "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md": "66f15a61ab9a562f380ff939c49194c88692d63d85267441352eb65dc20b9897",
+    "docs/02_field-procedures/03_security/PROC-SEC-009_fixed-post-security.md": "70e1bcc79790d8b5ad4c624f43bd555ae2543111a1489dfb0009473633c0a164",
+    "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md": "c797d68a508cfdc01f3b853b70cb167683a90f4be1487ae11ef0dfe89e30ef68",
+    "docs/02_field-procedures/03_security/PROC-SEC-011_lost-and-found-management.md": "450c834d41544da53d36df6712bdb308f15fed4d647e29133dc93a143c084ef9",
+    "docs/02_field-procedures/03_security/PROC-SEC-012_emergency-dispatch.md": "8f3b9f89fb08bbd7a96c712bc4f761d7ef1687d55f35c6259a4f18814c68edd4",
+    "docs/02_field-procedures/03_security/PROC-SEC-013_traffic-and-crowd-control.md": "17ad4457f473a3e008ad4364c6f1b224b6a12e0285fc248f605f238156c72813",
+    "docs/02_field-procedures/03_security/PROC-SEC-014_opening-and-closing.md": "36f5ba3673ca7b6e3af077b4d41b6bbade0e2177cf4b5c35dd8073f8bccc2bd8",
+    "docs/02_field-procedures/03_security/PROC-SEC-015_disaster_drill.md": "28925779892d828936d5e52aa65acafa441ef8342961f410443cbe7b573f0f9f",
     "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md": "2634faf8d0cadb62722a415fb7fea03598f80f877712d26b3bc22987fb4a2eb4",
     "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md": "6fdbe00f707d4c0a52fca0208c61d0571622a7d9942c22d7e250bfdfd8edc720",
     "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md": "1442673f0204fb5d87dcba8a24eac1a62a5f837eb7ca89a118254a86eb45cd89",

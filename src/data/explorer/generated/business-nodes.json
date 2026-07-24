@@ -6948,6 +6948,83 @@
     }
   },
   {
+    "id": "PROC-SEC-009",
+    "type": "procedure",
+    "label": "立哨・座哨警備",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-009_fixed-post-security.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-010",
+    "type": "procedure",
+    "label": "物品・車両出入管理",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-010_goods-and-vehicle-access.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-011",
+    "type": "procedure",
+    "label": "遺失物・拾得物管理",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-011_lost-and-found-management.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-012",
+    "type": "procedure",
+    "label": "機械警備緊急駆付け",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-012_emergency-dispatch.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-013",
+    "type": "procedure",
+    "label": "交通・混雑警備",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-013_traffic-and-crowd-control.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-014",
+    "type": "procedure",
+    "label": "開館・閉館確認",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-014_opening-and-closing.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
+    "id": "PROC-SEC-015",
+    "type": "procedure",
+    "label": "防災訓練の計画・実施・評価",
+    "source": {
+      "path": "docs/02_field-procedures/03_security/PROC-SEC-015_disaster_drill.md"
+    },
+    "metadata": {
+      "category": "SEC"
+    }
+  },
+  {
     "id": "ROLE-0634CC2853",
     "type": "role",
     "label": "受付",
