@@ -6562,6 +6562,83 @@
     }
   },
   {
+    "id": "PROC-HYG-001",
+    "type": "procedure",
+    "label": "空気環境測定・異常判定",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
+    },
+    "metadata": {
+      "category": "HYG"
+    }
+  },
+  {
+    "id": "PROC-HYG-002",
+    "type": "procedure",
+    "label": "給水・空調衛生設備点検",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    },
+    "metadata": {
+      "category": "HYG"
+    }
+  },
+  {
+    "id": "PROC-HYG-003",
+    "type": "procedure",
+    "label": "水質検査・異常判定",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
+    },
+    "metadata": {
+      "category": "HYG"
+    }
+  },
+  {
+    "id": "PROC-HYG-004",
+    "type": "procedure",
+    "label": "貯水槽清掃・使用再開確認",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
+    },
+    "metadata": {
+      "category": "HYG"
+    }
+  },
+  {
+    "id": "PROC-HYG-005",
+    "type": "procedure",
+    "label": "排水設備・排水槽点検清掃",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
+    },
+    "metadata": {
+      "category": "HYG"
+    }
+  },
+  {
+    "id": "PROC-HYG-006",
+    "type": "procedure",
+    "label": "ねずみ・害虫等調査防除",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
+    },
+    "metadata": {
+      "category": "HYG"
+    }
+  },
+  {
+    "id": "PROC-HYG-007",
+    "type": "procedure",
+    "label": "衛生状態報告・記録",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    },
+    "metadata": {
+      "category": "HYG"
+    }
+  },
+  {
     "id": "PROC-SEC-001",
     "type": "procedure",
     "label": "警備勤務開始・交代",
@@ -6677,6 +6754,15 @@
     }
   },
   {
+    "id": "ROLE-1139D7A2DB",
+    "type": "role",
+    "label": "法的義務主体・権限者",
+    "description": "行政報告、重大是正、リスク判断を決定",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "ROLE-12538771A3",
     "type": "role",
     "label": "法的義務主体",
@@ -6749,6 +6835,15 @@
     }
   },
   {
+    "id": "ROLE-1F3F4CA52F",
+    "type": "role",
+    "label": "検査機関・資格者",
+    "description": "指定方法による検査と結果発行",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
+    }
+  },
+  {
     "id": "ROLE-1F53653C16",
     "type": "role",
     "label": "管理者・受領者",
@@ -6782,6 +6877,24 @@
     "description": "在庫数、入出庫、発注点、保管状態の管理",
     "source": {
       "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-004_consumables-check-and-replenishment.md"
+    }
+  },
+  {
+    "id": "ROLE-23FA0024AE",
+    "type": "role",
+    "label": "採水・測定者",
+    "description": "採水点確認、汚染防止、測定、試料管理",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
+    }
+  },
+  {
+    "id": "ROLE-2E79FCEDEB",
+    "type": "role",
+    "label": "調査者",
+    "description": "調査点設定、痕跡・被害確認、記録",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
     }
   },
   {
@@ -6947,6 +7060,15 @@
     }
   },
   {
+    "id": "ROLE-47F6F4619F",
+    "type": "role",
+    "label": "槽内作業者・監視人",
+    "description": "清掃実施、連続監視、救出要請",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
+    }
+  },
+  {
     "id": "ROLE-49265E719B",
     "type": "role",
     "label": "試運転実施者",
@@ -7010,6 +7132,15 @@
     }
   },
   {
+    "id": "ROLE-5A5592C6AE",
+    "type": "role",
+    "label": "報告・文書管理者",
+    "description": "様式、提出、版、保存、アクセスを管理",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "ROLE-5C3F608444",
     "type": "role",
     "label": "区域設置者",
@@ -7037,6 +7168,33 @@
     }
   },
   {
+    "id": "ROLE-64A376411B",
+    "type": "role",
+    "label": "専門事業者",
+    "description": "資格・登録・専門技術を要する清掃・処置",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
+    }
+  },
+  {
+    "id": "ROLE-660D096149",
+    "type": "role",
+    "label": "衛生管理責任者・管理技術者",
+    "description": "適用基準確認、判定、意見・是正提案",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
+    }
+  },
+  {
+    "id": "ROLE-6610B58384",
+    "type": "role",
+    "label": "作業・測定者",
+    "description": "原記録、実施事実、例外、証跡を提出",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "ROLE-6811852FA9",
     "type": "role",
     "label": "立会・確認者",
@@ -7061,6 +7219,15 @@
     "description": "公的な救護、捜査、現場指揮",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-007_incident-illness-scene-preservation.md"
+    }
+  },
+  {
+    "id": "ROLE-6BFD0BEE19",
+    "type": "role",
+    "label": "衛生・水質確認者",
+    "description": "消毒・水質・衛生状態を確認",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
     }
   },
   {
@@ -7253,6 +7420,15 @@
     }
   },
   {
+    "id": "ROLE-93B509B6FB",
+    "type": "role",
+    "label": "専門・登録事業者",
+    "description": "薬剤・捕獲等の専門施工と法定記録",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
+    }
+  },
+  {
     "id": "ROLE-940BBE93FB",
     "type": "role",
     "label": "専門責任者",
@@ -7343,6 +7519,24 @@
     }
   },
   {
+    "id": "ROLE-B1B26BEA41",
+    "type": "role",
+    "label": "防除責任者",
+    "description": "種・発生度・手段・安全・効果判定を統制",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-006_pest-survey-and-control.md"
+    }
+  },
+  {
+    "id": "ROLE-B1CBAABABF",
+    "type": "role",
+    "label": "施設運用・給水責任者",
+    "description": "給水制限、代替供給、再開判断",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md"
+    }
+  },
+  {
     "id": "ROLE-B4D108F1EB",
     "type": "role",
     "label": "現場責任者",
@@ -7394,6 +7588,15 @@
     "description": "利用制限、対外周知、契約外対応、費用及び施設利用再開を判断する",
     "source": {
       "path": "docs/02_field-procedures/00_common/PROC-COM-004_abnormality-escalation.md"
+    }
+  },
+  {
+    "id": "ROLE-BAED2A66B7",
+    "type": "role",
+    "label": "測定者",
+    "description": "測定点・条件確認、機器点検、測定、原記録",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
     }
   },
   {
@@ -7469,12 +7672,30 @@
     }
   },
   {
+    "id": "ROLE-D0CAAC6C9A",
+    "type": "role",
+    "label": "設備・廃棄物担当",
+    "description": "ポンプ等の復旧、汚泥・廃棄物の適正引渡し",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-005_drainage-inspection-and-cleaning.md"
+    }
+  },
+  {
     "id": "ROLE-D104803DE6",
     "type": "role",
     "label": "法令",
     "description": "法令・技術担当が判定し、法的義務主体と受託責任者が責任分界を確認する",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-D26952CCD2",
+    "type": "role",
+    "label": "設備・施設運用責任者",
+    "description": "設備復旧と給水再開を別々に判断",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-004_water-tank-cleaning-and-restart.md"
     }
   },
   {
@@ -7637,6 +7858,15 @@
     "description": "作業責任者が設定し、安全責任者と施設利用権限者が解除可否を判断する",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "ROLE-E6F171A55F",
+    "type": "role",
+    "label": "衛生管理責任者",
+    "description": "点検基準、衛生判定、是正の統制",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
     }
   },
   {
