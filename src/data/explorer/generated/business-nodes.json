@@ -6419,6 +6419,94 @@
     }
   },
   {
+    "id": "PROC-CLN-007",
+    "type": "procedure",
+    "label": "給湯室・食堂清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-007_food-service-area-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-008",
+    "type": "procedure",
+    "label": "浴室・シャワー室清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-008_bath-and-shower-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-009",
+    "type": "procedure",
+    "label": "カーペット定期清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-009_carpet-periodic-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-010",
+    "type": "procedure",
+    "label": "手の届く範囲のガラス清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-010_accessible-glass-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-011",
+    "type": "procedure",
+    "label": "外周・駐車場清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-011_exterior-and-parking-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-012",
+    "type": "procedure",
+    "label": "高所・外壁清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-012_high-place-and-exterior-wall-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-013",
+    "type": "procedure",
+    "label": "汚染物発見時の初動対応",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-013_contamination-discovery-response.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
+    "id": "PROC-CLN-014",
+    "type": "procedure",
+    "label": "漏水・こぼれ等の臨時清掃",
+    "source": {
+      "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-014_spill-and-leak-emergency-cleaning.md"
+    },
+    "metadata": {
+      "category": "CLN"
+    }
+  },
+  {
     "id": "PROC-COM-001",
     "type": "procedure",
     "label": "勤務・担当引継ぎ",
