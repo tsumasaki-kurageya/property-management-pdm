@@ -3841,6 +3841,15 @@
     }
   },
   {
+    "id": "EDGE-1F8515D83E",
+    "type": "related_to",
+    "from": "BM-13-09",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-1F917EE075",
     "type": "approved_by",
     "from": "PROC-COM-004",
@@ -10180,6 +10189,15 @@
     }
   },
   {
+    "id": "EDGE-54DD09332C",
+    "type": "related_to",
+    "from": "BM-13-06",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-54E0FA4190",
     "type": "governed_by",
     "from": "BM-07-04",
@@ -13069,6 +13087,15 @@
     "to": "P12",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-6A8B3BD4DE",
+    "type": "related_to",
+    "from": "BM-13-07",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -17166,6 +17193,15 @@
     "to": "ART-5EBDB47BD8",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-8C088E90DB",
+    "type": "related_to",
+    "from": "BM-17-09",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
@@ -26218,6 +26254,15 @@
     }
   },
   {
+    "id": "EDGE-D56DE697E7",
+    "type": "related_to",
+    "from": "BM-13-08",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
+    }
+  },
+  {
     "id": "EDGE-D5756A5EA9",
     "type": "produces",
     "from": "BM-05-08",
@@ -28970,6 +29015,15 @@
     "to": "P03",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-ED0F76B654",
+    "type": "related_to",
+    "from": "BM-13-05",
+    "to": "PROC-HYG-007",
+    "source": {
+      "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
     }
   },
   {
