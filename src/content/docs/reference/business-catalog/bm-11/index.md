@@ -1,8 +1,8 @@
 ---
 title: BM-11 警備・防災管理
-description: 警備・防災管理に含まれる10業務のリファレンスです。
+description: 警備・防災管理に含まれる12業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md
@@ -18,7 +18,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 ## 業務一覧
 
 - [BM-11-01 警備計画を作成する](#bm-11-01)
-- [BM-11-02 入退館を管理する](#bm-11-02)
+- [BM-11-02 人・物品・車両の出入を管理する](#bm-11-02)
 - [BM-11-03 鍵を管理する](#bm-11-03)
 - [BM-11-04 巡回警備を行う](#bm-11-04)
 - [BM-11-05 監視設備を確認する](#bm-11-05)
@@ -27,6 +27,8 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 - [BM-11-08 防災訓練を計画・実施する](#bm-11-08)
 - [BM-11-09 災害時対応を行う](#bm-11-09)
 - [BM-11-10 警備・防災記録を報告する](#bm-11-10)
+- [BM-11-11 遺失物・拾得物を管理する](#bm-11-11)
+- [BM-11-12 機械警備の緊急駆付けを行う](#bm-11-12)
 
 <span id="bm-11-01"></span>
 
@@ -34,17 +36,17 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 配置、巡回経路、時間、重点監視箇所等を決定する。
 
-**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
 
 [前の業務: BM-10-13](../bm-10/#bm-10-13) · [次の業務: BM-11-02](../bm-11/#bm-11-02)
 
 <span id="bm-11-02"></span>
 
-## BM-11-02 入退館を管理する
+## BM-11-02 人・物品・車両の出入を管理する
 
-来館者、業者、従業員等の入退館を記録・確認する。
+来館者、業者、従業員、搬入・搬出物及び車両について、事前申請、本人・対象・許可権限、入出時刻、行先・経路、持込・持出条件等を照合し、許可・拒否・保留及び退出を記録する。人、物品、車両で受付方法と証跡は異なるが、許可された出入だけを成立させる同一業務として管理する。
 
-**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
 
 [前の業務: BM-11-01](../bm-11/#bm-11-01) · [次の業務: BM-11-03](../bm-11/#bm-11-03)
 
@@ -54,7 +56,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 鍵の保管、貸出、返却、紛失等を管理する。
 
-**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
 
 [前の業務: BM-11-02](../bm-11/#bm-11-02) · [次の業務: BM-11-04](../bm-11/#bm-11-04)
 
@@ -64,7 +66,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 建物内外を巡回し、異常、施錠、火気等を確認する。
 
-**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
 
 [前の業務: BM-11-03](../bm-11/#bm-11-03) · [次の業務: BM-11-05](../bm-11/#bm-11-05)
 
@@ -74,7 +76,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 監視カメラ、防犯設備等を監視する。
 
-**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
 
 [前の業務: BM-11-04](../bm-11/#bm-11-04) · [次の業務: BM-11-06](../bm-11/#bm-11-06)
 
@@ -94,7 +96,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 消火器、避難経路、防火戸等の状態を確認する。
 
-**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
 
 [前の業務: BM-11-06](../bm-11/#bm-11-06) · [次の業務: BM-11-08](../bm-11/#bm-11-08)
 
@@ -104,7 +106,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 管理権原者が選任した防火管理者・防災管理者の責任と消防計画に基づき、避難、通報、消火等の訓練を計画・実施する。ビルメンテナンス会社が支援・受託する場合も、責任者、承認者、参加者、消防機関への届出・連絡の要否を明確にする。([消防庁][5])
 
-**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P08](../../processes/p08/)
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
 
 [前の業務: BM-11-07](../bm-11/#bm-11-07) · [次の業務: BM-11-09](../bm-11/#bm-11-09)
 
@@ -126,4 +128,24 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 **接続するプロセス:** [P05](../../processes/p05/)
 
-[前の業務: BM-11-09](../bm-11/#bm-11-09) · [次の業務: BM-12-01](../bm-12/#bm-12-01)
+[前の業務: BM-11-09](../bm-11/#bm-11-09) · [次の業務: BM-11-11](../bm-11/#bm-11-11)
+
+<span id="bm-11-11"></span>
+
+## BM-11-11 遺失物・拾得物を管理する
+
+施設内の遺失申告又は拾得物の受領から、特徴、日時、場所、拾得者、取扱者及び保管状態を記録し、遺失者照合、返還、警察等への届出・提出、保管期限及び処分までの引渡しと所在を管理する。拾得時の安全確認、証拠保全、個人情報及び貴重品の取扱いを分け、施設占有者、警備受託者等の権限と法令・物件ルールに従う。
+
+**接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)、[P07](../../processes/p07/)、[P08](../../processes/p08/)
+
+[前の業務: BM-11-10](../bm-11/#bm-11-10) · [次の業務: BM-11-12](../bm-11/#bm-11-12)
+
+<span id="bm-11-12"></span>
+
+## BM-11-12 機械警備の緊急駆付けを行う
+
+機械警備・遠隔監視の警報を受信し、警報種別、対象、信頼性、現場危険及び契約上の初動条件から出動要否と優先度を判断する。出動指示、受付、移動、到着、入館、現場確認、安全確保、警察・消防・設備担当等への連絡及び引渡しを時系列で記録する。警報受信、出動決定、現地到着、初動完了及び案件終結を別状態として追跡する。
+
+**接続するプロセス:** [P06](../../processes/p06/)
+
+[前の業務: BM-11-11](../bm-11/#bm-11-11) · [次の業務: BM-12-01](../bm-12/#bm-12-01)

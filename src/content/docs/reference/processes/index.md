@@ -1,6 +1,6 @@
 ---
 title: 12横断プロセス
-description: 178業務を契約前から更新・終了までの流れで確認する索引です。
+description: 181業務を契約前から更新・終了までの流れで確認する索引です。
 sourceFile: docs/04_mappings/business-process-map.md
 sourceVersion: v0.1
 contentStatus: 原本から自動生成

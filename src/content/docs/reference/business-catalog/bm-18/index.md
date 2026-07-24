@@ -2,7 +2,7 @@
 title: BM-18 分析・改善・経営管理
 description: 分析・改善・経営管理に含まれる10業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md
@@ -36,7 +36,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 **接続するプロセス:** [P11](../../processes/p11/)、[P12](../../processes/p12/)
 
-[前の業務: BM-17-11](../bm-17/#bm-17-11) · [次の業務: BM-18-02](../bm-18/#bm-18-02)
+[前の業務: BM-17-12](../bm-17/#bm-17-12) · [次の業務: BM-18-02](../bm-18/#bm-18-02)
 
 <span id="bm-18-02"></span>
 

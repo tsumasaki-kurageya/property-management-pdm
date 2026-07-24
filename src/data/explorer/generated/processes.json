@@ -418,6 +418,7 @@
       "BM-11-05",
       "BM-11-07",
       "BM-11-08",
+      "BM-11-11",
       "BM-12-01",
       "BM-12-02",
       "BM-12-03",
@@ -682,6 +683,7 @@
       "BM-11-07",
       "BM-11-08",
       "BM-11-10",
+      "BM-11-11",
       "BM-14-01",
       "BM-14-02",
       "BM-14-03",
@@ -1006,7 +1008,8 @@
           "BM-11-04",
           "BM-11-05",
           "BM-11-07",
-          "BM-11-08"
+          "BM-11-08",
+          "BM-11-11"
         ],
         "activity": "警備・防災：実施",
         "outputs": "",
@@ -1028,11 +1031,11 @@
         ],
         "activity": "警備・防災：記録・判定",
         "outputs": "",
-        "connection": "事故・事件・災害はBM-11-06、09からP06",
+        "connection": "事故・事件・災害・緊急駆付けはBM-11-06、09、12からP06",
         "nextStepIds": [],
         "branches": [
           {
-            "label": "事故・事件・災害",
+            "label": "事故・事件・災害・緊急駆付け",
             "targetProcessId": "P06"
           }
         ],
@@ -1282,6 +1285,7 @@
       "BM-10-13",
       "BM-11-06",
       "BM-11-09",
+      "BM-11-12",
       "BM-12-01",
       "BM-12-02",
       "BM-12-03",
@@ -1314,7 +1318,8 @@
       "BM-15-09",
       "BM-17-05",
       "BM-17-06",
-      "BM-17-11"
+      "BM-17-11",
+      "BM-17-12"
     ],
     "steps": [
       {
@@ -1334,9 +1339,38 @@
         "outputs": "異常記録、受領済み速報",
         "connection": "2",
         "nextStepIds": [
+          "P06-1A",
           "P06-2"
         ],
         "branches": [],
+        "source": {
+          "path": "docs/04_mappings/business-process-map.md",
+          "anchor": "p06"
+        }
+      },
+      {
+        "id": "P06-1A",
+        "order": "1A",
+        "businessIds": [
+          "BM-11-12"
+        ],
+        "activity": "機械警備の警報から出動要否を判断し、受付、移動、到着、現地初動及び引渡しを時系列で管理する",
+        "outputs": "出動判断、到着・初動・引渡し記録",
+        "connection": "現場異常は3、非出動・引渡し完了はP05",
+        "nextStepIds": [
+          "P06-2",
+          "P06-3"
+        ],
+        "branches": [
+          {
+            "label": "現場異常",
+            "targetStepId": "P06-3"
+          },
+          {
+            "label": "非出動・引渡し完了",
+            "targetProcessId": "P05"
+          }
+        ],
         "source": {
           "path": "docs/04_mappings/business-process-map.md",
           "anchor": "p06"
@@ -1366,15 +1400,29 @@
         "order": "3",
         "businessIds": [
           "BM-10-03",
-          "BM-17-11"
+          "BM-17-11",
+          "BM-17-12"
         ],
-        "activity": "現場確認、停止、応急処置、利用制限、区域設定を行う",
-        "outputs": "安全確保・隔離状態",
-        "connection": "4",
+        "activity": "現場確認、停止、応急処置、利用制限、区域設定を行い、汚染・感染・有害物質が疑われる場合は専門対応へ移管する",
+        "outputs": "安全確保・隔離状態、専門対応引渡し",
+        "connection": "4又はP08・P09",
         "nextStepIds": [
           "P06-4"
         ],
-        "branches": [],
+        "branches": [
+          {
+            "label": "4又はP08・P09",
+            "targetStepId": "P06-4"
+          },
+          {
+            "label": "4又はP08・P09",
+            "targetProcessId": "P08"
+          },
+          {
+            "label": "4又はP08・P09",
+            "targetProcessId": "P09"
+          }
+        ],
         "source": {
           "path": "docs/04_mappings/business-process-map.md",
           "anchor": "p06"
@@ -1563,6 +1611,14 @@
       "BM-12-10"
     ],
     "businessIds": [
+      "BM-11-01",
+      "BM-11-02",
+      "BM-11-03",
+      "BM-11-04",
+      "BM-11-05",
+      "BM-11-07",
+      "BM-11-08",
+      "BM-11-11",
       "BM-12-01",
       "BM-12-02",
       "BM-12-03",
@@ -1784,6 +1840,7 @@
       "BM-11-05",
       "BM-11-07",
       "BM-11-08",
+      "BM-11-11",
       "BM-13-01",
       "BM-13-02",
       "BM-13-03",
@@ -1806,7 +1863,8 @@
       "BM-14-10",
       "BM-17-08",
       "BM-17-09",
-      "BM-17-10"
+      "BM-17-10",
+      "BM-17-12"
     ],
     "steps": [
       {
@@ -1898,9 +1956,37 @@
         "outputs": "点検・測定・訓練記録",
         "connection": "5",
         "nextStepIds": [
+          "P08-4A",
           "P08-5"
         ],
         "branches": [],
+        "source": {
+          "path": "docs/04_mappings/business-process-map.md",
+          "anchor": "p08"
+        }
+      },
+      {
+        "id": "P08-4A",
+        "order": "4A",
+        "businessIds": [
+          "BM-17-12"
+        ],
+        "activity": "汚染・感染・有害物質に法令上又は専門上の対応が必要な場合、義務主体、資格者、処理・廃棄及び証跡条件を確認して実施・手配する",
+        "outputs": "評価、対応・廃棄証跡、残留リスク",
+        "connection": "5又はP09",
+        "nextStepIds": [
+          "P08-5"
+        ],
+        "branches": [
+          {
+            "label": "5又はP09",
+            "targetStepId": "P08-5"
+          },
+          {
+            "label": "5又はP09",
+            "targetProcessId": "P09"
+          }
+        ],
         "source": {
           "path": "docs/04_mappings/business-process-map.md",
           "anchor": "p08"
@@ -2043,6 +2129,7 @@
       "BM-17-08",
       "BM-17-09",
       "BM-17-10",
+      "BM-17-12",
       "BM-18-02",
       "BM-18-08",
       "BM-18-09"
@@ -2094,10 +2181,11 @@
         "order": "3",
         "businessIds": [
           "BM-17-04",
+          "BM-17-12",
           "BM-06-10"
         ],
-        "activity": "応急是正、原因、恒久措置、担当、期限を決めて実施する",
-        "outputs": "是正措置、再清掃等",
+        "activity": "応急是正、原因、恒久措置、専門対応、担当、期限を決めて実施する",
+        "outputs": "是正措置、再清掃、除染・処理等",
         "connection": "4",
         "nextStepIds": [
           "P09-4"

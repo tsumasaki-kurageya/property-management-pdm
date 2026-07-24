@@ -2,7 +2,7 @@
 title: BM-08 設備運転管理
 description: 設備運転管理に含まれる9業務のリファレンスです。
 sourceFile: docs/building-maintenance-business-catalog.md
-sourceVersion: v1.4
+sourceVersion: v1.5
 contentStatus: 原本から自動生成
 generated: true
 editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/building-maintenance-business-catalog.md
@@ -61,7 +61,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 
 ## BM-08-04 現場を巡回する
 
-機械室、電気室、屋上等を巡回し、異音、漏れ、異臭等を確認する。
+機械室、電気室、屋上、建物内外及び外構等を巡回し、異音、漏れ、異臭、破損、劣化、通行支障等を確認する。植栽は、倒木・落枝、枯損、病害虫、建物・避難経路への支障等、施設利用と安全に影響する状態を確認する。
 
 **接続するプロセス:** [P03](../../processes/p03/)、[P04](../../processes/p04/)
 

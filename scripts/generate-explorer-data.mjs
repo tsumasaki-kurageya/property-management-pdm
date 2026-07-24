@@ -599,7 +599,7 @@ for (const edge of edgeList) {
   if (!nodeIds.has(edge.to)) throw new Error(`関係の参照先がありません: ${edge.id} -> ${edge.to}`);
 }
 if (catalog.areas.length !== 18) throw new Error(`業務領域が18件ではありません: ${catalog.areas.length}`);
-if (catalog.tasks.length !== 178) throw new Error(`個別業務が178件ではありません: ${catalog.tasks.length}`);
+if (catalog.tasks.length !== 181) throw new Error(`個別業務が181件ではありません: ${catalog.tasks.length}`);
 if (processes.length !== 12) throw new Error(`横断プロセスが12件ではありません: ${processes.length}`);
 if (new Set(nodeList.map((node) => node.id)).size !== nodeList.length) throw new Error('生成ノードIDが重複しています');
 const degree = new Map(nodeList.map((node) => [node.id, 0]));
@@ -722,4 +722,4 @@ for (const [filename, expected] of outputs) {
 if (mismatches.length > 0) {
   throw new Error(`エクスプローラー生成データが正本と一致しません:\n${mismatches.map((path) => `- ${path}`).join('\n')}\nnpm run generate:explorer を実行してください`);
 }
-console.log(`${nodeList.length}ノード・${edgeList.length}関係を${checkOnly ? '検証' : '生成'}しました（18領域、178業務、${procedures.length}手順、${processes.length}プロセス）`);
+console.log(`${nodeList.length}ノード・${edgeList.length}関係を${checkOnly ? '検証' : '生成'}しました（18領域、181業務、${procedures.length}手順、${processes.length}プロセス）`);

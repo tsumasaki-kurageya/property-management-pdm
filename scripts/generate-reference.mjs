@@ -131,14 +131,14 @@ const criticalBusinesses = parseCriticalBusinesses(criticalMarkdown);
 const criticalIds = new Set(criticalBusinesses.map((item) => item.id));
 const taskById = new Map(catalog.tasks.map((task) => [task.id, task]));
 
-if (catalog.tasks.length !== 178) throw new Error(`業務件数が178件ではありません: ${catalog.tasks.length}`);
+if (catalog.tasks.length !== 181) throw new Error(`業務件数が181件ではありません: ${catalog.tasks.length}`);
 if (taskById.size !== catalog.tasks.length) throw new Error('業務IDが重複しています');
 if (processes.length !== 12) throw new Error(`横断プロセスが12件ではありません: ${processes.length}`);
 if (criticalBusinesses.length !== 14) throw new Error(`重要業務が14件ではありません: ${criticalBusinesses.length}`);
 for (const task of catalog.tasks) if (!processMappings.has(task.id)) throw new Error(`接続先がありません: ${task.id}`);
 
-let catalogIndex = frontmatter({ title: '業務カタログ', description: '18領域・178業務を業務IDと名称から調べる索引です。', sourceFile: 'docs/building-maintenance-business-catalog.md', sourceVersion: catalog.version });
-catalogIndex += '# 18領域・178業務\n\n業務IDまたは日本語の業務名をサイト内検索へ入力するか、次の領域から辿ってください。業務の順序は[12横断プロセス](../processes/)で確認できます。\n\n| 領域 | 業務数 | 本文で学ぶ |\n|---|---:|---|\n';
+let catalogIndex = frontmatter({ title: '業務カタログ', description: '18領域・181業務を業務IDと名称から調べる索引です。', sourceFile: 'docs/building-maintenance-business-catalog.md', sourceVersion: catalog.version });
+catalogIndex += '# 18領域・181業務\n\n業務IDまたは日本語の業務名をサイト内検索へ入力するか、次の領域から辿ってください。業務の順序は[12横断プロセス](../processes/)で確認できます。\n\n| 領域 | 業務数 | 本文で学ぶ |\n|---|---:|---|\n';
 for (const area of catalog.areas) catalogIndex += `| [${area.id} ${area.name}](./${slug(area.id)}/) | ${area.tasks.length} | [解説](../../${narrativeByArea[area.id]}) |\n`;
 catalogIndex += '\n## 検索の例\n\n- 業務ID：`BM-10-02`\n- 業務名：`緊急度を判断する`\n- 領域名：`不具合・修繕管理`\n';
 add('business-catalog/index.md', catalogIndex);
@@ -163,7 +163,7 @@ for (const area of catalog.areas) {
   add(`business-catalog/${slug(area.id)}/index.md`, page);
 }
 
-let processIndex = frontmatter({ title: '12横断プロセス', description: '178業務を契約前から更新・終了までの流れで確認する索引です。', sourceFile: 'docs/04_mappings/business-process-map.md', sourceVersion: 'v0.1' });
+let processIndex = frontmatter({ title: '12横断プロセス', description: '181業務を契約前から更新・終了までの流れで確認する索引です。', sourceFile: 'docs/04_mappings/business-process-map.md', sourceVersion: 'v0.1' });
 processIndex += '# 12横断プロセス\n\n領域が「仕事の種類」を示すのに対し、横断プロセスは複数領域を通って仕事が完了する流れを示します。\n\n| ID | プロセス |\n|---|---|\n';
 for (const process of processes) processIndex += `| [${process.id}](./${process.id.toLowerCase()}/) | ${process.name} |\n`;
 add('processes/index.md', processIndex);
@@ -182,7 +182,7 @@ for (const item of criticalBusinesses) criticalPage += `<span id="${anchor(item)
 add('critical-businesses/index.md', criticalPage);
 
 let profilesPage = frontmatter({ title: '条件差プロファイル', description: '用途、管理方式、契約役割、責任主体、法令による業務差の原本索引です。', sourceFile: 'docs/pages-information-architecture.md' });
-profilesPage += '# 条件差プロファイル\n\nプロファイルは178業務を複製するものではなく、同じ業務の適用条件、担当、判断点、引渡し条件がどう変わるかを示します。\n\n| 条件軸 | 本文 | 分析用原本 |\n|---|---|---|\n';
+profilesPage += '# 条件差プロファイル\n\nプロファイルは181業務を複製するものではなく、同じ業務の適用条件、担当、判断点、引渡し条件がどう変わるかを示します。\n\n| 条件軸 | 本文 | 分析用原本 |\n|---|---|---|\n';
 for (const [name, path, narrative] of profileSources) profilesPage += `| ${name} | [解説](${narrative}) | [原本](${sourceLink(path)}) |\n`;
 add('profiles/index.md', profilesPage);
 
@@ -217,4 +217,4 @@ for (const [path, expected] of outputs) {
     await writeFile(path, expected);
   }
 }
-console.log(`${outputs.size}ページを${checkOnly ? '検証' : '生成'}しました（178業務、12プロセス、14重要業務）`);
+console.log(`${outputs.size}ページを${checkOnly ? '検証' : '生成'}しました（181業務、12プロセス、14重要業務）`);

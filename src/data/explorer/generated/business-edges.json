@@ -139,10 +139,28 @@
     }
   },
   {
+    "id": "EDGE-0109A58D81",
+    "type": "contains",
+    "from": "BM-17",
+    "to": "BM-17-12",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
     "id": "EDGE-0125143F3B",
     "type": "produces",
     "from": "BM-05-03",
     "to": "ART-C40023F571",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-012C7B1E3A",
+    "type": "participates_in",
+    "from": "BM-11-04",
+    "to": "P07",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -154,6 +172,15 @@
     "to": "ART-FC8FFB1A45",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-017077FDAC",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-C00B366C58",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
     }
   },
   {
@@ -443,10 +470,10 @@
     }
   },
   {
-    "id": "EDGE-04C6BAB568",
+    "id": "EDGE-047D756986",
     "type": "precedes",
-    "from": "BM-07-08",
-    "to": "BM-13-05",
+    "from": "BM-09-04",
+    "to": "BM-17-12",
     "label": "P08",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
@@ -766,20 +793,6 @@
     }
   },
   {
-    "id": "EDGE-06A2B6D45C",
-    "type": "precedes",
-    "from": "BM-11-07",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-06AC4B686B",
     "type": "contains",
     "from": "BM-06",
@@ -982,24 +995,19 @@
     }
   },
   {
-    "id": "EDGE-07AFDC4B38",
-    "type": "precedes",
-    "from": "BM-07-07",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-07BE035619",
     "type": "produces",
     "from": "BM-01-04",
     "to": "ART-8ECF75A8E3",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-07D7E6339B",
+    "type": "participates_in",
+    "from": "BM-11-02",
+    "to": "P07",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -1789,6 +1797,16 @@
     }
   },
   {
+    "id": "EDGE-0DF16210CA",
+    "type": "branches_to",
+    "from": "BM-17-11",
+    "to": "P08",
+    "label": "4又はP08・P09",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-0DF9A31F8B",
     "type": "performed_by",
     "from": "PROC-COM-001",
@@ -1969,20 +1987,6 @@
     "to": "BM-12-01",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
-    }
-  },
-  {
-    "id": "EDGE-0EF60DF616",
-    "type": "precedes",
-    "from": "BM-07-05",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -2187,6 +2191,15 @@
     "to": "BM-04-04",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
+    "id": "EDGE-1098963ABE",
+    "type": "participates_in",
+    "from": "BM-17-12",
+    "to": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -2467,20 +2480,6 @@
     }
   },
   {
-    "id": "EDGE-1334DED148",
-    "type": "precedes",
-    "from": "BM-11-07",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-1344ADB266",
     "type": "participates_in",
     "from": "BM-15-03",
@@ -2501,6 +2500,16 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P06"
+    }
+  },
+  {
+    "id": "EDGE-13623B0744",
+    "type": "branches_to",
+    "from": "BM-10-03",
+    "to": "P09",
+    "label": "4又はP08・P09",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -2540,6 +2549,16 @@
     "type": "participates_in",
     "from": "BM-17-10",
     "to": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-138F4A87C8",
+    "type": "branches_to",
+    "from": "BM-17-12",
+    "to": "P08",
+    "label": "4又はP08・P09",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -3098,6 +3117,15 @@
     }
   },
   {
+    "id": "EDGE-182AAC0241",
+    "type": "produces",
+    "from": "BM-17-04",
+    "to": "ART-9C3E4C1559",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-184157C29A",
     "type": "related_to",
     "from": "BM-07-07",
@@ -3116,20 +3144,6 @@
     }
   },
   {
-    "id": "EDGE-18499118C2",
-    "type": "precedes",
-    "from": "BM-08-07",
-    "to": "BM-10-01",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
     "id": "EDGE-184CC86936",
     "type": "precedes",
     "from": "BM-06-11",
@@ -3141,6 +3155,20 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P11"
+    }
+  },
+  {
+    "id": "EDGE-186AD3519E",
+    "type": "precedes",
+    "from": "BM-07-06",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -3226,6 +3254,20 @@
     }
   },
   {
+    "id": "EDGE-191542C3B6",
+    "type": "precedes",
+    "from": "BM-11-12",
+    "to": "BM-10-02",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-19254BBEF6",
     "type": "precedes",
     "from": "BM-08-07",
@@ -3249,6 +3291,20 @@
     },
     "metadata": {
       "basis": "catalog-order"
+    }
+  },
+  {
+    "id": "EDGE-19727A26B0",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-09-10",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -3572,54 +3628,12 @@
     }
   },
   {
-    "id": "EDGE-1C39AAC0BF",
-    "type": "precedes",
-    "from": "BM-12-01",
-    "to": "BM-10-01",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
-    "id": "EDGE-1C50928154",
-    "type": "precedes",
-    "from": "BM-12-03",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
     "id": "EDGE-1C73B5B01A",
     "type": "related_to",
     "from": "BM-17-08",
     "to": "PROC-SEC-008",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md"
-    }
-  },
-  {
-    "id": "EDGE-1C756F4436",
-    "type": "precedes",
-    "from": "BM-07-10",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -3637,17 +3651,12 @@
     }
   },
   {
-    "id": "EDGE-1CCA88C1EC",
-    "type": "precedes",
-    "from": "BM-11-09",
-    "to": "BM-10-01",
-    "label": "P06",
+    "id": "EDGE-1CC51F9515",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-7FAB2766B0",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
     }
   },
   {
@@ -3850,6 +3859,15 @@
     "to": "BM-12-03",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
+    "id": "EDGE-1E2403F686",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-24E0F8EF1B",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
     }
   },
   {
@@ -4190,20 +4208,6 @@
     "to": "ROLE-5A5592C6AE",
     "source": {
       "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-007_hygiene-reporting-and-records.md"
-    }
-  },
-  {
-    "id": "EDGE-2117AF6126",
-    "type": "precedes",
-    "from": "BM-09-04",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -4603,20 +4607,6 @@
     "to": "ART-896A6CC0A7",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
-    }
-  },
-  {
-    "id": "EDGE-239E739573",
-    "type": "precedes",
-    "from": "BM-07-02",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -5230,17 +5220,13 @@
     }
   },
   {
-    "id": "EDGE-2A3366977A",
-    "type": "precedes",
-    "from": "BM-11-07",
-    "to": "BM-13-06",
-    "label": "P08",
+    "id": "EDGE-2A3BDCEBF1",
+    "type": "branches_to",
+    "from": "BM-11-12",
+    "to": "P05",
+    "label": "現場異常は3、非出動・引渡し完了はP05",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -5305,20 +5291,6 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P02"
-    }
-  },
-  {
-    "id": "EDGE-2A8168FD8E",
-    "type": "precedes",
-    "from": "BM-07-05",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -5474,6 +5446,15 @@
     "to": "BM-06-04",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
+    "id": "EDGE-2C269E55A7",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-D80B03ABBF",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
     }
   },
   {
@@ -5714,20 +5695,6 @@
     }
   },
   {
-    "id": "EDGE-2E6D994B8A",
-    "type": "precedes",
-    "from": "BM-11-09",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
     "id": "EDGE-2E6F641CAE",
     "type": "contains",
     "from": "BM-01",
@@ -5775,6 +5742,20 @@
     }
   },
   {
+    "id": "EDGE-2F0E5D993A",
+    "type": "precedes",
+    "from": "BM-11-06",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-2F1D2C34CB",
     "type": "related_to",
     "from": "BM-07-04",
@@ -5795,20 +5776,6 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P09"
-    }
-  },
-  {
-    "id": "EDGE-2F40BC7D95",
-    "type": "precedes",
-    "from": "BM-07-10",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -6120,6 +6087,15 @@
     }
   },
   {
+    "id": "EDGE-3232131D37",
+    "type": "contains",
+    "from": "BM-11",
+    "to": "BM-11-11",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
     "id": "EDGE-3249A450CD",
     "type": "approved_by",
     "from": "BM-04-10",
@@ -6196,20 +6172,6 @@
     }
   },
   {
-    "id": "EDGE-3332BAAA85",
-    "type": "precedes",
-    "from": "BM-07-01",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-333EB9F53C",
     "type": "participates_in",
     "from": "BM-12-06",
@@ -6255,6 +6217,15 @@
     }
   },
   {
+    "id": "EDGE-33AAF453E4",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-4A3466352F",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-33BC49BB3B",
     "type": "participates_in",
     "from": "BM-07-10",
@@ -6288,20 +6259,6 @@
     "to": "STD-C00B366C58",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
-    }
-  },
-  {
-    "id": "EDGE-3443FACC33",
-    "type": "precedes",
-    "from": "BM-12-01",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
     }
   },
   {
@@ -6493,6 +6450,20 @@
     }
   },
   {
+    "id": "EDGE-3514E3572F",
+    "type": "precedes",
+    "from": "BM-07-10",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-3527BF65C0",
     "type": "produces",
     "from": "BM-02-02",
@@ -6558,6 +6529,20 @@
     "to": "P11",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-35CA5CFE98",
+    "type": "precedes",
+    "from": "BM-07-01",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -6810,6 +6795,19 @@
     }
   },
   {
+    "id": "EDGE-379AED6EE4",
+    "type": "precedes",
+    "from": "BM-11-10",
+    "to": "BM-11-11",
+    "label": "カタログ上の次",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "basis": "catalog-order"
+    }
+  },
+  {
     "id": "EDGE-37EF6A71C9",
     "type": "performed_by",
     "from": "BM-03-04",
@@ -6926,20 +6924,6 @@
     "to": "ROLE-31B57CBC6B",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
-    }
-  },
-  {
-    "id": "EDGE-3906E433FE",
-    "type": "precedes",
-    "from": "BM-07-09",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -7090,20 +7074,6 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P03"
-    }
-  },
-  {
-    "id": "EDGE-3A7050C0E8",
-    "type": "precedes",
-    "from": "BM-07-08",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -7262,20 +7232,6 @@
     },
     "metadata": {
       "basis": "catalog-order"
-    }
-  },
-  {
-    "id": "EDGE-3BC4E4FC49",
-    "type": "precedes",
-    "from": "BM-07-03",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -7454,20 +7410,6 @@
     }
   },
   {
-    "id": "EDGE-3D10647A08",
-    "type": "precedes",
-    "from": "BM-07-07",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-3D1AD1707F",
     "type": "uses",
     "from": "PROC-CLN-005",
@@ -7486,17 +7428,12 @@
     }
   },
   {
-    "id": "EDGE-3D2E8B1E8A",
-    "type": "precedes",
-    "from": "BM-07-10",
-    "to": "BM-13-05",
-    "label": "P08",
+    "id": "EDGE-3D2E17D1FA",
+    "type": "participates_in",
+    "from": "BM-11-11",
+    "to": "P07",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -7544,6 +7481,15 @@
     "type": "produces",
     "from": "BM-10-07",
     "to": "ART-D1D7396364",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-3E4AEC8080",
+    "type": "produces",
+    "from": "BM-06-10",
+    "to": "ART-9C3E4C1559",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -8128,20 +8074,6 @@
     }
   },
   {
-    "id": "EDGE-42955899C8",
-    "type": "precedes",
-    "from": "BM-07-02",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-42A8CA67B1",
     "type": "related_to",
     "from": "BM-06-08",
@@ -8252,6 +8184,15 @@
     }
   },
   {
+    "id": "EDGE-4350C2EE77",
+    "type": "participates_in",
+    "from": "BM-11-05",
+    "to": "P07",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-4355CCA7BE",
     "type": "governed_by",
     "from": "BM-08-04",
@@ -8351,20 +8292,6 @@
     }
   },
   {
-    "id": "EDGE-43CA4D8BC9",
-    "type": "precedes",
-    "from": "BM-07-01",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-43E7B468EC",
     "type": "branches_to",
     "from": "BM-13-09",
@@ -8435,6 +8362,15 @@
     },
     "metadata": {
       "basis": "catalog-order"
+    }
+  },
+  {
+    "id": "EDGE-449B021C39",
+    "type": "governed_by",
+    "from": "BM-11-11",
+    "to": "STD-C00B366C58",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
     }
   },
   {
@@ -8563,6 +8499,20 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P12"
+    }
+  },
+  {
+    "id": "EDGE-456CA4CCE6",
+    "type": "precedes",
+    "from": "BM-09-06",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
     }
   },
   {
@@ -9037,20 +8987,6 @@
     }
   },
   {
-    "id": "EDGE-48291464DC",
-    "type": "precedes",
-    "from": "BM-07-04",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-4844523A2E",
     "type": "uses",
     "from": "BM-10-03",
@@ -9115,6 +9051,24 @@
     "to": "ART-A7268AFD6A",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-489A2FC5B9",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-62F930A1C9",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-48A16FDFEA",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-11BB502D19",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
     }
   },
   {
@@ -9249,6 +9203,16 @@
     }
   },
   {
+    "id": "EDGE-4999E9DCC4",
+    "type": "branches_to",
+    "from": "BM-17-12",
+    "to": "P09",
+    "label": "4又はP08・P09",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-49AE9DD343",
     "type": "participates_in",
     "from": "BM-13-02",
@@ -9370,6 +9334,20 @@
     }
   },
   {
+    "id": "EDGE-4B3131E71E",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-10-05",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-4B38AA89BB",
     "type": "produces",
     "from": "BM-05-03",
@@ -9385,20 +9363,6 @@
     "to": "ROLE-D894377C2B",
     "source": {
       "path": "docs/02_field-procedures/02_equipment/PROC-EQP-003_meter-reading-and-measurement.md"
-    }
-  },
-  {
-    "id": "EDGE-4BA827D8C5",
-    "type": "precedes",
-    "from": "BM-07-07",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -9745,34 +9709,6 @@
     }
   },
   {
-    "id": "EDGE-4E27C6B2ED",
-    "type": "precedes",
-    "from": "BM-11-08",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
-    "id": "EDGE-4E370C35CB",
-    "type": "precedes",
-    "from": "BM-07-11",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-4E3EA7F8D4",
     "type": "produces",
     "from": "BM-13-04",
@@ -9800,40 +9736,12 @@
     }
   },
   {
-    "id": "EDGE-4E9148896A",
-    "type": "precedes",
-    "from": "BM-07-03",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-4E94FBC4D7",
     "type": "governed_by",
     "from": "BM-17-11",
     "to": "STD-2D0CA8C150",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
-    }
-  },
-  {
-    "id": "EDGE-4EA638FE95",
-    "type": "precedes",
-    "from": "BM-07-02",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -9995,15 +9903,6 @@
     }
   },
   {
-    "id": "EDGE-4FEE92A429",
-    "type": "produces",
-    "from": "BM-06-10",
-    "to": "ART-9AD7D8A0DC",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
     "id": "EDGE-4FF2AB9085",
     "type": "precedes",
     "from": "BM-18-10",
@@ -10052,20 +9951,6 @@
     "to": "P02",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
-    "id": "EDGE-50BD790730",
-    "type": "precedes",
-    "from": "BM-11-08",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -10228,20 +10113,6 @@
     }
   },
   {
-    "id": "EDGE-51BEB4BF3E",
-    "type": "precedes",
-    "from": "BM-07-11",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-51DD835FD5",
     "type": "participates_in",
     "from": "BM-06-04",
@@ -10350,20 +10221,6 @@
     }
   },
   {
-    "id": "EDGE-52DE23E113",
-    "type": "precedes",
-    "from": "BM-07-09",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-532D0F8141",
     "type": "precedes",
     "from": "BM-10-02",
@@ -10400,6 +10257,15 @@
     }
   },
   {
+    "id": "EDGE-5354144895",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-5ACF3D33AE",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
     "id": "EDGE-535C0DE14D",
     "type": "participates_in",
     "from": "BM-11-04",
@@ -10415,6 +10281,20 @@
     "to": "ART-E99F451EDF",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-5389A1C558",
+    "type": "precedes",
+    "from": "BM-07-03",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -11147,20 +11027,6 @@
     }
   },
   {
-    "id": "EDGE-58C6D02CC2",
-    "type": "precedes",
-    "from": "BM-07-08",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-58D2A1800B",
     "type": "related_to",
     "from": "BM-13-02",
@@ -11240,20 +11106,6 @@
     "to": "ROLE-8E43833406",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md"
-    }
-  },
-  {
-    "id": "EDGE-595FE034CE",
-    "type": "precedes",
-    "from": "BM-07-05",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -11491,6 +11343,29 @@
     }
   },
   {
+    "id": "EDGE-5C0E5A64B1",
+    "type": "precedes",
+    "from": "BM-13-11",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
+    "id": "EDGE-5C16E26DC2",
+    "type": "produces",
+    "from": "BM-10-03",
+    "to": "ART-E1AF78788F",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-5C1BE03600",
     "type": "produces",
     "from": "BM-14-01",
@@ -11552,6 +11427,20 @@
     "label": "適合は6、不適合はP06又はP09",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-5C9DAE5A93",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-17-02",
+    "label": "P09",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P09"
     }
   },
   {
@@ -11960,34 +11849,6 @@
     }
   },
   {
-    "id": "EDGE-5F31BDA881",
-    "type": "precedes",
-    "from": "BM-07-03",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
-    "id": "EDGE-5F362DD9CE",
-    "type": "precedes",
-    "from": "BM-07-05",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-5F4ADB32BD",
     "type": "produces",
     "from": "BM-18-07",
@@ -12026,20 +11887,6 @@
     "to": "P07",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
-    "id": "EDGE-5F6E05E3E0",
-    "type": "precedes",
-    "from": "BM-07-07",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -12524,20 +12371,6 @@
     "to": "ART-94ADFA1B68",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
-    }
-  },
-  {
-    "id": "EDGE-62BDC091CF",
-    "type": "precedes",
-    "from": "BM-07-09",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -13854,6 +13687,20 @@
     }
   },
   {
+    "id": "EDGE-6BD860796D",
+    "type": "precedes",
+    "from": "BM-07-02",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-6BDA466AE1",
     "type": "performed_by",
     "from": "PROC-EQP-003",
@@ -13915,6 +13762,15 @@
     "to": "STD-CA2AE6C798",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-6C853ECF1F",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-C85C4290C9",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -14060,20 +13916,6 @@
     }
   },
   {
-    "id": "EDGE-6E32CB8069",
-    "type": "precedes",
-    "from": "BM-08-07",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
     "id": "EDGE-6E3BD37900",
     "type": "participates_in",
     "from": "BM-14-01",
@@ -14112,20 +13954,6 @@
     "to": "BM-04-05",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
-    }
-  },
-  {
-    "id": "EDGE-6E6CA6F313",
-    "type": "precedes",
-    "from": "BM-07-09",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -14329,6 +14157,15 @@
     "to": "STD-24E0F8EF1B",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-6F7097F55A",
+    "type": "participates_in",
+    "from": "BM-11-03",
+    "to": "P07",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -14545,6 +14382,15 @@
     }
   },
   {
+    "id": "EDGE-70B382689A",
+    "type": "produces",
+    "from": "BM-06-10",
+    "to": "ART-7FAB2766B0",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-70B611915D",
     "type": "contains",
     "from": "BM-07",
@@ -14700,6 +14546,20 @@
     "to": "ART-AC3CA98DD3",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-717ED1859F",
+    "type": "precedes",
+    "from": "BM-07-07",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -14871,20 +14731,6 @@
     "type": "precedes",
     "from": "BM-04-04",
     "to": "BM-07-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
-    "id": "EDGE-7302C52DB8",
-    "type": "precedes",
-    "from": "BM-07-10",
-    "to": "BM-09-10",
     "label": "P08",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
@@ -15487,20 +15333,6 @@
     }
   },
   {
-    "id": "EDGE-779E412CB1",
-    "type": "precedes",
-    "from": "BM-07-03",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-77A0943980",
     "type": "performed_by",
     "from": "PROC-SEC-001",
@@ -15671,20 +15503,6 @@
     }
   },
   {
-    "id": "EDGE-78C91270A5",
-    "type": "precedes",
-    "from": "BM-07-03",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-78D314BE3D",
     "type": "governed_by",
     "from": "BM-07-02",
@@ -15817,34 +15635,6 @@
     "to": "PROC-CLN-008",
     "source": {
       "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-008_bath-and-shower-cleaning.md"
-    }
-  },
-  {
-    "id": "EDGE-79D0C314CE",
-    "type": "precedes",
-    "from": "BM-07-06",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
-    "id": "EDGE-79E59E8ECC",
-    "type": "precedes",
-    "from": "BM-07-04",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -16081,20 +15871,6 @@
     }
   },
   {
-    "id": "EDGE-7C9E10FE15",
-    "type": "precedes",
-    "from": "BM-07-11",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-7CB35C74F5",
     "type": "contains",
     "from": "BM-10",
@@ -16323,6 +16099,15 @@
     }
   },
   {
+    "id": "EDGE-7EC8976F8D",
+    "type": "participates_in",
+    "from": "BM-11-01",
+    "to": "P07",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-7EDDCAEAF2",
     "type": "governed_by",
     "from": "BM-10-09",
@@ -16360,20 +16145,6 @@
     },
     "metadata": {
       "basis": "catalog-order"
-    }
-  },
-  {
-    "id": "EDGE-7F01B915D1",
-    "type": "precedes",
-    "from": "BM-07-08",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -16510,6 +16281,15 @@
     }
   },
   {
+    "id": "EDGE-80BA3D25AC",
+    "type": "governed_by",
+    "from": "BM-11-12",
+    "to": "STD-C00B366C58",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
     "id": "EDGE-80BACC78AD",
     "type": "produces",
     "from": "BM-14-01",
@@ -16633,6 +16413,15 @@
     "to": "ART-799C28232C",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-81B15963BF",
+    "type": "participates_in",
+    "from": "BM-11-08",
+    "to": "P07",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -16789,6 +16578,19 @@
     }
   },
   {
+    "id": "EDGE-832195D68A",
+    "type": "precedes",
+    "from": "BM-11-11",
+    "to": "BM-11-12",
+    "label": "カタログ上の次",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "basis": "catalog-order"
+    }
+  },
+  {
     "id": "EDGE-8326D8CC71",
     "type": "related_to",
     "from": "BM-13-05",
@@ -16856,20 +16658,6 @@
     "to": "ART-F1A71F226F",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
-    "id": "EDGE-835D8002AA",
-    "type": "precedes",
-    "from": "BM-07-07",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -16963,20 +16751,6 @@
     }
   },
   {
-    "id": "EDGE-83F0BB23CC",
-    "type": "precedes",
-    "from": "BM-07-10",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-83F492DD23",
     "type": "precedes",
     "from": "BM-15-04",
@@ -16988,20 +16762,6 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P03"
-    }
-  },
-  {
-    "id": "EDGE-84001A2A8E",
-    "type": "precedes",
-    "from": "BM-07-06",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -17035,20 +16795,6 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P06"
-    }
-  },
-  {
-    "id": "EDGE-846EC81317",
-    "type": "precedes",
-    "from": "BM-07-01",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -17117,6 +16863,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P02"
+    }
+  },
+  {
+    "id": "EDGE-85263C09CF",
+    "type": "participates_in",
+    "from": "BM-17-12",
+    "to": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -17287,6 +17042,20 @@
     }
   },
   {
+    "id": "EDGE-86AF796E19",
+    "type": "precedes",
+    "from": "BM-07-11",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-86B3B8E224",
     "type": "branches_to",
     "from": "BM-14-03",
@@ -17449,20 +17218,6 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P02"
-    }
-  },
-  {
-    "id": "EDGE-87FA718A90",
-    "type": "precedes",
-    "from": "BM-09-06",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
     }
   },
   {
@@ -17697,20 +17452,6 @@
     }
   },
   {
-    "id": "EDGE-89D44E9B0C",
-    "type": "precedes",
-    "from": "BM-11-06",
-    "to": "BM-10-01",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
     "id": "EDGE-89E918DDB8",
     "type": "uses",
     "from": "BM-05-10",
@@ -17758,6 +17499,20 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P09"
+    }
+  },
+  {
+    "id": "EDGE-8A2BABD721",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-13-05",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -18652,6 +18407,15 @@
     }
   },
   {
+    "id": "EDGE-90395EE5EA",
+    "type": "participates_in",
+    "from": "BM-11-07",
+    "to": "P07",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-908B738C9A",
     "type": "produces",
     "from": "BM-17-10",
@@ -19274,6 +19038,16 @@
     }
   },
   {
+    "id": "EDGE-94181A0CB4",
+    "type": "branches_to",
+    "from": "BM-10-03",
+    "to": "P08",
+    "label": "4又はP08・P09",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-944223804F",
     "type": "precedes",
     "from": "BM-14-09",
@@ -19418,6 +19192,15 @@
     "to": "STD-62F930A1C9",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-959EA47412",
+    "type": "participates_in",
+    "from": "BM-11-11",
+    "to": "P04",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -19719,20 +19502,6 @@
     }
   },
   {
-    "id": "EDGE-98C2FF52CC",
-    "type": "precedes",
-    "from": "BM-07-04",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-98C34103D0",
     "type": "related_to",
     "from": "BM-04-07",
@@ -19762,20 +19531,6 @@
     "to": "ART-826B4ECDB3",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
-    "id": "EDGE-98F2BEABB6",
-    "type": "precedes",
-    "from": "BM-07-06",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -20174,20 +19929,6 @@
     }
   },
   {
-    "id": "EDGE-9C076D19B9",
-    "type": "precedes",
-    "from": "BM-07-06",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-9C1DD3C7FC",
     "type": "precedes",
     "from": "BM-04-01",
@@ -20287,6 +20028,20 @@
     }
   },
   {
+    "id": "EDGE-9CB612A9A1",
+    "type": "precedes",
+    "from": "BM-07-08",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-9CBA61B7A1",
     "type": "precedes",
     "from": "BM-13-03",
@@ -20353,20 +20108,6 @@
     "to": "PROC-HYG-002",
     "source": {
       "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md"
-    }
-  },
-  {
-    "id": "EDGE-9D3A069A9D",
-    "type": "precedes",
-    "from": "BM-07-09",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -20514,6 +20255,20 @@
     }
   },
   {
+    "id": "EDGE-9E44FFD968",
+    "type": "precedes",
+    "from": "BM-11-07",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-9E4AB190C9",
     "type": "produces",
     "from": "BM-14-08",
@@ -20612,6 +20367,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P02"
+    }
+  },
+  {
+    "id": "EDGE-9EED56AC6A",
+    "type": "participates_in",
+    "from": "BM-11-11",
+    "to": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -20882,6 +20646,19 @@
     "to": "P04",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-A16813EEF1",
+    "type": "precedes",
+    "from": "BM-17-11",
+    "to": "BM-17-12",
+    "label": "カタログ上の次",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    },
+    "metadata": {
+      "basis": "catalog-order"
     }
   },
   {
@@ -21194,20 +20971,6 @@
     }
   },
   {
-    "id": "EDGE-A4357E6F4F",
-    "type": "precedes",
-    "from": "BM-07-02",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-A44568D86B",
     "type": "performed_by",
     "from": "PROC-SEC-005",
@@ -21455,20 +21218,6 @@
     }
   },
   {
-    "id": "EDGE-A606512B67",
-    "type": "precedes",
-    "from": "BM-07-05",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-A60AB50EE1",
     "type": "uses",
     "from": "BM-09-04",
@@ -21502,6 +21251,15 @@
     "to": "BM-17-03",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
+    "id": "EDGE-A6254BEAA7",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-9C3E4C1559",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -21726,6 +21484,20 @@
     }
   },
   {
+    "id": "EDGE-A8ADFD7982",
+    "type": "precedes",
+    "from": "BM-12-01",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-A8B54FC425",
     "type": "participates_in",
     "from": "BM-12-02",
@@ -21904,6 +21676,20 @@
     }
   },
   {
+    "id": "EDGE-AA05449CEE",
+    "type": "precedes",
+    "from": "BM-11-09",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-AA07F4D25E",
     "type": "participates_in",
     "from": "BM-12-08",
@@ -21928,6 +21714,15 @@
     "to": "BM-12-10",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
+    "id": "EDGE-AA11311BC2",
+    "type": "produces",
+    "from": "BM-11-12",
+    "to": "ART-C861722BBE",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -22074,6 +21869,15 @@
     }
   },
   {
+    "id": "EDGE-AB26136BDE",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-6592C15455",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-AB546A10D0",
     "type": "related_to",
     "from": "BM-15-06",
@@ -22196,6 +22000,15 @@
     "type": "produces",
     "from": "BM-17-08",
     "to": "ART-B8E1CF9F89",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-AC3971253C",
+    "type": "participates_in",
+    "from": "BM-11-11",
+    "to": "P03",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -22611,20 +22424,6 @@
     }
   },
   {
-    "id": "EDGE-AEF9AC9935",
-    "type": "precedes",
-    "from": "BM-07-01",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-AEFA70411C",
     "type": "produces",
     "from": "BM-03-04",
@@ -22987,20 +22786,6 @@
     }
   },
   {
-    "id": "EDGE-B1F6DC845F",
-    "type": "precedes",
-    "from": "BM-09-04",
-    "to": "BM-09-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-B21C149449",
     "type": "produces",
     "from": "PROC-EQP-004",
@@ -23057,6 +22842,20 @@
     }
   },
   {
+    "id": "EDGE-B2465B01C8",
+    "type": "precedes",
+    "from": "BM-12-03",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-B25374D336",
     "type": "produces",
     "from": "BM-09-06",
@@ -23088,6 +22887,15 @@
     "type": "produces",
     "from": "BM-05-08",
     "to": "ART-2DE0878CBD",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-B28D8B69E8",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-8539936DA3",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -23323,6 +23131,20 @@
     }
   },
   {
+    "id": "EDGE-B46DD291AB",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-13-06",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-B47207FD9B",
     "type": "precedes",
     "from": "BM-14-01",
@@ -23437,6 +23259,15 @@
     }
   },
   {
+    "id": "EDGE-B52C6AEC3E",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-E1AF78788F",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-B53A16525E",
     "type": "related_to",
     "from": "BM-13-04",
@@ -23453,6 +23284,20 @@
     "label": "実行記録",
     "source": {
       "path": "docs/04_mappings/procedure-to-checklist-map.md"
+    }
+  },
+  {
+    "id": "EDGE-B563A857C8",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-09-06",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -23768,6 +23613,20 @@
     }
   },
   {
+    "id": "EDGE-B7998E594A",
+    "type": "precedes",
+    "from": "BM-08-07",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-B7AED6C8D3",
     "type": "participates_in",
     "from": "BM-07-04",
@@ -23967,20 +23826,6 @@
     }
   },
   {
-    "id": "EDGE-B8C321D1A7",
-    "type": "precedes",
-    "from": "BM-11-08",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-B8C78BCBBE",
     "type": "governed_by",
     "from": "BM-10-05",
@@ -24061,6 +23906,20 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P06"
+    }
+  },
+  {
+    "id": "EDGE-B9203165B6",
+    "type": "precedes",
+    "from": "BM-07-09",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -24196,6 +24055,20 @@
     }
   },
   {
+    "id": "EDGE-BB009DBB5C",
+    "type": "precedes",
+    "from": "BM-11-08",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-BB164104B1",
     "type": "participates_in",
     "from": "BM-14-05",
@@ -24254,6 +24127,20 @@
     }
   },
   {
+    "id": "EDGE-BB8F94529B",
+    "type": "precedes",
+    "from": "BM-12-02",
+    "to": "BM-11-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-BB9E43C7ED",
     "type": "uses",
     "from": "PROC-CLN-005",
@@ -24278,6 +24165,20 @@
     "to": "BM-17-02",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
+    "id": "EDGE-BBA57A3938",
+    "type": "precedes",
+    "from": "BM-10-02",
+    "to": "BM-17-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
     }
   },
   {
@@ -24351,20 +24252,6 @@
     "to": "P07",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
-    "id": "EDGE-BC564A56FE",
-    "type": "precedes",
-    "from": "BM-09-04",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -24445,20 +24332,6 @@
     }
   },
   {
-    "id": "EDGE-BD2AD1F31A",
-    "type": "precedes",
-    "from": "BM-09-06",
-    "to": "BM-10-01",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
     "id": "EDGE-BD306DDBE5",
     "type": "related_to",
     "from": "BM-06-08",
@@ -24508,6 +24381,15 @@
     "type": "produces",
     "from": "BM-01-08",
     "to": "ART-C854778444",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-BE0E9660C2",
+    "type": "produces",
+    "from": "BM-17-11",
+    "to": "ART-E1AF78788F",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -24570,20 +24452,6 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P11"
-    }
-  },
-  {
-    "id": "EDGE-BE8C101D3C",
-    "type": "precedes",
-    "from": "BM-11-06",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
     }
   },
   {
@@ -24702,6 +24570,15 @@
     "to": "ART-F497C63A5F",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-BF8C525908",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-CA2AE6C798",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
     }
   },
   {
@@ -25122,20 +24999,6 @@
     }
   },
   {
-    "id": "EDGE-C2367880DE",
-    "type": "precedes",
-    "from": "BM-07-04",
-    "to": "BM-13-06",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-C2401B4889",
     "type": "related_to",
     "from": "BM-17-02",
@@ -25281,34 +25144,6 @@
     }
   },
   {
-    "id": "EDGE-C37268D7E0",
-    "type": "precedes",
-    "from": "BM-13-11",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
-    "id": "EDGE-C39E911EF3",
-    "type": "precedes",
-    "from": "BM-09-04",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-C3CA51CD36",
     "type": "participates_in",
     "from": "BM-15-06",
@@ -25419,6 +25254,20 @@
     "to": "PROC-SEC-002",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md"
+    }
+  },
+  {
+    "id": "EDGE-C491A244CB",
+    "type": "precedes",
+    "from": "BM-11-12",
+    "to": "BM-10-01",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
     }
   },
   {
@@ -25657,6 +25506,20 @@
     "type": "precedes",
     "from": "BM-14-08",
     "to": "BM-10-12",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
+    "id": "EDGE-C64D4BFA89",
+    "type": "precedes",
+    "from": "BM-10-01",
+    "to": "BM-17-12",
     "label": "P06",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
@@ -25977,20 +25840,6 @@
     }
   },
   {
-    "id": "EDGE-C84FE98A12",
-    "type": "precedes",
-    "from": "BM-12-02",
-    "to": "BM-10-01",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
-    }
-  },
-  {
     "id": "EDGE-C862B0AFEE",
     "type": "participates_in",
     "from": "BM-14-03",
@@ -26113,15 +25962,6 @@
     }
   },
   {
-    "id": "EDGE-C958746B45",
-    "type": "produces",
-    "from": "BM-17-04",
-    "to": "ART-9AD7D8A0DC",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
     "id": "EDGE-C971E84512",
     "type": "contains",
     "from": "BM-11-04",
@@ -26215,20 +26055,6 @@
     "to": "ART-955B31B0AE",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
-    "id": "EDGE-CA85F9294A",
-    "type": "precedes",
-    "from": "BM-13-11",
-    "to": "BM-10-01",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
     }
   },
   {
@@ -26948,20 +26774,6 @@
     }
   },
   {
-    "id": "EDGE-D0B602C88D",
-    "type": "precedes",
-    "from": "BM-11-08",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-D0B617033D",
     "type": "produces",
     "from": "BM-01-05",
@@ -27315,20 +27127,6 @@
     "to": "PROC-CLN-012",
     "source": {
       "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-012_high-place-and-exterior-wall-cleaning.md"
-    }
-  },
-  {
-    "id": "EDGE-D3ECE5648E",
-    "type": "precedes",
-    "from": "BM-07-06",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -27742,20 +27540,6 @@
     }
   },
   {
-    "id": "EDGE-D7557F7550",
-    "type": "precedes",
-    "from": "BM-11-07",
-    "to": "BM-13-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-D76CE4B56B",
     "type": "precedes",
     "from": "BM-15-01",
@@ -28034,20 +27818,6 @@
     "to": "ROLE-D3F54CDD5B",
     "source": {
       "path": "docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md"
-    }
-  },
-  {
-    "id": "EDGE-D90CD648EC",
-    "type": "precedes",
-    "from": "BM-11-07",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -28416,20 +28186,6 @@
     }
   },
   {
-    "id": "EDGE-DB94DAFBF1",
-    "type": "precedes",
-    "from": "BM-07-01",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-DBC1A7CAF3",
     "type": "branches_to",
     "from": "BM-01-05",
@@ -28623,6 +28379,15 @@
     }
   },
   {
+    "id": "EDGE-DD3FE6E4EC",
+    "type": "produces",
+    "from": "BM-17-04",
+    "to": "ART-7FAB2766B0",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-DD6C17DBC6",
     "type": "participates_in",
     "from": "BM-17-09",
@@ -28809,6 +28574,20 @@
     }
   },
   {
+    "id": "EDGE-DE7C939B40",
+    "type": "precedes",
+    "from": "BM-17-03",
+    "to": "BM-17-12",
+    "label": "P09",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P09"
+    }
+  },
+  {
     "id": "EDGE-DE8A30FBA1",
     "type": "precedes",
     "from": "BM-04-01",
@@ -28872,6 +28651,15 @@
     }
   },
   {
+    "id": "EDGE-DF111DC086",
+    "type": "contains",
+    "from": "BM-11",
+    "to": "BM-11-12",
+    "source": {
+      "path": "docs/building-maintenance-business-catalog.md"
+    }
+  },
+  {
     "id": "EDGE-DF3BFAE779",
     "type": "precedes",
     "from": "BM-04-04",
@@ -28910,20 +28698,6 @@
     "to": "PROC-SEC-004",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-004_security-patrol.md"
-    }
-  },
-  {
-    "id": "EDGE-DF92D3B080",
-    "type": "precedes",
-    "from": "BM-07-08",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {
@@ -29076,6 +28850,15 @@
     "to": "ART-3C74369697",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-E118E3B151",
+    "type": "produces",
+    "from": "BM-17-12",
+    "to": "ART-30F097DF6D",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
     }
   },
   {
@@ -29540,20 +29323,6 @@
     }
   },
   {
-    "id": "EDGE-E636CAB244",
-    "type": "precedes",
-    "from": "BM-07-11",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-E654731B28",
     "type": "related_to",
     "from": "BM-11-10",
@@ -29821,20 +29590,6 @@
     }
   },
   {
-    "id": "EDGE-E86CAC36D1",
-    "type": "precedes",
-    "from": "BM-07-04",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-E8904F7DF0",
     "type": "precedes",
     "from": "BM-01-06",
@@ -29944,6 +29699,15 @@
     "id": "EDGE-E91F0FF082",
     "type": "participates_in",
     "from": "BM-14-10",
+    "to": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-E939E939E9",
+    "type": "participates_in",
+    "from": "BM-11-12",
     "to": "P06",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
@@ -30236,20 +30000,6 @@
     }
   },
   {
-    "id": "EDGE-EB95B6746F",
-    "type": "precedes",
-    "from": "BM-07-02",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-EBD4646DE9",
     "type": "governed_by",
     "from": "BM-10-01",
@@ -30440,6 +30190,15 @@
     }
   },
   {
+    "id": "EDGE-ED0FEE6761",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-C2EFC13478",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
     "id": "EDGE-ED22AFAC1D",
     "type": "precedes",
     "from": "BM-02-06",
@@ -30545,6 +30304,20 @@
     "to": "ART-8DFD1E7B72",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-EE0BBA9682",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-09-05",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -30695,17 +30468,12 @@
     }
   },
   {
-    "id": "EDGE-EF141B967F",
-    "type": "precedes",
-    "from": "BM-12-03",
-    "to": "BM-10-01",
-    "label": "P06",
+    "id": "EDGE-EF1895042F",
+    "type": "participates_in",
+    "from": "BM-17-12",
+    "to": "P09",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
     }
   },
   {
@@ -30745,6 +30513,15 @@
     "type": "produces",
     "from": "BM-17-03",
     "to": "ART-203C7F56A4",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-EF6D28C029",
+    "type": "produces",
+    "from": "BM-11-12",
+    "to": "ART-A792B26C64",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
     }
@@ -30868,12 +30645,40 @@
     }
   },
   {
+    "id": "EDGE-F0BBDAB4F7",
+    "type": "precedes",
+    "from": "BM-17-12",
+    "to": "BM-10-04",
+    "label": "P06",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P06"
+    }
+  },
+  {
     "id": "EDGE-F0F2D7178D",
     "type": "governed_by",
     "from": "BM-17-10",
     "to": "STD-2D0CA8C150",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-F12578AEA8",
+    "type": "precedes",
+    "from": "BM-07-05",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
     }
   },
   {
@@ -31777,6 +31582,20 @@
     }
   },
   {
+    "id": "EDGE-F87E0D8AC7",
+    "type": "precedes",
+    "from": "BM-07-04",
+    "to": "BM-17-12",
+    "label": "P08",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    },
+    "metadata": {
+      "basis": "process-map",
+      "processId": "P08"
+    }
+  },
+  {
     "id": "EDGE-F8820A1EFA",
     "type": "participates_in",
     "from": "BM-17-06",
@@ -31874,6 +31693,15 @@
     "to": "ROLE-3C4C8D8332",
     "source": {
       "path": "docs/02_field-procedures/03_security/PROC-SEC-008_disaster-initial-response.md"
+    }
+  },
+  {
+    "id": "EDGE-F94C2BB245",
+    "type": "governed_by",
+    "from": "BM-17-12",
+    "to": "STD-2D0CA8C150",
+    "source": {
+      "path": "docs/statutory-duty-profiles.md"
     }
   },
   {
@@ -32025,6 +31853,16 @@
     }
   },
   {
+    "id": "EDGE-FA5440E54D",
+    "type": "branches_to",
+    "from": "BM-17-11",
+    "to": "P09",
+    "label": "4又はP08・P09",
+    "source": {
+      "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
     "id": "EDGE-FA595D6E5E",
     "type": "related_to",
     "from": "BM-13-02",
@@ -32040,20 +31878,6 @@
     "to": "ART-A7A63832B2",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
-    }
-  },
-  {
-    "id": "EDGE-FA8D446389",
-    "type": "precedes",
-    "from": "BM-12-02",
-    "to": "BM-10-02",
-    "label": "P06",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P06"
     }
   },
   {
@@ -32351,40 +32175,12 @@
     }
   },
   {
-    "id": "EDGE-FD52AA3B30",
-    "type": "precedes",
-    "from": "BM-11-08",
-    "to": "BM-09-05",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
-    }
-  },
-  {
     "id": "EDGE-FD52B5D6EE",
     "type": "contains",
     "from": "BM-08",
     "to": "BM-08-05",
     "source": {
       "path": "docs/building-maintenance-business-catalog.md"
-    }
-  },
-  {
-    "id": "EDGE-FDD6B8479D",
-    "type": "precedes",
-    "from": "BM-07-11",
-    "to": "BM-09-10",
-    "label": "P08",
-    "source": {
-      "path": "docs/04_mappings/business-process-map.md"
-    },
-    "metadata": {
-      "basis": "process-map",
-      "processId": "P08"
     }
   },
   {

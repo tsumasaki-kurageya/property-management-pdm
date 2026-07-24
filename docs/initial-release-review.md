@@ -4,7 +4,7 @@
 
 | 観点 | 判定方法 |
 |---|---|
-| 18領域・178業務、12プロセス、重要業務14件 | `npm run check:reference` |
+| 18領域・181業務、12プロセス、重要業務14件 | `npm run check:reference` |
 | 原本と生成ページ、ローカルリンク | `npm run check:reference` |
 | 型・コンテンツ・本番ビルド | `npm run verify` |
 | base path、404、全文検索、内部参照 | `npm run check:release` |

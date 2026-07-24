@@ -1,15 +1,15 @@
 {
   "schemaVersion": "3.0.0",
-  "catalogVersion": "v1.4",
+  "catalogVersion": "v1.5",
   "counts": {
     "area": 18,
-    "business": 178,
+    "business": 181,
     "procedure": 43,
-    "artifact": 295,
+    "artifact": 302,
     "role": 138,
     "standard": 10,
     "process": 12,
-    "edges": 3163
+    "edges": 3166
   },
   "sourceHashes": {
     "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md": "75937a00329c98c19a78a27786de4de0404b6735530c4eb3a14af3fd40733df0",
@@ -41,8 +41,8 @@
     "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md": "6fb33d8518ebe277fa251cfec369727f2ca0b3b7bade1e2b93cb83dce223e48d",
     "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md": "a0dbf0ef31f26f349b34fb748767a62e23c5d7ec58d5fbf505aba56d5c018155",
     "docs/02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md": "ecefbb6ab72d50cdf03997158dd9f10b63615709dad980c30a1786caceb58543",
-    "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md": "146fb9267107f5579249feab303184adbe5621e1578cc4e2d67c9baf2972c390",
-    "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md": "2f8830104c23fbff0f9d045cef874464594d32659bb004936472fb103b21ee34",
+    "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md": "36c3a5e424740fa886e040c4446fd61d996188a92531954fc6979773be2a3af9",
+    "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md": "8fd6e0ab0c7a932d79a41a7f0dec38ee379aacdeb3bc35aa465959874b6c67a3",
     "docs/02_field-procedures/03_security/PROC-SEC-004_security-patrol.md": "35d3947ba855429031707ab68d9adc7aa637a4975229a5039c7914008f668eeb",
     "docs/02_field-procedures/03_security/PROC-SEC-005_alarm-and-security-monitoring.md": "6aff9e429af8e707438405a8244ac51d5b0a87fe8c2f6019126904de8c223f1a",
     "docs/02_field-procedures/03_security/PROC-SEC-006_suspicious-person-and-object-response.md": "0ed795ae33ac141f8300535018cd2fce1bb2cca91afb859cebb2c39bdb36eebf",
@@ -81,10 +81,10 @@
     "docs/03_checklists/03_security/CHK-SEC-006_alarm-and-security-monitoring.md": "0c67b350158da5a2ef36575a8494f41cea405f9c4fba45bbbd1065d8c92a4cbc",
     "docs/03_checklists/03_security/CHK-SEC-007_suspicious-person-and-object-response.md": "b7c14a0f46a4bc6d39990efcf3a6488ce5f85b1d6d55d994c0534091bce1db49",
     "docs/03_checklists/03_security/CHK-SEC-008_disaster-initial-response.md": "ae879a37648a043f483bd4ea5a2fecd091232883428eca7cdbcaf9799368b299",
-    "docs/04_mappings/business-process-map.md": "1e5ac020cc093d3d58f38d361757d2f64104f425c7021af2332db18b92deb6f9",
-    "docs/04_mappings/critical-business-analysis.md": "0c54fac8e9ceb8ccf582159bc0ec4ad5441c2635aca8b142052d0bfa8e71289f",
+    "docs/04_mappings/business-process-map.md": "0773d09e121a0d4c241082405d3aab9413a67fea3ad06225e6f6795f21ca3e3a",
+    "docs/04_mappings/critical-business-analysis.md": "8f2f604fd470803249eb1d9b58b21da905f370cf884193bba669339a023250df",
     "docs/04_mappings/procedure-to-checklist-map.md": "9bb5017d7d6abcb8f25c359591fd9a4adbb57a4ba45070dada31142b99428cda",
-    "docs/building-maintenance-business-catalog.md": "0481ee0a0d09c19bde912d99fa65559d9d2b6b5148f9cdb398b553625bab39f7",
-    "docs/statutory-duty-profiles.md": "a5e3afd61ac1b0370daccc550c63d901550db9efcfa4b4245a71399fed769e4a"
+    "docs/building-maintenance-business-catalog.md": "d9f4abfe6ebb7a11b6e265a33b20f0ac28c0f26f8134761be939ea1ff8507ec9",
+    "docs/statutory-duty-profiles.md": "9aee5ae706aaa18b9217009df4ac8ead43382b0f940524f474911ddb9ab7d548"
   }
 }

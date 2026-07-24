@@ -36,7 +36,7 @@
 | 層 | 目的 | 読み方 | 内容 |
 |---|---|---|---|
 | 学ぶための本文 | 初学者が全体像から順番に理解する | 推奨順序に沿って読む | 平易な説明、代表例、要点、図解 |
-| 調べるためのリファレンス | 特定の業務や条件を確認する | 検索、索引、関連リンクから参照する | 178業務、12横断プロセス、各種プロファイル、手順・対応表 |
+| 調べるためのリファレンス | 特定の業務や条件を確認する | 検索、索引、関連リンクから参照する | 181業務、12横断プロセス、各種プロファイル、手順・対応表 |
 
 本文はリファレンスの短縮版ではない。読者が理解しやすい順序で複数の原本を横断して説明する。リファレンスは網羅性と追跡性を維持し、本文で省略した詳細を確認できるようにする。
 
@@ -89,7 +89,7 @@
 
 | パス案 | ページ群 | 役割 | 元資料 |
 |---|---|---|---|
-| `/reference/business-catalog/` | 業務カタログ | 18領域・178業務をID、領域、名称から探す | `docs/building-maintenance-business-catalog.md` |
+| `/reference/business-catalog/` | 業務カタログ | 18領域・181業務をID、領域、名称から探す | `docs/building-maintenance-business-catalog.md` |
 | `/reference/processes/` | 横断プロセス | 12プロセスの開始契機、判断、成果物、完了状態を確認する | `docs/04_mappings/business-process-map.md` |
 | `/reference/critical-businesses/` | 重要業務分析 | 14業務の入力、主体、判断、成果物及び完了条件を確認する | `docs/04_mappings/critical-business-analysis.md` |
 | `/reference/profiles/` | 条件差プロファイル | 用途、管理方式、契約役割、責任主体及び法令による差を確認する | 各プロファイル |
@@ -104,7 +104,7 @@
 
 | 分析用原本 | 本文で主に使用する場所 | リファレンスでの扱い |
 |---|---|---|
-| `docs/building-maintenance-business-catalog.md` | 入門、全体像、各業務領域 | 178業務の基準カタログ |
+| `docs/building-maintenance-business-catalog.md` | 入門、全体像、各業務領域 | 181業務の基準カタログ |
 | `docs/04_mappings/business-process-map.md` | 全体像、周辺業務、異常対応 | 12横断プロセス |
 | `docs/04_mappings/critical-business-analysis.md` | 完了状態、引継ぎ、異常、法令、請求 | 14重要業務の詳細 |
 | `docs/building-use-profiles.md` | 建物用途による違い | 用途別差分の詳細 |
@@ -222,7 +222,7 @@
 
 ### 10.2 リファレンスへ置くもの
 
-- 178業務の全項目
+- 181業務の全項目
 - 12横断プロセスの詳細な業務ID列
 - 14重要業務の全分析項目
 - 用途別、管理方式別、契約役割別、法令別の詳細マトリクス
