@@ -45,6 +45,7 @@ editUrl: https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main
 | PROC-EQP-006 | PROC-EQP-006 緊急停止・隔離 | [Markdown](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md) |
 | PROC-EQP-007 | PROC-EQP-007 試運転・復旧確認 | [Markdown](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md) |
 | PROC-EQP-008 | PROC-EQP-008 設備日常保守 | [Markdown](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md) |
+| PROC-EQP-009 | PROC-EQP-009 修繕・工事実施 | [Markdown](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md) |
 | PROC-HYG-001 | PROC-HYG-001 空気環境測定・異常判定 | [Markdown](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/02_field-procedures/04_hygiene/PROC-HYG-001_air-environment-measurement.md) |
 | PROC-HYG-002 | PROC-HYG-002 給水・空調衛生設備点検 | [Markdown](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/02_field-procedures/04_hygiene/PROC-HYG-002_sanitary-equipment-inspection.md) |
 | PROC-HYG-003 | PROC-HYG-003 水質検査・異常判定 | [Markdown](https://github.com/tsumasaki-kurageya/property-management-pdm/blob/main/docs/02_field-procedures/04_hygiene/PROC-HYG-003_water-quality-testing.md) |

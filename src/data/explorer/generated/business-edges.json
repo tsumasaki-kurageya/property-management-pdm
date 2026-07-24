@@ -945,6 +945,15 @@
     }
   },
   {
+    "id": "EDGE-07997467B4",
+    "type": "related_to",
+    "from": "BM-13-01",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-07AD9DB03A",
     "type": "precedes",
     "from": "BM-10-11",
@@ -1016,6 +1025,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P02"
+    }
+  },
+  {
+    "id": "EDGE-08248EA56A",
+    "type": "related_to",
+    "from": "BM-13-05",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -1237,6 +1255,15 @@
     "to": "ART-1FD150F3D7",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-09C04DA116",
+    "type": "related_to",
+    "from": "BM-17-06",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -4538,6 +4565,15 @@
     }
   },
   {
+    "id": "EDGE-2340330360",
+    "type": "related_to",
+    "from": "BM-10-08",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-234901A808",
     "type": "precedes",
     "from": "BM-13-05",
@@ -5388,6 +5424,15 @@
     "to": "ART-63A20C73E2",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-2BBB3202AB",
+    "type": "related_to",
+    "from": "BM-13-06",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -7322,6 +7367,15 @@
     }
   },
   {
+    "id": "EDGE-3C6F64712C",
+    "type": "related_to",
+    "from": "BM-13-02",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-3C76E97336",
     "type": "precedes",
     "from": "BM-06-10",
@@ -7549,6 +7603,15 @@
     }
   },
   {
+    "id": "EDGE-3EBD3C5DD0",
+    "type": "approved_by",
+    "from": "PROC-EQP-009",
+    "to": "ROLE-B8515451B3",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-3EC2E88D40",
     "type": "uses",
     "from": "PROC-EQP-006",
@@ -7650,6 +7713,15 @@
     },
     "metadata": {
       "basis": "catalog-order"
+    }
+  },
+  {
+    "id": "EDGE-3F9AF20E84",
+    "type": "related_to",
+    "from": "BM-17-07",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -10106,6 +10178,15 @@
     }
   },
   {
+    "id": "EDGE-51940787FE",
+    "type": "approved_by",
+    "from": "PROC-EQP-009",
+    "to": "ROLE-DBA1DEF294",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-519A4654A6",
     "type": "precedes",
     "from": "BM-06-02",
@@ -10788,6 +10869,15 @@
     }
   },
   {
+    "id": "EDGE-571511BEF1",
+    "type": "related_to",
+    "from": "BM-17-04",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-571934BCE1",
     "type": "produces",
     "from": "BM-16-04",
@@ -11348,6 +11438,15 @@
     "to": "P08",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-5BA4599F83",
+    "type": "related_to",
+    "from": "BM-17-01",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -12191,6 +12290,15 @@
     "label": "P01、P03又はP12",
     "source": {
       "path": "docs/04_mappings/business-process-map.md"
+    }
+  },
+  {
+    "id": "EDGE-612452178A",
+    "type": "related_to",
+    "from": "BM-17-11",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -15202,6 +15310,24 @@
     }
   },
   {
+    "id": "EDGE-7638E9BDD4",
+    "type": "related_to",
+    "from": "BM-17-03",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
+    "id": "EDGE-76641E7CCA",
+    "type": "contains",
+    "from": "BM-10-09",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-7676CB013B",
     "type": "uses",
     "from": "BM-13-05",
@@ -16074,6 +16200,15 @@
     }
   },
   {
+    "id": "EDGE-7D49C9E882",
+    "type": "related_to",
+    "from": "BM-10-07",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-7D5B7EC7C5",
     "type": "participates_in",
     "from": "BM-07-01",
@@ -16158,6 +16293,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P08"
+    }
+  },
+  {
+    "id": "EDGE-7E48CE0858",
+    "type": "related_to",
+    "from": "BM-17-05",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -17594,6 +17738,15 @@
     }
   },
   {
+    "id": "EDGE-8A1005CCC5",
+    "type": "approved_by",
+    "from": "PROC-EQP-009",
+    "to": "ROLE-A686CD57E9",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-8A2AA6B1C7",
     "type": "precedes",
     "from": "BM-13-06",
@@ -17964,6 +18117,15 @@
     "to": "STD-C2EFC13478",
     "source": {
       "path": "docs/statutory-duty-profiles.md"
+    }
+  },
+  {
+    "id": "EDGE-8CF0E77272",
+    "type": "related_to",
+    "from": "BM-10-05",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -18347,6 +18509,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P12"
+    }
+  },
+  {
+    "id": "EDGE-8F4A747E96",
+    "type": "related_to",
+    "from": "BM-17-08",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -19417,6 +19588,15 @@
     }
   },
   {
+    "id": "EDGE-9789D089D3",
+    "type": "related_to",
+    "from": "BM-13-11",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-97ACD83A8A",
     "type": "governed_by",
     "from": "BM-07-07",
@@ -20077,6 +20257,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P06"
+    }
+  },
+  {
+    "id": "EDGE-9CA8DA31D5",
+    "type": "related_to",
+    "from": "BM-17-02",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -21236,6 +21425,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P11"
+    }
+  },
+  {
+    "id": "EDGE-A5E300B85B",
+    "type": "related_to",
+    "from": "BM-10-10",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -24294,6 +24492,15 @@
     "to": "ART-634E6A5CCA",
     "source": {
       "path": "docs/04_mappings/critical-business-analysis.md"
+    }
+  },
+  {
+    "id": "EDGE-BE02943575",
+    "type": "approved_by",
+    "from": "PROC-EQP-009",
+    "to": "ROLE-863BA8D743",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -29420,6 +29627,15 @@
     }
   },
   {
+    "id": "EDGE-E6D289F32D",
+    "type": "related_to",
+    "from": "BM-10-11",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-E6E5EAD00F",
     "type": "precedes",
     "from": "BM-04-02",
@@ -29713,6 +29929,15 @@
     "to": "PROC-CLN-011",
     "source": {
       "path": "docs/02_field-procedures/01_cleaning/PROC-CLN-011_exterior-and-parking-cleaning.md"
+    }
+  },
+  {
+    "id": "EDGE-E9164B95AD",
+    "type": "approved_by",
+    "from": "PROC-EQP-009",
+    "to": "ROLE-D1AE4443E6",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -31016,6 +31241,24 @@
     }
   },
   {
+    "id": "EDGE-F495B258C7",
+    "type": "related_to",
+    "from": "BM-10-06",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
+    "id": "EDGE-F4980B8DC5",
+    "type": "approved_by",
+    "from": "PROC-EQP-009",
+    "to": "ROLE-D3F54CDD5B",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-F4A8509F5F",
     "type": "produces",
     "from": "BM-05-04",
@@ -31081,6 +31324,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P06"
+    }
+  },
+  {
+    "id": "EDGE-F523B89B8F",
+    "type": "related_to",
+    "from": "BM-13-03",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {
@@ -31397,6 +31649,15 @@
     }
   },
   {
+    "id": "EDGE-F74820A94E",
+    "type": "performed_by",
+    "from": "PROC-EQP-009",
+    "to": "ROLE-647A7508E5",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
+    }
+  },
+  {
     "id": "EDGE-F75FBB2FE5",
     "type": "contains",
     "from": "BM-06",
@@ -31688,6 +31949,15 @@
     "metadata": {
       "basis": "process-map",
       "processId": "P11"
+    }
+  },
+  {
+    "id": "EDGE-F9AD9B5448",
+    "type": "related_to",
+    "from": "BM-13-04",
+    "to": "PROC-EQP-009",
+    "source": {
+      "path": "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md"
     }
   },
   {

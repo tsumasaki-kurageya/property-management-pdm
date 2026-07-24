@@ -4,12 +4,12 @@
   "counts": {
     "area": 18,
     "business": 178,
-    "procedure": 42,
+    "procedure": 43,
     "artifact": 295,
-    "role": 134,
+    "role": 138,
     "standard": 10,
     "process": 12,
-    "edges": 3133
+    "edges": 3163
   },
   "sourceHashes": {
     "docs/02_field-procedures/00_common/PROC-COM-001_shift-handover.md": "75937a00329c98c19a78a27786de4de0404b6735530c4eb3a14af3fd40733df0",
@@ -39,6 +39,7 @@
     "docs/02_field-procedures/02_equipment/PROC-EQP-006_emergency-shutdown-and-isolation.md": "bc6f5bce5630b92a3816968f363ddf2af496dfbd1100131af6dffcfa2fa5b993",
     "docs/02_field-procedures/02_equipment/PROC-EQP-007_restoration-verification.md": "c14f7219a177a11876ee06bc2cff17673fe55f393555e7cf4d4a5d8e1a1f4903",
     "docs/02_field-procedures/02_equipment/PROC-EQP-008_routine-maintenance.md": "6fb33d8518ebe277fa251cfec369727f2ca0b3b7bade1e2b93cb83dce223e48d",
+    "docs/02_field-procedures/02_equipment/PROC-EQP-009_repair-and-construction-execution.md": "a0dbf0ef31f26f349b34fb748767a62e23c5d7ec58d5fbf505aba56d5c018155",
     "docs/02_field-procedures/03_security/PROC-SEC-001_duty-start-and-handover.md": "ecefbb6ab72d50cdf03997158dd9f10b63615709dad980c30a1786caceb58543",
     "docs/02_field-procedures/03_security/PROC-SEC-002_access-reception-and-verification.md": "146fb9267107f5579249feab303184adbe5621e1578cc4e2d67c9baf2972c390",
     "docs/02_field-procedures/03_security/PROC-SEC-003_key-and-access-card-management.md": "2f8830104c23fbff0f9d045cef874464594d32659bb004936472fb103b21ee34",
