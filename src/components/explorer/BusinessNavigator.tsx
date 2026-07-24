@@ -197,7 +197,7 @@ export default function BusinessNavigator({ selectedId, onSelect }: BusinessNavi
         </div>
 
         <label className="explorer-search">
-          <span>業務ID・名前・説明から検索</span>
+          <span>業務一覧を絞り込む</span>
           <div className="explorer-search-field">
             <input
               ref={searchInputRef}
