@@ -6,7 +6,6 @@
     "description": "問い合わせ、入札、既存契約の見直しを契機に開始し、契約条件と受託範囲が確定したまでを扱う。",
     "startTrigger": "問い合わせ、入札、既存契約の見直し",
     "endState": "契約条件と受託範囲が確定した",
-    "lifecycleId": "LC-01",
     "entryBusinessIds": [
       "BM-01-01",
       "BM-01-02"
@@ -166,7 +165,6 @@
     "description": "契約締結、受託範囲の追加を契機に開始し、運用開始に必要な情報・体制・初期計画が揃ったまでを扱う。",
     "startTrigger": "契約締結、受託範囲の追加",
     "endState": "運用開始に必要な情報・体制・初期計画が揃った",
-    "lifecycleId": "LC-02",
     "entryBusinessIds": [
       "BM-03-01",
       "BM-03-02",
@@ -351,7 +349,6 @@
     "description": "契約、周期、期限、追加依頼を契機に開始し、実施可能な作業指示と準備が成立したまでを扱う。",
     "startTrigger": "契約、周期、期限、追加依頼",
     "endState": "実施可能な作業指示と準備が成立した",
-    "lifecycleId": "LC-03",
     "entryBusinessIds": [
       "BM-04-01",
       "BM-06-02",
@@ -616,7 +613,6 @@
     "description": "作業予定、運転時刻、巡回・監視を契機に開始し、作業結果又は異常情報が記録工程へ渡ったまでを扱う。",
     "startTrigger": "作業予定、運転時刻、巡回・監視",
     "endState": "作業結果又は異常情報が記録工程へ渡った",
-    "lifecycleId": "LC-04",
     "entryBusinessIds": [
       "BM-06-01",
       "BM-06-02",
@@ -1058,7 +1054,6 @@
     "description": "作業完了、測定・点検結果を契機に開始し、承認済み結果が提出され、提出状態を追跡できるまでを扱う。",
     "startTrigger": "作業完了、測定・点検結果",
     "endState": "承認済み結果が提出され、提出状態を追跡できる",
-    "lifecycleId": "LC-05",
     "entryBusinessIds": [
       "BM-13-01",
       "BM-13-02",
@@ -1255,7 +1250,6 @@
     "description": "警報、点検異常、事故、顧客連絡を契機に開始し、技術的復旧又は条件付き引渡しが成立したまでを扱う。",
     "startTrigger": "警報、点検異常、事故、顧客連絡",
     "endState": "技術的復旧又は条件付き引渡しが成立した",
-    "lifecycleId": "LC-06",
     "entryBusinessIds": [
       "BM-08-07",
       "BM-09-06",
@@ -1560,7 +1554,6 @@
     "description": "問い合わせ、作業依頼、苦情を契機に開始し、回答・対応結果が通知され、完了を追跡できるまでを扱う。",
     "startTrigger": "問い合わせ、作業依頼、苦情",
     "endState": "回答・対応結果が通知され、完了を追跡できる",
-    "lifecycleId": "LC-04",
     "entryBusinessIds": [
       "BM-12-01",
       "BM-12-02",
@@ -1734,7 +1727,6 @@
     "description": "適用条件の成立、法定期限、法改正を契機に開始し、必要な報告・届出・証跡保存が完了したまでを扱う。",
     "startTrigger": "適用条件の成立、法定期限、法改正",
     "endState": "必要な報告・届出・証跡保存が完了した",
-    "lifecycleId": "LC-04",
     "entryBusinessIds": [
       "BM-17-08",
       "BM-14-01",
@@ -2010,7 +2002,6 @@
     "description": "品質検査、苦情、監査、事故を契機に開始し、是正結果が確認され、再発防止へ接続したまでを扱う。",
     "startTrigger": "品質検査、苦情、監査、事故",
     "endState": "是正結果が確認され、再発防止へ接続した",
-    "lifecycleId": "LC-05",
     "entryBusinessIds": [
       "BM-17-01",
       "BM-17-02",
@@ -2185,7 +2176,6 @@
     "description": "締め日、作業承認、協力会社請求を契機に開始し、顧客請求と原価が確定したまでを扱う。",
     "startTrigger": "締め日、作業承認、協力会社請求",
     "endState": "顧客請求と原価が確定した",
-    "lifecycleId": "LC-06",
     "entryBusinessIds": [
       "BM-16-01"
     ],
@@ -2360,7 +2350,6 @@
     "description": "月次・年次締め、傾向、重大事象を契機に開始し、改善案が契約・計画・仕様へ反映されたまでを扱う。",
     "startTrigger": "月次・年次締め、傾向、重大事象",
     "endState": "改善案が契約・計画・仕様へ反映された",
-    "lifecycleId": "LC-07",
     "entryBusinessIds": [
       "BM-18-01",
       "BM-18-02",
@@ -2538,7 +2527,6 @@
     "description": "更新期限、解約通知、採算・品質見直しを契機に開始し、更新条件確定又は終了・引継ぎ完了までを扱う。",
     "startTrigger": "更新期限、解約通知、採算・品質見直し",
     "endState": "更新条件確定又は終了・引継ぎ完了",
-    "lifecycleId": "LC-07",
     "entryBusinessIds": [
       "BM-02-05"
     ],

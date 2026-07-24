@@ -37,7 +37,6 @@ const nodeTypeLabels: Record<ExplorerNodeType, string> = {
   artifact: 'チェックリスト・帳票',
   role: '担当者・関係者',
   standard: '法令・基準',
-  lifecycle: 'ライフサイクル段階',
   process: '横断プロセス',
 };
 

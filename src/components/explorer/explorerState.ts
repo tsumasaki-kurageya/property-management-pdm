@@ -5,19 +5,12 @@ import {
   explorerProcessesById,
 } from '../../data/explorer';
 
-export const explorerViewModes = ['flow', 'hierarchy', 'relations'] as const;
-export const explorerRelationFilters = ['all', 'related_to', 'uses', 'produces', 'people', 'governed_by'] as const;
-
-export type ExplorerViewMode = (typeof explorerViewModes)[number];
-export type ExplorerRelationFilter = (typeof explorerRelationFilters)[number];
 export type ExplorerScreen = 'overview' | 'process';
 
 export interface ExplorerUiState {
   screen: ExplorerScreen;
   selectedBusinessId?: string;
   selectedProcessId?: string;
-  viewMode: ExplorerViewMode;
-  relationFilter: ExplorerRelationFilter;
 }
 
 export interface ParsedExplorerState {
@@ -49,8 +42,6 @@ export function getDefaultExplorerState(): ExplorerUiState {
     screen: 'overview',
     selectedBusinessId: undefined,
     selectedProcessId: undefined,
-    viewMode: 'flow',
-    relationFilter: 'all',
   };
 }
 
@@ -93,7 +84,6 @@ export function openExplorerProcess(
     screen: 'process',
     selectedBusinessId,
     selectedProcessId: process.id,
-    viewMode: 'flow',
   };
 }
 
@@ -103,8 +93,6 @@ export function showExplorerOverview(state: ExplorerUiState): ExplorerUiState {
     screen: 'overview',
     selectedBusinessId: undefined,
     selectedProcessId: undefined,
-    viewMode: 'flow',
-    relationFilter: 'all',
   };
 }
 
@@ -144,8 +132,6 @@ export function parseExplorerUrl(url: URL): ParsedExplorerState {
       screen: 'process',
       selectedBusinessId,
       selectedProcessId,
-      viewMode: 'flow',
-      relationFilter: 'all',
     },
     notice: notices.length > 0 ? notices.join(' ') : undefined,
   };

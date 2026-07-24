@@ -5,7 +5,6 @@ export const explorerNodeTypes = [
   'artifact',
   'role',
   'standard',
-  'lifecycle',
   'process',
 ] as const;
 
@@ -61,13 +60,6 @@ export interface ExplorerEdge {
   metadata?: Record<string, unknown>;
 }
 
-export interface ExplorerLifecycleStage {
-  id: string;
-  label: string;
-  description: string;
-  processIds: string[];
-}
-
 export interface ExplorerBusinessArea {
   id: string;
   label: string;
@@ -101,7 +93,6 @@ export interface ExplorerProcessIndex {
   description: string;
   startTrigger: string;
   endState: string;
-  lifecycleId: string;
   entryBusinessIds: string[];
   exitBusinessIds: string[];
   businessIds: string[];
@@ -127,7 +118,6 @@ export interface ExplorerGraph {
   edges: ExplorerEdge[];
   businessAreas: ExplorerBusinessArea[];
   businessIndex: ExplorerBusinessIndexEntry[];
-  lifecycleStages: ExplorerLifecycleStage[];
   processes: ExplorerProcessIndex[];
   manifest: ExplorerManifest;
 }

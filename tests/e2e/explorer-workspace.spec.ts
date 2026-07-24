@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('PCではヘッダー下を使い切るワークスペースとして表示する', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop');
 
-  await page.goto('explorer/?business=BM-09-06&view=flow');
+  await page.goto('explorer/?business=BM-09-06');
   const explorer = page.locator('.explorer-shell');
   await expect(explorer).toBeVisible();
   await expect(page.locator('.detail-panel-id')).toHaveText('BM-09-06');
