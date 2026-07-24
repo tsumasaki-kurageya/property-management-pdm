@@ -3028,7 +3028,13 @@
     },
     "metadata": {
       "areaId": "BM-01",
-      "catalogOrder": 4
+      "catalogOrder": 4,
+      "startTrigger": "顧客要求と現地調査結果が揃い、受託内容の具体化が必要になったとき",
+      "completionCondition": "実施内容と完了判定が一意に解釈でき、見積・契約・立ち上げへ引き渡せる",
+      "primaryActivity": "対象、方法、周期、品質基準、体制、報告、除外範囲、例外時対応を定義する",
+      "decisionAndException": "要求が実施可能か、法令・資格条件を満たすか、契約内外を識別できるか。情報不足時は見積・契約確定へ進めない",
+      "actorAndDecisionMaker": "営業、技術・運用担当が作成し、受託責任者と顧客側権限者が判断する",
+      "relatedBusinessExpression": "BM-01-05〜08、BM-02-02、BM-03-05〜07"
     }
   },
   {
@@ -3279,7 +3285,13 @@
     },
     "metadata": {
       "areaId": "BM-03",
-      "catalogOrder": 19
+      "catalogOrder": 19,
+      "startTrigger": "契約締結後、運用開始日と受託範囲が確定したとき",
+      "completionCondition": "通常時・不在時・緊急時の責任者と連絡経路が受領確認されている",
+      "primaryActivity": "責任者、実施者、代行者、資格者、協力会社、承認者、緊急連絡順を割り当てる",
+      "decisionAndException": "必要資格・要員・対応時間を満たすか。不足時は開始条件未成立として担当・期限付きで管理する",
+      "actorAndDecisionMaker": "受託責任者が構築し、各社・各部門の責任者が担当受諾を判断する",
+      "relatedBusinessExpression": "BM-03-05〜08、BM-04-05〜07、BM-05-04、BM-17-08"
     }
   },
   {
@@ -3502,7 +3514,13 @@
     },
     "metadata": {
       "areaId": "BM-04",
-      "catalogOrder": 33
+      "catalogOrder": 33,
+      "startTrigger": "期限接近、予定時刻超過、中止・延期又は実施記録未登録を検知したとき",
+      "completionCondition": "未実施が解消されたか、責任者・期限・暫定措置を持つ管理状態へ移行している",
+      "primaryActivity": "未実施を分類し、影響評価、上申、再割当、再日程調整、関係者連絡を行う",
+      "decisionAndException": "延期可能か、法定期限を超えるか、代替措置が必要か、顧客承認が必要か",
+      "actorAndDecisionMaker": "計画管理者が検知・調整し、法定期限や顧客影響は責任者が判断する",
+      "relatedBusinessExpression": "BM-04-09、BM-12-06・08、BM-13-04、BM-17-08、P08"
     }
   },
   {
@@ -3665,7 +3683,13 @@
     },
     "metadata": {
       "areaId": "BM-05",
-      "catalogOrder": 43
+      "catalogOrder": 43,
+      "startTrigger": "勤務交代、担当変更、長期不在又は契約終了時",
+      "completionCondition": "受領者が内容を確認し、未解決事項の責任と次の行動が確定している",
+      "primaryActivity": "状態、未完了、注意事項、物品・権限、次の行動を確認し、受領可否を記録する",
+      "decisionAndException": "情報・物品が揃っているか、未解決事項を受領できるか。受領不能時は責任移管を成立させない",
+      "actorAndDecisionMaker": "引継ぎ者と受領者が照合し、未解決事項は現場責任者が担当・期限を判断する",
+      "relatedBusinessExpression": "P04、P05、P06、P12の継続案件"
     }
   },
   {
@@ -4242,7 +4266,13 @@
     },
     "metadata": {
       "areaId": "BM-09",
-      "catalogOrder": 78
+      "catalogOrder": 78,
+      "startTrigger": "法定周期・行政報告期限又は法令上必要な事象に到達したとき",
+      "completionCondition": "実施だけでなく、必要な確認・行政報告・保存までの責任と状態が確定している",
+      "primaryActivity": "適用義務と実施条件を確認し、調査・検査・点検、記録、判定を行う",
+      "decisionAndException": "対象・資格・周期が正しいか、異常があるか、行政報告・補正が必要か",
+      "actorAndDecisionMaker": "必要資格を満たす実施者が行い、法的義務主体・管理責任者が結果と報告を確認する",
+      "relatedBusinessExpression": "BM-09-05・06・10、BM-13-07〜10、BM-17-09・10、P06、P09"
     }
   },
   {
@@ -4272,7 +4302,13 @@
     },
     "metadata": {
       "areaId": "BM-09",
-      "catalogOrder": 80
+      "catalogOrder": 80,
+      "startTrigger": "点検値、目視結果又は機器状態が記録されたとき",
+      "completionCondition": "判定根拠と後続経路が記録され、異常時は対応責任者が受領している",
+      "primaryActivity": "基準比較、傾向確認、異常区分、影響・緊急度の初期評価を行う",
+      "decisionAndException": "正常、要観察、要是正、緊急のどれか。判断不能時は追加確認へ回す",
+      "actorAndDecisionMaker": "点検者が一次判定し、資格者又は設備責任者が技術判断を確定する",
+      "relatedBusinessExpression": "BM-10-01・02、BM-13-11、BM-17-03、P06、P09"
     }
   },
   {
@@ -4375,7 +4411,13 @@
     },
     "metadata": {
       "areaId": "BM-10",
-      "catalogOrder": 86
+      "catalogOrder": 86,
+      "startTrigger": "警報、点検異常、事故、苦情又は顧客連絡から不具合を受け付けたとき",
+      "completionCondition": "対応責任者が受領し、初動期限と次の行動が確定している",
+      "primaryActivity": "影響を評価し、優先度、初動期限、連絡先、現場確認要否を決める",
+      "decisionAndException": "即時停止・避難・通報が必要か、利用継続可能か、専門業者が必要か",
+      "actorAndDecisionMaker": "受付・現場担当が初期分類し、設備責任者又は管理責任者が優先度を確定する",
+      "relatedBusinessExpression": "BM-10-03・04、BM-11-06・09、BM-13-11、BM-17-11"
     }
   },
   {
@@ -4390,7 +4432,13 @@
     },
     "metadata": {
       "areaId": "BM-10",
-      "catalogOrder": 87
+      "catalogOrder": 87,
+      "startTrigger": "緊急度判断により現場確認又は被害拡大防止が必要とされたとき",
+      "completionCondition": "危険拡大が抑制され、暫定状態・残存リスク・監視条件が関係者に共有されている",
+      "primaryActivity": "現場確認、停止、隔離、応急処置、利用制限、関係者連絡、状態記録を行う",
+      "decisionAndException": "接近・操作可能か、停止範囲は妥当か、応急復旧で利用可能か、追加支援が必要か",
+      "actorAndDecisionMaker": "現場担当又は専門業者が実施し、安全・利用制限は権限者が判断する",
+      "relatedBusinessExpression": "BM-10-04〜08、BM-13-11、BM-17-11"
     }
   },
   {
@@ -4495,7 +4543,13 @@
     },
     "metadata": {
       "areaId": "BM-10",
-      "catalogOrder": 94
+      "catalogOrder": 94,
+      "startTrigger": "修繕・工事の施工者が作業完了を申告したとき",
+      "completionCondition": "技術的復旧、契約検収、区域解除、利用再開及び案件完了の各状態が区別して確定している",
+      "primaryActivity": "動作、品質、安全、変更、書類を確認し、不備差戻し、技術的復旧、引渡しを記録する",
+      "decisionAndException": "仕様適合か、条件付き引渡しか、区域解除・利用再開が可能か、再施工が必要か",
+      "actorAndDecisionMaker": "技術担当が検査し、契約上の検収者と施設利用権限者がそれぞれ判断する",
+      "relatedBusinessExpression": "BM-10-11〜13、BM-13-06〜10、BM-14-03〜10、BM-17-11"
     }
   },
   {
@@ -4954,7 +5008,13 @@
     },
     "metadata": {
       "areaId": "BM-13",
-      "catalogOrder": 122
+      "catalogOrder": 122,
+      "startTrigger": "作業者が記録を提出したとき又は提出期限に到達したとき",
+      "completionCondition": "記録の不足が解消し、承認・異常対応・是正のいずれかへ接続している",
+      "primaryActivity": "未入力、矛盾、異常値、証跡不足、未実施、指示との差異を確認し、差戻し又は承認経路へ渡す",
+      "decisionAndException": "記録が完全か、技術確認が必要か、異常速報が必要か、請求・報告に利用可能か",
+      "actorAndDecisionMaker": "現場責任者又は管理者が形式・内容を確認し、技術判断は資格者・専門担当へ回す",
+      "relatedBusinessExpression": "BM-13-06〜10、BM-13-11、BM-16-01・02、P06、P09"
     }
   },
   {
@@ -5044,7 +5104,13 @@
     },
     "metadata": {
       "areaId": "BM-13",
-      "catalogOrder": 128
+      "catalogOrder": 128,
+      "startTrigger": "人身、安全、法令、設備停止、利用影響又は顧客影響を伴う異常を認知したとき",
+      "completionCondition": "送信だけでなく、対応責任者の受領と次の行動が確認されている",
+      "primaryActivity": "事実と未確認情報を分け、所定経路へ連絡し、受領、指示、更新報を記録する",
+      "decisionAndException": "即時通報・避難・設備停止が必要か、顧客・行政・上位責任者への連絡が必要か",
+      "actorAndDecisionMaker": "異常認知者が速報し、受領責任者が対応開始・追加上申を判断する",
+      "relatedBusinessExpression": "BM-10-01〜03、BM-11-06・09、BM-12-06、P06"
     }
   },
   {
@@ -5398,7 +5464,13 @@
     },
     "metadata": {
       "areaId": "BM-16",
-      "catalogOrder": 149
+      "catalogOrder": 149,
+      "startTrigger": "請求締め日又は追加作業・修繕の検収完了時",
+      "completionCondition": "対象、金額根拠、検収状態が確定し、重複・漏れなく請求計算へ渡せる",
+      "primaryActivity": "契約内外、回数、従量、追加・減額、未検収、重複・漏れを照合する",
+      "decisionAndException": "請求条件を満たすか、保留・翌月繰越か、契約変更又は顧客確認が必要か",
+      "actorAndDecisionMaker": "請求担当が照合し、契約責任者又は顧客側検収者が対象可否を判断する",
+      "relatedBusinessExpression": "BM-16-03・04、BM-16-06〜10"
     }
   },
   {
@@ -5651,7 +5723,13 @@
     },
     "metadata": {
       "areaId": "BM-17",
-      "catalogOrder": 165
+      "catalogOrder": 165,
+      "startTrigger": "新規受託、法改正、用途・規模・設備・管理権原の変更又は定期見直し時",
+      "completionCondition": "各義務について対象・主体・期限・実施者・報告先・保存要件が確定している",
+      "primaryActivity": "適用判定、義務主体、資格、周期、届出・報告、保存、委託範囲を対応付ける",
+      "decisionAndException": "法令対象か、誰が義務を負うか、委託可能か、変更時に再判定が必要か",
+      "actorAndDecisionMaker": "法令・技術担当が判定し、法的義務主体と受託責任者が責任分界を確認する",
+      "relatedBusinessExpression": "BM-03-07、BM-04-01・10、BM-05-02、BM-09-04、BM-13-07〜10、BM-17-09・10"
     }
   },
   {
@@ -5696,7 +5774,13 @@
     },
     "metadata": {
       "areaId": "BM-17",
-      "catalogOrder": 168
+      "catalogOrder": 168,
+      "startTrigger": "危険作業、設備停止、異常隔離又は利用者との分離が必要になったとき",
+      "completionCondition": "作業終了だけでなく、安全復旧、撤去、関係者確認を経て区域解除が記録されている",
+      "primaryActivity": "区域、期間、標識、養生、入退場、代替動線、監視条件を設定し、終了後に復旧確認する",
+      "decisionAndException": "区域が十分か、利用継続できるか、拡大・延長が必要か、残存リスクなく解除できるか",
+      "actorAndDecisionMaker": "作業責任者が設定し、安全責任者と施設利用権限者が解除可否を判断する",
+      "relatedBusinessExpression": "BM-10-03・09・10、BM-11-05、BM-12-08、P04、P06"
     }
   },
   {
