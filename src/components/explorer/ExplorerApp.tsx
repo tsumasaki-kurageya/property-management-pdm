@@ -17,10 +17,13 @@ import './ExplorerApp.css';
 
 type ExplorerNodeKind = 'area' | 'business';
 
+type LifecycleGroup = 'main' | 'execution' | 'cross';
+
 interface ExplorerNodeData extends Record<string, unknown> {
   kind: ExplorerNodeKind;
   id: string;
   label: string;
+  lifecycleGroup?: LifecycleGroup;
   dimmed?: boolean;
   expanded?: boolean;
   onFocus?: (id: string) => void;
@@ -29,21 +32,41 @@ interface ExplorerNodeData extends Record<string, unknown> {
 
 type ExplorerFlowNode = Node<ExplorerNodeData, ExplorerNodeKind>;
 
-const AREA_COLUMNS = 6;
 const AREA_X_GAP = 420;
-const AREA_Y_GAP = 390;
 const AREA_ORIGIN_X = 170;
-const AREA_ORIGIN_Y = 170;
 const OPEN_DELAY = 150;
 const CLOSE_DELAY = 250;
 
+const lifecycleRows = {
+  main: ['BM-01', 'BM-02', 'BM-03', 'BM-04', 'BM-05', 'BM-13', 'BM-16', 'BM-18'],
+  execution: ['BM-06', 'BM-07', 'BM-08', 'BM-09', 'BM-10', 'BM-11'],
+  cross: ['BM-12', 'BM-14', 'BM-15', 'BM-17'],
+} as const satisfies Record<LifecycleGroup, readonly string[]>;
+
+const areaLayout = new Map<string, { group: LifecycleGroup; x: number; y: number }>();
+
+Object.entries(lifecycleRows).forEach(([group, areaIds]) => {
+  const lifecycleGroup = group as LifecycleGroup;
+  const rowWidth = (areaIds.length - 1) * AREA_X_GAP;
+  const mainRowWidth = (lifecycleRows.main.length - 1) * AREA_X_GAP;
+  const rowOriginX = AREA_ORIGIN_X + (mainRowWidth - rowWidth) / 2;
+  const y = lifecycleGroup === 'main' ? 170 : lifecycleGroup === 'execution' ? 560 : 950;
+
+  areaIds.forEach((areaId, index) => {
+    areaLayout.set(areaId, {
+      group: lifecycleGroup,
+      x: rowOriginX + index * AREA_X_GAP,
+      y,
+    });
+  });
+});
+
 const businessAreas = [...explorerGraph.businessAreas].sort((left, right) => left.order - right.order);
 
-function areaPosition(index: number) {
-  return {
-    x: AREA_ORIGIN_X + (index % AREA_COLUMNS) * AREA_X_GAP,
-    y: AREA_ORIGIN_Y + Math.floor(index / AREA_COLUMNS) * AREA_Y_GAP,
-  };
+function areaPosition(areaId: string) {
+  const layout = areaLayout.get(areaId);
+  if (!layout) throw new Error(`業務領域 ${areaId} のライフサイクル配置が未定義です。`);
+  return { x: layout.x, y: layout.y };
 }
 
 function businessPositions(count: number) {
@@ -87,7 +110,8 @@ function ExplorerNodeCard({ data }: NodeProps<ExplorerFlowNode>) {
   return (
     <button
       type="button"
-      className={`explorer-area-node${data.expanded ? ' is-expanded' : ''}${data.dimmed ? ' is-dimmed' : ''}`}
+      className={`explorer-area-node explorer-area-node--${data.lifecycleGroup}${data.expanded ? ' is-expanded' : ''}${data.dimmed ? ' is-dimmed' : ''}`}
+      data-lifecycle-group={data.lifecycleGroup}
       aria-label={`${data.id} 業務領域「${data.label}」`}
       aria-expanded={data.expanded}
       onFocus={() => data.onFocus?.(data.id)}
@@ -153,16 +177,17 @@ function ExplorerCanvas() {
   }, [clearCloseTimer, clearOpenTimer]);
 
   const nodes = useMemo<ExplorerFlowNode[]>(() => {
-    const areaNodes = businessAreas.map((area, index): ExplorerFlowNode => ({
+    const areaNodes = businessAreas.map((area): ExplorerFlowNode => ({
       id: area.id,
       type: 'area',
-      position: areaPosition(index),
+      position: areaPosition(area.id),
       draggable: false,
       selectable: false,
       data: {
         kind: 'area',
         id: area.id,
         label: area.label,
+        lifecycleGroup: areaLayout.get(area.id)?.group,
         expanded: area.id === expandedAreaId,
         dimmed: Boolean(expandedAreaId && area.id !== expandedAreaId),
         onFocus: openArea,
@@ -227,6 +252,11 @@ function ExplorerCanvas() {
     <section className="explorer-shell" aria-label="業務エクスプローラー">
       <header className="explorer-title">
         <h1>業務エクスプローラー</h1>
+        <p className="explorer-lifecycle-legend" aria-label="業務領域の配置区分">
+          <span data-group="main">主系列（左から右）</span>
+          <span data-group="execution">現場実行</span>
+          <span data-group="cross">横断基盤</span>
+        </p>
       </header>
       <div className="explorer-canvas" data-expanded-area={expandedAreaId ?? ''}>
         <ReactFlow
