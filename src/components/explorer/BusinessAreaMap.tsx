@@ -86,7 +86,9 @@ export default function BusinessAreaMap({ onSelectBusiness }: BusinessAreaMapPro
                   pointerInteractionRef.current = true;
                 }}
                 onPointerUp={() => {
-                  pointerInteractionRef.current = false;
+                  window.setTimeout(() => {
+                    pointerInteractionRef.current = false;
+                  }, 0);
                 }}
                 onPointerCancel={() => {
                   pointerInteractionRef.current = false;
