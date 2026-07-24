@@ -17,6 +17,35 @@ test('業務カタログ正本の18業務領域だけを初期表示する', asy
   await expect(explorer.locator('.explorer-toolbar')).toHaveCount(0);
 });
 
+test('18業務領域を主系列・現場実行・横断基盤の順に配置する', async ({ page }) => {
+  const explorer = page.getByLabel('業務エクスプローラー');
+  await expect(explorer.locator('[data-lifecycle-group="main"]')).toHaveCount(8);
+  await expect(explorer.locator('[data-lifecycle-group="execution"]')).toHaveCount(6);
+  await expect(explorer.locator('[data-lifecycle-group="cross"]')).toHaveCount(4);
+
+  const mainStart = explorer.getByRole('button', { name: 'BM-01 業務領域「営業・提案」' });
+  const mainEnd = explorer.getByRole('button', { name: 'BM-18 業務領域「分析・改善・経営管理」' });
+  const execution = explorer.getByRole('button', { name: 'BM-06 業務領域「清掃管理」' });
+  const cross = explorer.getByRole('button', { name: 'BM-12 業務領域「テナント・顧客対応」' });
+  const [mainStartBox, mainEndBox, executionBox, crossBox] = await Promise.all([
+    mainStart.boundingBox(),
+    mainEnd.boundingBox(),
+    execution.boundingBox(),
+    cross.boundingBox(),
+  ]);
+
+  expect(mainStartBox).not.toBeNull();
+  expect(mainEndBox).not.toBeNull();
+  expect(executionBox).not.toBeNull();
+  expect(crossBox).not.toBeNull();
+  if (!mainStartBox || !mainEndBox || !executionBox || !crossBox) return;
+
+  expect(mainStartBox.x).toBeLessThan(mainEndBox.x);
+  expect(Math.abs(mainStartBox.y - mainEndBox.y)).toBeLessThan(2);
+  expect(executionBox.y).toBeGreaterThan(mainStartBox.y);
+  expect(crossBox.y).toBeGreaterThan(executionBox.y);
+});
+
 test('領域をホバーすると全所属業務を周辺へ展開し、明瞭な線で結ぶ', async ({ page }, testInfo) => {
   const explorer = page.getByLabel('業務エクスプローラー');
   const area = explorer.getByRole('button', { name: 'BM-10 業務領域「不具合・修繕管理」' });
