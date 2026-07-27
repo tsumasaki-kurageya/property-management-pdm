@@ -7,6 +7,10 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 このガイドは、ビルメンテナンス業務に詳しくない人が、業務の全体像、関係者、日常の仕事、異常対応、条件による違いを順番に理解するためのものです。特に、業務を理解したいソフトウェア開発チームを主な読者としていますが、ソフトウェアの知識は前提にしません。
 
+:::tip[具体的な疑問から業務を探す場合]
+「担当者と日程を調整する業務の前後を知りたい」のような疑問から調べる場合は、[業務ガイドラインの使い方](./introduction/how-to-use/)を参照してください。自然言語から業務ID、業務領域、上流・下流、関連資料へたどる手順を説明しています。
+:::
+
 ## このサイトで分かること
 
 - 建物を維持する仕事の目的と範囲
@@ -32,22 +36,22 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 <CardGrid>
   <Card title="1. 目的と関係者" icon="open-book">
-    建物を何のために支え、誰が方針・調整・実施を担うのかを学びます。[読み始める](./what-is-building-maintenance/)
+    建物を何のために支え、誰が方針・調整・実施を担うのかを学びます。[読み始める](./introduction/what-is-building-maintenance/)
   </Card>
   <Card title="2. 業務の全体像" icon="right-arrow">
-    18の業務領域と、契約から実施、報告、改善までの循環を学びます。[全体像へ進む](../overview/)
+    18の業務領域と、契約から実施、報告、改善までの循環を学びます。[全体像へ進む](./overview/)
   </Card>
   <Card title="3. 現場の定常業務" icon="information">
-    清掃、衛生、設備、警備・防災と、それを支える人員・資材・記録を学びます。[現場業務へ進む](../field-work/)
+    清掃、衛生、設備、警備・防災と、それを支える人員・資材・記録を学びます。[現場業務へ進む](./field-work/)
   </Card>
   <Card title="4. 周辺業務と異常対応" icon="warning">
-    契約、立ち上げ、報告、請求と、異常・苦情・災害時の分岐を学びます。[周辺業務へ進む](../incidents-and-operations/)
+    契約、立ち上げ、報告、請求と、異常・苦情・災害時の分岐を学びます。[周辺業務へ進む](./incidents-and-operations/)
   </Card>
   <Card title="5. 条件による違い" icon="seti:config">
-    用途、管理方式、契約階層、責任主体、法令を分けて考えます。[条件差へ進む](../variations/)
+    用途、管理方式、契約階層、責任主体、法令を分けて考えます。[条件差へ進む](./variations/)
   </Card>
   <Card title="6. 詳細を調べる" icon="magnifier">
-    業務ID、横断プロセス、重要業務、条件差プロファイルを検索します。[リファレンスへ進む](../reference/)
+    業務ID、横断プロセス、重要業務、条件差プロファイルを検索します。[リファレンスへ進む](./reference/)
   </Card>
 </CardGrid>
 
@@ -55,4 +59,4 @@ import { Card, CardGrid } from '@astrojs/starlight/components';
 
 個別の業務、横断プロセス、建物用途などによる差を確認するときに使用します。網羅性を優先するため、本文より詳しい情報を扱います。
 
-分からない言葉がある場合は、まず[初学者向け用語集](./glossary/)を参照してください。個々の業務を詳しく調べる場合は、[リファレンスの入口](../reference/)から業務カタログなどへ進みます。
+分からない言葉がある場合は、まず[初学者向け用語集](./introduction/glossary/)を参照してください。個々の業務を詳しく調べる場合は、[リファレンスの入口](./reference/)から業務カタログなどへ進みます。
