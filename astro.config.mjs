@@ -43,7 +43,7 @@ export default defineConfig({
           items: [
             { label: 'ガイドの読み方', slug: 'introduction' },
             { label: '業務ガイドラインの使い方', slug: 'introduction/how-to-use' },
-            { label: '建物管理業務とは', slug: 'introduction/what-is-building-maintenance' },
+            { label: 'ビルメンテナンスとは', slug: 'introduction/what-is-building-maintenance' },
             { label: '関係者と役割', slug: 'introduction/people-and-roles' },
             { label: '初学者向け用語集', slug: 'introduction/glossary' },
           ],
