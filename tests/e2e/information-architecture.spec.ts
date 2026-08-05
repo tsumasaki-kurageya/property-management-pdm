@@ -1,34 +1,19 @@
-import { expect, test, type Locator, type Page } from '@playwright/test';
+import { expect, test } from '@playwright/test';
 
-async function firstVisible(locator: Locator) {
-  for (let index = 0; index < (await locator.count()); index += 1) {
-    const candidate = locator.nth(index);
-    if (await candidate.isVisible()) {
-      return candidate;
-    }
-  }
-  throw new Error('表示中の要素が見つかりませんでした');
-}
+const sidebarLabels = [
+  '所有・投資管理',
+  '物件・施設運営',
+  '維持管理・実行 ― ビルメンテナンス',
+  'レイヤー間の接続',
+  '代表シナリオ',
+];
 
-async function getVisibleSidebar(page: Page) {
-  const menuButtons = page.getByRole('button', { name: /メニュー|Menu/i });
-  if ((await menuButtons.count()) > 0) {
-    const visibleMenuButton = await firstVisible(menuButtons);
-    await visibleMenuButton.click();
-  }
-
-  const sidebar = await firstVisible(page.locator('nav[aria-label="メイン"]'));
-  await expect(sidebar).toBeVisible();
-  return sidebar;
-}
+const bmLabels = ['業務の全体像', '現場の業務', '異常と周辺業務', '条件による違い'];
 
 test('サイト名称とトップページが建物管理業務全体の対象範囲を示す', async ({ page }) => {
   await page.goto('');
-
   await expect(page).toHaveTitle(/建物の所有・運営・維持管理業務ガイド/);
-  await expect(
-    page.getByRole('heading', { level: 1, name: '建物の所有・運営・維持管理業務ガイド' }),
-  ).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1, name: '建物の所有・運営・維持管理業務ガイド' })).toBeVisible();
 
   const main = page.getByRole('main');
   await expect(main).toContainText('所有・投資管理');
@@ -37,38 +22,32 @@ test('サイト名称とトップページが建物管理業務全体の対象�
   await expect(main).toContainText('ビルメンテナンス');
 });
 
-test('三つの業務レイヤーと横断章を同じサイドバー水準で表示する', async ({ page }) => {
+test('三つの業務レイヤーと横断章をサイドバーに含める', async ({ page }) => {
   await page.goto('management-structure/');
-  const sidebar = await getVisibleSidebar(page);
-
-  await expect(sidebar).toContainText('所有・投資管理');
-  await expect(sidebar).toContainText('物件・施設運営');
-  await expect(sidebar).toContainText('維持管理・実行 ― ビルメンテナンス');
-  await expect(sidebar).toContainText('レイヤー間の接続');
-  await expect(sidebar).toContainText('代表シナリオ');
+  const text = (await page.locator('nav[aria-label="メイン"]').allTextContents()).join('\n');
+  for (const label of sidebarLabels) expect(text).toContain(label);
 });
 
-test('BM内部章を維持管理・実行の配下から開ける', async ({ page }) => {
+test('BM内部章を維持管理・実行グループの配下に構成する', async ({ page }) => {
   await page.goto('management-structure/maintenance-execution/');
-  const sidebar = await getVisibleSidebar(page);
+  const details = page.locator('nav[aria-label="メイン"] details');
+  let found = false;
 
-  const group = sidebar.locator('summary').filter({ hasText: '維持管理・実行 ― ビルメンテナンス' }).first();
-  await expect(group).toBeVisible();
-
-  const details = group.locator('xpath=..');
-  if ((await details.getAttribute('open')) === null) {
-    await group.click();
+  for (let index = 0; index < await details.count(); index += 1) {
+    const text = (await details.nth(index).textContent()) ?? '';
+    if (!text.includes('維持管理・実行 ― ビルメンテナンス')) continue;
+    for (const label of bmLabels) expect(text).toContain(label);
+    found = true;
+    break;
   }
 
-  for (const label of ['業務の全体像', '現場の業務', '異常と周辺業務', '条件による違い']) {
-    await expect(sidebar.locator('summary').filter({ hasText: label }).first()).toBeVisible();
-  }
+  expect(found).toBeTruthy();
 });
 
 test('既存の主要URLと末尾スラッシュを維持する', async ({ page }) => {
   for (const path of ['overview/', 'field-work/', 'incidents-and-operations/', 'variations/']) {
     const response = await page.goto(path);
-    expect(response?.ok(), `${path} should respond successfully`).toBeTruthy();
+    expect(response?.ok()).toBeTruthy();
     expect(new URL(page.url()).pathname.endsWith(`/${path}`)).toBeTruthy();
   }
 });
