@@ -41,6 +41,8 @@ flowchart TB
 | [2. 物件・施設運営](./property-and-facility-operation/) | 個別物件の収益・契約と、利用組織の施設要求をどう実現するか | 物件、賃貸借、テナント、施設、利用者、サービス | [PM](./property-and-facility-operation/property-management/)、[FM](./property-and-facility-operation/facility-management/) |
 | [3. 維持管理・実行](./maintenance-execution/) | 誰が、いつ、どの手順で作業し、何を記録するか | 建物、設備、作業、要員、協力会社、証跡 | [BMの位置付け](./maintenance-execution/building-maintenance/) |
 
+<span id="管理対象と計画期間/"></span>
+
 ## 管理対象と計画期間
 
 | 機能 | 主な管理対象 | 代表的な期間 |
@@ -51,7 +53,11 @@ flowchart TB
 | FM | 施設群、拠点、スペース、利用者、サービス、総施設コスト | ライフサイクル、中長期、年度、日常 |
 | BM | 建物、設備、作業、要員、協力会社、記録 | 年次、月次、週次、日次、作業、緊急時 |
 
-## レイヤー間をどう調べるか
+<span id="レイヤー間の情報循環/"></span>
+
+## レイヤー間の情報循環
+
+上位レイヤーからは方針、予算、要求、制約、承認がBMの計画・実行へ渡ります。BMからは作業実績、設備状態、費用、リスク、未解決事項が上位レイヤーへ戻り、次の計画・投資・リスク受容判断に使われます。
 
 - 誰が起案・評価・承認・実行・確認するかは[意思決定と責任分界](./connections/decision-and-responsibility/)で確認します。
 - 上位の方針・要求がBMへどう渡るかは[上位要求からBM業務への接続](./connections/requirements-to-bm/)で確認します。
