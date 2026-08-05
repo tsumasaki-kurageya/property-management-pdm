@@ -52,6 +52,6 @@ test('既存の主要URLと末尾スラッシュを維持する', async ({ page 
   for (const path of ['overview/', 'field-work/', 'incidents-and-operations/', 'variations/']) {
     const response = await page.goto(path);
     expect(response?.ok(), `${path} should respond successfully`).toBeTruthy();
-    expect(new URL(page.url()).pathname).toEndWith(`/${path}`);
+    expect(new URL(page.url()).pathname.endsWith(`/${path}`)).toBeTruthy();
   }
 });
