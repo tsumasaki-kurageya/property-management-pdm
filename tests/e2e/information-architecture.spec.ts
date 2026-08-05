@@ -1,10 +1,14 @@
-import { expect, test } from '@playwright/test';
+import { expect, test, type Page } from '@playwright/test';
 
-async function openSidebarOnNarrowViewport(page: import('@playwright/test').Page) {
-  const menuButton = page.getByRole('button', { name: /メニュー|Menu/i }).first();
+async function getVisibleSidebar(page: Page) {
+  const menuButton = page.getByRole('button', { name: /メニュー|Menu/i }).filter({ visible: true }).first();
   if (await menuButton.isVisible()) {
     await menuButton.click();
   }
+
+  const sidebar = page.locator('nav[aria-label="メイン"]:visible');
+  await expect(sidebar).toBeVisible();
+  return sidebar;
 }
 
 test('サイト名称とトップページが建物管理業務全体の対象範囲を示す', async ({ page }) => {
@@ -24,10 +28,8 @@ test('サイト名称とトップページが建物管理業務全体の対象�
 
 test('三つの業務レイヤーと横断章を同じサイドバー水準で表示する', async ({ page }) => {
   await page.goto('management-structure/');
-  await openSidebarOnNarrowViewport(page);
+  const sidebar = await getVisibleSidebar(page);
 
-  const sidebar = page.locator('nav').filter({ hasText: '所有・投資管理' }).first();
-  await expect(sidebar).toBeVisible();
   await expect(sidebar).toContainText('所有・投資管理');
   await expect(sidebar).toContainText('物件・施設運営');
   await expect(sidebar).toContainText('維持管理・実行 ― ビルメンテナンス');
@@ -37,14 +39,16 @@ test('三つの業務レイヤーと横断章を同じサイドバー水準で�
 
 test('BM内部章を維持管理・実行の配下から開ける', async ({ page }) => {
   await page.goto('management-structure/maintenance-execution/');
-  await openSidebarOnNarrowViewport(page);
+  const sidebar = await getVisibleSidebar(page);
 
-  const group = page.getByText('維持管理・実行 ― ビルメンテナンス', { exact: true }).first();
+  const group = sidebar.locator('summary').filter({ hasText: '維持管理・実行 ― ビルメンテナンス' }).first();
   await expect(group).toBeVisible();
-  await group.click();
+  if ((await group.getAttribute('aria-expanded')) !== 'true') {
+    await group.click();
+  }
 
   for (const label of ['業務の全体像', '現場の業務', '異常と周辺業務', '条件による違い']) {
-    await expect(page.getByText(label, { exact: true }).first()).toBeVisible();
+    await expect(sidebar.locator('summary').filter({ hasText: label }).first()).toBeVisible();
   }
 });
 
