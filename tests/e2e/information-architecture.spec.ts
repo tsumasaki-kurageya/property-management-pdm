@@ -1,12 +1,23 @@
-import { expect, test, type Page } from '@playwright/test';
+import { expect, test, type Locator, type Page } from '@playwright/test';
+
+async function firstVisible(locator: Locator) {
+  for (let index = 0; index < (await locator.count()); index += 1) {
+    const candidate = locator.nth(index);
+    if (await candidate.isVisible()) {
+      return candidate;
+    }
+  }
+  throw new Error('表示中の要素が見つかりませんでした');
+}
 
 async function getVisibleSidebar(page: Page) {
-  const menuButton = page.getByRole('button', { name: /メニュー|Menu/i }).locator(':visible').first();
-  if (await menuButton.isVisible()) {
-    await menuButton.click();
+  const menuButtons = page.getByRole('button', { name: /メニュー|Menu/i });
+  if ((await menuButtons.count()) > 0) {
+    const visibleMenuButton = await firstVisible(menuButtons);
+    await visibleMenuButton.click();
   }
 
-  const sidebar = page.locator('nav[aria-label="メイン"]:visible');
+  const sidebar = await firstVisible(page.locator('nav[aria-label="メイン"]'));
   await expect(sidebar).toBeVisible();
   return sidebar;
 }
@@ -43,7 +54,9 @@ test('BM内部章を維持管理・実行の配下から開ける', async ({ pag
 
   const group = sidebar.locator('summary').filter({ hasText: '維持管理・実行 ― ビルメンテナンス' }).first();
   await expect(group).toBeVisible();
-  if ((await group.getAttribute('aria-expanded')) !== 'true') {
+
+  const details = group.locator('xpath=..');
+  if ((await details.getAttribute('open')) === null) {
     await group.click();
   }
 
