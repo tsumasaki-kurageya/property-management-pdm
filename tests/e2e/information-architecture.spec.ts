@@ -49,6 +49,44 @@ test('サイドバーを情報の役割別に構成する', async ({ page }) => 
   for (const label of roleBasedSidebarLabels) expect(text).toContain(label);
 });
 
+test('主要なサイドメニュー名と遷移先ページタイトルが一致する', async ({ page }) => {
+  const cases = [
+    {
+      path: 'management-structure/maintenance-execution/',
+      menu: '3. 維持管理・実行レイヤー',
+      heading: '3. 維持管理・実行レイヤー',
+    },
+    {
+      path: 'management-structure/maintenance-execution/building-maintenance/',
+      menu: 'ビルメンテナンス（BM）の位置付け',
+      heading: 'ビルメンテナンス（BM）の位置付け',
+    },
+    {
+      path: 'variations/responsibility-boundaries/',
+      menu: '所有・利用・契約による責任分界の違い',
+      heading: '所有・利用・契約による責任分界の違い',
+    },
+    {
+      path: 'field-work/equipment-operation/',
+      menu: '設備運転管理',
+      heading: '設備運転管理',
+    },
+  ];
+
+  for (const item of cases) {
+    await page.goto(item.path);
+    await expect(page.getByRole('heading', { level: 1, name: item.heading })).toBeVisible();
+    await expect(page.locator('nav[aria-label="メイン"]')).toContainText(item.menu);
+  }
+});
+
+test('はじめに配下で同じページを別名で重複表示しない', async ({ page }) => {
+  await page.goto('introduction/');
+  const nav = page.locator('nav[aria-label="メイン"]');
+  await expect(nav.getByText('目的別の読み方', { exact: true })).toHaveCount(1);
+  await expect(nav.getByText('このガイドラインについて', { exact: true })).toHaveCount(0);
+});
+
 test('既存の主要URLと末尾スラッシュを維持する', async ({ page }) => {
   for (const path of ['overview/', 'field-work/', 'incidents-and-operations/', 'variations/', 'reference/business-catalog/', 'reference/processes/']) {
     const response = await page.goto(path);
