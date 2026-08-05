@@ -1,31 +1,45 @@
 ---
-title: ビルメンテナンス業務ガイド
-description: ビルメンテナンス業務を初めて学ぶ人のための入口です。
+title: 建物の所有・運営・維持管理業務ガイド
+description: 建物の所有・投資管理、物件・施設運営、維持管理・実行の関係を学ぶための入口です。
 template: splash
 hero:
-  tagline: 建物を安全・衛生的・継続的に利用できる状態へ保つ仕事を、全体像から順番に学びます。
+  tagline: 建物に関わる方針・投資判断から、物件・施設運営、ビルメンテナンスの実行までを一つの構造として学びます。
   actions:
     - text: ガイドを読み始める
       link: ./introduction/
       icon: right-arrow
       variant: primary
-    - text: リファレンスを見る
-      link: ./reference/
+    - text: 業務構造を見る
+      link: ./management-structure/
       icon: open-book
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
+## このガイドが扱う範囲
+
+<CardGrid>
+  <Card title="所有・投資管理" icon="star">
+    オーナーとアセットマネジメント（AM）が、資産価値、収益、投資、リスクをどのように判断するかを整理します。
+  </Card>
+  <Card title="物件・施設運営" icon="seti:config">
+    プロパティマネジメント（PM）とファシリティマネジメント（FM）が、物件運営と施設利用をどう支えるかを整理します。
+  </Card>
+  <Card title="維持管理・実行" icon="tools">
+    ビルメンテナンス（BM）の18業務領域、現場業務、異常対応、報告、請求、改善までを中核成果物として扱います。
+  </Card>
+</CardGrid>
+
 ## 二つの読み方
 
 <CardGrid>
   <Card title="順番に学ぶ" icon="open-book">
-    初めて読む人は、はじめに、全体像、現場の業務、異常対応、条件差の順に進みます。
+    初めて読む人は、はじめに、全体構造、三つの業務レイヤー、レイヤー間の接続、代表シナリオの順に進みます。
   </Card>
   <Card title="必要な情報を調べる" icon="magnifier">
-    業務ID、プロセス、条件差などの詳細はリファレンスと全文検索から探します。
+    BM業務ID、横断プロセス、上位業務との接続、条件差などの詳細はリファレンスと全文検索から探します。
   </Card>
 </CardGrid>
 
-本文、図解、業務カタログのリファレンスを含む初版です。収録範囲と確認済みの品質項目は[初版の範囲と品質](./about/initial-release/)で確認できます。
+このサイトは建物管理業務全体を対象としますが、ビルメンテナンス業務カタログと横断プロセスを中核成果物として維持します。収録範囲と確認済みの品質項目は[初版の範囲と品質](./about/initial-release/)で確認できます。
