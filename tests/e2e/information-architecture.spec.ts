@@ -1,7 +1,7 @@
 import { expect, test, type Page } from '@playwright/test';
 
 async function getVisibleSidebar(page: Page) {
-  const menuButton = page.getByRole('button', { name: /メニュー|Menu/i }).filter({ visible: true }).first();
+  const menuButton = page.getByRole('button', { name: /メニュー|Menu/i }).locator(':visible').first();
   if (await menuButton.isVisible()) {
     await menuButton.click();
   }
