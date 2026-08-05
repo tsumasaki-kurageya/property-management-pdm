@@ -6,7 +6,7 @@ test.beforeEach(async ({ page }) => {
   await expect(page.getByRole('heading', { name: '業務エクスプローラー' })).toBeVisible();
 });
 
-test('業務カタログ正本の18業務領域だけを初期表示する', async ({ page }) => {
+test('@pages 業務カタログ正本の18業務領域だけを初期表示する', async ({ page }) => {
   const explorer = page.getByLabel('業務エクスプローラー');
   await expect(explorer.locator('.react-flow__node-area')).toHaveCount(18);
   await expect(explorer.locator('.react-flow__node-business')).toHaveCount(0);
