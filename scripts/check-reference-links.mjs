@@ -1,5 +1,5 @@
 import { readFile, readdir, stat } from 'node:fs/promises';
-import { basename, dirname, extname, join, resolve } from 'node:path';
+import { basename, dirname, extname, join, relative, resolve } from 'node:path';
 
 const docsRoot = resolve('src/content/docs');
 const pagesRoot = resolve('src/pages');
@@ -21,8 +21,8 @@ function contentCandidates(base) {
     : [base, `${base}.md`, `${base}.mdx`, join(base, 'index.md'), join(base, 'index.mdx')];
 }
 
-function pageCandidates(target) {
-  const route = target.replace(/^\/+|\/+$/g, '');
+function pageCandidates(routePath) {
+  const route = routePath.replace(/^\/+|\/+$/g, '');
   const base = resolve(pagesRoot, route || 'index');
   return [
     `${base}.astro`,
@@ -45,12 +45,16 @@ for (const file of files) {
       ? dirname(file)
       : join(dirname(file), basename(file, extname(file)));
 
-    const candidates = target.startsWith('/')
-      ? [
-          ...contentCandidates(resolve(docsRoot, `.${target}`)),
-          ...pageCandidates(target),
-        ]
-      : contentCandidates(resolve(routeBase, target));
+    const contentBase = target.startsWith('/')
+      ? resolve(docsRoot, `.${target}`)
+      : resolve(routeBase, target);
+    const routePath = target.startsWith('/')
+      ? target
+      : relative(docsRoot, contentBase);
+    const candidates = [
+      ...contentCandidates(contentBase),
+      ...pageCandidates(routePath),
+    ];
 
     const found = await Promise.all(
       candidates.map((candidate) => stat(candidate).then(() => true).catch(() => false)),
