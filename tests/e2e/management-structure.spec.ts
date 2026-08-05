@@ -30,15 +30,16 @@ test('上位業務レイヤーの全ページを公開し、主要見出しを�
 
 test('既存URLを維持し、新章への相互導線を表示する', async ({ page }) => {
   await page.goto('introduction/people-and-roles/');
-  await expect(page.getByRole('link', { name: '所有・運営・維持管理の業務構造' }).first()).toBeVisible();
+  await expect(page.getByRole('main').getByRole('link', { name: '所有・運営・維持管理の業務構造' }).first()).toBeVisible();
 
   await page.goto('variations/responsibility-boundaries/');
-  await expect(page.getByRole('link', { name: '所有・運営・維持管理の業務構造' }).first()).toBeVisible();
+  await expect(page.getByRole('main').getByRole('link', { name: '所有・運営・維持管理の業務構造' }).first()).toBeVisible();
 
   await page.goto('management-structure/');
-  await expect(page.getByRole('link', { name: '関係者と役割' })).toBeVisible();
-  await expect(page.getByRole('link', { name: 'オーナー・PM・FM・BMの責任分界' })).toBeVisible();
-  await expect(page.getByRole('link', { name: '業務カタログ' })).toBeVisible();
+  const main = page.getByRole('main');
+  await expect(main.getByRole('link', { name: '関係者と役割' })).toBeVisible();
+  await expect(main.getByRole('link', { name: 'オーナー・PM・FM・BMの責任分界' })).toBeVisible();
+  await expect(main.getByRole('link', { name: '業務カタログ' })).toBeVisible();
 });
 
 test('3シナリオから上位ID・BM ID・接続種別・KPIを追跡できる', async ({ page }) => {
